@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b9dff" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#5b9dff" stop-opacity="0"/>
+    </linearGradient>
+    <path id="weekLine" d="M110,585 L210,545 L310,566 L410,488 L510,512 L610,428 L710,447 L790,375"/>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0b101d"/>
+  <text x="60" y="64" font-size="28" font-weight="700" fill="#e8eef7">数据可视化 — SVG 是图表的母语</text>
+  <text x="60" y="92" font-size="14" fill="#8fa0b8">Level 4.5 — 面积图 · 环形图 · 柱状图 · KPI 卡全手写；打开文件的一瞬间，"数据流入"动画自动播放</text>
+  <rect x="950" y="34" width="190" height="34" rx="17" fill="#141d31" stroke="#2d3f63"/>
+  <circle cx="972" cy="51" r="5" fill="#3ecf8e">
+    <animate attributeName="opacity" values="1;0.15;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="988" y="56" font-size="12" fill="#8fa0b8" font-family="SFMono-Regular, Menlo, monospace">LIVE · 每 60s 刷新</text>
+
+  <!-- ===== KPI 卡片 ===== -->
+  <g>
+    <rect x="60" y="120" width="350" height="110" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="150" font-size="13" fill="#8fa0b8">销售额 GMV</text>
+    <text x="84" y="192" font-size="32" font-weight="800" fill="#e8eef7">¥ 1,284,590</text>
+    <text x="84" y="216" font-size="13" fill="#3ecf8e">+12.4% ↑ 较昨日</text>
+    <path d="M240,200 L265,188 L290,195 L315,175 L340,182 L365,162 L390,156" fill="none" stroke="#5b9dff" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset" from="1" to="0" dur="1.4s" begin="0.2s" fill="freeze"/>
+    </path>
+  </g>
+  <g>
+    <rect x="440" y="120" width="350" height="110" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="464" y="150" font-size="13" fill="#8fa0b8">订单量</text>
+    <text x="464" y="192" font-size="32" font-weight="800" fill="#e8eef7">38,209</text>
+    <text x="464" y="216" font-size="13" fill="#3ecf8e">+8.2% ↑ 较昨日</text>
+    <path d="M620,202 L645,192 L670,197 L695,180 L720,186 L745,168 L770,160" fill="none" stroke="#2bb3a3" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset" from="1" to="0" dur="1.4s" begin="0.4s" fill="freeze"/>
+    </path>
+  </g>
+  <g>
+    <rect x="820" y="120" width="350" height="110" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="844" y="150" font-size="13" fill="#8fa0b8">支付转化率</text>
+    <text x="844" y="192" font-size="32" font-weight="800" fill="#e8eef7">3.86%</text>
+    <text x="844" y="216" font-size="13" fill="#f65e5e">-0.4% ↓ 较昨日</text>
+    <path d="M1000,158 L1025,166 L1050,162 L1075,176 L1100,172 L1125,188 L1150,196" fill="none" stroke="#f65e5e" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset" from="1" to="0" dur="1.4s" begin="0.6s" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- ===== 主图：近 7 日走势 ===== -->
+  <g>
+    <rect x="60" y="270" width="760" height="440" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="304" font-size="16" font-weight="700" fill="#e8eef7">近 7 日 GMV 走势</text>
+    <circle cx="652" cy="298" r="4" fill="#5b9dff"/>
+    <text x="662" y="302" font-size="12" fill="#8fa0b8">本周</text>
+    <line x1="706" y1="298" x2="730" y2="298" stroke="#44506a" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="738" y="302" font-size="12" fill="#8fa0b8">上周</text>
+
+    <!-- 网格与坐标 -->
+    <g stroke="#1a2540" stroke-width="1">
+      <line x1="110" y1="330" x2="790" y2="330"/>
+      <line x1="110" y1="410" x2="790" y2="410"/>
+      <line x1="110" y1="490" x2="790" y2="490"/>
+      <line x1="110" y1="570" x2="790" y2="570"/>
+      <line x1="110" y1="650" x2="790" y2="650"/>
+    </g>
+    <g font-size="11" fill="#5b6b8a" text-anchor="end">
+      <text x="102" y="334">240</text>
+      <text x="102" y="414">180</text>
+      <text x="102" y="494">120</text>
+      <text x="102" y="574">60</text>
+      <text x="102" y="654">0</text>
+    </g>
+    <g font-size="11" fill="#5b6b8a" text-anchor="middle">
+      <text x="110" y="672">10-01</text>
+      <text x="210" y="672">10-02</text>
+      <text x="310" y="672">10-03</text>
+      <text x="410" y="672">10-04</text>
+      <text x="510" y="672">10-05</text>
+      <text x="610" y="672">10-06</text>
+      <text x="710" y="672">10-07</text>
+      <text x="790" y="672">10-08</text>
+    </g>
+
+    <!-- 上周（对照虚线） -->
+    <path d="M110,610 L210,585 L310,596 L410,545 L510,560 L610,500 L710,515 L790,470" fill="none" stroke="#44506a" stroke-width="2" stroke-dasharray="5 6"/>
+
+    <!-- 面积（渐变填充，淡入） -->
+    <path d="M110,585 L210,545 L310,566 L410,488 L510,512 L610,428 L710,447 L790,375 L790,650 L110,650 Z" fill="url(#areaG)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="1.2s" begin="2.4s" fill="freeze"/>
+    </path>
+
+    <!-- 本周线（描边生长） -->
+    <path d="M110,585 L210,545 L310,566 L410,488 L510,512 L610,428 L710,447 L790,375" fill="none" stroke="#5b9dff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset" from="1" to="0" dur="2.2s" begin="0.2s" fill="freeze"/>
+    </path>
+
+    <!-- 光点沿数据线巡游，停在最新值 -->
+    <g>
+      <circle r="9" fill="#5b9dff" opacity="0.25"/>
+      <circle r="4.5" fill="#cfe4ff"/>
+      <animateMotion dur="2.2s" begin="0.2s" fill="freeze">
+        <mpath href="#weekLine"/>
+      </animateMotion>
+    </g>
+  </g>
+
+  <!-- ===== 环形图 ===== -->
+  <g>
+    <rect x="850" y="270" width="290" height="290" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="874" y="302" font-size="16" font-weight="700" fill="#e8eef7">渠道占比</text>
+    <circle cx="960" cy="420" r="78" fill="none" stroke="#1a2540" stroke-width="30"/>
+    <!-- pathLength=100：百分比直接写成 dasharray -->
+    <circle cx="960" cy="420" r="78" fill="none" stroke="#5b9dff" stroke-width="30" pathLength="100" stroke-dasharray="0 100" transform="rotate(-90 960 420)">
+      <animate attributeName="stroke-dasharray" from="0 100" to="45 55" dur="0.9s" begin="0.6s" fill="freeze"/>
+    </circle>
+    <circle cx="960" cy="420" r="78" fill="none" stroke="#9b6cf5" stroke-width="30" pathLength="100" stroke-dasharray="0 100" transform="rotate(-18 960 420)">
+      <animate attributeName="stroke-dasharray" from="0 100" to="30 70" dur="0.9s" begin="1.5s" fill="freeze"/>
+    </circle>
+    <circle cx="960" cy="420" r="78" fill="none" stroke="#2bb3a3" stroke-width="30" pathLength="100" stroke-dasharray="0 100" transform="rotate(90 960 420)">
+      <animate attributeName="stroke-dasharray" from="0 100" to="25 75" dur="0.9s" begin="2.4s" fill="freeze"/>
+    </circle>
+    <text x="960" y="416" font-size="26" font-weight="800" fill="#e8eef7" text-anchor="middle">¥2.4M</text>
+    <text x="960" y="442" font-size="11" fill="#8fa0b8" text-anchor="middle">总营收</text>
+    <g font-size="12" fill="#8fa0b8">
+      <circle cx="880" cy="512" r="4" fill="#5b9dff"/>
+      <text x="892" y="516">搜索 45%</text>
+      <circle cx="972" cy="512" r="4" fill="#9b6cf5"/>
+      <text x="984" y="516">直播 30%</text>
+      <circle cx="1064" cy="512" r="4" fill="#2bb3a3"/>
+      <text x="1076" y="516">私域 25%</text>
+    </g>
+  </g>
+
+  <!-- ===== 横向条形图 ===== -->
+  <g>
+    <rect x="850" y="590" width="290" height="120" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="874" y="616" font-size="14" font-weight="700" fill="#e8eef7">渠道转化 Top 4</text>
+    <text x="874" y="642" font-size="11" fill="#8fa0b8">搜索</text>
+    <rect x="920" y="632" width="180" height="12" rx="6" fill="#141d31"/>
+    <rect x="920" y="632" width="0" height="12" rx="6" fill="#5b9dff">
+      <animate attributeName="width" from="0" to="150" dur="1s" begin="0.4s" fill="freeze"/>
+    </rect>
+    <text x="1108" y="642" font-size="11" fill="#8fa0b8">83%</text>
+    <text x="874" y="662" font-size="11" fill="#8fa0b8">直播</text>
+    <rect x="920" y="652" width="180" height="12" rx="6" fill="#141d31"/>
+    <rect x="920" y="652" width="0" height="12" rx="6" fill="#9b6cf5">
+      <animate attributeName="width" from="0" to="118" dur="1s" begin="0.6s" fill="freeze"/>
+    </rect>
+    <text x="1108" y="662" font-size="11" fill="#8fa0b8">65%</text>
+    <text x="874" y="682" font-size="11" fill="#8fa0b8">推荐</text>
+    <rect x="920" y="672" width="180" height="12" rx="6" fill="#141d31"/>
+    <rect x="920" y="672" width="0" height="12" rx="6" fill="#2bb3a3">
+      <animate attributeName="width" from="0" to="96" dur="1s" begin="0.8s" fill="freeze"/>
+    </rect>
+    <text x="1108" y="682" font-size="11" fill="#8fa0b8">53%</text>
+    <text x="874" y="702" font-size="11" fill="#8fa0b8">私域</text>
+    <rect x="920" y="692" width="180" height="12" rx="6" fill="#141d31"/>
+    <rect x="920" y="692" width="0" height="12" rx="6" fill="#f7a23b">
+      <animate attributeName="width" from="0" to="64" dur="1s" begin="1s" fill="freeze"/>
+    </rect>
+    <text x="1108" y="702" font-size="11" fill="#8fa0b8">35%</text>
+  </g>
+
+  <text x="60" y="748" font-size="14" fill="#c6d2e4">面积图 = 渐变填充 + 描边生长 + 光点巡游；环形图 = pathLength="100" 把百分比直接写成 dasharray；柱条 = width 动画。</text>
+  <text x="60" y="772" font-size="12.5" fill="#5b6b8a">ECharts / D3 / AntV 导出的正是这种 SVG —— 意味着 Agent 也能不依赖任何图表库，直接手写一张"活"的图表。</text>
+</svg>

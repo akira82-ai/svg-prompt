@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>SVG 能力进阶演示 · 从初级到高级</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #070b14;
+    color: #e8eef7;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    padding: 48px 40px 80px;
+  }
+  header { max-width: 1280px; margin: 0 auto 40px; }
+  h1 { font-size: 30px; font-weight: 800; }
+  h1 em { font-style: normal; background: linear-gradient(90deg,#7ecbff,#c98ef7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header p { margin-top: 12px; color: #8fa0b8; font-size: 14.5px; line-height: 1.7; }
+  header p b { color: #c6d2e4; }
+  .grid {
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); gap: 28px;
+  }
+  .card {
+    background: #0e1524; border: 1px solid #22304d; border-radius: 16px; overflow: hidden;
+    transition: border-color .2s;
+  }
+  .card:hover { border-color: #3d5a8a; }
+  .card img { display: block; width: 100%; height: auto; }
+  .meta { padding: 18px 22px 20px; }
+  .lv {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    padding: 3px 10px; border-radius: 10px; margin-bottom: 8px;
+  }
+  .lv1 { background: #14304f; color: #7ecbff; }
+  .lv2 { background: #2a1f4d; color: #c98ef7; }
+  .lv3 { background: #12333d; color: #5ad0c0; }
+  .lv4 { background: #0f3a2a; color: #3ecf8e; }
+  .lv45 { background: #14264d; color: #8fb4ff; }
+  .lv5 { background: #3d2413; color: #f7a23b; }
+  .lv6 { background: #33184a; color: #e0a6ff; }
+  .meta h2 { font-size: 17px; font-weight: 700; }
+  .meta h2 code { font-family: SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: #5b6b8a; font-weight: 400; margin-left: 8px; }
+  .meta p { margin-top: 6px; font-size: 13px; color: #8fa0b8; line-height: 1.65; }
+  footer { max-width: 1280px; margin: 44px auto 0; color: #5b6b8a; font-size: 12.5px; line-height: 1.8; border-top: 1px solid #1a2540; padding-top: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SVG 能力进阶演示 · <em>从初级到高级</em></h1>
+  <p>14 个文件全部是<b>手写 SVG 标记</b>（无 Canvas、无 WebGL、无任何位图素材），按能力层级递进。
+  动效文件（05–14）在浏览器里会<b>自动播放</b>——点开单个 .svg 文件也一样能动，因为动画写在标记本身里（09 为"加载即播放一次"的数据流入动画）。</p>
+</header>
+
+<div class="grid">
+  <div class="card">
+    <img src="01-基础图形.svg" alt="基础图形">
+    <div class="meta">
+      <span class="lv lv1">LEVEL 1 · 入门</span>
+      <h2>8 种基础图形 <code>01-基础图形.svg</code></h2>
+      <p>rect / circle / ellipse / line / polyline / polygon / path（贝塞尔、圆弧）。一切 SVG 的起点：一段文本描述一个图形，放大到任何尺寸都不失真。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="02-渐变与玻璃质感.svg" alt="渐变与玻璃质感">
+    <div class="meta">
+      <span class="lv lv1">LEVEL 2 · 视觉</span>
+      <h2>渐变 · 玻璃 · 光晕 <code>02-渐变与玻璃质感.svg</code></h2>
+      <p>linearGradient、radialGradient、渐变文字、毛玻璃拟态、feDropShadow 投影。网页级"现代设计感"全部由标记语言实现，defs 定义一次全局复用。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="03-程序化纹理与图案.svg" alt="程序化纹理与图案">
+    <div class="meta">
+      <span class="lv lv3">LEVEL 3 · 纹理</span>
+      <h2>零图片素材的程序化纹理 <code>03-程序化纹理与图案.svg</code></h2>
+      <p>feTurbulence 数学噪声"无中生有"：星空、噪点渐变、木纹、大理石；pattern 小单元平铺任意形状。这是 SVG 独有的能力——位图格式做不到"用公式画木头"。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="04-复杂系统架构图.svg" alt="复杂系统架构图">
+    <div class="meta">
+      <span class="lv lv4">LEVEL 4 · 复杂布局</span>
+      <h2>复杂系统架构图 <code>04-复杂系统架构图.svg</code></h2>
+      <p>回答"复杂布局行不行"：6 个分区、20 个节点、23 条横平竖直的正交布线（总线式扇出 + 直角走线），五种线型（同步/异步/数据/注册/采集），全部避开节点框。分组、marker 箭头、图例、边标签齐全。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="05-描边动画.svg" alt="描边动画">
+    <div class="meta">
+      <span class="lv lv5">LEVEL 5 · 动效 A</span>
+      <h2>描边动画：SVG 会"自己画画" <code>05-描边动画.svg</code></h2>
+      <p>pathLength="1" 归一化 + dashoffset 补间，线稿逐笔绘出、随后上色，7 秒循环。任何 logo、签名、地图路线都能套这个模板，约 10 行 CSS。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="06-SMIL动效面板.svg" alt="SMIL 动效面板">
+    <div class="meta">
+      <span class="lv lv5">LEVEL 5 · 动效 B</span>
+      <h2>SMIL 动效面板：不写一行 JS/CSS <code>06-SMIL动效面板.svg</code></h2>
+      <p>雷达扫描（animateTransform）、行星轨道（animateMotion 沿椭圆路径）、数据流水线（dashoffset 流动 + 光点巡游）、心电图扫描。动画写在标记里，文件完全自包含。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="07-滤镜特效.svg" alt="滤镜特效">
+    <div class="meta">
+      <span class="lv lv5">LEVEL 5 · 动效 C</span>
+      <h2>滤镜特效：矢量版 Photoshop <code>07-滤镜特效.svg</code></h2>
+      <p>液态融合 Metaball（blur+对比度）、金属打光（feSpecularLighting 光源 z 轴呼吸）、水波扭曲（feTurbulence 位移）、霓虹辉光闪烁。滤镜让纯几何拥有"材质感"。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="08-动态架构图.svg" alt="动态架构图">
+    <div class="meta">
+      <span class="lv lv5">LEVEL 5+ · 终极合体</span>
+      <h2>会呼吸的动态架构图 <code>08-动态架构图.svg</code></h2>
+      <p>与 04 同一套正交布线，叠加 SMIL 动画层：14 个数据包沿直角航线流动、服务状态灯心跳、Kafka 呼吸灯、标题流光、网关链路流动虚线。复杂布局 × 动效 = "活文档"。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="09-数据可视化仪表盘.svg" alt="数据可视化仪表盘">
+    <div class="meta">
+      <span class="lv lv45">LEVEL 4.5 · 数据</span>
+      <h2>数据可视化仪表盘 <code>09-数据可视化仪表盘.svg</code></h2>
+      <p>面积图（渐变填充 + 描边生长 + 光点巡游停在最新值）、环形图（pathLength="100" 把百分比直接写成 dasharray）、柱状图（width 动画）、KPI 卡迷你走势线——加载即"数据流入"。ECharts / D3 导出的正是这种 SVG。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="10-SVG黑科技.svg" alt="SVG 黑科技">
+    <div class="meta">
+      <span class="lv lv6">LEVEL 6 · 边界</span>
+      <h2>SVG 黑科技四连 <code>10-SVG黑科技.svg</code></h2>
+      <p>路径形变（animate d 让 blob 呼吸变形，两颗卫星绕行）、聚光灯（mask 亮度显隐 + 光斑巡游，扫过才"看见"）、文字骑路径（textPath 无缝环形旋转）、等距伪 3D（三个面 × 明度 = 立体感）。创意海报的原料库。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="11-变形记Morph.svg" alt="变形记 Morph">
+    <div class="meta">
+      <span class="lv lv6">LEVEL 6 · 变形</span>
+      <h2>变形记：方生圆 · 圆化星 · B 化 W <code>11-变形记Morph.svg</code></h2>
+      <p>路径 Morphing 专题：正方形→圆→菱形（共线控制点垫直线的万能技巧）、圆→五角星→爱心（同一副 10 锚点骨架）、单线字母 B⇄W（液态中间态 + keyTimes 停顿）、✓⇄✗ 状态切换（颜色随形变渐变）。液态 Logo 的底层原理。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="12-变形记II.svg" alt="变形记 II">
+    <div class="meta">
+      <span class="lv lv6">LEVEL 6+ · 变形进阶</span>
+      <h2>变形记 II：CAT 化 DOG · 图标互变 <code>12-变形记II.svg</code></h2>
+      <p>进阶案例：真词 CAT⇄DOG（六个字母各一副 6 段骨架，3 子路径对 3 子路径逐字母液化）、B⇄X（回描四臂）、聊天气泡⇄信封（尾巴 V 化封口 V）、爱心⇄闪电（粉心充能成金电，填充同步渐变）。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="13-三维.svg" alt="三维">
+    <div class="meta">
+      <span class="lv lv6">LEVEL 6++ · 三维</span>
+      <h2>三维：插画级 · 数学级 · 动画级 <code>13-三维.svg</code></h2>
+      <p>回答"能不能 3D"：等距数据中心插画（LED 心跳）、参数方程圆环面线框（逐点投影 + 深度调透明度）、立方体 90° 样条翻面（顶点发光）、SMIL 关键帧 3D 柱状图摇摆——由 30 行 Node 迷你 3D 引擎生成，零 JS 零 WebGL。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="14-数学变换.svg" alt="数学变换">
+    <div class="meta">
+      <span class="lv lv6">LEVEL 6++ · 数学变换</span>
+      <h2>数学变换：球化环 · 莫比乌斯 · 利萨茹 · 涟漪 <code>14-数学变换.svg</code></h2>
+      <p>3D 参数之舞：同一副 (u,v) 网格上 R 62→0 让圆环面退化成球面（拓扑经典）、莫比乌斯带单侧曲面摇摆、利萨茹曲线相位换舞步、涟漪面 z=A·sin(kr−ωt) 波从圆心荡开——每帧都是真 3D 投影。</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  验证方式：双击任意 .svg 文件用浏览器打开即可；动效（05–14）同样生效。
+  技术边界速记：SMIL 负责自包含动画（animateMotion / animateTransform / animate / 动画 d、points 与 width），CSS 负责描边与过渡，
+  滤镜与遮罩负责质感，symbol/use 负责复用；需要"物理引擎级"交互（拖拽、力导向、真 3D 相机）时才需要 JS 接管。
+</footer>
+</body>
+</html>
