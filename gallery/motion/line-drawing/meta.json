@@ -1,0 +1,12 @@
+{
+  "slug": "line-drawing",
+  "title": "线稿描边动画",
+  "space": "2d",
+  "time": "css",
+  "difficulty": 2,
+  "spellLevel": 2,
+  "tech": ["stroke-dasharray", "stroke-dashoffset", "keyframes", "path"],
+  "description": "线稿被一支看不见的笔逐渐画出来的经典动效，零 JS 单文件",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}
