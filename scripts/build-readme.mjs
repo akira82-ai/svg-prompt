@@ -67,23 +67,13 @@ function wrapSpell(text, width = 22) {
     .join('\n');
 }
 
-// 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）。
-// 标题行右侧 = octicon 复制图标（img align=right 浮动贴右，GitHub 白名单保留 align）；
-// 点击 = details 原地展开提示词全文（零跳转，README 内无 JS 所以"点击进剪贴板"不存在，
-// 展开后选中复制是最接近的交互）。
+// 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）
 function gridCell(e) {
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
-  const spell = escapeHtml(wrapSpell(e.spell));
   return (
     `<td width="320" valign="top">` +
     `<img src="${img}" width="300" alt="${e.title}"><br>` +
-    `<details>` +
-    `<summary title="点击展开提示词，选中后 Ctrl+C 复制">` +
-    `<img src="assets/copy.svg" width="14" height="14" align="right" alt="复制提示词">` +
     `<strong>${e.title}</strong>` +
-    `</summary>` +
-    `<pre>${spell}</pre>` +
-    `</details>` +
     `</td>`
   );
 }
@@ -96,7 +86,19 @@ function gridTable(entries) {
   return ['<table>', ...rows, '</table>'].join('\n');
 }
 
-// 咒语不再出现在 README 里：raw 链接见 gridCell（源文件唯一事实源）
+// 提示词：标题下的深色代码块文本框，全文展示；GitHub 只给顶层代码块注入
+// 原生复制按钮（点击直接进剪贴板），这是平台上唯一的真·一键复制。
+function spellBlock(e) {
+  const fence = e.spell.includes('```') ? '````' : '```';
+  return [
+    `### ${e.title}`,
+    '',
+    `${fence}text`,
+    e.spell,
+    `${fence}`,
+    '',
+  ].join('\n');
+}
 
 function buildGallery() {
   const toc = [];
@@ -111,6 +113,7 @@ function buildGallery() {
       continue;
     }
     body.push(gridTable(entries), '');
+    for (const e of entries) body.push(spellBlock(e), '');
   }
   return { toc: toc.join('\n'), body: body.join('\n').replace(/\n+$/, '\n') };
 }
