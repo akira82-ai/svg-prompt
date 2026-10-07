@@ -7,22 +7,24 @@ svg-prompt/
 ├── gallery/                      # ★ 内容源文件（一图一目录，README 由这里生成）
 │   └── <category>/<entry-slug>/  #   八大分类，英文 kebab-case 条目名
 │       ├── index.svg             #     作品本体，浏览器可直接打开
-│       ├── prompt.md             #     提示词咒语（第一个代码块会被注入 README）
+│       ├── prompt.md             #     条目详情页：标题 + 大图 + 提示词代码块（三段式）
 │       └── meta.json             #     五维标签（机器可读）
 ├── templates/entry/              # 新条目模板：复制这个目录开新条目
 ├── schema/entry.schema.json      # meta.json 的校验规则
-├── scripts/build-readme.mjs      # 扫描 gallery → 生成 README 目录与条目区
+├── scripts/build-readme.mjs      # 扫描 gallery → 生成 README 缩略图画廊
 └── archive/demos/                # 立项前的 14 个技术验证 Demo（存档，非图鉴条目）
 ```
 
-**为什么一图一目录，而不是把内容直接写进 README？** README 是生成物（`<!-- GALLERY:START/END -->` 之间由脚本维护），内容源文件才是唯一事实。目录化让每个投稿是纯增量 PR、文件级复制咒语、锚点导航由脚本统一生成——人永远不手写长 README。
+**两级页面结构**：主 README = 缩略图画廊（每卡链接到条目详情页）；条目详情页 = `prompt.md` 的 GitHub 文件页（标题 + 720px 大图 + 提示词代码块）。原生复制按钮只存在于详情页的顶层代码块——这是 GitHub 平台规则（table/折叠内必失，实测），所以主页不放提示词正文。
+
+**为什么一图一目录，而不是把内容直接写进 README？** README 是生成物（`<!-- GALLERY:START/END -->` 之间由脚本维护），内容源文件才是唯一事实。目录化让每个投稿是纯增量 PR、详情页与作品同目录自包含——人永远不手写长 README。
 
 ## 三件套约定
 
 | 文件 | 要求 |
 |---|---|
 | `index.svg` | 作品本体；浏览器直接打开即渲染；动效条目优先 SMIL / CSS 实现（零 JS） |
-| `prompt.md` | 第一个代码块 = 咒语正文，会被注入 README；可替换部分用 `{花括号}` 标注；正文附复现要点 |
+| `prompt.md` | **三段式详情页**：`# 中文标题` → `<img src="index.svg" width="720">` → `## 提示词` + 第一个代码块（会被脚本读取校验）；保持这个结构，不要加别的小节 |
 | `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致 |
 
 ## 五维标签

@@ -1,8 +1,8 @@
 # 滤镜材质特效
 
-> 难度 L5 · 咒语等级 L3
+<img src="index.svg" width="720" alt="滤镜材质特效">
 
-## 咒语
+## 提示词
 
 ```
 用 SVG 展示三种滤镜材质特效，全部零位图实时计算：
@@ -12,12 +12,3 @@
 - 水波扭曲：一行文字 + feTurbulence + feDisplacementMap，baseFrequency 加缓慢 <animate> 像在水中晃动
 画布 1200×800 深色底，每块标注名称。
 ```
-
-## 效果
-
-![滤镜材质特效](index.svg)
-
-## 复现要点
-
-- gooey 的灵魂是 blur→contrast 两连：只 blur 不拉 alpha 对比度，出来的是糊团不是液态吸附
-- fePointLight 的 <animate> 要写 attributeName="z"——光在 z 轴呼吸，高光才会"游走"
