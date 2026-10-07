@@ -1,0 +1,12 @@
+{
+  "slug": "entry-slug",
+  "title": "条目标题",
+  "space": "2d",
+  "time": "static",
+  "difficulty": 1,
+  "spellLevel": 1,
+  "tech": [],
+  "description": "一句话描述这个图形是什么、亮点在哪",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}
