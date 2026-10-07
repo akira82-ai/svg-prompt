@@ -28,6 +28,9 @@ const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().re
 const escapeHtml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// 提示词 raw 地址：复制图标指向这里（README 内不放咒语正文，源文件是唯一事实源）
+const RAW_BASE = 'https://raw.githubusercontent.com/akira82-ai/svg-prompt/main';
+
 function readEntries(category) {
   const dir = join(root, 'gallery', category);
   if (!existsSync(dir)) return [];
@@ -43,12 +46,16 @@ function readEntries(category) {
 }
 
 // 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）
+// 标题旁 = octicon 复制图标，链接到提示词 raw 纯文本页；title 属性 = 悬停 tooltip
 function gridCell(e) {
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
+  const raw = `${RAW_BASE}/gallery/${e.category}/${e.dir}/prompt.md`;
   return (
     `<td width="320" valign="top">` +
     `<img src="${img}" width="300" alt="${e.title}"><br>` +
-    `<strong>${e.title}</strong>` +
+    `<strong>${e.title}</strong> ` +
+    `<a href="${raw}" title="点击复制提示词：打开后 Ctrl+A 全选、Ctrl+C 复制">` +
+    `<img src="assets/copy.svg" width="14" height="14" alt="复制提示词"></a>` +
     `</td>`
   );
 }
@@ -61,18 +68,7 @@ function gridTable(entries) {
   return ['<table>', ...rows, '</table>'].join('\n');
 }
 
-// 咒语：直接列在图卡底下，完整全文 + GitHub 原生复制按钮
-function spellBlock(e) {
-  const fence = e.spell.includes('```') ? '````' : '```';
-  return [
-    `### ${e.title}`,
-    '',
-    `${fence}text`,
-    e.spell,
-    `${fence}`,
-    '',
-  ].join('\n');
-}
+// 咒语不再出现在 README 里：raw 链接见 gridCell（源文件唯一事实源）
 
 function buildGallery() {
   const toc = [];
@@ -87,7 +83,6 @@ function buildGallery() {
       continue;
     }
     body.push(gridTable(entries), '');
-    for (const e of entries) body.push(spellBlock(e), '');
   }
   return { toc: toc.join('\n'), body: body.join('\n').replace(/\n+$/, '\n') };
 }
