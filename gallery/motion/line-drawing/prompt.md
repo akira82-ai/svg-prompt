@@ -1,4 +1,4 @@
-# 线稿描边动画
+# 线稿描边动画 `CSS 动效` `2D`
 
 <img src="index.svg" width="720" alt="线稿描边动画">
 

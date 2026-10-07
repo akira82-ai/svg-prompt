@@ -1,4 +1,4 @@
-# SMIL 动效面板
+# SMIL 动效面板 `SMIL 动效` `2D`
 
 <img src="index.svg" width="720" alt="SMIL 动效面板">
 

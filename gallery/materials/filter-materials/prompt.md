@@ -1,4 +1,4 @@
-# 滤镜材质特效
+# 滤镜材质特效 `SMIL 动效` `2D`
 
 <img src="index.svg" width="720" alt="滤镜材质特效">
 

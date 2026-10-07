@@ -26,6 +26,14 @@ const CATEGORIES = [
 // GitHub 锚点规则：小写；删去字母/数字/空格/连字符/下划线以外的字符；空格变 -
 const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().replace(/ +/g, '-');
 
+// 分类内默认排序：静态 2D → 动态 2D → 静态 3D → 动态 3D（用户定稿）
+const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
+const SPACE_RANK = { '2d': 0, '3d': 1 };
+const TIME_LABEL = { static: '静态', smil: 'SMIL 动效', css: 'CSS 动效', js: 'JS 动效' };
+const byTimeThenSpace = (a, b) =>
+  (TIME_RANK[a.time] ?? 9) - (TIME_RANK[b.time] ?? 9) ||
+  (SPACE_RANK[a.space] ?? 9) - (SPACE_RANK[b.space] ?? 9);
+
 function readEntries(category) {
   const dir = join(root, 'gallery', category);
   if (!existsSync(dir)) return [];
@@ -44,10 +52,11 @@ function readEntries(category) {
 function gridCell(e) {
   const href = `gallery/${e.category}/${e.dir}/prompt.md`;
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
+  const tag = `<code>${TIME_LABEL[e.time] ?? e.time}</code> <code>${(e.space || '2d').toUpperCase()}</code>`;
   return (
     `<td width="320" valign="top">` +
     `<a href="${href}"><img src="${img}" width="300" alt="${e.title}"></a><br>` +
-    `<a href="${href}"><strong>${e.title}</strong></a>` +
+    `<a href="${href}"><strong>${e.title}</strong></a> ${tag}` +
     `</td>`
   );
 }
@@ -64,7 +73,7 @@ function buildGallery() {
   const toc = [];
   const body = [];
   for (const [cat, name] of CATEGORIES) {
-    const entries = readEntries(cat);
+    const entries = readEntries(cat).sort(byTimeThenSpace);
     const catAnchor = slug(name);
     toc.push(`- **[${name}](#${encodeURI(catAnchor)})** <sub>${cat} · ${entries.length} 条</sub>`);
     body.push(`## ${name}`, '');

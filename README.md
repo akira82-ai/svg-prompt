@@ -20,25 +20,25 @@
 ## 基础图形
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/basics/basic-shapes/prompt.md"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"></a><br><a href="gallery/basics/basic-shapes/prompt.md"><strong>七大基础图形</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/basics/basic-shapes/prompt.md"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"></a><br><a href="gallery/basics/basic-shapes/prompt.md"><strong>七大基础图形</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ## UI 组件
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/ui/glassmorphism/prompt.md"><img src="gallery/ui/glassmorphism/index.svg" width="300" alt="渐变与玻璃质感"></a><br><a href="gallery/ui/glassmorphism/prompt.md"><strong>渐变与玻璃质感</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/ui/glassmorphism/prompt.md"><img src="gallery/ui/glassmorphism/index.svg" width="300" alt="渐变与玻璃质感"></a><br><a href="gallery/ui/glassmorphism/prompt.md"><strong>渐变与玻璃质感</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ## 品牌排版
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/branding/procedural-textures/prompt.md"><img src="gallery/branding/procedural-textures/index.svg" width="300" alt="程序化纹理与图案"></a><br><a href="gallery/branding/procedural-textures/prompt.md"><strong>程序化纹理与图案</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/branding/procedural-textures/prompt.md"><img src="gallery/branding/procedural-textures/index.svg" width="300" alt="程序化纹理与图案"></a><br><a href="gallery/branding/procedural-textures/prompt.md"><strong>程序化纹理与图案</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ## 图表报表
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/charts/animated-architecture/prompt.md"><img src="gallery/charts/animated-architecture/index.svg" width="300" alt="动态架构图"></a><br><a href="gallery/charts/animated-architecture/prompt.md"><strong>动态架构图</strong></a></td><td width="320" valign="top"><a href="gallery/charts/dashboard/prompt.md"><img src="gallery/charts/dashboard/index.svg" width="300" alt="数据可视化仪表盘"></a><br><a href="gallery/charts/dashboard/prompt.md"><strong>数据可视化仪表盘</strong></a></td><td width="320" valign="top"><a href="gallery/charts/system-architecture/prompt.md"><img src="gallery/charts/system-architecture/index.svg" width="300" alt="复杂系统架构图"></a><br><a href="gallery/charts/system-architecture/prompt.md"><strong>复杂系统架构图</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/charts/system-architecture/prompt.md"><img src="gallery/charts/system-architecture/index.svg" width="300" alt="复杂系统架构图"></a><br><a href="gallery/charts/system-architecture/prompt.md"><strong>复杂系统架构图</strong></a> <code>静态</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/charts/animated-architecture/prompt.md"><img src="gallery/charts/animated-architecture/index.svg" width="300" alt="动态架构图"></a><br><a href="gallery/charts/animated-architecture/prompt.md"><strong>动态架构图</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/charts/dashboard/prompt.md"><img src="gallery/charts/dashboard/index.svg" width="300" alt="数据可视化仪表盘"></a><br><a href="gallery/charts/dashboard/prompt.md"><strong>数据可视化仪表盘</strong></a> <code>SMIL 动效</code> <code>2D</code></td></tr>
 </table>
 
 ## 信息可视化
@@ -48,20 +48,20 @@
 ## 实物模拟
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/materials/filter-materials/prompt.md"><img src="gallery/materials/filter-materials/index.svg" width="300" alt="滤镜材质特效"></a><br><a href="gallery/materials/filter-materials/prompt.md"><strong>滤镜材质特效</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/materials/filter-materials/prompt.md"><img src="gallery/materials/filter-materials/index.svg" width="300" alt="滤镜材质特效"></a><br><a href="gallery/materials/filter-materials/prompt.md"><strong>滤镜材质特效</strong></a> <code>SMIL 动效</code> <code>2D</code></td></tr>
 </table>
 
 ## 动效艺术
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/motion/line-drawing/prompt.md"><img src="gallery/motion/line-drawing/index.svg" width="300" alt="线稿描边动画"></a><br><a href="gallery/motion/line-drawing/prompt.md"><strong>线稿描边动画</strong></a></td><td width="320" valign="top"><a href="gallery/motion/morph-ii/prompt.md"><img src="gallery/motion/morph-ii/index.svg" width="300" alt="变形记 II"></a><br><a href="gallery/motion/morph-ii/prompt.md"><strong>变形记 II</strong></a></td><td width="320" valign="top"><a href="gallery/motion/path-morph/prompt.md"><img src="gallery/motion/path-morph/index.svg" width="300" alt="变形记 Morph"></a><br><a href="gallery/motion/path-morph/prompt.md"><strong>变形记 Morph</strong></a></td></tr>
-<tr><td width="320" valign="top"><a href="gallery/motion/smil-panel/prompt.md"><img src="gallery/motion/smil-panel/index.svg" width="300" alt="SMIL 动效面板"></a><br><a href="gallery/motion/smil-panel/prompt.md"><strong>SMIL 动效面板</strong></a></td><td width="320" valign="top"><a href="gallery/motion/svg-mechanics/prompt.md"><img src="gallery/motion/svg-mechanics/index.svg" width="300" alt="SVG 黑科技四连"></a><br><a href="gallery/motion/svg-mechanics/prompt.md"><strong>SVG 黑科技四连</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/motion/morph-ii/prompt.md"><img src="gallery/motion/morph-ii/index.svg" width="300" alt="变形记 II"></a><br><a href="gallery/motion/morph-ii/prompt.md"><strong>变形记 II</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/motion/path-morph/prompt.md"><img src="gallery/motion/path-morph/index.svg" width="300" alt="变形记 Morph"></a><br><a href="gallery/motion/path-morph/prompt.md"><strong>变形记 Morph</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/motion/smil-panel/prompt.md"><img src="gallery/motion/smil-panel/index.svg" width="300" alt="SMIL 动效面板"></a><br><a href="gallery/motion/smil-panel/prompt.md"><strong>SMIL 动效面板</strong></a> <code>SMIL 动效</code> <code>2D</code></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/motion/svg-mechanics/prompt.md"><img src="gallery/motion/svg-mechanics/index.svg" width="300" alt="SVG 黑科技四连"></a><br><a href="gallery/motion/svg-mechanics/prompt.md"><strong>SVG 黑科技四连</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/motion/line-drawing/prompt.md"><img src="gallery/motion/line-drawing/index.svg" width="300" alt="线稿描边动画"></a><br><a href="gallery/motion/line-drawing/prompt.md"><strong>线稿描边动画</strong></a> <code>CSS 动效</code> <code>2D</code></td></tr>
 </table>
 
 ## 高级数学
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/math/three-d/prompt.md"><img src="gallery/math/three-d/index.svg" width="300" alt="三维投影"></a><br><a href="gallery/math/three-d/prompt.md"><strong>三维投影</strong></a></td><td width="320" valign="top"><a href="gallery/math/topology-deform/prompt.md"><img src="gallery/math/topology-deform/index.svg" width="300" alt="拓扑形变"></a><br><a href="gallery/math/topology-deform/prompt.md"><strong>拓扑形变</strong></a></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/math/three-d/prompt.md"><img src="gallery/math/three-d/index.svg" width="300" alt="三维投影"></a><br><a href="gallery/math/three-d/prompt.md"><strong>三维投影</strong></a> <code>SMIL 动效</code> <code>3D</code></td><td width="320" valign="top"><a href="gallery/math/topology-deform/prompt.md"><img src="gallery/math/topology-deform/index.svg" width="300" alt="拓扑形变"></a><br><a href="gallery/math/topology-deform/prompt.md"><strong>拓扑形变</strong></a> <code>SMIL 动效</code> <code>3D</code></td></tr>
 </table>
 <!-- GALLERY:END -->
 

@@ -1,4 +1,4 @@
-# 动态架构图
+# 动态架构图 `SMIL 动效` `2D`
 
 <img src="index.svg" width="720" alt="动态架构图">
 
