@@ -1,0 +1,14 @@
+{
+  "slug": "boolean-shapes",
+  "title": "相减与挖洞",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "fill-rule-evenodd",
+    "mask",
+    "clipPath"
+  ],
+  "description": "圆环、月牙、透镜——两个圆的三种布尔关系与三种实现",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

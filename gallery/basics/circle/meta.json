@@ -1,0 +1,15 @@
+{
+  "slug": "circle",
+  "title": "圆 circle",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "circle",
+    "cx",
+    "cy",
+    "r"
+  ],
+  "description": "圆心与半径：cx/cy 定位置，r 定大小，同心圆与三种填充态",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

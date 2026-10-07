@@ -1,0 +1,14 @@
+{
+  "slug": "line",
+  "title": "直线 line",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "line",
+    "stroke-width",
+    "stroke-linecap"
+  ],
+  "description": "两个点一条线：粗细谱系与三种线帽（平头 / 方头 / 圆头）",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

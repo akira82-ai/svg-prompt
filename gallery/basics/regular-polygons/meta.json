@@ -1,0 +1,14 @@
+{
+  "slug": "regular-polygons",
+  "title": "正多边形家族",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "polygon",
+    "正多边形顶点公式",
+    "stroke-linejoin"
+  ],
+  "description": "正三角形到正八边形：一个顶点公式生成整族，外加圆角变体",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

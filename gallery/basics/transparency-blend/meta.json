@@ -1,0 +1,13 @@
+{
+  "slug": "transparency-blend",
+  "title": "透明叠色",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "fill-opacity",
+    "半透明叠加"
+  ],
+  "description": "fill-opacity 让颜色互相穿透——三圆叠出七种色区",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

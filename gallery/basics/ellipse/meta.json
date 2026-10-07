@@ -1,0 +1,15 @@
+{
+  "slug": "ellipse",
+  "title": "椭圆 ellipse",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "ellipse",
+    "rx",
+    "ry",
+    "transform"
+  ],
+  "description": "rx 与 ry 的比例游戏：从正圆到扁椭圆，再到旋转椭圆",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}
