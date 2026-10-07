@@ -3,8 +3,6 @@
   "title": "七大基础图形",
   "space": "2d",
   "time": "static",
-  "difficulty": 1,
-  "spellLevel": 1,
   "tech": ["rect", "circle", "ellipse", "line", "polyline", "polygon", "path", "text"],
   "description": "一张图认全 SVG 七种基本形状与描边填充风格",
   "author": "airay1015",

@@ -1,9 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "svg-prompt entry meta",
-  "description": "gallery/<category>/<entry>/meta.json 的校验规则。五维标签：space(空间) × time(时间) + category(目录即分类) + difficulty(难度 L1-L6) + spellLevel(咒语等级 L1-L3)。",
+  "description": "gallery/<category>/<entry>/meta.json 的校验规则。标签维度：space(空间 2D/3D) × time(时间 静/动) + category(目录即分类) + tech(技术标签)。",
   "type": "object",
-  "required": ["slug", "title", "space", "time", "difficulty", "spellLevel", "description"],
+  "required": [
+    "slug",
+    "title",
+    "space",
+    "time",
+    "description"
+  ],
   "properties": {
     "slug": {
       "type": "string",
@@ -15,28 +21,26 @@
       "description": "中文标题"
     },
     "space": {
-      "enum": ["2d", "3d"],
+      "enum": [
+        "2d",
+        "3d"
+      ],
       "description": "空间维度：是否使用三维投影/光照/拓扑变换"
     },
     "time": {
-      "enum": ["static", "smil", "css", "js"],
+      "enum": [
+        "static",
+        "smil",
+        "css",
+        "js"
+      ],
       "description": "时间维度：static 静态 / smil 内嵌动画（零依赖） / css 动画 / js 驱动动画"
-    },
-    "difficulty": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 6,
-      "description": "实现难度 L1(基础形状) 至 L6(拓扑形变/系统级)"
-    },
-    "spellLevel": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 3,
-      "description": "咒语等级：L1 一句话直出 / L2 结构化模板 / L3 系统化流水线"
     },
     "tech": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "用到的技术标签，如 path / feTurbulence / mask / textPath"
     },
     "description": {

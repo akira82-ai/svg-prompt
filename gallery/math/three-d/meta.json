@@ -3,8 +3,6 @@
   "title": "三维投影",
   "space": "3d",
   "time": "smil",
-  "difficulty": 6,
-  "spellLevel": 3,
   "tech": ["等距投影", "旋转矩阵", "SMIL 关键帧", "脚本生成坐标"],
   "description": "等距插画、参数方程投影、关键帧插值——零 JS 零 WebGL 的三种 3D 姿势",
   "author": "airay1015",

@@ -3,8 +3,6 @@
   "title": "拓扑形变",
   "space": "3d",
   "time": "smil",
-  "difficulty": 6,
-  "spellLevel": 3,
   "tech": ["参数方程", "拓扑形变", "SMIL 关键帧", "脚本生成坐标"],
   "description": "球面⇄圆环面、莫比乌斯带、利萨茹、涟漪——每一帧都是真实 3D 的数学之舞",
   "author": "airay1015",

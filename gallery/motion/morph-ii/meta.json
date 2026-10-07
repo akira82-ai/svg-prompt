@@ -3,8 +3,6 @@
   "title": "变形记 II",
   "space": "2d",
   "time": "smil",
-  "difficulty": 6,
-  "spellLevel": 3,
   "tech": ["animate", "path", "多子路径插值"],
   "description": "CAT⇄DOG 逐字母液态书法、B⇄X、图标互变——多子路径对多子路径的进阶 morph",
   "author": "airay1015",
