@@ -28,9 +28,6 @@ const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().re
 const escapeHtml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// 提示词 raw 地址：复制图标指向这里（README 内不放咒语正文，源文件是唯一事实源）
-const RAW_BASE = 'https://raw.githubusercontent.com/akira82-ai/svg-prompt/main';
-
 function readEntries(category) {
   const dir = join(root, 'gallery', category);
   if (!existsSync(dir)) return [];
@@ -45,17 +42,48 @@ function readEntries(category) {
     });
 }
 
-// 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）
-// 标题旁 = octicon 复制图标，链接到提示词 raw 纯文本页；title 属性 = 悬停 tooltip
+// 提示词折行：pre 无 CSS 可用（style 被剥），不折行的长句会横向撑破卡片。
+// 按"显示宽度"贪心断行：中文全宽记 1，ASCII 半宽记 0.5，一行约 22 个中文位。
+function wrapSpell(text, width = 22) {
+  return text
+    .split('\n')
+    .map((para) => {
+      const lines = [];
+      let line = '';
+      let w = 0;
+      for (const ch of para) {
+        const cw = /[\x20-\x7e]/.test(ch) ? 0.5 : 1;
+        if (w + cw > width) {
+          lines.push(line);
+          line = '';
+          w = 0;
+        }
+        line += ch;
+        w += cw;
+      }
+      if (line) lines.push(line);
+      return lines.join('\n');
+    })
+    .join('\n');
+}
+
+// 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）。
+// 标题行右侧 = octicon 复制图标（img align=right 浮动贴右，GitHub 白名单保留 align）；
+// 点击 = details 原地展开提示词全文（零跳转，README 内无 JS 所以"点击进剪贴板"不存在，
+// 展开后选中复制是最接近的交互）。
 function gridCell(e) {
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
-  const raw = `${RAW_BASE}/gallery/${e.category}/${e.dir}/prompt.md`;
+  const spell = escapeHtml(wrapSpell(e.spell));
   return (
     `<td width="320" valign="top">` +
     `<img src="${img}" width="300" alt="${e.title}"><br>` +
-    `<strong>${e.title}</strong> ` +
-    `<a href="${raw}" title="点击复制提示词：打开后 Ctrl+A 全选、Ctrl+C 复制">` +
-    `<img src="assets/copy.svg" width="14" height="14" alt="复制提示词"></a>` +
+    `<details>` +
+    `<summary title="点击展开提示词，选中后 Ctrl+C 复制">` +
+    `<img src="assets/copy.svg" width="14" height="14" align="right" alt="复制提示词">` +
+    `<strong>${e.title}</strong>` +
+    `</summary>` +
+    `<pre>${spell}</pre>` +
+    `</details>` +
     `</td>`
   );
 }
