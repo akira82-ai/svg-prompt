@@ -1,0 +1,12 @@
+{
+  "slug": "filter-materials",
+  "title": "滤镜材质特效",
+  "space": "2d",
+  "time": "smil",
+  "difficulty": 5,
+  "spellLevel": 3,
+  "tech": ["feGaussianBlur", "feColorMatrix", "feSpecularLighting", "fePointLight", "feTurbulence", "feDisplacementMap"],
+  "description": "液态融合、金属打光、水波扭曲——20 个滤镜原语串联出的矢量版 Photoshop",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

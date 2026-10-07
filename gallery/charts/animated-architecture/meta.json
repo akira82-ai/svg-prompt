@@ -1,0 +1,12 @@
+{
+  "slug": "animated-architecture",
+  "title": "动态架构图",
+  "space": "2d",
+  "time": "smil",
+  "difficulty": 6,
+  "spellLevel": 3,
+  "tech": ["animateMotion", "animate", "marker", "path"],
+  "description": "数据包沿真实布线流动、服务心跳灯、标题流光——与静态架构图同一张骨架叠上 SMIL 动画层",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

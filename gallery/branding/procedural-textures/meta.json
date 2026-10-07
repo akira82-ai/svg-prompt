@@ -1,0 +1,12 @@
+{
+  "slug": "procedural-textures",
+  "title": "程序化纹理与图案",
+  "space": "2d",
+  "time": "static",
+  "difficulty": 3,
+  "spellLevel": 2,
+  "tech": ["feTurbulence", "feColorMatrix", "pattern", "feDisplacementMap"],
+  "description": "星空、噪点渐变、木纹、平铺图案——feTurbulence 用数学噪声无中生有，文件里没有一张位图",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

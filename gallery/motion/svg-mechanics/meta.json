@@ -1,0 +1,12 @@
+{
+  "slug": "svg-mechanics",
+  "title": "SVG 黑科技四连",
+  "space": "2d",
+  "time": "smil",
+  "difficulty": 6,
+  "spellLevel": 3,
+  "tech": ["mask", "animateMotion", "animate", "textPath", "transform"],
+  "description": "mask 聚光灯、路径形变、文字骑路径、等距伪 3D——机制级能力，纯代码海报的原料",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

@@ -61,10 +61,11 @@ function gridCell(e) {
   const href = `#${encodeURI(e.anchor)}`;
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
   // td 内容保持单行 HTML：GitHub 表格单元格里只适合简单内容，多块级结构会撑破布局
+  // 全部左对齐（不设 align）：一行不满 4 卡时其余留白，卡片依旧靠左
   return (
-    `<td width="25%" valign="top">` +
-    `<p align="center"><a href="${href}"><img src="${img}" width="220" alt="${e.title}"></a><br>` +
-    `<strong><a href="${href}">${e.title}</a></strong></p>` +
+    `<td width="260" valign="top">` +
+    `<a href="${href}"><img src="${img}" width="220" alt="${e.title}"></a><br>` +
+    `<strong><a href="${href}">${e.title}</a></strong><br>` +
     `<sub>${escapeHtml(summarize(e.spell))}</sub>` +
     `</td>`
   );
@@ -85,7 +86,7 @@ function detailSection(e) {
   return [
     `### ${e.title}`,
     '',
-    `<p align="center"><img src="${img}" width="400" alt="${e.title}"></p>`,
+    `<img src="${img}" width="400" alt="${e.title}">`,
     '',
     `${fence}text`,
     e.spell,

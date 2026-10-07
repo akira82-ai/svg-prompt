@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef1fb"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f8ef7"/>
+      <stop offset="0.55" stop-color="#7a5cf0"/>
+      <stop offset="1" stop-color="#e65cc7"/>
+    </linearGradient>
+    <radialGradient id="glyphGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7a5cf0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7a5cf0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2bb3a3" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#2bb3a3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8ef7"/>
+      <stop offset="0.6" stop-color="#7a5cf0"/>
+      <stop offset="1" stop-color="#e65cc7"/>
+    </linearGradient>
+    <linearGradient id="pillA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8ef7"/>
+      <stop offset="1" stop-color="#7a5cf0"/>
+    </linearGradient>
+    <linearGradient id="pillB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2bb3a3"/>
+      <stop offset="1" stop-color="#3f8ef7"/>
+    </linearGradient>
+    <linearGradient id="pillC" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7b32b"/>
+      <stop offset="1" stop-color="#f65e5e"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#2a3550" flood-opacity="0.16"/>
+    </filter>
+    <filter id="tinyShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2a3550" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <text x="60" y="76" font-size="28" font-weight="700" fill="#1c2733">渐变 · 玻璃 · 光晕 —— "设计感"的全部来源</text>
+  <text x="60" y="104" font-size="14" fill="#6b7785">Level 2 — linearGradient / radialGradient / feDropShadow / 半透明叠加，纯 SVG 实现品牌视觉</text>
+
+  <!-- 左：Logo 卡片 -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="150" width="420" height="430" rx="24" fill="#ffffff" stroke="#e7ebf2"/>
+  </g>
+  <g filter="url(#tinyShadow)">
+    <rect x="185" y="205" width="210" height="210" rx="48" fill="url(#logoGrad)"/>
+  </g>
+  <circle cx="290" cy="310" r="86" fill="url(#glyphGlow)"/>
+  <path d="M290,258 C297,288 306,297 336,310 C306,323 297,332 290,362 C283,332 274,323 244,310 C274,297 283,288 290,258 Z" fill="#ffffff"/>
+  <circle cx="356" cy="248" r="7" fill="#ffffff" opacity="0.85"/>
+  <text x="290" y="480" font-size="22" font-weight="700" fill="#1c2733" text-anchor="middle">Aurora</text>
+  <text x="290" y="506" font-size="13" fill="#8a94a3" text-anchor="middle" letter-spacing="4">DESIGN SYSTEM</text>
+  <text x="290" y="545" font-size="13" fill="#6b7785" text-anchor="middle">图标 = 渐变底座 + 光晕 + 四角星 path</text>
+
+  <!-- 右：品牌横幅区 -->
+  <circle cx="720" cy="430" r="150" fill="url(#blobA)"/>
+  <circle cx="1010" cy="360" r="120" fill="url(#blobB)"/>
+
+  <text x="580" y="220" font-size="64" font-weight="800" fill="url(#textGrad)">Aurora</text>
+  <text x="582" y="252" font-size="15" fill="#6b7785" font-family="SFMono-Regular, Menlo, monospace">文字也能填充渐变：fill="url(#textGrad)"</text>
+
+  <!-- 玻璃卡片 -->
+  <g filter="url(#tinyShadow)">
+    <rect x="580" y="300" width="540" height="150" rx="20" fill="#ffffff" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5"/>
+  </g>
+  <text x="612" y="346" font-size="18" font-weight="700" fill="#232f45">毛玻璃卡片（Glassmorphism）</text>
+  <text x="612" y="374" font-size="13.5" fill="#44506a">彩色光斑放在卡片下层 + 白色半透明矩形叠上去，</text>
+  <text x="612" y="394" font-size="13.5" fill="#44506a">就是 macOS 风格的磨砂玻璃 —— 没有一行 CSS。</text>
+  <text x="612" y="422" font-size="12.5" fill="#8a94a3" font-family="SFMono-Regular, Menlo, monospace">fill-opacity="0.55" · stroke-opacity="0.9"</text>
+
+  <!-- 渐变按钮组 -->
+  <g filter="url(#tinyShadow)">
+    <rect x="580" y="490" width="160" height="52" rx="26" fill="url(#pillA)"/>
+    <rect x="770" y="490" width="160" height="52" rx="26" fill="url(#pillB)"/>
+    <rect x="960" y="490" width="160" height="52" rx="26" fill="url(#pillC)"/>
+  </g>
+  <text x="660" y="523" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">开始使用</text>
+  <text x="850" y="523" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">查看文档</text>
+  <text x="1040" y="523" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">联系我们</text>
+
+  <!-- 图标行 -->
+  <g filter="url(#tinyShadow)">
+    <circle cx="610" cy="610" r="26" fill="url(#logoGrad)"/>
+    <circle cx="690" cy="610" r="26" fill="url(#pillB)"/>
+    <circle cx="770" cy="610" r="26" fill="url(#pillC)"/>
+  </g>
+  <path d="M610,597 L614,606 L623,610 L614,614 L610,623 L606,614 L597,610 L606,606 Z" fill="#ffffff"/>
+  <path d="M690,600 C695,606 700,609 706,610 C700,611 695,614 690,620 C685,614 680,611 674,610 C680,609 685,606 690,600 Z" fill="#ffffff"/>
+  <circle cx="770" cy="610" r="7" fill="#ffffff"/>
+  <text x="840" y="606" font-size="13.5" fill="#44506a">同一套渐变复用到按钮、图标、文字 ——</text>
+  <text x="840" y="626" font-size="13.5" fill="#44506a">defs 定义一次，全部 url(#) 引用。</text>
+
+  <text x="60" y="742" font-size="14" fill="#6b7785">结论：网页级"现代设计感"（渐变 logo、玻璃拟态、光晕投影）SVG 原生全包，且全部可无限缩放。</text>
+  <text x="60" y="764" font-size="13" fill="#9aa4b1">技术点：linearGradient · radialGradient · gradientTransform · fill-opacity · feDropShadow · defs 复用</text>
+</svg>

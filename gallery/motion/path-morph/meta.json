@@ -1,0 +1,12 @@
+{
+  "slug": "path-morph",
+  "title": "变形记 Morph",
+  "space": "2d",
+  "time": "smil",
+  "difficulty": 6,
+  "spellLevel": 2,
+  "tech": ["animate", "path", "贝塞尔骨架"],
+  "description": "方⇄圆⇄菱、圆→五角星→爱心——同一副锚点骨架的坐标插值，液态 Logo 的原理",
+  "author": "airay1015",
+  "date": "2026-10-07"
+}

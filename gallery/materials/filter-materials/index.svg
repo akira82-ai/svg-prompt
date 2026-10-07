@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="metalG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f7fc"/>
+      <stop offset="0.48" stop-color="#aeb9c9"/>
+      <stop offset="0.52" stop-color="#78849a"/>
+      <stop offset="1" stop-color="#d7dee8"/>
+    </linearGradient>
+    <filter id="goo" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="gooey"/>
+      <feComposite in="SourceGraphic" in2="gooey" operator="atop"/>
+    </filter>
+    <filter id="emboss" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="soft"/>
+      <feSpecularLighting in="soft" surfaceScale="5" specularConstant="0.95" specularExponent="15" lighting-color="#ffffff" result="spec">
+        <fePointLight x="890" y="170" z="150">
+          <animate attributeName="z" values="150;300;150" dur="5s" repeatCount="indefinite"/>
+        </fePointLight>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+      <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+    <filter id="wavy" x="-20%" y="-40%" width="140%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.09" numOctaves="2" seed="2" result="n">
+        <animate attributeName="baseFrequency" values="0.02 0.09;0.028 0.115;0.02 0.09" dur="6s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="15" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="neon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0b101d"/>
+  <text x="60" y="64" font-size="28" font-weight="700" fill="#e8eef7">滤镜特效 — SVG 内置的"矢量 Photoshop"</text>
+  <text x="60" y="92" font-size="14" fill="#8fa0b8">Level 5c — 20 个滤镜原语自由串联，把几何变成材质：液态 / 金属 / 水波 / 霓虹，全部实时计算，零位图</text>
+
+  <!-- P1 液态融合 gooey -->
+  <g>
+    <rect x="60" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="146" font-size="18" font-weight="700" fill="#e8eef7">液态融合（Metaball）</text>
+    <g filter="url(#goo)">
+      <circle cx="210" cy="250" r="26" fill="#f65e5e">
+        <animate attributeName="cx" values="210;300;210" dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="300" cy="235" r="21" fill="#f7b32b">
+        <animate attributeName="cx" values="300;352;300" dur="3.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="395" cy="265" r="24" fill="#3f8ef7">
+        <animate attributeName="cx" values="395;330;395" dur="5.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <text x="84" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">feGaussianBlur + feColorMatrix(alpha 对比度) → 相互"吸附"</text>
+  </g>
+
+  <!-- P2 金属打光 -->
+  <g>
+    <rect x="620" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="644" y="146" font-size="18" font-weight="700" fill="#e8eef7">金属打光（3D 光斑）</text>
+    <text x="890" y="290" font-size="120" font-weight="800" letter-spacing="8" text-anchor="middle" fill="url(#metalG)" filter="url(#emboss)">SVG</text>
+    <text x="644" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">feSpecularLighting + fePointLight（光源 z 轴呼吸 → 高光游走）</text>
+  </g>
+
+  <!-- P3 水波扭曲 -->
+  <g>
+    <rect x="60" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="466" font-size="18" font-weight="700" fill="#e8eef7">水波扭曲（手写抖动）</text>
+    <text x="330" y="590" font-size="46" font-weight="800" text-anchor="middle" fill="#e8eef7" filter="url(#wavy)">AI 磊叔的 SVG 课</text>
+    <text x="84" y="686" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">feTurbulence → feDisplacementMap，baseFrequency 也在动</text>
+  </g>
+
+  <!-- P4 霓虹辉光 -->
+  <g>
+    <rect x="620" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="644" y="466" font-size="18" font-weight="700" fill="#e8eef7">霓虹辉光</text>
+    <text x="890" y="600" font-size="96" font-weight="800" letter-spacing="14" text-anchor="middle" fill="none" stroke="#ff5ea0" stroke-width="3" filter="url(#neon)">NEON
+      <animate attributeName="opacity" values="1;1;0.5;1;0.75;1" keyTimes="0;0.55;0.6;0.7;0.85;1" dur="3.2s" repeatCount="indefinite"/>
+    </text>
+    <text x="644" y="686" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">feGaussianBlur × 2 + feMerge 辉光叠加 + opacity 闪烁</text>
+  </g>
+
+  <text x="60" y="756" font-size="14" fill="#c6d2e4">滤镜是 SVG "高级感"的分水岭 —— 它让纯几何图形拥有了材质与物理感。</text>
+  <text x="60" y="778" font-size="14" fill="#c6d2e4">同样的技术套在架构图 / PPT 页面上，就是"科技感大屏"和"发布会 keynote"的质感来源。</text>
+</svg>
