@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 把 gallery/ 下所有条目自动拼装进 README 的生成区。
-// 布局：每个分类 = 4 列卡片网格（图 + 标题 + 咒语摘要）+ 详情区（图 + 完整咒语代码块）。
-// 卡片锚点跳详情；复制按钮只存在于顶层代码块（GitHub 平台限制，实测 table 内 pre 无按钮）。
+// 布局（用户定稿）：每个分类 = 一行 3 张图卡（图 + 纯标题，无链接无摘要）+ 底下直接依次列出完整咒语代码块。
+// 图只出现一次；复制按钮由 GitHub 注入在顶层代码块上（table 内 pre 无按钮，平台限制）。
 // README 中 <!-- GALLERY:START --> 与 <!-- GALLERY:END --> 之间的内容由本脚本维护，勿手改。
 // 用法：node scripts/build-readme.mjs
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
@@ -28,15 +28,6 @@ const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().re
 const escapeHtml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// 重复标题的锚点加 -2/-3 后缀（与 GitHub 的重复标题消歧一致）
-const usedAnchors = new Map();
-function anchorOf(title) {
-  const base = slug(title) || 'entry';
-  const n = (usedAnchors.get(base) ?? 0) + 1;
-  usedAnchors.set(base, n);
-  return n === 1 ? base : `${base}-${n}`;
-}
-
 function readEntries(category) {
   const dir = join(root, 'gallery', category);
   if (!existsSync(dir)) return [];
@@ -51,42 +42,30 @@ function readEntries(category) {
     });
 }
 
-// 摘要：压平空白取前 60 字，超出加省略号（约等于 245px 卡片里的 3 行）
-function summarize(spell) {
-  const flat = spell.replace(/\s+/g, ' ').trim();
-  return flat.length > 60 ? flat.slice(0, 60) + '…' : flat;
-}
-
+// 图卡：单行 HTML，全部左对齐（GitHub table 是 max-content 收缩布局，不满行自动靠左）
 function gridCell(e) {
-  const href = `#${encodeURI(e.anchor)}`;
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
-  // td 内容保持单行 HTML：GitHub 表格单元格里只适合简单内容，多块级结构会撑破布局
-  // 全部左对齐（不设 align）：一行不满 4 卡时其余留白，卡片依旧靠左
   return (
-    `<td width="260" valign="top">` +
-    `<a href="${href}"><img src="${img}" width="220" alt="${e.title}"></a><br>` +
-    `<strong><a href="${href}">${e.title}</a></strong><br>` +
-    `<sub>${escapeHtml(summarize(e.spell))}</sub>` +
+    `<td width="320" valign="top">` +
+    `<img src="${img}" width="300" alt="${e.title}"><br>` +
+    `<strong>${e.title}</strong>` +
     `</td>`
   );
 }
 
 function gridTable(entries) {
   const rows = [];
-  for (let i = 0; i < entries.length; i += 4) {
-    rows.push('<tr>' + entries.slice(i, i + 4).map(gridCell).join('') + '</tr>');
+  for (let i = 0; i < entries.length; i += 3) {
+    rows.push('<tr>' + entries.slice(i, i + 3).map(gridCell).join('') + '</tr>');
   }
   return ['<table>', ...rows, '</table>'].join('\n');
 }
 
-function detailSection(e) {
-  const img = `gallery/${e.category}/${e.dir}/index.svg`;
-  // 咒语本身含 ``` 时换四反引号围栏，避免提前闭合
+// 咒语：直接列在图卡底下，完整全文 + GitHub 原生复制按钮
+function spellBlock(e) {
   const fence = e.spell.includes('```') ? '````' : '```';
   return [
     `### ${e.title}`,
-    '',
-    `<img src="${img}" width="400" alt="${e.title}">`,
     '',
     `${fence}text`,
     e.spell,
@@ -100,19 +79,15 @@ function buildGallery() {
   const body = [];
   for (const [cat, name] of CATEGORIES) {
     const entries = readEntries(cat);
-    const catAnchor = anchorOf(name);
+    const catAnchor = slug(name);
     toc.push(`- **[${name}](#${encodeURI(catAnchor)})** <sub>${cat} · ${entries.length} 条</sub>`);
-    for (const e of entries) {
-      e.anchor = anchorOf(e.title);
-      toc.push(`  - [${e.title}](#${encodeURI(e.anchor)})`);
-    }
     body.push(`## ${name}`, '');
     if (entries.length === 0) {
       body.push('*暂无条目，欢迎按 `templates/entry/` 投稿。*', '');
       continue;
     }
     body.push(gridTable(entries), '');
-    for (const e of entries) body.push(detailSection(e), '');
+    for (const e of entries) body.push(spellBlock(e), '');
   }
   return { toc: toc.join('\n'), body: body.join('\n').replace(/\n+$/, '\n') };
 }

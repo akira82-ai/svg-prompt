@@ -11,37 +11,21 @@
 
 <!-- GALLERY:START -->
 - **[教学基础](#%E6%95%99%E5%AD%A6%E5%9F%BA%E7%A1%80)** <sub>basics · 1 条</sub>
-  - [七大基础图形](#%E4%B8%83%E5%A4%A7%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2)
 - **[UI 组件](#ui-%E7%BB%84%E4%BB%B6)** <sub>ui · 1 条</sub>
-  - [渐变与玻璃质感](#%E6%B8%90%E5%8F%98%E4%B8%8E%E7%8E%BB%E7%92%83%E8%B4%A8%E6%84%9F)
 - **[品牌排版](#%E5%93%81%E7%89%8C%E6%8E%92%E7%89%88)** <sub>branding · 1 条</sub>
-  - [程序化纹理与图案](#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%BA%B9%E7%90%86%E4%B8%8E%E5%9B%BE%E6%A1%88)
 - **[图表报表](#%E5%9B%BE%E8%A1%A8%E6%8A%A5%E8%A1%A8)** <sub>charts · 3 条</sub>
-  - [动态架构图](#%E5%8A%A8%E6%80%81%E6%9E%B6%E6%9E%84%E5%9B%BE)
-  - [数据可视化仪表盘](#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BB%AA%E8%A1%A8%E7%9B%98)
-  - [复杂系统架构图](#%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE)
 - **[信息可视化](#%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96)** <sub>infographics · 0 条</sub>
 - **[实物模拟](#%E5%AE%9E%E7%89%A9%E6%A8%A1%E6%8B%9F)** <sub>materials · 1 条</sub>
-  - [滤镜材质特效](#%E6%BB%A4%E9%95%9C%E6%9D%90%E8%B4%A8%E7%89%B9%E6%95%88)
 - **[动效艺术](#%E5%8A%A8%E6%95%88%E8%89%BA%E6%9C%AF)** <sub>motion · 5 条</sub>
-  - [线稿描边动画](#%E7%BA%BF%E7%A8%BF%E6%8F%8F%E8%BE%B9%E5%8A%A8%E7%94%BB)
-  - [变形记 II](#%E5%8F%98%E5%BD%A2%E8%AE%B0-ii)
-  - [变形记 Morph](#%E5%8F%98%E5%BD%A2%E8%AE%B0-morph)
-  - [SMIL 动效面板](#smil-%E5%8A%A8%E6%95%88%E9%9D%A2%E6%9D%BF)
-  - [SVG 黑科技四连](#svg-%E9%BB%91%E7%A7%91%E6%8A%80%E5%9B%9B%E8%BF%9E)
 - **[高级数学](#%E9%AB%98%E7%BA%A7%E6%95%B0%E5%AD%A6)** <sub>math · 2 条</sub>
-  - [三维投影](#%E4%B8%89%E7%BB%B4%E6%8A%95%E5%BD%B1)
-  - [拓扑形变](#%E6%8B%93%E6%89%91%E5%BD%A2%E5%8F%98)
 
 ## 教学基础
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E4%B8%83%E5%A4%A7%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2"><img src="gallery/basics/basic-shapes/index.svg" width="220" alt="七大基础图形"></a><br><strong><a href="#%E4%B8%83%E5%A4%A7%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2">七大基础图形</a></strong><br><sub>用 SVG 画一张基础图形教学图：并排展示 rect、circle、ellipse、line、polyline、poly…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"><br><strong>七大基础图形</strong></td></tr>
 </table>
 
 ### 七大基础图形
-
-<img src="gallery/basics/basic-shapes/index.svg" width="400" alt="七大基础图形">
 
 ```text
 用 SVG 画一张基础图形教学图：并排展示 rect、circle、ellipse、line、polyline、polygon、path 七种基本形状，每种形状下方用小字标注英文名。统一风格：深灰描边 2px、半透明蓝色填充、浅米色背景，画布 1200×800，构图整齐留白均匀。
@@ -51,12 +35,10 @@
 ## UI 组件
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E6%B8%90%E5%8F%98%E4%B8%8E%E7%8E%BB%E7%92%83%E8%B4%A8%E6%84%9F"><img src="gallery/ui/glassmorphism/index.svg" width="220" alt="渐变与玻璃质感"></a><br><strong><a href="#%E6%B8%90%E5%8F%98%E4%B8%8E%E7%8E%BB%E7%92%83%E8%B4%A8%E6%84%9F">渐变与玻璃质感</a></strong><br><sub>用 SVG 画一张&quot;渐变与玻璃质感&quot;设计展示图，四个区块： - 极光横幅：linearGradient 蓝→紫→粉多色过…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/ui/glassmorphism/index.svg" width="300" alt="渐变与玻璃质感"><br><strong>渐变与玻璃质感</strong></td></tr>
 </table>
 
 ### 渐变与玻璃质感
-
-<img src="gallery/ui/glassmorphism/index.svg" width="400" alt="渐变与玻璃质感">
 
 ```text
 用 SVG 画一张"渐变与玻璃质感"设计展示图，四个区块：
@@ -71,12 +53,10 @@
 ## 品牌排版
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%BA%B9%E7%90%86%E4%B8%8E%E5%9B%BE%E6%A1%88"><img src="gallery/branding/procedural-textures/index.svg" width="220" alt="程序化纹理与图案"></a><br><strong><a href="#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%BA%B9%E7%90%86%E4%B8%8E%E5%9B%BE%E6%A1%88">程序化纹理与图案</a></strong><br><sub>用 SVG 画&quot;程序化纹理&quot;四联图，全部用滤镜生成、零图片素材： - 星空：feTurbulence fractalNo…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/branding/procedural-textures/index.svg" width="300" alt="程序化纹理与图案"><br><strong>程序化纹理与图案</strong></td></tr>
 </table>
 
 ### 程序化纹理与图案
-
-<img src="gallery/branding/procedural-textures/index.svg" width="400" alt="程序化纹理与图案">
 
 ```text
 用 SVG 画"程序化纹理"四联图，全部用滤镜生成、零图片素材：
@@ -91,12 +71,10 @@
 ## 图表报表
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E5%8A%A8%E6%80%81%E6%9E%B6%E6%9E%84%E5%9B%BE"><img src="gallery/charts/animated-architecture/index.svg" width="220" alt="动态架构图"></a><br><strong><a href="#%E5%8A%A8%E6%80%81%E6%9E%B6%E6%9E%84%E5%9B%BE">动态架构图</a></strong><br><sub>用 SVG 画一张&quot;会呼吸&quot;的系统架构图（单文件、零 JS，动效全部 SMIL）： - 四层结构：Web 前端/小程序（…</sub></td><td width="260" valign="top"><a href="#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BB%AA%E8%A1%A8%E7%9B%98"><img src="gallery/charts/dashboard/index.svg" width="220" alt="数据可视化仪表盘"></a><br><strong><a href="#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BB%AA%E8%A1%A8%E7%9B%98">数据可视化仪表盘</a></strong><br><sub>用 SVG 画一张数据可视化仪表盘： - KPI 卡片行：4 张圆角卡片（指标名 + 大数字 + 涨跌幅箭头），如&quot;销售…</sub></td><td width="260" valign="top"><a href="#%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE"><img src="gallery/charts/system-architecture/index.svg" width="220" alt="复杂系统架构图"></a><br><strong><a href="#%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE">复杂系统架构图</a></strong><br><sub>用 SVG 画一张六层系统架构图（约 20 个节点）： - 分区自上而下：客户端层 / 接入层 / 服务层 / 中间件层…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/charts/animated-architecture/index.svg" width="300" alt="动态架构图"><br><strong>动态架构图</strong></td><td width="320" valign="top"><img src="gallery/charts/dashboard/index.svg" width="300" alt="数据可视化仪表盘"><br><strong>数据可视化仪表盘</strong></td><td width="320" valign="top"><img src="gallery/charts/system-architecture/index.svg" width="300" alt="复杂系统架构图"><br><strong>复杂系统架构图</strong></td></tr>
 </table>
 
 ### 动态架构图
-
-<img src="gallery/charts/animated-architecture/index.svg" width="400" alt="动态架构图">
 
 ```text
 用 SVG 画一张"会呼吸"的系统架构图（单文件、零 JS，动效全部 SMIL）：
@@ -110,8 +88,6 @@
 
 ### 数据可视化仪表盘
 
-<img src="gallery/charts/dashboard/index.svg" width="400" alt="数据可视化仪表盘">
-
 ```text
 用 SVG 画一张数据可视化仪表盘：
 - KPI 卡片行：4 张圆角卡片（指标名 + 大数字 + 涨跌幅箭头），如"销售额 GMV ¥1,284,590 +12.4%↑"
@@ -124,8 +100,6 @@
 
 
 ### 复杂系统架构图
-
-<img src="gallery/charts/system-architecture/index.svg" width="400" alt="复杂系统架构图">
 
 ```text
 用 SVG 画一张六层系统架构图（约 20 个节点）：
@@ -144,12 +118,10 @@
 ## 实物模拟
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E6%BB%A4%E9%95%9C%E6%9D%90%E8%B4%A8%E7%89%B9%E6%95%88"><img src="gallery/materials/filter-materials/index.svg" width="220" alt="滤镜材质特效"></a><br><strong><a href="#%E6%BB%A4%E9%95%9C%E6%9D%90%E8%B4%A8%E7%89%B9%E6%95%88">滤镜材质特效</a></strong><br><sub>用 SVG 展示三种滤镜材质特效，全部零位图实时计算： - 液态融合：两个相邻色块 + feGaussianBlur(s…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/materials/filter-materials/index.svg" width="300" alt="滤镜材质特效"><br><strong>滤镜材质特效</strong></td></tr>
 </table>
 
 ### 滤镜材质特效
-
-<img src="gallery/materials/filter-materials/index.svg" width="400" alt="滤镜材质特效">
 
 ```text
 用 SVG 展示三种滤镜材质特效，全部零位图实时计算：
@@ -164,13 +136,11 @@
 ## 动效艺术
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E7%BA%BF%E7%A8%BF%E6%8F%8F%E8%BE%B9%E5%8A%A8%E7%94%BB"><img src="gallery/motion/line-drawing/index.svg" width="220" alt="线稿描边动画"></a><br><strong><a href="#%E7%BA%BF%E7%A8%BF%E6%8F%8F%E8%BE%B9%E5%8A%A8%E7%94%BB">线稿描边动画</a></strong><br><sub>用 SVG 做一个描边动画：一个 {城市天际线} 的线稿被逐渐&quot;画出来&quot;。 要求： - 单文件自包含，零 JS，动画用 …</sub></td><td width="260" valign="top"><a href="#%E5%8F%98%E5%BD%A2%E8%AE%B0-ii"><img src="gallery/motion/morph-ii/index.svg" width="220" alt="变形记 II"></a><br><strong><a href="#%E5%8F%98%E5%BD%A2%E8%AE%B0-ii">变形记 II</a></strong><br><sub>用 SVG 做进阶路径形变： - 单词变形 CAT ⇄ DOG：C/A/T 与 D/O/G 六个字母各设计一副 6 段贝…</sub></td><td width="260" valign="top"><a href="#%E5%8F%98%E5%BD%A2%E8%AE%B0-morph"><img src="gallery/motion/path-morph/index.svg" width="220" alt="变形记 Morph"></a><br><strong><a href="#%E5%8F%98%E5%BD%A2%E8%AE%B0-morph">变形记 Morph</a></strong><br><sub>用 SVG 做路径形变动画，两组： - 几何三态：圆角方形 ⇄ 圆 ⇄ 菱形，同一副 8 锚点骨架（直线态 = 控制点全…</sub></td><td width="260" valign="top"><a href="#smil-%E5%8A%A8%E6%95%88%E9%9D%A2%E6%9D%BF"><img src="gallery/motion/smil-panel/index.svg" width="220" alt="SMIL 动效面板"></a><br><strong><a href="#smil-%E5%8A%A8%E6%95%88%E9%9D%A2%E6%9D%BF">SMIL 动效面板</a></strong><br><sub>用 SVG 做一块自包含动效面板（零 JS、零 CSS，动画全部用 SMIL &lt;animate&gt;/&lt;animateTra…</sub></td></tr>
-<tr><td width="260" valign="top"><a href="#svg-%E9%BB%91%E7%A7%91%E6%8A%80%E5%9B%9B%E8%BF%9E"><img src="gallery/motion/svg-mechanics/index.svg" width="220" alt="SVG 黑科技四连"></a><br><strong><a href="#svg-%E9%BB%91%E7%A7%91%E6%8A%80%E5%9B%9B%E8%BF%9E">SVG 黑科技四连</a></strong><br><sub>用 SVG 做&quot;机制级技法&quot;四联演示： - 聚光灯：深色底 + 一段隐藏文字，用径向渐变亮斑作为 mask，&lt;anima…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/motion/line-drawing/index.svg" width="300" alt="线稿描边动画"><br><strong>线稿描边动画</strong></td><td width="320" valign="top"><img src="gallery/motion/morph-ii/index.svg" width="300" alt="变形记 II"><br><strong>变形记 II</strong></td><td width="320" valign="top"><img src="gallery/motion/path-morph/index.svg" width="300" alt="变形记 Morph"><br><strong>变形记 Morph</strong></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/motion/smil-panel/index.svg" width="300" alt="SMIL 动效面板"><br><strong>SMIL 动效面板</strong></td><td width="320" valign="top"><img src="gallery/motion/svg-mechanics/index.svg" width="300" alt="SVG 黑科技四连"><br><strong>SVG 黑科技四连</strong></td></tr>
 </table>
 
 ### 线稿描边动画
-
-<img src="gallery/motion/line-drawing/index.svg" width="400" alt="线稿描边动画">
 
 ```text
 用 SVG 做一个描边动画：一个 {城市天际线} 的线稿被逐渐"画出来"。
@@ -185,8 +155,6 @@
 
 ### 变形记 II
 
-<img src="gallery/motion/morph-ii/index.svg" width="400" alt="变形记 II">
-
 ```text
 用 SVG 做进阶路径形变：
 - 单词变形 CAT ⇄ DOG：C/A/T 与 D/O/G 六个字母各设计一副 6 段贝塞尔骨架，
@@ -200,8 +168,6 @@
 
 ### 变形记 Morph
 
-<img src="gallery/motion/path-morph/index.svg" width="400" alt="变形记 Morph">
-
 ```text
 用 SVG 做路径形变动画，两组：
 - 几何三态：圆角方形 ⇄ 圆 ⇄ 菱形，同一副 8 锚点骨架（直线态 = 控制点全部落在边上的共线退化贝塞尔）
@@ -211,8 +177,6 @@
 
 
 ### SMIL 动效面板
-
-<img src="gallery/motion/smil-panel/index.svg" width="400" alt="SMIL 动效面板">
 
 ```text
 用 SVG 做一块自包含动效面板（零 JS、零 CSS，动画全部用 SMIL <animate>/<animateTransform>/<animateMotion>）：
@@ -224,8 +188,6 @@
 
 
 ### SVG 黑科技四连
-
-<img src="gallery/motion/svg-mechanics/index.svg" width="400" alt="SVG 黑科技四连">
 
 ```text
 用 SVG 做"机制级技法"四联演示：
@@ -240,12 +202,10 @@
 ## 高级数学
 
 <table>
-<tr><td width="260" valign="top"><a href="#%E4%B8%89%E7%BB%B4%E6%8A%95%E5%BD%B1"><img src="gallery/math/three-d/index.svg" width="220" alt="三维投影"></a><br><strong><a href="#%E4%B8%89%E7%BB%B4%E6%8A%95%E5%BD%B1">三维投影</a></strong><br><sub>用 SVG 表现 3D（零 JS、零 WebGL），三块： - 等距插画：数据中心机柜，30° 等距轴，顶/左/右三个面…</sub></td><td width="260" valign="top"><a href="#%E6%8B%93%E6%89%91%E5%BD%A2%E5%8F%98"><img src="gallery/math/topology-deform/index.svg" width="220" alt="拓扑形变"></a><br><strong><a href="#%E6%8B%93%E6%89%91%E5%BD%A2%E5%8F%98">拓扑形变</a></strong><br><sub>用 SVG 展示 3D 参数之舞（每一帧都是真实 3D：参数方程 + 旋转矩阵 + 投影，SMIL 关键帧由脚本预计算）…</sub></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/math/three-d/index.svg" width="300" alt="三维投影"><br><strong>三维投影</strong></td><td width="320" valign="top"><img src="gallery/math/topology-deform/index.svg" width="300" alt="拓扑形变"><br><strong>拓扑形变</strong></td></tr>
 </table>
 
 ### 三维投影
-
-<img src="gallery/math/three-d/index.svg" width="400" alt="三维投影">
 
 ```text
 用 SVG 表现 3D（零 JS、零 WebGL），三块：
@@ -257,8 +217,6 @@
 
 
 ### 拓扑形变
-
-<img src="gallery/math/topology-deform/index.svg" width="400" alt="拓扑形变">
 
 ```text
 用 SVG 展示 3D 参数之舞（每一帧都是真实 3D：参数方程 + 旋转矩阵 + 投影，SMIL 关键帧由脚本预计算）：
