@@ -22,15 +22,8 @@
 ## 教学基础
 
 <table>
-<tr><td width="320" valign="top"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"><br><strong>七大基础图形</strong></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/basics/basic-shapes/prompt.md"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"></a><br><a href="gallery/basics/basic-shapes/prompt.md"><strong>七大基础图形</strong></a></td></tr>
 </table>
-
-### 七大基础图形
-
-```text
-用 SVG 画一张基础图形教学图：并排展示 rect、circle、ellipse、line、polyline、polygon、path 七种基本形状，每种形状下方用小字标注英文名。统一风格：深灰描边 2px、半透明蓝色填充、浅米色背景，画布 1200×800，构图整齐留白均匀。
-```
-
 
 ## UI 组件
 
