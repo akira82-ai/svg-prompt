@@ -13,7 +13,7 @@ const readmePath = join(root, 'README.md');
 
 // 展示顺序 = 难度进阶顺序，与 gallery/ 目录名一一对应
 const CATEGORIES = [
-  ['basics', '教学基础'],
+  ['basics', '基础图形'],
   ['ui', 'UI 组件'],
   ['branding', '品牌排版'],
   ['charts', '图表报表'],

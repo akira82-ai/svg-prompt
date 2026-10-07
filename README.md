@@ -8,7 +8,7 @@
 ## 目录
 
 <!-- GALLERY:START -->
-- **[教学基础](#%E6%95%99%E5%AD%A6%E5%9F%BA%E7%A1%80)** <sub>basics · 1 条</sub>
+- **[基础图形](#%E5%9F%BA%E7%A1%80%E5%9B%BE%E5%BD%A2)** <sub>basics · 1 条</sub>
 - **[UI 组件](#ui-%E7%BB%84%E4%BB%B6)** <sub>ui · 1 条</sub>
 - **[品牌排版](#%E5%93%81%E7%89%8C%E6%8E%92%E7%89%88)** <sub>branding · 1 条</sub>
 - **[图表报表](#%E5%9B%BE%E8%A1%A8%E6%8A%A5%E8%A1%A8)** <sub>charts · 3 条</sub>
@@ -17,7 +17,7 @@
 - **[动效艺术](#%E5%8A%A8%E6%95%88%E8%89%BA%E6%9C%AF)** <sub>motion · 5 条</sub>
 - **[高级数学](#%E9%AB%98%E7%BA%A7%E6%95%B0%E5%AD%A6)** <sub>math · 2 条</sub>
 
-## 教学基础
+## 基础图形
 
 <table>
 <tr><td width="320" valign="top"><a href="gallery/basics/basic-shapes/prompt.md"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"></a><br><a href="gallery/basics/basic-shapes/prompt.md"><strong>七大基础图形</strong></a></td></tr>
