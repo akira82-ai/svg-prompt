@@ -22,12 +22,12 @@
 ## 教学基础
 
 <table>
-<tr><td width="320" valign="top"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"><br><details><summary title="点击展开提示词，选中后 Ctrl+C 复制"><img src="assets/copy.svg" width="14" height="14" align="right" alt="复制提示词"><strong>七大基础图形</strong></summary><pre>用 SVG 画一张基础图形教学图：并排展示 rect、
-circle、ellipse、line、polyline、polygon、pa
-th 七种基本形状，每种形状下方用小字标注英文
-名。统一风格：深灰描边 2px、半透明蓝色填充、
-浅米色背景，画布 1200×800，构图整齐留白均匀
-。</pre></details></td></tr>
+<tr><td width="320" valign="top"><img src="gallery/basics/basic-shapes/index.svg" width="300" alt="七大基础图形"><br><strong>七大基础图形</strong><details><summary title="点击展开完整提示词，选中后 Ctrl+C 复制"><img src="assets/copy.svg" width="14" height="14" align="right" alt="复制提示词">用 SVG 画一张基础图形教学图：并排展示 rect、circle、ellipse、line、polyline、polygon、path 七种基本形状，每种形状下方标注英文名。统一风格：深灰描边 2px、半透明蓝色填充…</summary><pre>用 SVG 画一张基础图形教学图：并排展示 rect、
+circle、ellipse、line、polyline、polygon、
+path 七种基本形状，每种形状下方用小字标注英
+文名。统一风格：深灰描边 2px、半透明蓝色填
+充、浅米色背景，画布 1200×800，构图整齐留
+白均匀。</pre></details></td></tr>
 </table>
 
 ## UI 组件
