@@ -26,7 +26,7 @@ svg-prompt/
 | `index.svg` | 作品本体；浏览器直接打开即渲染；动效条目优先 SMIL / CSS 实现（零 JS） |
 | `prompt.md` | **详情页结构**：`# 中文标题` + `静态`/`动效`/`2D`/`3D` 标签 → `<img src="index.svg" width="720">` → 提示词代码块（不加"提示词"等小节标题）；保持这个结构 |
 | `prompt.md` 内的提示词 | **多行结构化书写**（不要挤成一行）：首行一句话意图，`-` 列表逐条列结构与风格要求，可替换部分用 `{花括号}` 标注 |
-| `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致 |
+| `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致；`order`（可选）控制分类内展示位置——按**复杂度递进**编号：单一组件 → 复杂组合 → 完整原型，未设时排在已编号条目之后 |
 
 ## 五维标签
 

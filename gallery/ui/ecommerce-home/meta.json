@@ -11,5 +11,6 @@
   ],
   "description": "搜索栏、秒杀 Banner、分类入口、商品瀑布格与底部 Tab",
   "author": "airay1015",
-  "date": "2026-10-08"
+  "date": "2026-10-08",
+  "order": 23
 }

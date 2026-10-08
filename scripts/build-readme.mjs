@@ -26,11 +26,12 @@ const CATEGORIES = [
 // GitHub 锚点规则：小写；删去字母/数字/空格/连字符/下划线以外的字符；空格变 -
 const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().replace(/ +/g, '-');
 
-// 分类内默认排序：静态 2D → 动态 2D → 静态 3D → 动态 3D（用户定稿）
+// 分类内默认排序：order（复杂度递进，用户定稿）优先，未设 order 的按 静态 2D → 动态 2D → 静态 3D → 动态 3D
 const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 const TIME_LABEL = { static: '静态', smil: 'SMIL 动效', css: 'CSS 动效', js: 'JS 动效' };
-const byTimeThenSpace = (a, b) =>
+const byOrderThenTime = (a, b) =>
+  (a.order ?? 999) - (b.order ?? 999) ||
   (TIME_RANK[a.time] ?? 9) - (TIME_RANK[b.time] ?? 9) ||
   (SPACE_RANK[a.space] ?? 9) - (SPACE_RANK[b.space] ?? 9);
 
@@ -73,7 +74,7 @@ function buildGallery() {
   const toc = [];
   const body = [];
   for (const [cat, name] of CATEGORIES) {
-    const entries = readEntries(cat).sort(byTimeThenSpace);
+    const entries = readEntries(cat).sort(byOrderThenTime);
     const catAnchor = slug(name);
     toc.push(`- **[${name}](#${encodeURI(catAnchor)})** <sub>${cat} · ${entries.length} 条</sub>`);
     body.push(`## ${name}`, '');

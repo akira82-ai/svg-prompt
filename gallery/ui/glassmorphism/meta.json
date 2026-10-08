@@ -3,8 +3,14 @@
   "title": "渐变与玻璃质感",
   "space": "2d",
   "time": "static",
-  "tech": ["linearGradient", "radialGradient", "feDropShadow", "feGaussianBlur"],
+  "tech": [
+    "linearGradient",
+    "radialGradient",
+    "feDropShadow",
+    "feGaussianBlur"
+  ],
   "description": "极光渐变、光晕图标、渐变文字、毛玻璃卡片——设计感的四个来源，零位图",
   "author": "airay1015",
-  "date": "2026-10-07"
+  "date": "2026-10-07",
+  "order": 12
 }

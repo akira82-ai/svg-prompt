@@ -27,6 +27,11 @@
       ],
       "description": "空间维度：是否使用三维投影/光照/拓扑变换"
     },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "分类内的展示序号（复杂度递进：简单 → 复杂 → 完整原型）。可选；未设时按时间/空间维度排在后面"
+    },
     "time": {
       "enum": [
         "static",
