@@ -1,0 +1,14 @@
+{
+  "slug": "checkbox-radio",
+  "title": "复选与单选",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "circle",
+    "path"
+  ],
+  "description": "复选框三态与单选组：未选 / 选中 / 半选",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

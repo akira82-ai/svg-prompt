@@ -1,0 +1,14 @@
+{
+  "slug": "input-states",
+  "title": "输入框状态",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "text",
+    "表单设计"
+  ],
+  "description": "默认 / 聚焦 / 错误 / 禁用四态，标签与占位文字齐全",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

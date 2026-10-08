@@ -1,0 +1,14 @@
+{
+  "slug": "chips",
+  "title": "标签 Chips",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "rx",
+    "text"
+  ],
+  "description": "普通 / 选中 / 可删除 / 虚线添加四种标签形态",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

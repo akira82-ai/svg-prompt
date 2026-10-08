@@ -1,0 +1,14 @@
+{
+  "slug": "spinners",
+  "title": "加载器三连",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "animateTransform",
+    "animate",
+    "circle"
+  ],
+  "description": "旋转圆弧、三点跳动、脉冲圆环三种经典加载动效",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

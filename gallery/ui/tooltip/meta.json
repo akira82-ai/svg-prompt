@@ -1,0 +1,14 @@
+{
+  "slug": "tooltip",
+  "title": "工具提示 Tooltip",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "rect",
+    "气泡"
+  ],
+  "description": "深浅两色气泡 + 指向箭头 + 触发按钮",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "tabs",
+  "title": "标签页与分段控件",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "text",
+    "rect",
+    "指示条"
+  ],
+  "description": "下划线标签页与胶囊分段控件，激活态两种指示方式",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

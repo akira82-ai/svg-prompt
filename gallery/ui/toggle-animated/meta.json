@@ -1,0 +1,14 @@
+{
+  "slug": "toggle-animated",
+  "title": "开关拨动动画",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "animate",
+    "circle",
+    "rect"
+  ],
+  "description": "滑块位移与轨道变色同步补间——开与关自动循环",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

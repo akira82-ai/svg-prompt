@@ -1,0 +1,14 @@
+{
+  "slug": "typing-indicator",
+  "title": "打字指示器",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "animate",
+    "circle",
+    "rect"
+  ],
+  "description": "聊天气泡里三点依次亮起——\"对方正在输入\"",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "dropdown",
+  "title": "下拉菜单",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "path",
+    "投影"
+  ],
+  "description": "触发框 + 展开菜单：普通项、悬停高亮、选中打勾",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

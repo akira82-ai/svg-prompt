@@ -1,0 +1,14 @@
+{
+  "slug": "buttons",
+  "title": "按钮三态",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "text",
+    "状态设计"
+  ],
+  "description": "主色与次色按钮的默认/悬停/按下/禁用四态对照",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

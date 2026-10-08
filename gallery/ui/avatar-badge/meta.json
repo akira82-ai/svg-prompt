@@ -1,0 +1,14 @@
+{
+  "slug": "avatar-badge",
+  "title": "头像与徽章",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "circle",
+    "clipPath",
+    "text"
+  ],
+  "description": "字母头像、图标头像、数字徽章与在线状态点",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

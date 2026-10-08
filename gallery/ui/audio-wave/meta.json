@@ -1,0 +1,14 @@
+{
+  "slug": "audio-wave",
+  "title": "音频波形",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "animate",
+    "rect",
+    "rx"
+  ],
+  "description": "一排圆头声条错相起伏——语音正在被听见",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

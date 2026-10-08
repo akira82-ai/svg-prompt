@@ -1,0 +1,14 @@
+{
+  "slug": "indeterminate-progress",
+  "title": "不确定进度条",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "clipPath",
+    "linearGradient",
+    "animate"
+  ],
+  "description": "不知道还要多久——渐变光条在轨道内循环滑动",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
