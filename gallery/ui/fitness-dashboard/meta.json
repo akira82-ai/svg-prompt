@@ -1,0 +1,15 @@
+{
+  "slug": "fitness-dashboard",
+  "title": "健身数据",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "circle",
+    "stroke-dasharray",
+    "rect",
+    "数据可视化"
+  ],
+  "description": "活动三环、数据卡与周柱状图——健康仪表盘",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

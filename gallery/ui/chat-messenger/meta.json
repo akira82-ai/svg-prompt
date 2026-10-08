@@ -1,0 +1,15 @@
+{
+  "slug": "chat-messenger",
+  "title": "聊天 IM",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "circle",
+    "path",
+    "消息流"
+  ],
+  "description": "会话列表与聊天窗口两屏：头像、气泡、未读徽章、输入栏",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

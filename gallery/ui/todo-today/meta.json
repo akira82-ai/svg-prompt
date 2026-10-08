@@ -1,0 +1,15 @@
+{
+  "slug": "todo-today",
+  "title": "待办清单",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "circle",
+    "path",
+    "列表设计"
+  ],
+  "description": "周历条、任务分组勾选与悬浮新建按钮",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "ecommerce-home",
+  "title": "电商首页",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "linearGradient",
+    "rect",
+    "text",
+    "网格布局"
+  ],
+  "description": "搜索栏、秒杀 Banner、分类入口、商品瀑布格与底部 Tab",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

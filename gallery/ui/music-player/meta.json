@@ -1,0 +1,15 @@
+{
+  "slug": "music-player",
+  "title": "音乐播放器",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "linearGradient",
+    "circle",
+    "animate",
+    "深色主题"
+  ],
+  "description": "深色播放页与播放列表：唱片、进度条、控制键、律动均衡器",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
