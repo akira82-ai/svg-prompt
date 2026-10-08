@@ -9,7 +9,7 @@
     "pathLength",
     "animate"
   ],
-  "description": "一条线被画完，数据点随后逐个点亮",
+  "description": "描线画完、数据点亮起、曲线持续微波——8 秒一个循环",
   "author": "airay1015",
   "date": "2026-10-08"
 }
