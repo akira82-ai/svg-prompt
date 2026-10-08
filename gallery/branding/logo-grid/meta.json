@@ -3,7 +3,7 @@
   "title": "Logo 网格构图",
   "space": "2d",
   "time": "static",
-  "order": 2,
+  "order": 1,
   "tech": [
     "path",
     "circle",

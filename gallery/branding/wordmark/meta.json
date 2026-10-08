@@ -3,7 +3,7 @@
   "title": "字标 Wordmark",
   "space": "2d",
   "time": "static",
-  "order": 3,
+  "order": 2,
   "tech": [
     "text",
     "letter-spacing",

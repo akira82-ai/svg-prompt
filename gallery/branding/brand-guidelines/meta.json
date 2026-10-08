@@ -3,7 +3,7 @@
   "title": "品牌规范页",
   "space": "2d",
   "time": "static",
-  "order": 11,
+  "order": 10,
   "tech": [
     "path",
     "circle",

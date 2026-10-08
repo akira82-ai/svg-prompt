@@ -3,7 +3,7 @@
   "title": "名片正反面",
   "space": "2d",
   "time": "static",
-  "order": 10,
+  "order": 9,
   "tech": [
     "text",
     "pattern",

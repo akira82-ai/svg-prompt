@@ -3,7 +3,7 @@
   "title": "单色图标系统",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 4,
   "tech": [
     "path",
     "stroke-linecap",

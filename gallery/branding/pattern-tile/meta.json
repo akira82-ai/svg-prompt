@@ -3,7 +3,7 @@
   "title": "图案平铺",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 6,
   "tech": [
     "pattern",
     "rect"
