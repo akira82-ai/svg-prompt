@@ -1,0 +1,15 @@
+{
+  "slug": "scatter",
+  "title": "散点图",
+  "space": "2d",
+  "time": "static",
+  "order": 5,
+  "tech": [
+    "circle",
+    "回归线",
+    "相关性"
+  ],
+  "description": "投放与销量的正相关 + 回归线 + 异常点圈注",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

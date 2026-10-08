@@ -1,0 +1,15 @@
+{
+  "slug": "donut-sweep",
+  "title": "环形扫描动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 17,
+  "tech": [
+    "stroke-dasharray",
+    "animate",
+    "环形"
+  ],
+  "description": "进度环从 0° 扫到 68%，中心数字随后亮起",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

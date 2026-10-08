@@ -1,0 +1,14 @@
+{
+  "slug": "bubble",
+  "title": "气泡图",
+  "space": "2d",
+  "time": "static",
+  "order": 6,
+  "tech": [
+    "circle",
+    "三維编码"
+  ],
+  "description": "x 投入 / y 增长 / 气泡大小 = 市场规模",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

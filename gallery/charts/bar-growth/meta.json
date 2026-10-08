@@ -1,0 +1,15 @@
+{
+  "slug": "bar-growth",
+  "title": "柱状生长动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 15,
+  "tech": [
+    "animate",
+    "rect",
+    "入场动效"
+  ],
+  "description": "柱子依次从零长到目标值——数据\"长出来\"的经典开场",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

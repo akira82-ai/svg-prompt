@@ -1,0 +1,15 @@
+{
+  "slug": "area-expand",
+  "title": "面积展开动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 18,
+  "tech": [
+    "clipPath",
+    "animate",
+    "面积图"
+  ],
+  "description": "层叠面积从左向右展开铺满——像被缓缓揭开",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

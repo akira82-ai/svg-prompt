@@ -1,0 +1,15 @@
+{
+  "slug": "gantt-progress",
+  "title": "甘特推进动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 21,
+  "tech": [
+    "animate",
+    "rect",
+    "今日线"
+  ],
+  "description": "任务条依次推进到目标长度，今日线持续闪动",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

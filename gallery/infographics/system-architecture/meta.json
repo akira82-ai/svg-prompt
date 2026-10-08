@@ -3,8 +3,15 @@
   "title": "复杂系统架构图",
   "space": "2d",
   "time": "static",
-  "tech": ["path", "marker", "rect", "text", "正交折线"],
+  "tech": [
+    "path",
+    "marker",
+    "rect",
+    "text",
+    "正交折线"
+  ],
   "description": "六分区 20 节点电商架构图，全部正交折线布线——模型盲算坐标必翻车的场景及解法",
   "author": "airay1015",
-  "date": "2026-10-07"
+  "date": "2026-10-07",
+  "order": 1
 }

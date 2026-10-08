@@ -1,0 +1,15 @@
+{
+  "slug": "live-stream",
+  "title": "实时数据流",
+  "space": "2d",
+  "time": "smil",
+  "order": 22,
+  "tech": [
+    "clipPath",
+    "animateTransform",
+    "折线"
+  ],
+  "description": "心电图式滚动折线——监控大屏的呼吸感",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "radar",
+  "title": "雷达图",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "tech": [
+    "path",
+    "多边形",
+    "多维"
+  ],
+  "description": "两支团队五维能力对比：设计/研发/运营/增长/协作",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

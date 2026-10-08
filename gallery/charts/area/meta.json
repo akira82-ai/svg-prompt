@@ -1,0 +1,15 @@
+{
+  "slug": "area",
+  "title": "面积图",
+  "space": "2d",
+  "time": "static",
+  "order": 4,
+  "tech": [
+    "path",
+    "linearGradient",
+    "层叠"
+  ],
+  "description": "层叠双系列面积：构成随时间的流动",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

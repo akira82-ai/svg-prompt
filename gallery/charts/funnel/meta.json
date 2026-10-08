@@ -1,0 +1,15 @@
+{
+  "slug": "funnel",
+  "title": "漏斗图",
+  "space": "2d",
+  "time": "static",
+  "order": 10,
+  "tech": [
+    "path",
+    "梯形",
+    "转化率"
+  ],
+  "description": "五层转化漏斗：访问到复购的每一级流失",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "line",
+  "title": "折线图",
+  "space": "2d",
+  "time": "static",
+  "order": 2,
+  "tech": [
+    "path",
+    "circle",
+    "注释气泡"
+  ],
+  "description": "三条序列的趋势对比与峰值注释",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

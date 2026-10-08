@@ -1,0 +1,15 @@
+{
+  "slug": "histogram-boxplot",
+  "title": "直方图与箱线图",
+  "space": "2d",
+  "time": "static",
+  "order": 13,
+  "tech": [
+    "rect",
+    "四分位",
+    "分布"
+  ],
+  "description": "分布的两副面孔：频数直方 + 箱线四分位",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

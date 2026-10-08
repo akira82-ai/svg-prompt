@@ -1,0 +1,15 @@
+{
+  "slug": "funnel-steps",
+  "title": "漏斗逐层动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 19,
+  "tech": [
+    "animate",
+    "opacity",
+    "漏斗"
+  ],
+  "description": "五层漏斗依次淡入落位——转化链路逐级展开",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

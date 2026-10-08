@@ -1,0 +1,15 @@
+{
+  "slug": "heatmap",
+  "title": "日历热力图",
+  "space": "2d",
+  "time": "static",
+  "order": 9,
+  "tech": [
+    "rect",
+    "色阶",
+    "矩阵"
+  ],
+  "description": "GitHub 风格打卡热力：140 天的勤懒一图看穿",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

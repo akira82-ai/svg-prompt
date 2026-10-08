@@ -1,0 +1,15 @@
+{
+  "slug": "number-roll",
+  "title": "数字滚动",
+  "space": "2d",
+  "time": "smil",
+  "order": 23,
+  "tech": [
+    "animate",
+    "opacity",
+    "翻牌"
+  ],
+  "description": "KPI 大数字快速翻滚后定格——告示牌的仪式感",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

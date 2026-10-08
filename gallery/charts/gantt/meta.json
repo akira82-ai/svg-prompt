@@ -1,0 +1,15 @@
+{
+  "slug": "gantt",
+  "title": "甘特图",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "tech": [
+    "rect",
+    "时间轴",
+    "今日线"
+  ],
+  "description": "项目排期：6 个任务、3 位负责人、今日基准线",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

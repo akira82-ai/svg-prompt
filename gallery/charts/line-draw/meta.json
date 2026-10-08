@@ -1,0 +1,15 @@
+{
+  "slug": "line-draw",
+  "title": "折线描线动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 16,
+  "tech": [
+    "stroke-dashoffset",
+    "pathLength",
+    "animate"
+  ],
+  "description": "一条线被画完，数据点随后逐个点亮",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

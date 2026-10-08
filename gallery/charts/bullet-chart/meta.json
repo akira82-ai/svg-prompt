@@ -1,0 +1,15 @@
+{
+  "slug": "bullet-chart",
+  "title": "子弹图",
+  "space": "2d",
+  "time": "static",
+  "order": 12,
+  "tech": [
+    "rect",
+    "区间带",
+    "目标线"
+  ],
+  "description": "实际 vs 目标 vs 区间：一横条说清 KPI 完成度",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

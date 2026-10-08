@@ -1,0 +1,15 @@
+{
+  "slug": "pie-donut",
+  "title": "饼图与环形图",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "tech": [
+    "path",
+    "stroke-dasharray",
+    "圆弧"
+  ],
+  "description": "饼图、环形图与半圆仪表的三种占比表达",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

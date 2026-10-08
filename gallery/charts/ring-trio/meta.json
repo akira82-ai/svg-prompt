@@ -1,0 +1,15 @@
+{
+  "slug": "ring-trio",
+  "title": "进度环组",
+  "space": "2d",
+  "time": "smil",
+  "order": 25,
+  "tech": [
+    "stroke-dasharray",
+    "animate",
+    "环形组"
+  ],
+  "description": "三枚进度环同时扫描到 76% / 48% / 92%",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
