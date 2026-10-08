@@ -1,0 +1,15 @@
+{
+  "slug": "starry-sky",
+  "title": "程序化星空",
+  "space": "2d",
+  "time": "static",
+  "order": 2,
+  "tech": [
+    "feTurbulence",
+    "feColorMatrix",
+    "阈值化"
+  ],
+  "description": "高频噪声阈值化出稀疏星点——一串参数就是一整片夜空",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

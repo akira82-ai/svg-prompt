@@ -1,0 +1,15 @@
+{
+  "slug": "grainy-gradient",
+  "title": "噪点渐变",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "tech": [
+    "linearGradient",
+    "feTurbulence",
+    "grainy"
+  ],
+  "description": "渐变叠一层半透明噪声——消除\"AI 味\"平涂的质感秘诀",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

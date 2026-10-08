@@ -13,7 +13,7 @@
 - **[品牌排版](#%E5%93%81%E7%89%8C%E6%8E%92%E7%89%88)** <sub>branding · 10 条</sub>
 - **[图表报表](#%E5%9B%BE%E8%A1%A8%E6%8A%A5%E8%A1%A8)** <sub>charts · 3 条</sub>
 - **[信息可视化](#%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96)** <sub>infographics · 0 条</sub>
-- **[实物模拟](#%E5%AE%9E%E7%89%A9%E6%A8%A1%E6%8B%9F)** <sub>materials · 2 条</sub>
+- **[实物模拟](#%E5%AE%9E%E7%89%A9%E6%A8%A1%E6%8B%9F)** <sub>materials · 5 条</sub>
 - **[动效艺术](#%E5%8A%A8%E6%95%88%E8%89%BA%E6%9C%AF)** <sub>motion · 5 条</sub>
 - **[高级数学](#%E9%AB%98%E7%BA%A7%E6%95%B0%E5%AD%A6)** <sub>math · 2 条</sub>
 
@@ -63,7 +63,8 @@
 ## 实物模拟
 
 <table>
-<tr><td width="320" valign="top"><a href="gallery/materials/filter-materials/prompt.md"><img src="gallery/materials/filter-materials/index.svg" width="300" alt="滤镜材质特效"></a><br><a href="gallery/materials/filter-materials/prompt.md"><strong>滤镜材质特效</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/materials/procedural-textures/prompt.md"><img src="gallery/materials/procedural-textures/index.svg" width="300" alt="程序化纹理与图案"></a><br><a href="gallery/materials/procedural-textures/prompt.md"><strong>程序化纹理与图案</strong></a> <code>静态</code> <code>2D</code></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/materials/filter-materials/prompt.md"><img src="gallery/materials/filter-materials/index.svg" width="300" alt="滤镜材质特效"></a><br><a href="gallery/materials/filter-materials/prompt.md"><strong>滤镜材质特效</strong></a> <code>SMIL 动效</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/materials/starry-sky/prompt.md"><img src="gallery/materials/starry-sky/index.svg" width="300" alt="程序化星空"></a><br><a href="gallery/materials/starry-sky/prompt.md"><strong>程序化星空</strong></a> <code>静态</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/materials/grainy-gradient/prompt.md"><img src="gallery/materials/grainy-gradient/index.svg" width="300" alt="噪点渐变"></a><br><a href="gallery/materials/grainy-gradient/prompt.md"><strong>噪点渐变</strong></a> <code>静态</code> <code>2D</code></td></tr>
+<tr><td width="320" valign="top"><a href="gallery/materials/wood-grain/prompt.md"><img src="gallery/materials/wood-grain/index.svg" width="300" alt="木纹"></a><br><a href="gallery/materials/wood-grain/prompt.md"><strong>木纹</strong></a> <code>静态</code> <code>2D</code></td><td width="320" valign="top"><a href="gallery/materials/pattern-fill/prompt.md"><img src="gallery/materials/pattern-fill/index.svg" width="300" alt="平铺图案"></a><br><a href="gallery/materials/pattern-fill/prompt.md"><strong>平铺图案</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ## 动效艺术

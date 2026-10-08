@@ -1,0 +1,15 @@
+{
+  "slug": "wood-grain",
+  "title": "木纹",
+  "space": "2d",
+  "time": "static",
+  "order": 4,
+  "tech": [
+    "feTurbulence",
+    "feColorMatrix",
+    "拉伸噪声"
+  ],
+  "description": "把噪声横向压扁拉出年轮——baseFrequency 的两个值就是秘诀",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
