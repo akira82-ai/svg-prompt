@@ -1,6 +1,6 @@
 {
   "slug": "number-roll",
-  "title": "数字滚动",
+  "title": "数字滚动动画",
   "space": "2d",
   "time": "smil",
   "order": 23,
@@ -9,7 +9,7 @@
     "opacity",
     "翻牌"
   ],
-  "description": "大数字快速翻滚→定格→归零重来，6 秒一个循环",
+  "description": "大数字逐级滚涨到目标值——计数器风格，6.5 秒一个循环",
   "author": "airay1015",
   "date": "2026-10-08"
 }

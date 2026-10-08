@@ -3,7 +3,7 @@
 <img src="index.svg" width="720" alt="三维投影">
 
 ```
-用 SVG 表现 3D（零 JS、零 WebGL），三块：
+用 SVG 表现 3D，三块：
 - 等距插画：数据中心机柜，30° 等距轴，顶/左/右三个面不同明度 + LED 心跳 SMIL
 - 参数投影：线框球与环面，顶点经旋转矩阵 + 透视投影落到 2D，近棱亮、远棱暗
 - 动态 3D：一个旋转立方体，把预计算的若干关键帧 pose 写成 <animateTransform> 的 values 序列

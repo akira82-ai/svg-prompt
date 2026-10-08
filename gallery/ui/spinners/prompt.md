@@ -3,7 +3,7 @@
 <img src="index.svg" width="720" alt="加载器三连">
 
 ```
-用 SVG 做一张"加载动效规格图"（SMIL 动画、零 JS、无限循环）：
+用 SVG 做一张"加载动效规格图"：
 - 三张卡片各一种加载器：
 - 旋转圆弧：灰色圆轨道 + 蓝色圆头弧线绕圆心匀速旋转（animateTransform rotate）
 - 三点跳动：三个圆点依次上下弹跳，begin 依次错开 0.15s

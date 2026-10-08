@@ -3,8 +3,13 @@
   "title": "SMIL 动效面板",
   "space": "2d",
   "time": "smil",
-  "tech": ["animate", "animateTransform", "animateMotion", "mpath"],
-  "description": "雷达扫描、引力轨道、状态灯——动画指令直接写在 SVG 标记里，零 JS/CSS 单文件自包含",
+  "tech": [
+    "animate",
+    "animateTransform",
+    "animateMotion",
+    "mpath"
+  ],
+  "description": "雷达扫描、引力轨道、状态灯——动画指令直接写在 SVG 标记里",
   "author": "airay1015",
   "date": "2026-10-07"
 }
