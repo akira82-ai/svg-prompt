@@ -1,0 +1,15 @@
+{
+  "slug": "packaging-dieline",
+  "title": "包装展开图",
+  "space": "2d",
+  "time": "static",
+  "order": 15,
+  "tech": [
+    "path",
+    "rect",
+    "虚线折线"
+  ],
+  "description": "咖啡袋刀版展开与成品对照——刀线、折线、出血",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "type-scale",
+  "title": "字阶系统",
+  "space": "2d",
+  "time": "static",
+  "order": 7,
+  "tech": [
+    "text",
+    "排版系统",
+    "字号梯度"
+  ],
+  "description": "Display 到辅助文字的五级字号梯度与行高",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

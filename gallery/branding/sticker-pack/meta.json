@@ -1,0 +1,16 @@
+{
+  "slug": "sticker-pack",
+  "title": "贴纸包",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "tech": [
+    "path",
+    "circle",
+    "投影",
+    "异形切模"
+  ],
+  "description": "8 枚异形切模贴纸：Logo 变体、Slogan 与星芒表情",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -3,7 +3,7 @@
   "title": "圆形徽章",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 9,
   "tech": [
     "textPath",
     "circle",

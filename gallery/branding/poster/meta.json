@@ -1,0 +1,15 @@
+{
+  "slug": "poster",
+  "title": "品牌海报",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "tech": [
+    "text",
+    "linearGradient",
+    "排版层级"
+  ],
+  "description": "A3 竖版海报：超大字排版与图形层级",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

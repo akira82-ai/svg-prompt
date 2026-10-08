@@ -1,0 +1,16 @@
+{
+  "slug": "social-kit",
+  "title": "社媒套件",
+  "space": "2d",
+  "time": "static",
+  "order": 10,
+  "tech": [
+    "circle",
+    "rect",
+    "linearGradient",
+    "多尺寸"
+  ],
+  "description": "头像、横幅、方帖三尺寸——品牌在社媒的统一皮肤",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
