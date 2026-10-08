@@ -412,7 +412,7 @@
     <line x1="570" y1="932" x2="610" y2="932" stroke="#8fa0b8" stroke-width="2" stroke-dasharray="2 5"/>
     <text x="620" y="937">注册 / 采集</text>
     <circle cx="750" cy="932" r="3.5" fill="#cfe4ff"/>
-    <text x="762" y="937">流動光点 = animateMotion 沿布线运动（14 条航线并行）</text>
+    <text x="762" y="937">流动光点 = animateMotion 沿布线运动（14 条航线并行）</text>
     <text x="1540" y="937" text-anchor="end" fill="#5b6b8a">同一份布局 + 动画层 —— 可导出 PNG 静帧，也可以直接当"活文档"发出去</text>
   </g>
 </svg>
