@@ -103,6 +103,6 @@
   <text x="840" y="606" font-size="13.5" fill="#44506a">同一套渐变复用到按钮、图标、文字 ——</text>
   <text x="840" y="626" font-size="13.5" fill="#44506a">defs 定义一次，全部 url(#) 引用。</text>
 
-  <text x="60" y="742" font-size="14" fill="#6b7785">结论：网页级"现代设计感"（渐变 logo、玻璃拟态、光晕投影）SVG 原生全包，且全部可无限缩放。</text>
+  
   <text x="60" y="764" font-size="13" fill="#9aa4b1">技术点：linearGradient · radialGradient · gradientTransform · fill-opacity · feDropShadow · defs 复用</text>
 </svg>
