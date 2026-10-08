@@ -1,0 +1,15 @@
+{
+  "slug": "process-steps",
+  "title": "过程图解",
+  "space": "2d",
+  "time": "static",
+  "order": 14,
+  "tech": [
+    "circle",
+    "箭头",
+    "步骤图解"
+  ],
+  "description": "四步工作流：从一句话到一张验证过的图",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

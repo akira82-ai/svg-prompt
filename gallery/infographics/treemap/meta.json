@@ -1,0 +1,15 @@
+{
+  "slug": "treemap",
+  "title": "树状图 Treemap",
+  "space": "2d",
+  "time": "static",
+  "order": 5,
+  "tech": [
+    "rect",
+    "面积编码",
+    "层级"
+  ],
+  "description": "手机市场矩形分割：面积即份额",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

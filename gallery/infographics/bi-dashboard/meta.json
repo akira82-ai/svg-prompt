@@ -1,0 +1,15 @@
+{
+  "slug": "bi-dashboard",
+  "title": "浅色 BI 经营盘",
+  "space": "2d",
+  "time": "static",
+  "order": 17,
+  "tech": [
+    "筛选栏",
+    "KPI 行",
+    "SaaS 风"
+  ],
+  "description": "SaaS 销售经营盘：筛选栏 + KPI 行 + 双图 + 排行表",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "dark-ops-dashboard",
+  "title": "深色监控大屏",
+  "space": "2d",
+  "time": "static",
+  "order": 16,
+  "tech": [
+    "深色主题",
+    "多面板",
+    "数据组合"
+  ],
+  "description": "NOC 运维风：深底霓虹一屏九区",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
