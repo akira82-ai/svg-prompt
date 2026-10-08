@@ -1,0 +1,15 @@
+{
+  "slug": "sankey-flow",
+  "title": "桑基流动",
+  "space": "2d",
+  "time": "smil",
+  "order": 19,
+  "tech": [
+    "path",
+    "stroke-dashoffset",
+    "animateMotion"
+  ],
+  "description": "桑基图上流带持续流动——能量从左向右奔涌",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "map-ripple",
+  "title": "地图涟漪",
+  "space": "2d",
+  "time": "smil",
+  "order": 20,
+  "tech": [
+    "circle",
+    "animate",
+    "涟漪"
+  ],
+  "description": "区域版图上城市光点涟漪扩散，强度分档",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "process-walk",
+  "title": "流程行进",
+  "space": "2d",
+  "time": "smil",
+  "order": 23,
+  "tech": [
+    "animateMotion",
+    "路径",
+    "流程图"
+  ],
+  "description": "小圆点沿决策流程走完全程，路径渐次点亮",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

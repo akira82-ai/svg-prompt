@@ -1,0 +1,15 @@
+{
+  "slug": "live-ops-dashboard",
+  "title": "动态大屏",
+  "space": "2d",
+  "time": "smil",
+  "order": 21,
+  "tech": [
+    "深色主题",
+    "滚动折线",
+    "组合动效"
+  ],
+  "description": "深色大屏组合动效：滚动折线+呼吸灯+扫描+数字滚动",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
