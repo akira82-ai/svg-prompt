@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="变形记 II">
 
-## 提示词
-
 ```
 用 SVG 做进阶路径形变：
 - 单词变形 CAT ⇄ DOG：C/A/T 与 D/O/G 六个字母各设计一副 6 段贝塞尔骨架，

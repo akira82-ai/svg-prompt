@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="三维投影">
 
-## 提示词
-
 ```
 用 SVG 表现 3D（零 JS、零 WebGL），三块：
 - 等距插画：数据中心机柜，30° 等距轴，顶/左/右三个面不同明度 + LED 心跳 SMIL

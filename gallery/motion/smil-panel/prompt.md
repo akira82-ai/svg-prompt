@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="SMIL 动效面板">
 
-## 提示词
-
 ```
 用 SVG 做一块自包含动效面板（零 JS、零 CSS，动画全部用 SMIL <animate>/<animateTransform>/<animateMotion>）：
 - 雷达扫描：扇形 <animateTransform type="rotate"> 绕中心匀速旋转，底下三圈同心圆网格 + 扫过余辉

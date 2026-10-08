@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="滤镜材质特效">
 
-## 提示词
-
 ```
 用 SVG 展示三种滤镜材质特效，全部零位图实时计算：
 - 液态融合：两个相邻色块 + feGaussianBlur(stdDeviation 10) + feColorMatrix 把 alpha 通道对比度拉陡

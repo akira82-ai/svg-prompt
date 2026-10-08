@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="渐变与玻璃质感">
 
-## 提示词
-
 ```
 用 SVG 画一张"渐变与玻璃质感"设计展示图，四个区块：
 - 极光横幅：linearGradient 蓝→紫→粉多色过渡，叠加两团 radialGradient 光晕，圆角大横条

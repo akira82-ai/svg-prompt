@@ -2,8 +2,6 @@
 
 <img src="index.svg" width="720" alt="程序化纹理与图案">
 
-## 提示词
-
 ```
 用 SVG 画"程序化纹理"四联图，全部用滤镜生成、零图片素材：
 - 星空：feTurbulence fractalNoise 高频 + feColorMatrix 阈值化 → 深蓝底上稀疏白色星点
