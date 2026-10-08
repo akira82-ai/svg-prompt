@@ -1,0 +1,15 @@
+{
+  "slug": "brand-guidelines",
+  "title": "品牌规范页",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "tech": [
+    "path",
+    "circle",
+    "line"
+  ],
+  "description": "Brand Book 一页：安全距离、最小尺寸、错误示范与色彩字体",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

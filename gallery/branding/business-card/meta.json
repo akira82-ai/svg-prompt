@@ -1,0 +1,15 @@
+{
+  "slug": "business-card",
+  "title": "名片正反面",
+  "space": "2d",
+  "time": "static",
+  "order": 10,
+  "tech": [
+    "text",
+    "pattern",
+    "linearGradient"
+  ],
+  "description": "90×54 比例的名片：正面信息层级与背面图案",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

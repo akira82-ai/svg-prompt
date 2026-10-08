@@ -1,0 +1,15 @@
+{
+  "slug": "logo-grid",
+  "title": "Logo 网格构图",
+  "space": "2d",
+  "time": "static",
+  "order": 2,
+  "tech": [
+    "path",
+    "circle",
+    "辅助网格"
+  ],
+  "description": "四角星芒 Logo 的建造过程：辅助圆、比例标注与安全距离",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "type-effects",
+  "title": "文字特效四连",
+  "space": "2d",
+  "time": "static",
+  "order": 9,
+  "tech": [
+    "stroke",
+    "linearGradient",
+    "mask",
+    "feGaussianBlur"
+  ],
+  "description": "描边、渐变、镂空、霓虹——品牌大字的四种上妆法",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

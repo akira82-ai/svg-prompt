@@ -1,0 +1,15 @@
+{
+  "slug": "wordmark",
+  "title": "字标 Wordmark",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "tech": [
+    "text",
+    "letter-spacing",
+    "circle"
+  ],
+  "description": "NOVA 字标：图形化字母 O 与深浅两种版本",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

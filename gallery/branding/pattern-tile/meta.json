@@ -1,0 +1,14 @@
+{
+  "slug": "pattern-tile",
+  "title": "图案平铺",
+  "space": "2d",
+  "time": "static",
+  "order": 7,
+  "tech": [
+    "pattern",
+    "rect"
+  ],
+  "description": "四方连续图案：一个单元铺满整个世界",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

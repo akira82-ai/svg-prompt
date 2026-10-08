@@ -1,0 +1,15 @@
+{
+  "slug": "brand-palette",
+  "title": "品牌色板",
+  "space": "2d",
+  "time": "static",
+  "order": 6,
+  "tech": [
+    "rect",
+    "text",
+    "色彩系统"
+  ],
+  "description": "主辅语义色卡与 Logo 用色规范",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

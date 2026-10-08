@@ -1,0 +1,15 @@
+{
+  "slug": "icon-set",
+  "title": "单色图标系统",
+  "space": "2d",
+  "time": "static",
+  "order": 5,
+  "tech": [
+    "path",
+    "stroke-linecap",
+    "24 网格"
+  ],
+  "description": "8 个线性图标：同一网格、同一笔触、同一圆角",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
