@@ -1,0 +1,14 @@
+{
+  "slug": "golden-spiral",
+  "title": "黄金螺旋",
+  "space": "2d",
+  "time": "static",
+  "order": 5,
+  "tech": [
+    "斐波那契",
+    "四分之一圆弧"
+  ],
+  "description": "斐波那契矩形嵌套 + 鹦鹉螺弧 — 1.618 的几何显形",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "sierpinski",
+  "title": "谢尔宾斯基三角形",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "tech": [
+    "递归",
+    "三分迭代"
+  ],
+  "description": "六层递归 729 个三角形 — 分形的自相似",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

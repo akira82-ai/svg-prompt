@@ -1,0 +1,14 @@
+{
+  "slug": "fourier-square",
+  "title": "傅里叶逼近",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "tech": [
+    "傅里叶级数",
+    "谐波叠加"
+  ],
+  "description": "方波 = 正弦奇次谐波之和 — 项数越多越方",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

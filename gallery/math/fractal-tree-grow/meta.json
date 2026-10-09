@@ -1,0 +1,15 @@
+{
+  "slug": "fractal-tree-grow",
+  "title": "分形树生长动画",
+  "space": "2d",
+  "time": "static",
+  "order": 14,
+  "tech": [
+    "递归",
+    "逐层生长",
+    "循环"
+  ],
+  "description": "枝条逐层生长、叶端渐绿 — 树\"长\"出来的过程",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}
