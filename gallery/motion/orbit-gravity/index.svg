@@ -12,7 +12,7 @@
     <path id="flow2" d="M100,560 L540,560"/>
     <path id="flow3" d="M100,600 L540,600"/>
     <path id="ecg" d="M660,560 L700,560 L715,545 L730,575 L745,505 L760,615 L775,560 L820,560 L835,545 L850,575 L865,505 L880,615 L895,560 L940,560 L955,545 L970,575 L985,505 L1000,615 L1015,560 L1060,560 L1105,560"/>
-  </defs><g transform="translate(-290,180)"><g>
+  </defs><g transform="translate(600,400) scale(1.35) translate(-890,-250)"><g>
     <rect x="620" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="644" y="146" font-size="18" font-weight="700" fill="#e8eef7">引力轨道</text>
     <use href="#orbit2" stroke="#24406b" stroke-width="1.5"/>

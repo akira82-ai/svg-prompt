@@ -15,7 +15,7 @@
     </g>
     <path id="ringP" d="M330,595 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
     <path id="orbitBlob" d="M330,255 m-115,0 a115,55 0 1,0 230,0 a115,55 0 1,0 -230,0"/>
-  </defs><g transform="translate(-290,-140)"><g>
+  </defs><g transform="translate(600,400) scale(1.35) translate(-890,-570)"><g>
     <rect x="620" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="644" y="466" font-size="18" font-weight="700" fill="#e8eef7">等距伪 3D（Isometric）</text>
     <text x="644" y="488" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">顶/左/右三个面 × 三档明度 + 呼吸浮动 —— 没有任何 3D 引擎</text>
