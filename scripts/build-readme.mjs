@@ -55,8 +55,8 @@ function gridCell(e) {
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
   const tag = `<code>${TIME_LABEL[e.time] ?? e.time}</code> <code>${(e.space || '2d').toUpperCase()}</code>`;
   return (
-    `<td width="320" valign="top">` +
-    `<a href="${href}"><img src="${img}" width="300" alt="${e.title}"></a><br>` +
+    `<td width="350" align="center" valign="top">` +
+    `<a href="${href}"><img src="${img}" width="336" alt="${e.title}"></a><br>` +
     `<a href="${href}"><strong>${e.title}</strong></a> ${tag}` +
     `</td>`
   );
