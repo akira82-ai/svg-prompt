@@ -3,7 +3,7 @@
   "title": "波形解析器",
   "space": "2d",
   "time": "smil",
-  "order": 22,
+  "order": 31,
   "tech": [
     "translate 循环",
     "正弦叠加",

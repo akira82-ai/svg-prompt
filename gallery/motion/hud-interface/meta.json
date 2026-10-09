@@ -3,7 +3,7 @@
   "title": "HUD 瞬准界面",
   "space": "2d",
   "time": "smil",
-  "order": 16,
+  "order": 25,
   "tech": [
     "animateTransform",
     "双环反转",

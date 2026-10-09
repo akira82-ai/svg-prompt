@@ -3,7 +3,7 @@
   "title": "符号变换",
   "space": "2d",
   "time": "smil",
-  "order": 5,
+  "order": 11,
   "tech": [
     "animate",
     "d 路径 morph",

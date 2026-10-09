@@ -3,7 +3,7 @@
   "title": "赛博城市",
   "space": "2d",
   "time": "smil",
-  "order": 21,
+  "order": 30,
   "tech": [
     "rect",
     "闪烁窗灯",

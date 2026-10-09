@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">雷达扫描</text><text x="60" y="104" font-size="14" fill="#7c8db0">循环扫描扇形 + 目标点闪烁</text><defs>
+    <radialGradient id="sunG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe9b8"/>
+      <stop offset="0.6" stop-color="#f7a23b"/>
+      <stop offset="1" stop-color="#f65e5e"/>
+    </radialGradient>
+    <linearGradient id="sweepG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ecf8e" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#3ecf8e" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <path id="orbit1" d="M790,260 a100,40 0 1,0 200,0 a100,40 0 1,0 -200,0" fill="none"/>
+    <path id="orbit2" d="M740,260 a150,60 0 1,0 300,0 a150,60 0 1,0 -300,0" fill="none"/>
+    <path id="flow1" d="M100,520 L540,520"/>
+    <path id="flow2" d="M100,560 L540,560"/>
+    <path id="flow3" d="M100,600 L540,600"/>
+    <path id="ecg" d="M660,560 L700,560 L715,545 L730,575 L745,505 L760,615 L775,560 L820,560 L835,545 L850,575 L865,505 L880,615 L895,560 L940,560 L955,545 L970,575 L985,505 L1000,615 L1015,560 L1060,560 L1105,560"/>
+  </defs><g transform="translate(270,180)"><g>
+    <rect x="60" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="146" font-size="18" font-weight="700" fill="#e8eef7">雷达扫描</text>
+    <line x1="230" y1="270" x2="430" y2="270" stroke="#1f3a5f"/>
+    <line x1="330" y1="170" x2="330" y2="370" stroke="#1f3a5f"/>
+    <circle cx="330" cy="270" r="33" fill="none" stroke="#1f3a5f"/>
+    <circle cx="330" cy="270" r="66" fill="none" stroke="#1f3a5f"/>
+    <circle cx="330" cy="270" r="100" fill="none" stroke="#2a4a74"/>
+    <g>
+      <path d="M330,270 L330,170 A100,100 0 0 1 394,193 Z" fill="url(#sweepG)" filter="url(#soft2)">
+        <animateTransform attributeName="transform" type="rotate" from="0 330 270" to="360 330 270" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <line x1="330" y1="270" x2="330" y2="170" stroke="#3ecf8e" stroke-width="2">
+        <animateTransform attributeName="transform" type="rotate" from="0 330 270" to="360 330 270" dur="4s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <circle cx="390" cy="230" r="4" fill="#3ecf8e">
+      <animate attributeName="opacity" values="1;0.1;1" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="205" r="3.5" fill="#5b9dff">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="372" cy="312" r="3.5" fill="#f7a23b">
+      <animate attributeName="opacity" values="1;0.15;1" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="84" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">&lt;animateTransform type="rotate"&gt; + &lt;animate opacity/r&gt;</text>
+  </g></g></svg>

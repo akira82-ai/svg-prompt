@@ -3,7 +3,7 @@
   "title": "日出场景",
   "space": "2d",
   "time": "smil",
-  "order": 16,
+  "order": 23,
   "tech": [
     "stop-color 动画",
     "animate",

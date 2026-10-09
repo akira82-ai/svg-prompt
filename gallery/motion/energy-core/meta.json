@@ -3,7 +3,7 @@
   "title": "能量核心",
   "space": "2d",
   "time": "smil",
-  "order": 20,
+  "order": 29,
   "tech": [
     "animateTransform",
     "dasharray 环",

@@ -3,7 +3,7 @@
   "title": "故障文字 Glitch",
   "space": "2d",
   "time": "smil",
-  "order": 17,
+  "order": 26,
   "tech": [
     "RGB 分离",
     "clipPath 切片",

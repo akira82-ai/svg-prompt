@@ -3,7 +3,7 @@
   "title": "单词变换",
   "space": "2d",
   "time": "smil",
-  "order": 4,
+  "order": 10,
   "tech": [
     "animate",
     "多子路径 morph",

@@ -3,7 +3,7 @@
   "title": "数据雨",
   "space": "2d",
   "time": "smil",
-  "order": 19,
+  "order": 28,
   "tech": [
     "translate 循环",
     "字符列",

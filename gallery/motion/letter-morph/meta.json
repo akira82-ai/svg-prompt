@@ -3,7 +3,7 @@
   "title": "字母变换",
   "space": "2d",
   "time": "smil",
-  "order": 3,
+  "order": 9,
   "tech": [
     "animate",
     "d 路径 morph",

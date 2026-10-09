@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">等距立方</text><text x="60" y="104" font-size="14" fill="#7c8db0">三面明度 + 悬浮呼吸</text><defs>
+    <linearGradient id="blobG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a5cf0"/>
+      <stop offset="1" stop-color="#3f8ef7"/>
+    </linearGradient>
+    <radialGradient id="spotRad">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="spot" maskUnits="userSpaceOnUse" x="620" y="110" width="540" height="280">
+      <rect x="620" y="110" width="540" height="280" fill="#000000"/>
+      <circle r="110" fill="url(#spotRad)">
+        <animateMotion dur="10s" repeatCount="indefinite" path="M760,240 L980,190 L1080,320 L820,340 L700,290 Z"/>
+      </circle>
+    </mask>
+    <g id="secretContent">
+      <text x="660" y="212" font-size="56" font-weight="800" fill="#ffd166" letter-spacing="6">TOP SECRET</text>
+      <text x="662" y="248" font-size="15" fill="#c6d2e4">只有光斑扫过的地方，才被"看见" —— mask 以亮度决定显隐</text>
+      <polyline points="660,290 740,290 760,318 880,318 900,290 1120,290" fill="none" stroke="#5ad0c0" stroke-width="2"/>
+      <circle cx="700" cy="344" r="4" fill="#f65e5e"/>
+      <circle cx="758" cy="344" r="4" fill="#f7b32b"/>
+      <circle cx="816" cy="344" r="4" fill="#3ecf8e"/>
+      <circle cx="874" cy="344" r="4" fill="#5b9dff"/>
+      <rect x="940" y="312" width="170" height="44" rx="8" fill="none" stroke="#c98ef7"/>
+      <text x="1025" y="339" font-size="13" fill="#c98ef7" text-anchor="middle">机密数据 · 001</text>
+    </g>
+    <path id="ringP" d="M330,595 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
+    <path id="orbitBlob" d="M330,255 m-115,0 a115,55 0 1,0 230,0 a115,55 0 1,0 -230,0"/>
+  </defs><g transform="translate(-290,-140)"><g>
+    <rect x="620" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="644" y="466" font-size="18" font-weight="700" fill="#e8eef7">等距伪 3D（Isometric）</text>
+    <text x="644" y="488" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">顶/左/右三个面 × 三档明度 + 呼吸浮动 —— 没有任何 3D 引擎</text>
+    <g stroke="#16213a" stroke-width="1">
+      <line x1="640" y1="480" x2="1000" y2="688"/>
+      <line x1="780" y1="430" x2="1140" y2="638"/>
+      <line x1="640" y1="660" x2="1000" y2="452"/>
+      <line x1="840" y1="660" x2="1140" y2="487"/>
+    </g>
+    <ellipse cx="800" cy="648" rx="52" ry="9" fill="#000000" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="3.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="912" cy="582" rx="38" ry="7" fill="#000000" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="4.1s" begin="-1.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="1000" cy="672" rx="45" ry="8" fill="#000000" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="3.6s" begin="-2s" repeatCount="indefinite"/>
+    </ellipse>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -9; 0 0" dur="3.2s" repeatCount="indefinite"/>
+      <polygon points="800,526 847,553 800,580 753,553" fill="#8ec5ff"/>
+      <polygon points="753,553 800,580 800,634 753,607" fill="#4a94f8"/>
+      <polygon points="800,580 847,553 847,607 800,634" fill="#2b5fc0"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -8; 0 0" dur="4.1s" begin="-1.2s" repeatCount="indefinite"/>
+      <polygon points="912,494 945,513 912,532 879,513" fill="#cbaeff"/>
+      <polygon points="879,513 912,532 912,570 879,551" fill="#9b6cf5"/>
+      <polygon points="912,532 945,513 945,551 912,570" fill="#6a3fd0"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -7; 0 0" dur="3.6s" begin="-2s" repeatCount="indefinite"/>
+      <polygon points="1000,566 1040,589 1000,612 960,589" fill="#ffcf7a"/>
+      <polygon points="960,589 1000,612 1000,658 960,635" fill="#f7a23b"/>
+      <polygon points="1000,612 1040,589 1040,635 1000,658" fill="#c77714"/>
+    </g>
+  </g></g></svg>

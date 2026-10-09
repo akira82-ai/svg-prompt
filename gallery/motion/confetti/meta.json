@@ -3,7 +3,7 @@
   "title": "粒子礼花",
   "space": "2d",
   "time": "smil",
-  "order": 12,
+  "order": 19,
   "tech": [
     "animate",
     "粒子系统",
