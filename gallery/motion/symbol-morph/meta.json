@@ -1,0 +1,15 @@
+{
+  "slug": "symbol-morph",
+  "title": "符号变换",
+  "space": "2d",
+  "time": "smil",
+  "order": 5,
+  "tech": [
+    "animate",
+    "d 路径 morph",
+    "变色同步"
+  ],
+  "description": "气泡⇄信封与爱心⇄闪电的形变变色",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

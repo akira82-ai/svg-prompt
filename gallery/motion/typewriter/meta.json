@@ -3,7 +3,7 @@
   "title": "打字机文字",
   "space": "2d",
   "time": "smil",
-  "order": 6,
+  "order": 8,
   "tech": [
     "clipPath",
     "calcMode discrete",

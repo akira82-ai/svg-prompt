@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0b101d"/>
+  <text x="60" y="64" font-size="28" font-weight="700" fill="#e8eef7">字母变换</text>
+  <text x="60" y="92" font-size="14" fill="#8fa0b8">B ⇄ W · B ⇄ X — 粗描边骨架插值</text>
+<defs>
+    <linearGradient id="geoG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2bb3a3"/>
+      <stop offset="1" stop-color="#3f8ef7"/>
+    </linearGradient>
+    <linearGradient id="bloomyG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9b6cf5"/>
+      <stop offset="1" stop-color="#e65cc7"/>
+    </linearGradient>
+    <linearGradient id="penG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff8a8a"/>
+    </linearGradient>
+  </defs>
+<!-- P3 字母变形：B ⇄ W -->
+  <g>
+    <rect x="60" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="466" font-size="18" font-weight="700" fill="#e8eef7">字母变形：B ⇄ W（单线手写体）</text>
+    <path fill="none" stroke="url(#penG)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"
+      d="M280,500 C280,525 280,550 280,575 C280,600 280,625 280,650 C335,650 352,635 352,612 C352,589 335,575 280,575 C330,575 348,560 348,538 C348,516 330,500 280,500">
+      <animate attributeName="d" dur="8s" repeatCount="indefinite" keyTimes="0;0.32;0.5;0.82;1"
+        values="M280,500 C280,525 280,550 280,575 C280,600 280,625 280,650 C335,650 352,635 352,612 C352,589 335,575 280,575 C330,575 348,560 348,538 C348,516 330,500 280,500;
+                M280,500 C280,525 280,550 280,575 C280,600 280,625 280,650 C335,650 352,635 352,612 C352,589 335,575 280,575 C330,575 348,560 348,538 C348,516 330,500 280,500;
+                M280,500 C285,525 290,550 296,575 C302,600 307,625 312,650 C322,613 331,577 340,540 C349,577 358,613 368,650 C376,625 385,600 394,575 C400,550 410,525 420,500;
+                M280,500 C285,525 290,550 296,575 C302,600 307,625 312,650 C322,613 331,577 340,540 C349,577 358,613 368,650 C376,625 385,600 394,575 C400,550 410,525 420,500;
+                M280,500 C280,525 280,550 280,575 C280,600 280,625 280,650 C335,650 352,635 352,612 C352,589 335,575 280,575 C330,575 348,560 348,538 C348,516 330,500 280,500"/>
+    </path>
+    <text x="490" y="580" font-size="13" fill="#5b6b8a" font-family="SFMono-Regular, Menlo, monospace">4 段贝塞尔</text>
+    <text x="84" y="686" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">B 的"一笔字"骨架（竖 + 两碗）⇄ W 的四折骨架 —— 中间态是"液态"，keyTimes 控制停顿</text>
+  </g>
+
+  
+<g transform="translate(560,0)">
+<!-- P2 单字母 B ⇄ X -->
+  <g>
+    <rect x="60" y="440" width="340" height="260" rx="14" fill="#0e1524" stroke="#22304d"/>
+    <text x="84" y="466" font-size="17" font-weight="700" fill="#e8eef7">单字母 B ⇄ X</text>
+    <path fill="none" stroke="url(#penG2)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+      d="M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500">
+      <animate attributeName="d" dur="8s" repeatCount="indefinite" keyTimes="0;0.32;0.5;0.82;1"
+        values="M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500;
+                M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500;
+                M175,500 C193,525 212,550 230,575 C248,600 266,625 285,650 C266,625 248,600 230,575 C248,550 266,525 285,500 C266,525 248,550 230,575 C212,625 193,650 175,650;
+                M175,500 C193,525 212,550 230,575 C248,600 266,625 285,650 C266,625 248,600 230,575 C248,550 266,525 285,500 C266,525 248,550 230,575 C212,625 193,650 175,650;
+                M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500"/>
+    </path>
+    <text x="84" y="686" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">B = 竖笔加双碗；X = 回描四臂</text>
+  </g>
+
+  
+</g>
+</svg>

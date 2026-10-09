@@ -3,7 +3,7 @@
   "title": "创意 loading 集",
   "space": "2d",
   "time": "smil",
-  "order": 9,
+  "order": 11,
   "tech": [
     "animate",
     "场景化加载"

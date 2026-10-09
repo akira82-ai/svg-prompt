@@ -1,0 +1,15 @@
+{
+  "slug": "shape-morph",
+  "title": "形状变换",
+  "space": "2d",
+  "time": "smil",
+  "order": 2,
+  "tech": [
+    "animate",
+    "d 路径 morph",
+    "贝塞尔骨架"
+  ],
+  "description": "正方形⇄圆⇄菱形与圆→星→心的路径插值",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

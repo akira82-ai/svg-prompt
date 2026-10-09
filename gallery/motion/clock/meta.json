@@ -3,7 +3,7 @@
   "title": "钟表",
   "space": "2d",
   "time": "smil",
-  "order": 8,
+  "order": 10,
   "tech": [
     "animateTransform",
     "calcMode discrete",
