@@ -1,0 +1,15 @@
+{
+  "slug": "snow-globe",
+  "title": "雪景球",
+  "space": "2d",
+  "time": "smil",
+  "order": 11,
+  "tech": [
+    "clipPath",
+    "animate",
+    "多层飘落"
+  ],
+  "description": "雪花三层飘落循环，玻璃球里的冬天",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

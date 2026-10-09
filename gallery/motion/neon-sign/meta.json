@@ -1,0 +1,15 @@
+{
+  "slug": "neon-sign",
+  "title": "霓虹灯牌",
+  "space": "2d",
+  "time": "smil",
+  "order": 7,
+  "tech": [
+    "feGaussianBlur",
+    "辉光",
+    "闪烁序列"
+  ],
+  "description": "OPEN 24H 灯管逐段点亮、辉光呼吸、偶发故障闪烁",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

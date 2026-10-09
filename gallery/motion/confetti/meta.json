@@ -1,0 +1,15 @@
+{
+  "slug": "confetti",
+  "title": "粒子礼花",
+  "space": "2d",
+  "time": "smil",
+  "order": 10,
+  "tech": [
+    "animate",
+    "粒子系统",
+    "放射"
+  ],
+  "description": "粒子从中心爆发四散、坠落实散——循环绽放",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

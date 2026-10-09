@@ -1,0 +1,15 @@
+{
+  "slug": "rain-ripples",
+  "title": "雨滴涟漪",
+  "space": "2d",
+  "time": "smil",
+  "order": 12,
+  "tech": [
+    "line",
+    "ellipse",
+    "animate"
+  ],
+  "description": "雨滴下落触水成涟漪，多滴错位循环",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

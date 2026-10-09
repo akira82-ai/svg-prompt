@@ -1,0 +1,15 @@
+{
+  "slug": "clock",
+  "title": "钟表",
+  "space": "2d",
+  "time": "smil",
+  "order": 8,
+  "tech": [
+    "animateTransform",
+    "calcMode discrete",
+    "rotate"
+  ],
+  "description": "秒针滴答步进、分针匀速——机械芯的节奏",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}
