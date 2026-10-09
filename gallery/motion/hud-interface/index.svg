@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <rect width="1200" height="800" fill="#0a0f1a"/>
+  <text x="60" y="76" font-size="28" font-weight="700" fill="#d7e3f4">HUD · TARGETING INTERFACE</text>
+  <text x="60" y="104" font-size="14" fill="#7c8db0">SYS ONLINE — 双环反转 · 目标锁定</text>
+  <g>
+    <line x1="0" y1="66" x2="1200" y2="66" stroke="#101828"/>
+    <line x1="0" y1="132" x2="1200" y2="132" stroke="#101828"/>
+    <line x1="0" y1="198" x2="1200" y2="198" stroke="#101828"/>
+    <line x1="0" y1="264" x2="1200" y2="264" stroke="#101828"/>
+    <line x1="0" y1="330" x2="1200" y2="330" stroke="#101828"/>
+    <line x1="0" y1="396" x2="1200" y2="396" stroke="#101828"/>
+    <line x1="0" y1="462" x2="1200" y2="462" stroke="#101828"/>
+    <line x1="0" y1="528" x2="1200" y2="528" stroke="#101828"/>
+    <line x1="0" y1="594" x2="1200" y2="594" stroke="#101828"/>
+    <line x1="0" y1="660" x2="1200" y2="660" stroke="#101828"/>
+    <line x1="0" y1="726" x2="1200" y2="726" stroke="#101828"/>
+    <line x1="100" y1="0" x2="100" y2="800" stroke="#101828"/>
+    <line x1="200" y1="0" x2="200" y2="800" stroke="#101828"/>
+    <line x1="300" y1="0" x2="300" y2="800" stroke="#101828"/>
+    <line x1="400" y1="0" x2="400" y2="800" stroke="#101828"/>
+    <line x1="500" y1="0" x2="500" y2="800" stroke="#101828"/>
+    <line x1="600" y1="0" x2="600" y2="800" stroke="#101828"/>
+    <line x1="700" y1="0" x2="700" y2="800" stroke="#101828"/>
+    <line x1="800" y1="0" x2="800" y2="800" stroke="#101828"/>
+    <line x1="900" y1="0" x2="900" y2="800" stroke="#101828"/>
+    <line x1="1000" y1="0" x2="1000" y2="800" stroke="#101828"/>
+    <line x1="1100" y1="0" x2="1100" y2="800" stroke="#101828"/>
+  </g>
+  <line x1="0" y1="430" x2="1200" y2="430" stroke="#00e5ff" stroke-width="0.6" opacity="0.35"/>
+  <line x1="600" y1="130" x2="600" y2="730" stroke="#00e5ff" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="600" cy="430" r="200" fill="none" stroke="#00e5ff" stroke-width="2" stroke-dasharray="4 14">
+    <animate attributeName="stroke-dashoffset" values="0;-360" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="430" r="150" fill="none" stroke="#ff2d95" stroke-width="1.5" stroke-dasharray="40 22">
+    <animate attributeName="stroke-dashoffset" values="0;248" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 534 300 h -24 a 10 10 0 0 0 -10 10 v 24" fill="none" stroke="#00e5ff" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 666 300 h 24 a 10 10 0 0 1 10 10 v 24" fill="none" stroke="#00e5ff" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 534 560 h -24 a 10 10 0 0 1 -10 -10 v -24" fill="none" stroke="#00e5ff" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 666 560 h 24 a 10 10 0 0 0 10 -10 v -24" fill="none" stroke="#00e5ff" stroke-width="3">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  <rect x="574" y="404" width="52" height="52" fill="none" stroke="#ff2d95" stroke-width="2">
+    <animate attributeName="width" values="52;40;52" dur="1.6s" repeatCount="indefinite"/>
+    <animate attributeName="height" values="52;40;52" dur="1.6s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="574;580;574" dur="1.6s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="404;410;404" dur="1.6s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="600" cy="430" r="3" fill="#ff2d95"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#00e5ff" opacity="0.5">
+    <animate attributeName="y" values="0;796;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="90" y="620" font-size="12" fill="#7c8db0" font-family="SFMono-Regular, Menlo, monospace">SPEED</text>
+  <text x="90" y="642" font-size="20" font-weight="800" fill="#00e5ff" font-family="SFMono-Regular, Menlo, monospace">462 kt</text>
+  <text x="420" y="620" font-size="12" fill="#7c8db0" font-family="SFMono-Regular, Menlo, monospace">ALT</text>
+  <text x="420" y="642" font-size="20" font-weight="800" fill="#00ff9d" font-family="SFMono-Regular, Menlo, monospace">12,400 ft</text>
+  <text x="750" y="620" font-size="12" fill="#7c8db0" font-family="SFMono-Regular, Menlo, monospace">HDG</text>
+  <text x="750" y="642" font-size="20" font-weight="800" fill="#ffb45c" font-family="SFMono-Regular, Menlo, monospace">042°</text>
+  <text x="1010" y="620" font-size="12" fill="#7c8db0" font-family="SFMono-Regular, Menlo, monospace">TGT DIST</text>
+  <text x="1010" y="642" font-size="20" font-weight="800" fill="#ff2d95" font-family="SFMono-Regular, Menlo, monospace">1.24 km</text>
+  <text x="90" y="180" font-size="13" font-weight="700" fill="#00ff9d" font-family="SFMono-Regular, Menlo, monospace">SYS ONLINE</text>
+  <circle cx="196" cy="176" r="5" fill="#00ff9d">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "slug": "hologram",
+  "title": "全息投影",
+  "space": "2d",
+  "time": "smil",
+  "order": 18,
+  "tech": [
+    "线框",
+    "扫描亮带",
+    "闪烁"
+  ],
+  "description": "线框地球全息：扫描亮带上下、整体闪烁、底座光环",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

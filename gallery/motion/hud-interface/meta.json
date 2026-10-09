@@ -1,0 +1,15 @@
+{
+  "slug": "hud-interface",
+  "title": "HUD 瞬准界面",
+  "space": "2d",
+  "time": "smil",
+  "order": 16,
+  "tech": [
+    "animateTransform",
+    "双环反转",
+    "目标锁定"
+  ],
+  "description": "双层刻度环反向旋转 + 目标锁定框呼吸 + 数据读数",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}
