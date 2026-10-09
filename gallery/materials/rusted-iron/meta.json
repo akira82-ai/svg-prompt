@@ -1,0 +1,11 @@
+{
+  "slug": "rusted-iron",
+  "title": "铁锈",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "tech": [],
+  "description": "底色深铁灰 #4a4240，叠三层：铁底渐变（暗→深）、橙棕锈斑（feTurbulence bf 0.06 octaves 5 映射橙棕 opacity 0.75）、暗斑驳（bf 0.15 opacity 0.3）",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "fabric",
+  "title": "织物",
+  "space": "2d",
+  "time": "static",
+  "order": 9,
+  "tech": [],
+  "description": "针织区（上 60%）：米白底 #ece7dd，V 纹交错（pattern：两条 ±18° 斜线列交替，浅灰 #d8d2c4）",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

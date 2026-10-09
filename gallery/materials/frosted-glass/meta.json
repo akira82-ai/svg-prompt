@@ -1,0 +1,11 @@
+{
+  "slug": "frosted-glass",
+  "title": "磨砂玻璃",
+  "space": "2d",
+  "time": "static",
+  "order": 13,
+  "tech": [],
+  "description": "底层彩色几何内容（蓝紫橙圆与三角）经 feGaussianBlur(12) 全部虚化",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

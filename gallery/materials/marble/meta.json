@@ -1,0 +1,11 @@
+{
+  "slug": "marble",
+  "title": "大理石",
+  "space": "2d",
+  "time": "static",
+  "order": 14,
+  "tech": [],
+  "description": "底色冷白渐变（#f4f4f0 → #dfe3e8）",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}
