@@ -1,19 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">文字骑路径</text><text x="60" y="104" font-size="14" fill="#7c8db0">环形排布旋转</text><defs>
-    <linearGradient id="blobG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7a5cf0"/>
-      <stop offset="1" stop-color="#3f8ef7"/>
-    </linearGradient>
-    <radialGradient id="spotRad">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-    <mask id="spot" maskUnits="userSpaceOnUse" x="620" y="110" width="540" height="280">
-      <rect x="620" y="110" width="540" height="280" fill="#000000"/>
-      <circle r="110" fill="url(#spotRad)">
-        <animateMotion dur="10s" repeatCount="indefinite" path="M760,240 L980,190 L1080,320 L820,340 L700,290 Z"/>
-      </circle>
-    </mask>
+    
+    
+    
     <g id="secretContent">
       <text x="660" y="212" font-size="56" font-weight="800" fill="#ffd166" letter-spacing="6">TOP SECRET</text>
       <text x="662" y="248" font-size="15" fill="#c6d2e4">只有光斑扫过的地方，才被"看见" —— mask 以亮度决定显隐</text>

@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#f6f8fb"/><text x="60" y="76" font-size="28" font-weight="700" fill="#1c2733">三阶贝塞尔 · 德卡斯特里奥构造</text><text x="60" y="104" font-size="14" fill="#6b7785">控制点定义形状，光点走的是曲线</text><g><rect x="60" y="140" width="1080" height="560" rx="16" fill="#ffffff" stroke="#e3e8ef"/></g><path d="M 200,600 C 420,240 780,620 1000,260" fill="none" stroke="#4f8ef7" stroke-width="4"/><circle cx="200" cy="600" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/><text x="214" y="588" font-size="13" fill="#6b7785" text-anchor="start" font-weight="600" font-family="SFMono-Regular, Menlo, monospace">P0</text><circle cx="420" cy="240" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/><text x="434" y="228" font-size="13" fill="#6b7785" text-anchor="start" font-weight="600" font-family="SFMono-Regular, Menlo, monospace">P1</text><circle cx="780" cy="620" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/><text x="794" y="608" font-size="13" fill="#6b7785" text-anchor="start" font-weight="600" font-family="SFMono-Regular, Menlo, monospace">P2</text><circle cx="1000" cy="260" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/><text x="1014" y="248" font-size="13" fill="#6b7785" text-anchor="start" font-weight="600" font-family="SFMono-Regular, Menlo, monospace">P3</text><g opacity="0.85"><line x1="200,600" y1="420,240" x2="780,620" y2="1000,260" stroke="#e3e8ef" stroke-width="1.5"/></g><animate attributeName="opacity" values="0.85;0.3;0.85" dur="4s" repeatCount="indefinite"/><circle r="9" fill="#ff2d95"><animateMotion dur="3.4s" repeatCount="indefinite" path="M 200,600 C 420,240 780,620 1000,260"/></circle></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+  <rect width="1200" height="800" fill="#f6f8fb"/>
+  <text x="60" y="76" font-size="28" font-weight="700" fill="#1c2733">三阶贝塞尔 · 德卡斯特里奥构造</text>
+  <text x="60" y="104" font-size="14" fill="#6b7785">控制点定义形状，光点走的是曲线</text>
+  <g>
+    <rect x="60" y="140" width="1080" height="560" rx="16" fill="#ffffff" stroke="#e3e8ef"/>
+    <line x1="200" y1="560" x2="420" y2="220" stroke="#c9d4e3" stroke-width="2">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="420" y1="220" x2="780" y2="620" stroke="#c9d4e3" stroke-width="2">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="780" y1="620" x2="1000" y2="240" stroke="#c9d4e3" stroke-width="2">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <path d="M 200 560 C 420 220 780 620 1000 240" fill="none" stroke="#4f8ef7" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="200" cy="560" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/>
+    <circle cx="420" cy="220" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/>
+    <circle cx="780" cy="620" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/>
+    <circle cx="1000" cy="240" r="9" fill="#fff" stroke="#1c2733" stroke-width="2.5"/>
+    <text x="214" y="548" font-size="13" fill="#6b7785" font-family="SFMono-Regular, Menlo, monospace" font-weight="600">P0</text>
+    <text x="434" y="208" font-size="13" fill="#6b7785" font-family="SFMono-Regular, Menlo, monospace" font-weight="600">P1</text>
+    <text x="794" y="608" font-size="13" fill="#6b7785" font-family="SFMono-Regular, Menlo, monospace" font-weight="600">P2</text>
+    <text x="1014" y="228" font-size="13" fill="#6b7785" font-family="SFMono-Regular, Menlo, monospace" font-weight="600">P3</text>
+    <circle r="9" fill="#ff2d95">
+      <animateMotion dur="3.4s" repeatCount="indefinite" path="M 200 560 C 420 220 780 620 1000 240"/>
+    </circle>
+    <text x="600" y="680" font-size="12.5" fill="#8a94a3" text-anchor="middle" font-family="SFMono-Regular, Menlo, monospace">B(t) = (1-t)³P0 + 3(1-t)²t·P1 + 3(1-t)t²·P2 + t³·P3</text>
+  </g>
+</svg>

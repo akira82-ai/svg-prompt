@@ -1,9 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">雷达扫描</text><text x="60" y="104" font-size="14" fill="#7c8db0">循环扫描扇形 + 目标点闪烁</text><defs>
-    <radialGradient id="sunG" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffe9b8"/>
-      <stop offset="0.6" stop-color="#f7a23b"/>
-      <stop offset="1" stop-color="#f65e5e"/>
-    </radialGradient>
+    
     <linearGradient id="sweepG" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#3ecf8e" stop-opacity="0.55"/>
       <stop offset="1" stop-color="#3ecf8e" stop-opacity="0.05"/>

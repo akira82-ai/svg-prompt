@@ -2,7 +2,7 @@
   "slug": "dark-ops-dashboard",
   "title": "深色监控大屏",
   "space": "2d",
-  "time": "static",
+  "time": "smil",
   "order": 16,
   "tech": [
     "深色主题",

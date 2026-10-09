@@ -4,7 +4,10 @@
   "space": "2d",
   "time": "static",
   "order": 12,
-  "tech": [],
+  "tech": [
+    "linearGradient",
+    "镜面渐变"
+  ],
   "description": "底色深暖棕 #14100a 衬托",
   "author": "airay1015",
   "date": "2026-10-09"

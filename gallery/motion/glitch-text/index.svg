@@ -104,11 +104,9 @@
     <rect x="0" y="788" width="1200" height="1.6" fill="#141c28"/>
   </g>
   <g>
-    <text x="594" y="430" font-size="150" font-weight="900" text-anchor="middle" fill="#ff2d95" opacity="0.75" letter-spacing="10">
-      <animate attributeName="transform" type="translate" values="0 0;-8 2;5 -2;0 0" keyTimes="0;0.55;0.62;1" dur="2.2s" calcMode="discrete" repeatCount="indefinite"/>
+    <text x="594" y="430" font-size="150" font-weight="900" text-anchor="middle" fill="#ff2d95" opacity="0.75" letter-spacing="10">GLITCH<animateTransform attributeName="transform" type="translate" values="0 0;-8 2;5 -2;0 0" keyTimes="0;0.55;0.62;1" dur="2.2s" calcMode="discrete" repeatCount="indefinite"/>
     </text>
-    <text x="606" y="430" font-size="150" font-weight="900" text-anchor="middle" fill="#00e5ff" opacity="0.75" letter-spacing="10">
-      <animate attributeName="transform" type="translate" values="0 0;8 -2;-5 2;0 0" keyTimes="0;0.58;0.66;1" dur="2.2s" calcMode="discrete" repeatCount="indefinite"/>
+    <text x="606" y="430" font-size="150" font-weight="900" text-anchor="middle" fill="#00e5ff" opacity="0.75" letter-spacing="10">GLITCH<animateTransform attributeName="transform" type="translate" values="0 0;8 -2;-5 2;0 0" keyTimes="0;0.58;0.66;1" dur="2.2s" calcMode="discrete" repeatCount="indefinite"/>
     </text>
     <text x="600" y="430" font-size="150" font-weight="900" text-anchor="middle" fill="#f2f6ff" letter-spacing="10">GLITCH</text>
   </g>

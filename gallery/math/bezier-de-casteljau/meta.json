@@ -2,11 +2,12 @@
   "slug": "bezier-de-casteljau",
   "title": "贝塞尔构造动画",
   "space": "2d",
-  "time": "static",
+  "time": "smil",
   "order": 13,
   "tech": [
-    "德卡斯特里奥",
-    "animateMotion"
+    "animateMotion",
+    "贝塞尔曲线",
+    "控制点"
   ],
   "description": "光点沿三阶贝塞尔行进，控制多边形呼吸显隐",
   "author": "airay1015",

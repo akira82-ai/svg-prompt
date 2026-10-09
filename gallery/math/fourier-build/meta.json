@@ -2,7 +2,7 @@
   "slug": "fourier-build",
   "title": "傅里叶构建动画",
   "space": "2d",
-  "time": "static",
+  "time": "smil",
   "order": 12,
   "tech": [
     "谐波逐入",

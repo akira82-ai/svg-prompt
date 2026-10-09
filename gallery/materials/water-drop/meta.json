@@ -4,7 +4,10 @@
   "space": "2d",
   "time": "static",
   "order": 15,
-  "tech": [],
+  "tech": [
+    "radialGradient",
+    "折射亮斑"
+  ],
   "description": "背景：绿渐变叶面（#3f7d44 → #2c5a31）+ 叶脉细线三根",
   "author": "airay1015",
   "date": "2026-10-09"

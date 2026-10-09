@@ -9,7 +9,7 @@
 
   <rect width="1200" height="800" fill="#0b101d"/>
   <text x="60" y="64" font-size="28" font-weight="700" fill="#e8eef7">数据可视化 — SVG 是图表的母语</text>
-  <text x="60" y="92" font-size="14" fill="#8fa0b8">Level 4.5 — 面积图 · 环形图 · 柱状图 · KPI 卡全手写；打开文件的一瞬间，"数据流入"动画自动播放</text>
+  <text x="60" y="92" font-size="14" fill="#8fa0b8">面积图 · 环形图 · 柱状图 · KPI 卡全手写；打开文件的一瞬间，"数据流入"动画自动播放</text>
   <rect x="950" y="34" width="190" height="34" rx="17" fill="#141d31" stroke="#2d3f63"/>
   <circle cx="972" cy="51" r="5" fill="#3ecf8e">
     <animate attributeName="opacity" values="1;0.15;1" dur="1.2s" repeatCount="indefinite"/>

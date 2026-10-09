@@ -1,6 +1,6 @@
-# 按钮三态 `静态` `2D`
+# 按钮四态 `静态` `2D`
 
-<img src="index.svg" width="720" alt="按钮三态">
+<img src="index.svg" width="720" alt="按钮四态">
 
 ```
 用 SVG 画一张"按钮状态规格图"：

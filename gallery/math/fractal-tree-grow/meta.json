@@ -2,7 +2,7 @@
   "slug": "fractal-tree-grow",
   "title": "分形树生长动画",
   "space": "2d",
-  "time": "static",
+  "time": "smil",
   "order": 14,
   "tech": [
     "递归",
