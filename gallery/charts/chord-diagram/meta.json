@@ -1,0 +1,15 @@
+{
+  "slug": "chord-diagram",
+  "title": "弦图",
+  "space": "2d",
+  "time": "static",
+  "order": 6,
+  "tech": [
+    "circle",
+    "path",
+    "环形关系"
+  ],
+  "description": "六城人口迁徒：弧带粗细即往来强度",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "rotational-patterns",
+  "title": "旋转复制组合",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "transform-rotate",
+    "defs",
+    "use"
+  ],
+  "description": "一个单元绕圆心复制 N 次——齿轮、花瓣、太阳的共同祖先",
+  "author": "airay1015",
+  "date": "2026-10-07",
+  "order": 18
+}

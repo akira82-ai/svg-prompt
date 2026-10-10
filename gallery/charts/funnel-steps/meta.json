@@ -3,7 +3,7 @@
   "title": "漏斗逐层动画",
   "space": "2d",
   "time": "smil",
-  "order": 19,
+  "order": 22,
   "tech": [
     "animate",
     "opacity",

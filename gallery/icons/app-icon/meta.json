@@ -1,0 +1,15 @@
+{
+  "slug": "app-icon",
+  "title": "App 图标",
+  "space": "2d",
+  "time": "static",
+  "order": 1,
+  "tech": [
+    "linearGradient",
+    "rect",
+    "rx"
+  ],
+  "description": "四枚超椭圆 App 图标与 iOS 网格参考",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

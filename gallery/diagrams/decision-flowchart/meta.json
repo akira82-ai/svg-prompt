@@ -1,0 +1,15 @@
+{
+  "slug": "decision-flowchart",
+  "title": "决策流程图",
+  "space": "2d",
+  "time": "static",
+  "order": 6,
+  "tech": [
+    "rect",
+    "菱形",
+    "分支"
+  ],
+  "description": "SVG 生成质量的判定流程：是/否分支走到底",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

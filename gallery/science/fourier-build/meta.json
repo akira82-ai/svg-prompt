@@ -1,0 +1,14 @@
+{
+  "slug": "fourier-build",
+  "title": "傅里叶构建动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 7,
+  "tech": [
+    "谐波逐入",
+    "循环"
+  ],
+  "description": "谐波逐个加入，曲线逐渐逼近方波 — 逼近过程可见",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

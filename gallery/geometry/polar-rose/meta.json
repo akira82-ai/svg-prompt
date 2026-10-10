@@ -1,0 +1,14 @@
+{
+  "slug": "polar-rose",
+  "title": "极坐标玫瑰",
+  "space": "2d",
+  "time": "static",
+  "order": 1,
+  "tech": [
+    "极坐标",
+    "cos(kθ)"
+  ],
+  "description": "r = cos(kθ) — 花瓣数由 k 决定",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "stat-numbers",
+  "title": "数字统计图",
+  "space": "2d",
+  "time": "static",
+  "order": 18,
+  "tech": [
+    "text",
+    "大数字排版",
+    "杂志式"
+  ],
+  "description": "六组大数字：图鉴自己的年度统计",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

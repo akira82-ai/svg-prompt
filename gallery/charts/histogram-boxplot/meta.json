@@ -3,7 +3,7 @@
   "title": "直方图与箱线图",
   "space": "2d",
   "time": "static",
-  "order": 13,
+  "order": 17,
   "tech": [
     "rect",
     "四分位",

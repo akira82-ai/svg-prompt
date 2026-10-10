@@ -1,0 +1,15 @@
+{
+  "slug": "water-shimmer",
+  "title": "水面波光",
+  "space": "2d",
+  "time": "smil",
+  "order": 19,
+  "tech": [
+    "animate",
+    "高光线",
+    "循环"
+  ],
+  "description": "深海蓝纵向渐变（#0a2a4a → #061527）",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

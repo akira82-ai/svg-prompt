@@ -1,5 +1,7 @@
 # 输入框状态 `静态` `2D`
 
+分类：[界面与组件](../_about.md)
+
 <img src="index.svg" width="720" alt="输入框状态">
 
 ```

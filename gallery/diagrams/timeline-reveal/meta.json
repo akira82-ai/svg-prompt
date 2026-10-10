@@ -1,0 +1,15 @@
+{
+  "slug": "timeline-reveal",
+  "title": "时间轴点亮",
+  "space": "2d",
+  "time": "smil",
+  "order": 12,
+  "tech": [
+    "animate",
+    "循环",
+    "时间轴"
+  ],
+  "description": "事件沿时间线逐个点亮——6 秒一轮的时光放映",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

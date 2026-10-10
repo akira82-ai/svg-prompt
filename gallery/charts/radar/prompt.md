@@ -1,5 +1,7 @@
 # 雷达图 `静态` `2D`
 
+分类：[数据图表](../_about.md)
+
 <img src="index.svg" width="720" alt="雷达图">
 
 ```

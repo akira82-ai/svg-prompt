@@ -3,7 +3,7 @@
   "title": "子弹图",
   "space": "2d",
   "time": "static",
-  "order": 12,
+  "order": 16,
   "tech": [
     "rect",
     "区间带",

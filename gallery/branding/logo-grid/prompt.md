@@ -1,5 +1,7 @@
 # Logo 网格构图 `静态` `2D`
 
+分类：[品牌与排版](../_about.md)
+
 <img src="index.svg" width="720" alt="Logo 网格构图">
 
 ```

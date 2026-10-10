@@ -1,0 +1,15 @@
+{
+  "slug": "treemap",
+  "title": "树状图 Treemap",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "tech": [
+    "rect",
+    "面积编码",
+    "层级"
+  ],
+  "description": "虚构市场份额父块与无重叠型号分区",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

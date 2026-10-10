@@ -3,7 +3,7 @@
   "title": "折线描线动画",
   "space": "2d",
   "time": "smil",
-  "order": 16,
+  "order": 20,
   "tech": [
     "stroke-dashoffset",
     "pathLength",

@@ -1,0 +1,14 @@
+{
+  "slug": "golden-spiral",
+  "title": "黄金螺旋",
+  "space": "2d",
+  "time": "static",
+  "order": 2,
+  "tech": [
+    "斐波那契",
+    "四分之一圆弧"
+  ],
+  "description": "Fibonacci方块拼接与相切四分之一圆弧近似，非严格对数螺旋",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

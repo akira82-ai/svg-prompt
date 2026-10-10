@@ -1,0 +1,15 @@
+{
+  "slug": "solar-system",
+  "title": "太阳系轨道",
+  "space": "2d",
+  "time": "smil",
+  "order": 10,
+  "tech": [
+    "animateMotion",
+    "椭圆轨道",
+    "多速公转"
+  ],
+  "description": "五行星各自速度公转 + 彗星长周期掠过",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

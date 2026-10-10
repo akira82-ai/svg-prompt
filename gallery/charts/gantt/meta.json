@@ -3,7 +3,7 @@
   "title": "甘特图",
   "space": "2d",
   "time": "static",
-  "order": 11,
+  "order": 15,
   "tech": [
     "rect",
     "时间轴",

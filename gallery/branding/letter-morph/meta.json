@@ -1,0 +1,15 @@
+{
+  "slug": "letter-morph",
+  "title": "字母变换",
+  "space": "2d",
+  "time": "smil",
+  "order": 7,
+  "tech": [
+    "animate",
+    "d 路径 morph",
+    "描边骨架"
+  ],
+  "description": "B⇄W 与 B⇄X 的描边骨架插值",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

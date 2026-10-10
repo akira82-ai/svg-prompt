@@ -1,0 +1,15 @@
+{
+  "slug": "alert-blink",
+  "title": "告警闪烁",
+  "space": "2d",
+  "time": "smil",
+  "order": 40,
+  "tech": [
+    "animate",
+    "opacity",
+    "声波扩散"
+  ],
+  "description": "警告横幅快闪两下常亮 + 声波弧持续扩散",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

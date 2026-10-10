@@ -3,7 +3,7 @@
   "title": "面积展开动画",
   "space": "2d",
   "time": "smil",
-  "order": 18,
+  "order": 21,
   "tech": [
     "clipPath",
     "animate",

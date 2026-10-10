@@ -3,7 +3,7 @@
   "title": "双轴组合图",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 11,
   "tech": [
     "rect",
     "path",

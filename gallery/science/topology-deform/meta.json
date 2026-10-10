@@ -1,0 +1,16 @@
+{
+  "slug": "topology-deform",
+  "title": "拓扑形变",
+  "space": "3d",
+  "time": "smil",
+  "tech": [
+    "参数方程",
+    "拓扑形变",
+    "SMIL 关键帧",
+    "脚本生成坐标"
+  ],
+  "description": "环面参数退化与自交、莫比乌斯带及三维参数线框",
+  "author": "airay1015",
+  "date": "2026-10-07",
+  "order": 12
+}

@@ -3,7 +3,7 @@
   "title": "柱状生长动画",
   "space": "2d",
   "time": "smil",
-  "order": 15,
+  "order": 19,
   "tech": [
     "animate",
     "rect",

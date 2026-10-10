@@ -3,7 +3,7 @@
   "title": "散点图",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 7,
   "tech": [
     "circle",
     "回归线",

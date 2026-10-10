@@ -1,0 +1,15 @@
+{
+  "slug": "status-patrol",
+  "title": "状态灯巡检",
+  "space": "2d",
+  "time": "smil",
+  "order": 37,
+  "tech": [
+    "animate",
+    "opacity",
+    "巡检扫描"
+  ],
+  "description": "服务状态灯依次呼吸 + 巡检光带自上而下循环",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

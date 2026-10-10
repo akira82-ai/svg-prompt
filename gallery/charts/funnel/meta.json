@@ -3,7 +3,7 @@
   "title": "漏斗图",
   "space": "2d",
   "time": "static",
-  "order": 10,
+  "order": 14,
   "tech": [
     "path",
     "梯形",

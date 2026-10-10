@@ -1,5 +1,7 @@
 # 品牌色板 `静态` `2D`
 
+分类：[品牌与排版](../_about.md)
+
 <img src="index.svg" width="720" alt="品牌色板">
 
 ```

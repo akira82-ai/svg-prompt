@@ -1,0 +1,15 @@
+{
+  "slug": "campfire",
+  "title": "篝火",
+  "space": "2d",
+  "time": "smil",
+  "order": 4,
+  "tech": [
+    "feTurbulence",
+    "feDisplacementMap",
+    "animateTransform"
+  ],
+  "description": "火焰摇曳、火星上飘、炭火呼吸——滤镜动画",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "digital-rain",
+  "title": "数据雨",
+  "space": "2d",
+  "time": "smil",
+  "order": 22,
+  "tech": [
+    "translate 循环",
+    "字符列",
+    "头部亮点"
+  ],
+  "description": "Matrix 字符雨：14 列字符流下落渐隐",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

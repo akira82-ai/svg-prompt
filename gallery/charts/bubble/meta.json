@@ -3,7 +3,7 @@
   "title": "气泡图",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 9,
   "tech": [
     "circle",
     "三維编码"

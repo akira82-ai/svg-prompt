@@ -1,0 +1,14 @@
+{
+  "slug": "catenary",
+  "title": "悬链线",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "tech": [
+    "cosh",
+    "对比"
+  ],
+  "description": "悬链线 vs 抛物线：看着像，其实是两种曲线",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

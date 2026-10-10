@@ -1,0 +1,15 @@
+{
+  "slug": "gauge-swing",
+  "title": "仪表指针动画",
+  "space": "2d",
+  "time": "smil",
+  "order": 30,
+  "tech": [
+    "animateTransform",
+    "rotate",
+    "仪表盘"
+  ],
+  "description": "指针摆到 68% 回弹落位，之后持续微微颤动——仪表是活的",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

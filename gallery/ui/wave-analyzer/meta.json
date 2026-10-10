@@ -1,0 +1,15 @@
+{
+  "slug": "wave-analyzer",
+  "title": "波形解析器",
+  "space": "2d",
+  "time": "smil",
+  "order": 42,
+  "tech": [
+    "translate 循环",
+    "正弦叠加",
+    "频谱柱"
+  ],
+  "description": "三相位波形流动 + 频谱柱循环跳动",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

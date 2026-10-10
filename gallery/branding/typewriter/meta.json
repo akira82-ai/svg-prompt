@@ -1,0 +1,15 @@
+{
+  "slug": "typewriter",
+  "title": "打字机文字",
+  "space": "2d",
+  "time": "smil",
+  "order": 3,
+  "tech": [
+    "clipPath",
+    "calcMode discrete",
+    "光标"
+  ],
+  "description": "文字逐字打出、光标闪烁——终端的仪式感",
+  "author": "airay1015",
+  "date": "2026-10-09"
+}

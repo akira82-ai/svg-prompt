@@ -1,0 +1,15 @@
+{
+  "slug": "china-grid-map",
+  "title": "地理填色图",
+  "space": "2d",
+  "time": "static",
+  "order": 1,
+  "tech": [
+    "rect",
+    "分档填色",
+    "点阵地图"
+  ],
+  "description": "部分省份抽象格图，虚构示例数值与统一色阶",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}

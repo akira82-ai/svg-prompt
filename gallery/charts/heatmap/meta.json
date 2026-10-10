@@ -3,7 +3,7 @@
   "title": "日历热力图",
   "space": "2d",
   "time": "static",
-  "order": 9,
+  "order": 13,
   "tech": [
     "rect",
     "色阶",

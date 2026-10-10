@@ -1,5 +1,7 @@
 # 折线描线动画 `SMIL 动效` `2D`
 
+分类：[数据图表](../_about.md)
+
 <img src="index.svg" width="720" alt="折线描线动画">
 
 ```

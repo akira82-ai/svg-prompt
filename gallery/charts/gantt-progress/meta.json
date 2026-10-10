@@ -3,7 +3,7 @@
   "title": "甘特推进动画",
   "space": "2d",
   "time": "smil",
-  "order": 21,
+  "order": 24,
   "tech": [
     "animate",
     "rect",

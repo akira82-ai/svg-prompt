@@ -1,5 +1,7 @@
 # 名片正反面 `静态` `2D`
 
+分类：[品牌与排版](../_about.md)
+
 <img src="index.svg" width="720" alt="名片正反面">
 
 ```

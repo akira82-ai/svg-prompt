@@ -1,0 +1,15 @@
+{
+  "slug": "spirals-and-waves",
+  "title": "螺旋与波浪",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "参数方程采样",
+    "polyline"
+  ],
+  "description": "参数方程喂出来的曲线：阿基米德螺旋与正弦波（脚本生成坐标）",
+  "author": "airay1015",
+  "date": "2026-10-07",
+  "order": 19
+}

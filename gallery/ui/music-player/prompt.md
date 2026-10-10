@@ -1,5 +1,7 @@
 # 音乐播放器 `SMIL 动效` `2D`
 
+分类：[界面与组件](../_about.md)
+
 <img src="index.svg" width="720" alt="音乐播放器">
 
 ```

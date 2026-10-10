@@ -11,16 +11,27 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const readmePath = join(root, 'README.md');
 
-// 展示顺序 = 难度进阶顺序，与 gallery/ 目录名一一对应
+// 按作品用途展示；动效和空间形式属于独立标签。
 const CATEGORIES = [
-  ['basics', '基础图形'],
-  ['ui', 'UI 组件'],
-  ['branding', '品牌排版'],
-  ['charts', '图表报表'],
-  ['infographics', '信息可视化'],
-  ['materials', '实物模拟'],
-  ['motion', '动效艺术'],
-  ['math', '高级数学'],
+  ['charts', '数据图表'],
+  ['diagrams', '流程与架构'],
+  ['maps', '地图与空间'],
+  ['science', '科学与原理'],
+  ['ui', '界面与组件'],
+  ['branding', '品牌与排版'],
+  ['icons', '图标与符号'],
+  ['illustrations', '插画与场景'],
+  ['geometry', '几何与生成艺术'],
+  ['backgrounds', '背景与材质'],
+];
+
+// 专题只引用原作品，不复制条目或改变主分类。
+const COLLECTIONS = [
+  ['精选作品', ['diagrams/system-architecture', 'science/bezier-de-casteljau', 'illustrations/cyber-city']],
+  ['系统图解', ['diagrams/animated-architecture', 'diagrams/data-pipeline', 'diagrams/network-pulse']],
+  ['科学机制', ['science/fourier-build', 'science/catenary', 'science/koch-snowflake']],
+  ['未来界面', ['ui/hud-interface', 'ui/dark-ops-dashboard', 'ui/wave-analyzer']],
+  ['动效实验室', ['geometry/shape-morph', 'branding/letter-morph', 'backgrounds/rain-ripples']],
 ];
 
 // GitHub 锚点规则：小写；删去字母/数字/空格/连字符/下划线以外的字符；空格变 -
@@ -73,18 +84,36 @@ function gridTable(entries) {
 function buildGallery() {
   const toc = [];
   const body = [];
+  const all = CATEGORIES.flatMap(([cat]) => readEntries(cat));
+  const known = new Set(CATEGORIES.map(([cat]) => cat));
+  for (const dir of readdirSync(join(root, 'gallery'), { withFileTypes: true })) {
+    if (dir.isDirectory() && !known.has(dir.name)) throw new Error(`未注册分类：${dir.name}`);
+  }
+  toc.push('- **[精选与专题](#精选与专题)** <sub>跨分类策展入口</sub>');
+  body.push('## 精选与专题', '', '按用途浏览下方分类；静态 / 动效、2D / 3D 及具体技术见卡片与条目元数据。专题中的作品同时保留在各自主分类中。', '');
+  for (const [name, paths] of COLLECTIONS) {
+    const entries = paths.map((path) => {
+      const entry = all.find((e) => `${e.category}/${e.dir}` === path);
+      if (!entry) throw new Error(`专题「${name}」引用不存在的条目：${path}`);
+      return entry;
+    });
+    body.push(`### ${name}`, '', gridTable(entries), '');
+  }
   for (const [cat, name] of CATEGORIES) {
-    const entries = readEntries(cat).sort(byOrderThenTime);
+    const entries = all.filter((e) => e.category === cat).sort(byOrderThenTime);
     const catAnchor = slug(name);
     toc.push(`- **[${name}](#${encodeURI(catAnchor)})** <sub>${cat} · ${entries.length} 条</sub>`);
-    body.push(`## ${name}`, '');
+    const about = readFileSync(join(root, 'gallery', cat, '_about.md'), 'utf8');
+    const description = about.split('\n\n')[1];
+    if (!description) throw new Error(`${cat}/_about.md 缺少分类说明`);
+    body.push(`## ${name}`, '', description, '');
     if (entries.length === 0) {
       body.push('*暂无条目，欢迎按 `templates/entry/` 投稿。*', '');
       continue;
     }
     body.push(gridTable(entries), '');
   }
-  return { toc: toc.join('\n'), body: body.join('\n').replace(/\n+$/, '\n') };
+  return { toc: toc.join('\n'), body: body.join('\n').replace(/\n+$/, '\n'), count: all.length };
 }
 
 const readme = readFileSync(readmePath, 'utf8');
@@ -93,11 +122,10 @@ const END = '<!-- GALLERY:END -->';
 if (!readme.includes(START) || !readme.includes(END)) {
   throw new Error('README.md 缺少 GALLERY:START / GALLERY:END 标记');
 }
-const { toc, body } = buildGallery();
+const { toc, body, count } = buildGallery();
 const updated = readme.replace(
   new RegExp(`${START}[\\s\\S]*${END}`),
   `${START}\n${toc}\n\n${body}${END}`
 );
 writeFileSync(readmePath, updated);
-const count = (updated.match(/<td /g) ?? []).length;
-console.log(`OK: README 已重新生成，共 ${count} 张卡片`);
+console.log(`OK: README 已重新生成，共 ${count} 个作品，${COLLECTIONS.length} 个专题`);

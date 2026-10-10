@@ -1,0 +1,15 @@
+{
+  "slug": "comparison-vs",
+  "title": "对比信息图",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "tech": [
+    "rect",
+    "VS 版式",
+    "维度对照"
+  ],
+  "description": "矢量 SVG vs 位图 PNG：五维度左右对照",
+  "author": "airay1015",
+  "date": "2026-10-08"
+}
