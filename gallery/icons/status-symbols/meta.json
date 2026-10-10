@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "status-symbols",
+  "title": "状态与反馈符号",
+  "space": "2d",
+  "time": "static",
+  "order": 7,
+  "description": "状态不只靠红绿区分：轮廓、文字与颜色共同表达。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}

@@ -1,16 +1,16 @@
-# 线性图标系统 / Outline Icons
+# 双色图标系统 / Duotone Icons
 
 分类：[图标与符号](../_about.md)
 
-<img src="index.svg" width="720" alt="线性图标系统">
+<img src="index.svg" width="720" alt="双色图标系统">
 
 ```
-用 SVG 制作“线性图标系统 / Outline Icons”。
+用 SVG 制作“双色图标系统 / Duotone Icons”。
 - 画布1400×900，背景#f2f5f9，正文#172b42，辅助文字#516478，强调色#245ee8；顶部中英文名称，主体y206..786，页脚y858。
 - 图标使用24×24局部坐标，默认1.6单位描边、圆端点与圆拐角；symbol/use复用轮廓，颜色由currentColor继承。
 - 同一组八种功能语义，保持一致网格、视觉重量与中英文名称。
 - 线性版1.6单位描边；实心版使用独立闭合轮廓与evenodd内孔；双色版淡蓝底形加蓝色前景，不依赖颜色区分功能。
-- 可见文字：["VECTOR SYSTEMS / 02", "线性图标系统", "Outline Icons", "首页", "HOME", "搜索", "SEARCH", "收藏", "HEART", "通知", "BELL", "账户", "USER", "邮件", "MAIL", "相机", "CAMERA", "设置", "SETTINGS", "同一组八种功能语义，保持一致网格、视觉重量与中英文名称。"]
+- 可见文字：["VECTOR SYSTEMS / 04", "双色图标系统", "Duotone Icons", "首页", "HOME", "搜索", "SEARCH", "收藏", "HEART", "通知", "BELL", "账户", "USER", "邮件", "MAIL", "相机", "CAMERA", "设置", "SETTINGS", "同一组八种功能语义，保持一致网格、视觉重量与中英文名称。"]
 逐一复现以下本页使用的符号路径（24×24 viewBox）：
 - home: M3 10 12 3 21 10 M5 9v12h5v-7h4v7h5V9
 - search: M16 16l5 5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0

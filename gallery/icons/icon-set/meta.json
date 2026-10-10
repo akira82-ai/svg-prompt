@@ -1,15 +1,16 @@
 {
   "slug": "icon-set",
-  "title": "单色图标系统",
+  "title": "线性图标系统",
   "space": "2d",
   "time": "static",
   "order": 2,
   "tech": [
-    "path",
-    "stroke-linecap",
-    "24 网格"
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
   ],
-  "description": "8 个线性图标：同一网格、同一笔触、同一圆角",
+  "description": "同一组八种功能语义，保持一致网格、视觉重量与中英文名称。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

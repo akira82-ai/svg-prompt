@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "solid-icons",
+  "title": "实心图标系统",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "description": "同一组八种功能语义，保持一致网格、视觉重量与中英文名称。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}

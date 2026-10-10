@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "icon-construction",
+  "title": "图标构形与光学校正",
+  "space": "2d",
+  "time": "static",
+  "order": 1,
+  "description": "构形网格是共同起点，最终视觉重量仍需实际尺寸判断。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}

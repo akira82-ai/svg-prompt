@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "file-type-icons",
+  "title": "文件与格式图标",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "description": "共同文件轮廓与明确格式缩写，缩写承担区分功能。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}

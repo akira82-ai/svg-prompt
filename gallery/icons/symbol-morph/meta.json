@@ -1,15 +1,16 @@
 {
   "slug": "symbol-morph",
-  "title": "符号变换",
+  "title": "状态切换动效",
   "space": "2d",
   "time": "smil",
-  "order": 3,
+  "order": 12,
   "tech": [
-    "animate",
-    "d 路径 morph",
-    "变色同步"
+    "symbol",
+    "use",
+    "currentColor",
+    "SMIL"
   ],
-  "description": "气泡⇄信封与爱心⇄闪电的形变变色",
+  "description": "两组有明确操作含义的状态过渡，一次播放后保持终态。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

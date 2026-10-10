@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "technology-icons",
+  "title": "科技产品图标",
+  "space": "2d",
+  "time": "static",
+  "order": 9,
+  "description": "科技产品的常见能力符号，不把抽象图标当架构说明。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}

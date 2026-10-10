@@ -1,15 +1,16 @@
 {
   "slug": "app-icon",
-  "title": "App 图标",
+  "title": "App 图标家族",
   "space": "2d",
   "time": "static",
-  "order": 1,
+  "order": 10,
   "tech": [
-    "linearGradient",
-    "rect",
-    "rx"
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
   ],
-  "description": "四枚超椭圆 App 图标与 iOS 网格参考",
+  "description": "四枚科技App图标共享圆角、构形与单色反白，下面展示实际尺寸。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -47,6 +47,19 @@ const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 // Slugs supply conventional English names; overrides clarify scene-specific titles.
 const ENGLISH_NAMES = {
+  'icons/icon-construction': 'Icon Construction',
+  'icons/icon-set': 'Outline Icons',
+  'icons/solid-icons': 'Solid Icons',
+  'icons/duotone-icons': 'Duotone Icons',
+  'icons/small-size-icons': 'Small-size Icons',
+  'icons/arrows': 'Directional Symbols',
+  'icons/status-symbols': 'Status Symbols',
+  'icons/file-type-icons': 'File Type Icons',
+  'icons/technology-icons': 'Technology Icons',
+  'icons/app-icon': 'App Icon Family',
+  'icons/wayfinding-symbols': 'Wayfinding Symbols',
+  'icons/symbol-morph': 'Animated State Transitions',
+
   'branding/brand-intro': 'Brand Intro Animation',
   'branding/typewriter': 'Brand Copy Reveal',
   'branding/circular-badge': 'Circular Brand Badge',

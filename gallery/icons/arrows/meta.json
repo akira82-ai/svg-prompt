@@ -1,16 +1,16 @@
 {
   "slug": "arrows",
-  "title": "箭头家族",
+  "title": "方向与箭头",
   "space": "2d",
   "time": "static",
   "tech": [
-    "marker",
-    "orient",
-    "path",
-    "polygon"
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
   ],
-  "description": "marker 让箭头自动跟随路径方向——直的、弯的、双头的、粗尾的",
+  "description": "统一箭头端点、斜边和笔触；方向与操作语义分开命名。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 4
+  "order": 6
 }

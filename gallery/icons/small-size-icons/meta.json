@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "small-size-icons",
+  "title": "小尺寸图标",
+  "space": "2d",
+  "time": "static",
+  "order": 5,
+  "description": "上排按SVG原始像素展示；缩略图会缩放，1:1需原图100%查看。",
+  "tech": [
+    "symbol",
+    "use",
+    "currentColor",
+    "24px grid"
+  ]
+}
