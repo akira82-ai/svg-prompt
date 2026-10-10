@@ -44,7 +44,104 @@ const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().re
 // 分类内默认排序：order（策展顺序：分析任务或复杂度）优先，未设 order 的按 静态 2D → 动态 2D → 静态 3D → 动态 3D
 const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
-const TIME_LABEL = { static: '静态', smil: 'SMIL 动效', css: 'CSS 动效', js: 'JS 动效' };
+// Slugs supply conventional English names; overrides clarify scene-specific titles.
+const ENGLISH_NAMES = {
+  'charts/pie-donut': 'Pie and Donut Charts',
+  'charts/bar': 'Bar Chart', 'charts/bar-growth': 'Bar Chart Animation',
+  'charts/line': 'Line Chart', 'charts/line-draw': 'Line Chart Animation',
+  'charts/area': 'Area Chart', 'charts/area-expand': 'Area Chart Animation',
+  'charts/scatter': 'Scatter Plot', 'charts/bubble': 'Bubble Chart',
+  'charts/boxplot': 'Box Plot', 'charts/violin': 'Violin Plot',
+  'charts/waterfall': 'Waterfall Chart', 'charts/interval': 'Interval Plot',
+  'charts/radar': 'Radar Chart', 'charts/funnel': 'Funnel Chart',
+  'charts/funnel-steps': 'Funnel Animation', 'charts/sankey': 'Sankey Diagram',
+  'charts/sankey-flow': 'Sankey Flow Animation', 'charts/gantt': 'Gantt Chart',
+  'charts/gantt-progress': 'Gantt Progress Animation',
+  'charts/combo-dual-axis': 'Dual-Axis Combo Chart',
+  'charts/ranking-lollipop': 'Lollipop Ranking',
+  'charts/histogram-boxplot': 'Histogram and Box Plot',
+  'charts/dumbbell': 'Dumbbell Chart', 'charts/sunburst': 'Sunburst Chart',
+  'diagrams/system-architecture': 'Application Architecture',
+  'diagrams/animated-architecture': 'Architecture Flow Animation',
+  'diagrams/timeline-svg': 'Timeline', 'diagrams/timeline-reveal': 'Timeline Animation',
+  'diagrams/process-walk': 'Process Flow Animation',
+  'diagrams/network-pulse': 'Network Flow Animation',
+  'diagrams/process-steps': 'Process Flow', 'diagrams/deployment': 'Deployment Diagram',
+  'diagrams/entity-relationship': 'Entity Relationship Diagram',
+  'maps/china-grid-map': 'Regional Tile Grid',
+  'maps/choropleth': 'Choropleth Map',
+  'maps/proportional-symbols': 'Proportional Symbol Map',
+  'maps/point-distribution': 'Campus Point Distribution',
+  'maps/spatial-density': 'Spatial Density Map',
+  'maps/regional-events': 'Regional Event Map',
+  'maps/map-ripple': 'Regional Event Animation',
+  'maps/origin-destination': 'Origin–Destination Flows',
+  'maps/route-stations': 'Routes and Transfers',
+  'maps/service-coverage': 'Distance-Based Service Coverage',
+  'maps/campus-floorplan': 'Floor Plan and Devices',
+  'maps/spatial-comparison': 'Spatial Snapshots',
+  'science/lissajous': 'Lissajous Curves',
+  'science/golden-spiral': 'Fibonacci Spiral Approximation',
+  'science/catenary': 'Catenary vs. Parabola',
+  'science/bezier-de-casteljau': 'Bézier Construction',
+  'science/sierpinski': 'Sierpiński Triangle',
+  'science/koch-snowflake': 'Koch Snowflake',
+  'science/fourier-square': 'Fourier Square-Wave Approximation',
+  'science/fourier-build': 'Fourier Harmonic Construction',
+  'science/wave-interference': 'Wave Superposition and Interference',
+  'science/standing-wave': 'Standing Waves',
+  'science/thin-lens': 'Thin-Lens Imaging',
+  'science/orbit-gravity': 'Keplerian Orbit',
+  'science/solar-system': 'Orbital Period Comparison',
+  'science/three-d': '3D Projection Comparison',
+  'science/topology-deform': 'Möbius Strip Construction',
+  'ui/buttons': 'Button States', 'ui/toggle': 'Toggle States',
+  'ui/toggle-animated': 'Toggle Transitions',
+  'ui/checkbox-radio': 'Checkboxes and Radio Buttons',
+  'ui/input-states': 'Input and Validation', 'ui/dropdown': 'Dropdown Selection',
+  'ui/chips': 'Tags and Filter Chips', 'ui/avatar-badge': 'Avatars and Badges',
+  'ui/elevation': 'Cards and Elevation', 'ui/date-range': 'Date Range Picker',
+  'ui/file-upload': 'File Upload States', 'ui/login-verification': 'Login and Verification',
+  'ui/tabs': 'Tabs and Segmented Navigation', 'ui/pagination': 'Pagination',
+  'ui/tooltip': 'Tooltips', 'ui/breadcrumb': 'Breadcrumb Navigation',
+  'ui/global-search': 'Global Search', 'ui/command-palette': 'Command Palette',
+  'ui/filter-sort': 'Filtering and Sorting',
+  'ui/settings-preferences': 'Settings and Preferences',
+  'ui/help-feedback': 'Help and Feedback', 'ui/alerts': 'Status Alerts',
+  'ui/alert-blink': 'Alert Emphasis', 'ui/spinners': 'Loading Indicators',
+  'ui/skeleton-shimmer': 'Skeleton Loading', 'ui/typing-indicator': 'Typing Indicator',
+  'ui/audio-wave': 'Voice Input States', 'ui/status-patrol': 'Service Status Inspection',
+  'ui/task-stepper': 'Task Progress Steps', 'ui/request-retry': 'Request and Retry States',
+  'ui/empty-error': 'Empty and Error States', 'ui/modal-confirm': 'Confirmation Dialog',
+  'ui/product-onboarding': 'Product Onboarding',
+  'ui/progress-slider': 'Progress Bars and Sliders', 'ui/kpi-cards': 'KPI Cards',
+  'ui/number-roll': 'Metric Value Transitions', 'ui/data-table': 'Data Table',
+  'ui/detail-drawer': 'Detail Drawer', 'ui/pricing-usage': 'Plans and Usage',
+  'ui/ai-chat-workbench': 'AI Chat Workspace',
+  'ui/model-parameters': 'Model and Parameter Selection',
+  'ui/agent-execution': 'Agent Execution',
+  'ui/knowledge-citations': 'Knowledge Search and Citations',
+  'ui/generation-compare': 'Generation Comparison', 'ui/todo-today': 'Daily Tasks',
+  'ui/chat-messenger': 'Team Chat', 'ui/ecommerce-home': 'Product Catalog',
+  'ui/kanban-board': 'Task Kanban', 'ui/members-permissions': 'Members and Permissions',
+  'ui/checkout-payment': 'Checkout and Payment',
+  'ui/bi-dashboard': 'Business Analytics Workspace',
+  'ui/dashboard': 'Business Analytics Entrance',
+  'ui/dark-ops-dashboard': 'Operations Monitoring Workspace',
+  'ui/live-ops-dashboard': 'Operations Inspection Animation',
+  'ui/fitness-dashboard': 'Activity and Training', 'ui/music-player': 'Music Workspace',
+  'ui/hud-interface': 'HUD Navigation Concept', 'ui/wave-analyzer': 'Waveform Analyzer',
+  'branding/stat-numbers': 'Gallery Statistics',
+  'branding/comparison-vs': 'Comparison Layout', 'branding/type-scale': 'Typography Scale',
+  'branding/type-effects': 'Typography Effects',
+  'geometry/iso-cubes': 'Isometric Cubes', 'geometry/path': 'SVG Paths',
+  'geometry/polyline': 'Polylines', 'geometry/fractal-tree-grow': 'Fractal Tree Growth',
+};
+const ENGLISH_WORDS = { ai: 'AI', bi: 'BI', kpi: 'KPI', hud: 'HUD', rag: 'RAG', svg: 'SVG', vs: 'vs.' };
+function englishName(e) {
+  return ENGLISH_NAMES[`${e.category}/${e.dir}`] ?? e.dir.split('-')
+    .map((word) => ENGLISH_WORDS[word] ?? word[0].toUpperCase() + word.slice(1)).join(' ');
+}
 const byOrderThenTime = (a, b) =>
   (a.order ?? 999) - (b.order ?? 999) ||
   (TIME_RANK[a.time] ?? 9) - (TIME_RANK[b.time] ?? 9) ||
@@ -68,11 +165,11 @@ function readEntries(category) {
 function gridCell(e) {
   const href = `gallery/${e.category}/${e.dir}/prompt.md`;
   const img = `gallery/${e.category}/${e.dir}/index.svg`;
-  const tag = `<code>${TIME_LABEL[e.time] ?? e.time}</code> <code>${(e.space || '2d').toUpperCase()}</code>`;
+  const english = englishName(e);
   return (
     `<td width="350" align="center" valign="top">` +
     `<a href="${href}"><img src="${img}" width="336" alt="${e.title}"></a><br>` +
-    `<a href="${href}"><strong>${e.title}</strong></a> ${tag}` +
+    `<a href="${href}"><strong>${e.title}</strong><br><sub>${english}</sub></a>` +
     `</td>`
   );
 }
@@ -94,7 +191,7 @@ function buildGallery() {
     if (dir.isDirectory() && !known.has(dir.name)) throw new Error(`未注册分类：${dir.name}`);
   }
   toc.push('- **[精选与专题](#精选与专题)** <sub>跨分类策展入口</sub>');
-  body.push('## 精选与专题', '', '按用途浏览下方分类；静态 / 动效、2D / 3D 及具体技术见卡片与条目元数据。专题中的作品同时保留在各自主分类中。', '');
+  body.push('## 精选与专题', '', '按用途浏览下方分类；卡片显示中英文名称。专题中的作品同时保留在各自主分类中。', '');
   for (const [name, paths] of COLLECTIONS) {
     const entries = paths.map((path) => {
       const entry = all.find((e) => `${e.category}/${e.dir}` === path);
