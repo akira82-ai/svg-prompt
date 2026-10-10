@@ -1,15 +1,15 @@
 {
   "slug": "cyber-city",
-  "title": "赛博城市",
+  "title": "未来城市",
   "space": "2d",
-  "time": "smil",
-  "order": 8,
+  "time": "static",
+  "order": 10,
   "tech": [
-    "rect",
-    "闪烁窗灯",
-    "飞行器"
+    "path",
+    "clipPath",
+    "vector illustration"
   ],
-  "description": "霓虹楼群 + 窗灯错闪 + 飞行器拖尾掠过",
+  "description": "未来城市以远近楼群、交通弧线与月光建立空间层次。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

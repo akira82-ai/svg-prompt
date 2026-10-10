@@ -1,15 +1,15 @@
 {
   "slug": "campfire",
-  "title": "篝火",
+  "title": "林间篝火",
   "space": "2d",
-  "time": "smil",
-  "order": 4,
+  "time": "css",
+  "order": 14,
   "tech": [
-    "feTurbulence",
-    "feDisplacementMap",
-    "animateTransform"
+    "path",
+    "clipPath",
+    "CSS ambient motion"
   ],
-  "description": "火焰摇曳、火星上飘、炭火呼吸——滤镜动画",
+  "description": "森林剪影与暖色火焰形成冷暖对照，火光不依赖扰动滤镜。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

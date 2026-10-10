@@ -1,16 +1,16 @@
-# 线稿描边动画 `CSS 动效` `2D`
+# 航天探索 / Space Exploration
 
 分类：[插画与场景](../_about.md)
 
-<img src="index.svg" width="720" alt="线稿描边动画">
+<img src="index.svg" width="720" alt="航天探索">
 
 ```
-用 SVG 做一张"描边动画"教学图（动画无限循环）：
-- 左侧大白卡：一枚火箭线稿按 顺序逐笔描出（机身 → 舷窗 → 左尾翼 → 右尾翼 → 火焰），笔序标注在下方
-- 线稿深藏青 #2b3a55、stroke-width 5，pathLength="1" 归一化后逐段描出（每笔间隔 0.2s、时长 0.7s）
-- 描完一层上色淡入：浅蓝机身 #dfe9fb、蓝舷窗 #9cc2ff、橙尾翼 #f7a23b、金红渐变火焰
-- 火箭身后一个虚线参考圆
-- 右侧深色代码卡（红黄绿圆点 + pathLength / CSS 片段）+ 下方"三个关键点"①②③
-- 标题"描边动画 — SVG 会自己画画"+ Level 5a 副标题
-- 画布 1000×700，浅灰 #f6f8fb 背景，白色圆角卡片
+用SVG绘制“航天探索 / Space Exploration”。
+- 1400×900画布，背景#101e30，正文#e5efff，强调色#70dddf；中英文标题，主体裁切在x64..1336、y190..810圆角区域。
+- 探索主题的完整插画：火箭、轨迹与远方行星形成方向感。
+- 倾斜火箭位于左中，带环行星在右，星点使用确定性位置；删去代码卡，不表现真实轨道。
+- 本作品为概念插画，不是科学仿真、地图或可操作界面。
+- 动效只改变装饰层，不隐藏主体；CSS失效时静态画面完整；prefers-reduced-motion禁用动画。
+- 以下为可复现的完整SVG几何与色彩参考，可直接保存查看，也可据此改写构图：
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">航天探索 / Space Exploration</title><desc id="desc">探索主题的完整插画：火箭、轨迹与远方行星形成方向感。；倾斜火箭位于左中，带环行星在右，星点使用确定性位置；删去代码卡，不表现真实轨道。</desc><rect x="0" y="0" width="1400" height="900" rx="0" fill="#101e30" /><text x="64" y="65" fill="#e5efff" font-size="14" text-anchor="start">VECTOR STORIES / 07</text><text x="64" y="117" fill="#e5efff" font-size="34" text-anchor="start">航天探索</text><text x="1336" y="117" fill="#e5efff" font-size="20" text-anchor="end">Space Exploration</text><defs><radialGradient id="halo"><stop stop-color="#70dddf" stop-opacity=".45"/><stop offset="1" stop-color="#70dddf" stop-opacity="0"/></radialGradient><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b7d2eb"/><stop offset="1" stop-color="#f4d8b4"/></linearGradient><clipPath id="stage"><rect x="64" y="190" width="1272" height="620" rx="20"/></clipPath></defs><g clip-path="url(#stage)"><circle cx="100" cy="220" r="1.5" fill="#91abc9" /><circle cx="237" cy="293" r="1.5" fill="#91abc9" /><circle cx="374" cy="366" r="1.5" fill="#91abc9" /><circle cx="511" cy="439" r="1.5" fill="#91abc9" /><circle cx="648" cy="512" r="1.5" fill="#91abc9" /><circle cx="785" cy="585" r="1.5" fill="#91abc9" /><circle cx="922" cy="238" r="1.5" fill="#91abc9" /><circle cx="1059" cy="311" r="1.5" fill="#91abc9" /><circle cx="1196" cy="384" r="1.5" fill="#91abc9" /><circle cx="133" cy="457" r="1.5" fill="#91abc9" /><circle cx="270" cy="530" r="1.5" fill="#91abc9" /><circle cx="407" cy="603" r="1.5" fill="#91abc9" /><circle cx="544" cy="256" r="1.5" fill="#91abc9" /><circle cx="681" cy="329" r="1.5" fill="#91abc9" /><circle cx="818" cy="402" r="1.5" fill="#91abc9" /><circle cx="955" cy="475" r="1.5" fill="#91abc9" /><circle cx="1092" cy="548" r="1.5" fill="#91abc9" /><circle cx="1229" cy="621" r="1.5" fill="#91abc9" /><circle cx="166" cy="274" r="1.5" fill="#91abc9" /><circle cx="303" cy="347" r="1.5" fill="#91abc9" /><circle cx="440" cy="420" r="1.5" fill="#91abc9" /><circle cx="577" cy="493" r="1.5" fill="#91abc9" /><circle cx="714" cy="566" r="1.5" fill="#91abc9" /><circle cx="851" cy="639" r="1.5" fill="#91abc9" /><circle cx="988" cy="292" r="1.5" fill="#91abc9" /><circle cx="1125" cy="365" r="1.5" fill="#91abc9" /><circle cx="1262" cy="438" r="1.5" fill="#91abc9" /><circle cx="199" cy="511" r="1.5" fill="#91abc9" /><circle cx="336" cy="584" r="1.5" fill="#91abc9" /><circle cx="473" cy="237" r="1.5" fill="#91abc9" /><circle cx="610" cy="310" r="1.5" fill="#91abc9" /><circle cx="747" cy="383" r="1.5" fill="#91abc9" /><circle cx="884" cy="456" r="1.5" fill="#91abc9" /><circle cx="1021" cy="529" r="1.5" fill="#91abc9" /><circle cx="1158" cy="602" r="1.5" fill="#91abc9" /><circle cx="1020" cy="395" r="140" fill="#41658a" /><ellipse cx="1020" cy="395" rx="230" ry="45" fill="none" stroke="#8da7c3" stroke-width="9" transform="rotate(-18 1020 395)"/><path d="M130 795Q390 560 645 486" fill="none" stroke="#41658a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 12"/><g transform="translate(600 420) rotate(30)"><path d="M0-160Q100-50 60 120H-60Q-100-50 0-160Z" fill="#e5efff" stroke="#8da7c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M-60 60L-120 145H-52M60 60L120 145H52" fill="#245ee8" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="0" cy="-25" r="35" fill="#245ee8" stroke="#19344c" stroke-width="9"/><path d="M-38 125Q0 280 38 125Z" fill="#efa76e" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g></g><text x="64" y="857" fill="#b3c5da" font-size="16" text-anchor="start">探索主题的完整插画：火箭、轨迹与远方行星形成方向感。</text><style>@keyframes breathe{50%{opacity:.6}}.pulse{animation:breathe 6s ease-in-out infinite}@keyframes drift{50%{transform:translateY(6px)}}.drift{animation:drift 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}</style></svg>
 ```

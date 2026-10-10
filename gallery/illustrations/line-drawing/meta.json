@@ -1,16 +1,15 @@
 {
   "slug": "line-drawing",
-  "title": "线稿描边动画",
+  "title": "航天探索",
   "space": "2d",
-  "time": "css",
+  "time": "static",
   "tech": [
-    "stroke-dasharray",
-    "stroke-dashoffset",
-    "keyframes",
-    "path"
+    "path",
+    "clipPath",
+    "vector illustration"
   ],
-  "description": "线稿被一支看不见的笔逐渐画出来的经典动效",
+  "description": "探索主题的完整插画：火箭、轨迹与远方行星形成方向感。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 1
+  "order": 7
 }

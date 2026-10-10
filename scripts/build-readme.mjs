@@ -47,6 +47,22 @@ const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 // Slugs supply conventional English names; overrides clarify scene-specific titles.
 const ENGLISH_NAMES = {
+  'illustrations/human-ai': 'Human–AI Collaboration',
+  'illustrations/knowledge-discovery': 'Knowledge Discovery',
+  'illustrations/cloud-computing': 'Cloud Computing',
+  'illustrations/data-security': 'Data Security',
+  'illustrations/creative-workspace': 'Creative Workspace',
+  'illustrations/robot-assistant': 'Robot Assistant',
+  'illustrations/line-drawing': 'Space Exploration',
+  'illustrations/hologram': 'Holographic Projection',
+  'illustrations/energy-core': 'Future Energy Device',
+  'illustrations/cyber-city': 'Future City',
+  'illustrations/tech-campus': 'Isometric Tech Campus',
+  'illustrations/sunrise-scene': 'Mountain Sunrise',
+  'illustrations/snow-globe': 'Winter Snow Globe',
+  'illustrations/campfire': 'Forest Campfire',
+  'illustrations/sticker-pack': 'Technology Stickers',
+
   'icons/icon-construction': 'Icon Construction',
   'icons/icon-set': 'Outline Icons',
   'icons/solid-icons': 'Solid Icons',

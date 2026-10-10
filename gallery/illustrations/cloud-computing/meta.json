@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "cloud-computing",
+  "title": "云端计算",
+  "order": 3,
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "clipPath",
+    "vector illustration"
+  ],
+  "description": "云端资源与地面计算节点形成稳定的上下层次。"
+}

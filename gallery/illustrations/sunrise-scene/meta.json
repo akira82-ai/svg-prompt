@@ -1,15 +1,15 @@
 {
   "slug": "sunrise-scene",
-  "title": "日出场景",
+  "title": "山间日出",
   "space": "2d",
-  "time": "smil",
-  "order": 5,
+  "time": "css",
+  "order": 12,
   "tech": [
-    "stop-color 动画",
-    "animate",
-    "云层"
+    "path",
+    "clipPath",
+    "CSS ambient motion"
   ],
-  "description": "天空由夜转昼、太阳升起、云层漂移",
+  "description": "日出已经成立的静态构图，只有云层作缓慢的轻微漂移。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

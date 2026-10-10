@@ -2,14 +2,14 @@
   "slug": "hologram",
   "title": "全息投影",
   "space": "2d",
-  "time": "smil",
-  "order": 6,
+  "time": "css",
+  "order": 8,
   "tech": [
-    "线框",
-    "扫描亮带",
-    "闪烁"
+    "path",
+    "clipPath",
+    "CSS ambient motion"
   ],
-  "description": "线框地球全息：扫描亮带上下、整体闪烁、底座光环",
+  "description": "投影底座、光束与线框球形成完整设备场景。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "robot-assistant",
+  "title": "机器人助手",
+  "order": 6,
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "clipPath",
+    "vector illustration"
+  ],
+  "description": "机器人助手以温和的姿态和完成反馈表达协助。"
+}

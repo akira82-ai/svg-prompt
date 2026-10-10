@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "human-ai",
+  "title": "人机协作",
+  "order": 1,
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "clipPath",
+    "vector illustration"
+  ],
+  "description": "人负责目标与判断，助手参与整理资料；桌面与共享文档成为画面中心。"
+}

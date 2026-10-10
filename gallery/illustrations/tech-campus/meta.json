@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "tech-campus",
+  "title": "等距科技园区",
+  "order": 11,
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "path",
+    "clipPath",
+    "vector illustration"
+  ],
+  "description": "等距科技园区用建筑、通路和绿化组织空间，不承担地图导航。"
+}

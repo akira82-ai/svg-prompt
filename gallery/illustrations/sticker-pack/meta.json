@@ -1,16 +1,15 @@
 {
   "slug": "sticker-pack",
-  "title": "贴纸包",
+  "title": "科技主题贴纸",
   "space": "2d",
   "time": "static",
-  "order": 2,
+  "order": 15,
   "tech": [
     "path",
-    "circle",
-    "投影",
-    "异形切模"
+    "clipPath",
+    "vector illustration"
   ],
-  "description": "8 枚异形切模贴纸：Logo 变体、Slogan 与星芒表情",
+  "description": "六枚科技主题贴纸组成可复用的小插画，不再重复品牌Logo套件。",
   "author": "airay1015",
   "date": "2026-10-08"
 }
