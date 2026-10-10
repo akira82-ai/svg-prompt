@@ -2,19 +2,12 @@
   <text x="60" y="64" font-size="28" font-weight="700" fill="#e8eef7">字母变换</text>
   <text x="60" y="92" font-size="14" fill="#8fa0b8">B ⇄ W · B ⇄ X — 粗描边骨架插值</text>
 <defs>
-    <linearGradient id="geoG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2bb3a3"/>
-      <stop offset="1" stop-color="#3f8ef7"/>
-    </linearGradient>
-    <linearGradient id="bloomyG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#9b6cf5"/>
-      <stop offset="1" stop-color="#e65cc7"/>
-    </linearGradient>
     <linearGradient id="penG" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffd166"/>
       <stop offset="1" stop-color="#ff8a8a"/>
     </linearGradient>
   </defs>
+<g transform="translate(600,445) scale(1.24) translate(-510,-570)">
 <!-- P3 字母变形：B ⇄ W -->
   <g>
     <rect x="60" y="430" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
@@ -38,7 +31,7 @@
   <g>
     <rect x="60" y="440" width="340" height="260" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="84" y="466" font-size="17" font-weight="700" fill="#e8eef7">单字母 B ⇄ X</text>
-    <path fill="none" stroke="url(#penG2)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+    <path fill="none" stroke="url(#penG)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
       d="M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500">
       <animate attributeName="d" dur="8s" repeatCount="indefinite" keyTimes="0;0.32;0.5;0.82;1"
         values="M194,500 C194,525 194,550 194,575 C194,600 194,625 194,650 C249,650 266,635 266,612 C266,589 249,575 194,575 C244,575 262,560 262,538 C262,516 244,500 194,500;
@@ -51,5 +44,6 @@
   </g>
 
   
+</g>
 </g>
 </svg>

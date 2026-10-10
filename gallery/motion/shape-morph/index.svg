@@ -16,7 +16,7 @@
     </linearGradient>
   </defs>
 <!-- P1 几何三态：正方形 → 圆 → 菱形 -->
-  <g>
+  <g transform="translate(600,286) scale(1.15) translate(-330,-250)"><g>
     <rect x="60" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="84" y="146" font-size="18" font-weight="700" fill="#e8eef7">几何三态：方 ⇄ 圆 ⇄ 菱</text>
     <path fill="url(#geoG)" opacity="0.92"
@@ -33,11 +33,11 @@
       <polygon points="188,330 200,342 188,354 176,342"/>
     </g>
     <text x="84" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">8 锚点骨架 × 3 组坐标：直线态的控制点全落在边上（共线）</text>
-  </g>
+  </g></g>
 
   
 <!-- P2 图形开花：圆 → 五角星 → 爱心 -->
-  <g>
+  <g transform="translate(600,624) scale(1.15) translate(-890,-250)"><g>
     <rect x="620" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="644" y="146" font-size="18" font-weight="700" fill="#e8eef7">图形开花：圆 → 五角星 → 爱心</text>
     <path fill="url(#bloomyG)" opacity="0.92"
@@ -54,7 +54,7 @@
       <path d="M756,354 C748,347 744,341 744,336 C744,331 748,328 752,330 C754,331 755,333 756,335 C757,333 758,331 760,330 C764,328 768,331 768,336 C768,341 764,347 756,354 Z"/>
     </g>
     <text x="644" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">同一副 10 锚点骨架：星 = 内锚点收到 r=38，爱心 = 锚点按心形重排</text>
-  </g>
+  </g></g>
 
   
 </svg>
