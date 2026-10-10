@@ -1,12 +1,14 @@
-# 品牌色板 `静态` `2D`
+# 品牌色彩系统 / Brand Color System
 
 分类：[品牌与排版](../_about.md)
 
-<img src="index.svg" width="720" alt="品牌色板">
+<img src="index.svg" width="720" alt="品牌色彩系统">
 
 ```
-用 SVG 画一张"品牌色板"展示图：
-- 上排 5 块大色卡：NOVA Blue #4f8ef7（主色 60%）、Nova Purple #9b59f5（辅色 20%）、Ink #1c2733（文字）、Success #3fb98f、Warning #f5a83c，每块显示色名、HEX、用途占比
-- 下排三块小卡展示 Logo 用色规范：白底蓝 Logo（标准）、深底白 Logo（反白）、蓝底白 Logo（品牌底），各标注 ✓
-- 画布 1200×800 浅蓝灰背景，白色圆角卡片，色卡圆角、HEX 用等宽字体
+用 SVG 制作“品牌色彩系统 / Brand Color System”，采用NOVA示例品牌。
+- 画布1400×900；背景#eef2f6、纸面#ffffff、正文#14263d、辅助文字#596b80、强调色#245ee8；顶部中英文标题，作品区域x64..1336、y200..820，页脚说明示例与印刷边界。
+- 4品牌色主色245ee8/正文14263d/纸面ffffff/浅层dce7fc，HEX文本与色块一致；不把品牌色板当完整功能语义色。
+- NOVA共用标准矢量标识：6×6单位视图，路径 M0 0 L2 0 L6 4 L6 6 L4 6 L0 2 Z M4 0 L6 0 L6 2 Z M0 4 L0 6 L2 6 Z；字标N/O/V/A共用固定矢量轮廓，宽高266:60；不依赖字体重建字标。
+- 其他标题采用系统无衬线或Georgia衬线回退；中英文字体由环境决定，不声称嵌入商业字体。
+- 文字和样例值：["SVG / BRAND & TYPE", "NOVA / CONCEPT BRAND", "品牌色彩系统", "Brand Color System", "示例品牌与版式 · 字体依赖系统环境 · 印刷图仅为示意", "SVG-PROMPT", "PRIMARY", "#245EE8", "品牌主色", "INK", "#14263D", "正文与深底", "PAPER", "#FFFFFF", "纸面", "MIST", "#DCE7FC", "浅色层级", "颜色承担品牌与层级；功能性成功、错误、告警另按产品语义定义。"]。
 ```

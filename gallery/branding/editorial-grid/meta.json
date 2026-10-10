@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "editorial-grid",
+  "title": "编辑网格与版式",
+  "space": "2d",
+  "time": "static",
+  "order": 8,
+  "description": "相同主题主信息/解释/下一步以单栏、双栏、非对称主侧栏组织；虚线显示内容边界，列间留白不小于24px。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

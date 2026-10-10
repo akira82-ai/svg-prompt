@@ -1,15 +1,15 @@
 {
   "slug": "circular-badge",
-  "title": "圆形徽章",
+  "title": "品牌圆形徽章",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 22,
   "tech": [
-    "textPath",
-    "circle",
-    "path"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "环形文字 + 中心星芒的经典 Seal 徽章",
+  "description": "LOAM单色徽章，外半径215/内半径165/文字路径185；上弧品牌名称、下弧A CONCEPT BRAND，不伪造认证标志。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "brand-lockup",
+  "title": "品牌组合标识",
+  "space": "2d",
+  "time": "static",
+  "order": 3,
+  "description": "横版图标90px、字标60px、间隔30px；竖版图标与字标共同中心；小尺寸单色和反白版本保留共同轮廓。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

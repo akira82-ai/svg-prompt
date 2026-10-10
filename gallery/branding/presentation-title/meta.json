@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "presentation-title",
+  "title": "演讲标题页",
+  "space": "2d",
+  "time": "static",
+  "order": 15,
+  "description": "演讲标题页采用横向屏幕布局，主题、讲者、活动日期三个层级；右侧线性图形不干扰标题，不冒充真实活动。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

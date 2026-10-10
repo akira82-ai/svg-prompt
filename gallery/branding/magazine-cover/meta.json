@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "magazine-cover",
+  "title": "杂志式封面",
+  "space": "2d",
+  "time": "static",
+  "order": 11,
+  "description": "4:5杂志封面440×550，FIELD刊头、08期/2026年10月、主标题秩序也有温度和两条导读；图形背景与主标题阅读层级分离。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

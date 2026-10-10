@@ -1,15 +1,15 @@
 {
   "slug": "typewriter",
-  "title": "打字机文字",
+  "title": "品牌文案揭示",
   "space": "2d",
   "time": "smil",
-  "order": 3,
+  "order": 23,
   "tech": [
-    "clipPath",
-    "calcMode discrete",
-    "光标"
+    "brand system",
+    "SVG typography",
+    "SMIL reveal"
   ],
-  "description": "文字逐字打出、光标闪烁——终端的仪式感",
+  "description": "两行品牌文案MAKE WORK / TRACEABLE，第一行常显，第二行2秒线性遮罩揭示，延迟.4秒；不声称逐字打字，结束完整保留，不循环闪烁。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

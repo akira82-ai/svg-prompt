@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "product-launch",
+  "title": "产品发布海报",
+  "space": "2d",
+  "time": "static",
+  "order": 13,
+  "description": "横向发布海报突出一个主信息复杂工作清楚推进、NOVA2.0版本和了解入口；虚构产品，不编造发布日期或性能指标。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

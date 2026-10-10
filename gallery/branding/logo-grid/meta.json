@@ -1,15 +1,15 @@
 {
   "slug": "logo-grid",
-  "title": "Logo 网格构图",
+  "title": "Logo 构形与网格",
   "space": "2d",
   "time": "static",
   "order": 1,
   "tech": [
-    "path",
-    "circle",
-    "辅助网格"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "四角星芒 Logo 的建造过程：辅助圆、比例标注与安全距离",
+  "description": "标识6u×6u，所有顶点在整数网格上；四周安全留白1u，虚线框8u×8u，几何辅助线与真实轮廓对应。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

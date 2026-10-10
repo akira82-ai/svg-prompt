@@ -5,11 +5,11 @@
   "time": "static",
   "order": 18,
   "tech": [
-    "text",
-    "大数字排版",
-    "杂志式"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "截至2026-10-10的图鉴快照：216个作品、10类、63个动态与153个静态作品",
+  "description": "截至2026-10-10的全库快照：221个作品、10类、162个静态和59个动效；由条目元数据计算，统计布局随数值更新。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

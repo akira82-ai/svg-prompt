@@ -1,15 +1,15 @@
 {
   "slug": "packaging-dieline",
-  "title": "包装展开图",
+  "title": "包装结构与品牌应用",
   "space": "2d",
   "time": "static",
-  "order": 15,
+  "order": 21,
   "tech": [
-    "path",
-    "rect",
-    "虚线折线"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "咖啡袋刀版展开与成品对照——刀线、折线、出血",
+  "description": "纸盒24/60/180/60/180px面板宽，粘口/侧/正/侧/背对应；顶底折片60px，橙色外扩8px示意出血，正面安全区内缩12px；只作展开结构示意，未经生产验证。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

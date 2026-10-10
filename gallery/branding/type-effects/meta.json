@@ -1,16 +1,15 @@
 {
   "slug": "type-effects",
-  "title": "文字特效四连",
+  "title": "品牌文字表达",
   "space": "2d",
   "time": "static",
-  "order": 12,
+  "order": 9,
   "tech": [
-    "stroke",
-    "linearGradient",
-    "mask",
-    "feGaussianBlur"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "描边、渐变、镂空、霓虹——品牌大字的四种上妆法",
+  "description": "四种处理共用NOVA矢量轮廓；描边不填色，反白是真实白色字标，光晕叠加清晰前景，不让模糊成为文字主体。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

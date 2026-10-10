@@ -1,15 +1,15 @@
 {
   "slug": "brand-palette",
-  "title": "品牌色板",
+  "title": "品牌色彩系统",
   "space": "2d",
   "time": "static",
   "order": 4,
   "tech": [
-    "rect",
-    "text",
-    "色彩系统"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "主辅语义色卡与 Logo 用色规范",
+  "description": "4品牌色主色245ee8/正文14263d/纸面ffffff/浅层dce7fc，HEX文本与色块一致；不把品牌色板当完整功能语义色。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

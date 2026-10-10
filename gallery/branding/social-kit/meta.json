@@ -1,16 +1,15 @@
 {
   "slug": "social-kit",
-  "title": "社媒套件",
+  "title": "社媒品牌套件",
   "space": "2d",
   "time": "static",
-  "order": 8,
+  "order": 20,
   "tech": [
-    "circle",
-    "rect",
-    "linearGradient",
-    "多尺寸"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "头像、横幅、方帖三尺寸——品牌在社媒的统一皮肤",
+  "description": "头像240×240、横幅1200×400、方帖1080×1080逻辑规格，分别以240×240/900×300/240×240展示，保持比例；共同NOVA标识。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

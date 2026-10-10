@@ -1,15 +1,15 @@
 {
   "slug": "type-scale",
-  "title": "字阶系统",
+  "title": "字阶与阅读层级",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 6,
   "tech": [
-    "text",
-    "排版系统",
-    "字号梯度"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "Display 到辅助文字的五级字号梯度与行高",
+  "description": "五阶字号/行高56/64、36/46、24/34、18/29、14/22；行高明确为版式规范，单行SVG文本不声称自动布局。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

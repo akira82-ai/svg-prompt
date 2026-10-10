@@ -1,15 +1,15 @@
 {
   "slug": "poster",
-  "title": "品牌海报",
+  "title": "编辑式品牌海报",
   "space": "2d",
   "time": "static",
-  "order": 11,
+  "order": 16,
   "tech": [
-    "text",
-    "linearGradient",
-    "排版层级"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "A3 竖版海报：超大字排版与图形层级",
+  "description": "竖版400×566近似A3比例，主标题看见秩序、英文副标题ORDER IN VIEW、编辑设计系列说明；排版用留白与字重建立层级。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

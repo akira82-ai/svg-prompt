@@ -79,3 +79,7 @@ svg-prompt/
 ## 界面与组件维护
 
 修改 `scripts/build-ui.py` 后运行 `python3 scripts/build-ui.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-ui.py`。组件状态与场景必须对应，错误、禁用、聚焦及操作上下文清楚；进度、日期、财务指标和波形数据需核对。浏览器检查全部文字布局、动画阶段与减少动效快照；原型不得宣称具有真实交互。生成脚本不会删除目录，移除条目应单独授权并清理引用。
+
+## 品牌与排版维护
+
+修改 `scripts/build-branding.py` 后运行 `python3 scripts/build-branding.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-branding.py`。品牌作品共用矢量标识和字标，核对安全留白、画幅比例、色板与文本；印刷图必须注明逻辑规格与生产限制。统计卡随全库元数据计算；动效一次播放并保留完整终帧，减少动效使用同一静态内容。

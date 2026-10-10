@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "bilingual-type",
+  "title": "中英文字体搭配",
+  "space": "2d",
+  "time": "static",
+  "order": 7,
+  "description": "中文58px粗体搭配英文Georgia36px；数字独立示例。采用系统字体回退，混排字面和基线需实测，不将字号相等当视觉等大。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

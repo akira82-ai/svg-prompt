@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "article-header",
+  "title": "文章头图与裁切",
+  "space": "2d",
+  "time": "static",
+  "order": 14,
+  "description": "原画780×438.75为16:9；标题安全区x120..620/y330..610，副图在右可裁切；右下为缩略重排而非同画面自动裁切。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

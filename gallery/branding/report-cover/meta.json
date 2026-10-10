@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "report-cover",
+  "title": "技术报告封面",
+  "space": "2d",
+  "time": "static",
+  "order": 12,
+  "description": "报告封面390×552近似A4比例，题名系统的边界与协作效率；机构NOVA RESEARCH为虚构，版本1.0与日期明确。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ]
+}

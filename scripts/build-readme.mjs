@@ -34,8 +34,9 @@ const COLLECTIONS = [
   ['科学机制', ['science/fourier-build', 'science/catenary', 'science/koch-snowflake']],
   ['AI 产品', ['ui/ai-chat-workbench', 'ui/agent-execution', 'ui/knowledge-citations']],
   ['产品设计', ['ui/data-table', 'ui/pricing-usage', 'ui/kanban-board']],
+  ['品牌设计', ['branding/wordmark', 'branding/magazine-cover', 'branding/product-launch']],
   ['未来界面', ['ui/hud-interface', 'ui/dark-ops-dashboard', 'ui/wave-analyzer']],
-  ['动效实验室', ['geometry/shape-morph', 'branding/letter-morph', 'backgrounds/rain-ripples']],
+  ['动效实验室', ['geometry/shape-morph', 'branding/brand-intro', 'backgrounds/rain-ripples']],
 ];
 
 // GitHub 锚点规则：小写；删去字母/数字/空格/连字符/下划线以外的字符；空格变 -
@@ -46,6 +47,30 @@ const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 // Slugs supply conventional English names; overrides clarify scene-specific titles.
 const ENGLISH_NAMES = {
+  'branding/brand-intro': 'Brand Intro Animation',
+  'branding/typewriter': 'Brand Copy Reveal',
+  'branding/circular-badge': 'Circular Brand Badge',
+  'branding/packaging-dieline': 'Packaging Structure and Branding',
+  'branding/social-kit': 'Social Brand Kit',
+  'branding/business-card': 'Business Card Front and Back',
+  'branding/stat-numbers': 'Gallery Statistics',
+  'branding/comparison-vs': 'Comparison Layout',
+  'branding/poster': 'Editorial Brand Poster',
+  'branding/presentation-title': 'Presentation Title Slide',
+  'branding/article-header': 'Article Header and Cropping',
+  'branding/product-launch': 'Product Launch Poster',
+  'branding/report-cover': 'Technical Report Cover',
+  'branding/magazine-cover': 'Magazine Cover',
+  'branding/text-on-path': 'Type on a Path',
+  'branding/type-effects': 'Expressive Typography',
+  'branding/editorial-grid': 'Editorial Grid Systems',
+  'branding/bilingual-type': 'Bilingual Typography',
+  'branding/type-scale': 'Type Scale and Hierarchy',
+  'branding/brand-guidelines': 'Brand Guidelines',
+  'branding/brand-palette': 'Brand Color System',
+  'branding/brand-lockup': 'Brand Lockups',
+  'branding/wordmark': 'Geometric Wordmark',
+  'branding/logo-grid': 'Logo Construction Grid',
   'charts/pie-donut': 'Pie and Donut Charts',
   'charts/bar': 'Bar Chart', 'charts/bar-growth': 'Bar Chart Animation',
   'charts/line': 'Line Chart', 'charts/line-draw': 'Line Chart Animation',
@@ -131,9 +156,6 @@ const ENGLISH_NAMES = {
   'ui/live-ops-dashboard': 'Operations Inspection Animation',
   'ui/fitness-dashboard': 'Activity and Training', 'ui/music-player': 'Music Workspace',
   'ui/hud-interface': 'HUD Navigation Concept', 'ui/wave-analyzer': 'Waveform Analyzer',
-  'branding/stat-numbers': 'Gallery Statistics',
-  'branding/comparison-vs': 'Comparison Layout', 'branding/type-scale': 'Typography Scale',
-  'branding/type-effects': 'Typography Effects',
   'geometry/iso-cubes': 'Isometric Cubes', 'geometry/path': 'SVG Paths',
   'geometry/polyline': 'Polylines', 'geometry/fractal-tree-grow': 'Fractal Tree Growth',
 };

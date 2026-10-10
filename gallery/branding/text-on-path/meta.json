@@ -1,11 +1,15 @@
 {
   "slug": "text-on-path",
-  "title": "文字骑路径",
+  "title": "文字沿路径排布",
   "space": "2d",
-  "time": "smil",
-  "order": 16,
-  "tech": [],
-  "description": "环形排布旋转",
+  "time": "static",
+  "order": 10,
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "editorial layout"
+  ],
+  "description": "圆弧与缓曲线两种textPath，使用href本地路径、50%居中；不旋转品牌文字，保证静态阅读。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

@@ -3,13 +3,13 @@
   "title": "名片正反面",
   "space": "2d",
   "time": "static",
-  "order": 13,
+  "order": 19,
   "tech": [
-    "text",
-    "pattern",
-    "linearGradient"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "90×54 比例的名片：正面信息层级与背面图案",
+  "description": "名片正反面各540×324px，逻辑规格90×54mm，比例一致；姓名、职位与示例邮箱建立层级，不提供真实联系方式。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -1,15 +1,15 @@
 {
   "slug": "wordmark",
-  "title": "字标 Wordmark",
+  "title": "几何字标",
   "space": "2d",
   "time": "static",
   "order": 2,
   "tech": [
-    "text",
-    "letter-spacing",
-    "circle"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "NOVA 字标：图形化字母 O 与深浅两种版本",
+  "description": "NOVA字标N/O/V/A采用固定矢量轮廓，深色与反白轮廓完全一致，宽高266:60；内孔使用evenodd。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

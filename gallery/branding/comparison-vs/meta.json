@@ -1,15 +1,15 @@
 {
   "slug": "comparison-vs",
-  "title": "对比信息图",
+  "title": "对比信息版式",
   "space": "2d",
   "time": "static",
-  "order": 19,
+  "order": 17,
   "tech": [
-    "rect",
-    "VS 版式",
-    "维度对照"
+    "brand system",
+    "SVG typography",
+    "editorial layout"
   ],
-  "description": "矢量 SVG vs 位图 PNG：五维度左右对照",
+  "description": "五维比较保留条件，不绝对宣称矢量文件更小或图片无法动画；PNG/APNG与文字提取方式区别清楚。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

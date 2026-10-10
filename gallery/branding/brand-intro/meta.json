@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "brand-intro",
+  "title": "品牌动效片头",
+  "space": "2d",
+  "time": "smil",
+  "order": 24,
+  "description": "标识0..0.8s出现，字标0.8..2s揭示，完整NOVA组合与口号稳定；motion遮罩只播放一次，减少动效显示相同intro-final组合。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "SMIL reveal"
+  ]
+}
