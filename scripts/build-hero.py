@@ -187,7 +187,7 @@ def build():
  .signal-trace{animation:signal-flow 4s linear infinite}
  @media(prefers-reduced-motion:reduce){.planet-spin,.cloud-spin,.warp,.engine-breathe,.shuttle-flight,.signal-trace{animation:none}}
  </style>'''
- svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表120秒自转模拟、云层156秒独立移动，星线径向向外运动，运输艇航行，引擎4.8秒波动。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
+ svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" style="width:100%;height:auto;display:block" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表120秒自转模拟、云层156秒独立移动，星线径向向外运动，运输艇航行，引擎4.8秒波动。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
  assets=ROOT/'assets';assets.mkdir(exist_ok=True);(assets/'hero.svg').write_text(svg)
  prompt='''# 跃迁前夜 / Before the Jump
 

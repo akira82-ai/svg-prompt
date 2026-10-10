@@ -8,6 +8,7 @@ ns={'s':'http://www.w3.org/2000/svg'}
 raw=(ROOT/'assets/hero.svg').read_text();svg=ET.fromstring(raw)
 assert svg.get('viewBox')=='0 0 2100 900'
 assert int(svg.get('width'))/int(svg.get('height'))==7/3
+assert 'width:100%' in svg.get('style') and 'height:auto' in svg.get('style')
 assert svg.get('aria-labelledby')=='hero-title hero-desc'
 ids=[e.get('id') for e in svg.iter() if e.get('id')];assert len(ids)==len(set(ids))
 for ref in re.findall(r'url\(#([^)]*)\)',raw):assert ref in ids
