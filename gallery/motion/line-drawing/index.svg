@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><title>线稿描边动画</title><desc>线稿被一支看不见的笔逐渐画出来的经典动效</desc>
   <defs>
     <linearGradient id="flameG" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#f7b32b"/>

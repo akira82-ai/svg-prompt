@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><title>复杂系统架构图</title><desc>六分区 20 节点电商架构图，全部正交折线布线——模型盲算坐标必翻车的场景及解法</desc>
   <defs>
     <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="12" cy="12" r="1" fill="#1a2540"/>

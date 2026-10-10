@@ -1,6 +1,6 @@
-# HUD 瞬准界面 `SMIL 动效` `2D`
+# HUD 瞄准界面 `SMIL 动效` `2D`
 
-<img src="index.svg" width="720" alt="HUD 瞬准界面">
+<img src="index.svg" width="720" alt="HUD 瞄准界面">
 
 ```
 用 SVG 做"HUD 平显界面"：

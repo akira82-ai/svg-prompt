@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">液态形变</text><text x="60" y="104" font-size="14" fill="#7c8db0">d 路径循环 + 巡游点</text><defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif"><title>液态形变</title><desc>d 路径循环 + 巡游点</desc><rect width="1200" height="800" fill="#0a0f1a"/><text x="60" y="76" font-size="28" font-weight="700" fill="#e8eef7">液态形变</text><text x="60" y="104" font-size="14" fill="#7c8db0">d 路径循环 + 巡游点</text><defs>
     <linearGradient id="blobG" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#7a5cf0"/>
       <stop offset="1" stop-color="#3f8ef7"/>

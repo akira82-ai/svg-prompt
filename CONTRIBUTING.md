@@ -8,7 +8,7 @@ svg-prompt/
 │   └── <category>/<entry-slug>/  #   八大分类，英文 kebab-case 条目名
 │       ├── index.svg             #     作品本体，浏览器可直接打开
 │       ├── prompt.md             #     条目详情页：标题 + 大图 + 提示词代码块（三段式）
-│       └── meta.json             #     五维标签（机器可读）
+│       └── meta.json             #     分类与时空标签（机器可读）
 ├── templates/entry/              # 新条目模板：复制这个目录开新条目
 ├── schema/entry.schema.json      # meta.json 的校验规则
 ├── scripts/build-readme.mjs      # 扫描 gallery → 生成 README 缩略图画廊
@@ -28,15 +28,13 @@ svg-prompt/
 | `prompt.md` 内的提示词 | **多行结构化书写**（不要挤成一行）：首行一句话意图，`-` 列表逐条列结构与风格要求，可替换部分用 `{花括号}` 标注 |
 | `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致；`order`（可选）控制分类内展示位置——按**复杂度递进**编号：单一组件 → 复杂组合 → 完整原型，未设时排在已编号条目之后 |
 
-## 五维标签
+## 分类与时空标签
 
 | 维度 | 字段 | 取值 |
 |---|---|---|
 | 空间 | `space` | `2d` / `3d` |
 | 时间 | `time` | `static` / `smil` / `css` / `js` |
 | 主分类 | （所在目录） | 八类之一，不重复存储 |
-| 难度 | `difficulty` | L1–L6（基础形状 → 拓扑形变/系统级） |
-| 咒语等级 | `spellLevel` | L1 一句话直出 / L2 结构化模板 / L3 系统化流水线 |
 
 收录标准见各分类目录的 `_about.md`。
 
