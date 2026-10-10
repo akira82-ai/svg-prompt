@@ -120,23 +120,28 @@ def build():
   t=.04+i*.037;x,y=pos(t,1);line(x+9,y+12,x+21*(1-t),y+24*(1-t),'#d7b581' if i%6==0 else '#739cab',1.5,extra='data-role="hull-window"')
  for i in range(4):
   t=.12+i*.13;x,y=pos(t,1);poly([(x+5,y+4),(x+54*(1-t),y-25*(1-t)),(x+57*(1-t),y-8*(1-t)),(x+10,y+21*(1-t))],'#091927','#4e7a90',1.3,extra='data-role="hangar"');line(x+12,y+7,x+44*(1-t),y-11*(1-t),'#9ee0e6',2)
- # Multi-tier dorsal bridge, with raised side faces instead of flat stickers.
- decks=[([(455,556),(925,423),(762,591),(572,681)],28),([(540,548),(841,455),(727,574),(615,642)],38),([(589,538),(755,479),(704,560),(643,602)],38)]
- for points,height in decks:poly([(x+24,y-height+32) for x,y in points],'#06121c',extra='filter="url(#bridge-shadow)" opacity=".65" clip-path="url(#hull-clip)"')
- for j,(points,height) in enumerate(decks):
-  elevated=[(x,y-height) for x,y in points];poly([points[1],points[2],elevated[2],elevated[1]],'#193448','#557486');poly([points[2],points[3],elevated[3],elevated[2]],'#233e50','#557486');poly(elevated,['#78929e','#607e8e','#8fa7b1'][j],'#aec2c7',1.2)
-  for k in range(8):
-   a=elevated[0];b=elevated[1];t=(k+1)/10;x=a[0]+t*(b[0]-a[0]);y=a[1]+t*(b[1]-a[1]);line(x,y,x+8,y+5,'#3f5c6e',1)
- # Radiator fins and compact sensor assemblies follow each raised deck.
- for j,(points,height) in enumerate(decks):
-  a=points[0];b=points[1];c=points[2];d=points[3]
-  for i in range(17):
-   t=.13+i*.042;x=a[0]+(b[0]-a[0])*t;y=a[1]+(b[1]-a[1])*t-height
-   line(x,y+9,x+18,y+17,'#243e51',1.7)
-  for i in range(4):
-   t=.15+i*.19;x=d[0]+(c[0]-d[0])*t;y=d[1]+(c[1]-d[1])*t-height
-   poly([(x-11,y-5),(x+5,y-12),(x+16,y-6),(x,y+3)],'#aec0c7','#3f6075',.8)
-   line(x,y-4,x-3,y-16,'#b8ccd1',1)
+ # Compact nested bridge tiers share the hull projection and cumulative elevation.
+ decks=[]
+ for t0,t1,u0,u1,bottom,top in [(.12,.39,.32,.68,0,16),(.15,.35,.36,.64,16,30),(.18,.31,.4,.6,30,43)]:
+  footprint=[pos(t0,u0),pos(t1,u0),pos(t1,u1),pos(t0,u1)]
+  decks.append((footprint,bottom,top))
+ for points,bottom,top in decks:
+  poly([(x+18,y+20) for x,y in points],'#06121c',extra='filter="url(#bridge-shadow)" opacity=".5" clip-path="url(#hull-clip)"')
+ for j,(points,bottom,top) in enumerate(decks):
+  base=[(x,y-bottom) for x,y in points];roof=[(x,y-top) for x,y in points]
+  for k,c in [(1,'#193448'),(2,'#233e50'),(3,'#2e4b5b')]:
+   n=(k+1)%4;poly([base[k],base[n],roof[n],roof[k]],c,'#557486',.8)
+  poly(roof,['#78929e','#607e8e','#8fa7b1'][j],'#aec2c7',1.2,extra=f'data-role="bridge-roof" data-bottom="{bottom}" data-top="{top}"')
+  for i in range(10):
+   t=(i+1)/12;a=roof[0];b=roof[1];x=a[0]+t*(b[0]-a[0]);y=a[1]+t*(b[1]-a[1]);line(x,y+3,x+8,y+8,'#243e51',1.4)
+  a=roof[2];b=roof[3]
+  glass=[(a[0],a[1]+3),(b[0],b[1]+3),(b[0],b[1]+10),(a[0],a[1]+10)]
+  poly(glass,'#122f44','#8dc8d6',.7)
+  for i in range(1,8):
+   t=i/8;x=a[0]+t*(b[0]-a[0]);y=a[1]+t*(b[1]-a[1]);line(x,y+3,x,y+10,'#7baebc',.7)
+ # Short sensor masts are mounted on the upper roof rather than floating above it.
+ for t,u,h in [(.21,.44,31),(.25,.5,23),(.28,.55,17)]:
+  x,y=pos(t,u);y-=43;ellipse(x,y,7,3,'#344f60',extra='stroke="#9cb5bd"');line(x,y,x,y-h,'#91aebb',1.5);line(x-6,y-h+5,x+6,y-h+5,'#91aebb',1);circle(x,y-h,2,'#e3b87b')
  # Branching energy distribution on the lower deck is a physical conduit network.
  for j in range(5):
   t=.32+j*.087;x,y=pos(t,.53)
@@ -144,9 +149,7 @@ def build():
   for u in [.43,.63]:
    xx,yy=pos(t+.014,u);line(x,y,xx,yy,'#9acdd2',1)
    poly([(xx-3,yy),(xx,yy-3),(xx+3,yy),(xx,yy+3)],'#acdce0')
- # Navigation bridge glass, antenna and a small docking crane.
- poly([(617,460),(713,425),(695,472),(647,502)],'#122f44','#8dc8d6',1.4);line(627,460,699,434,'#bce7eb',2)
- for x,y,h in [(625,480,94),(665,456,73),(723,438,48)]:line(x,y,x,y-h,'#91aebb',2);line(x-9,y-h+7,x+9,y-h+7,'#91aebb',1);circle(x,y-h,2,'#e3b87b')
+ # A small docking crane remains on the aft deck.
  poly([(434,570),(474,552),(500,570),(461,594)],'#122c3f','#8aacbb');line(471,559,464,503,'#9cb5bd',3);line(464,503,497,487,'#9cb5bd',3);line(497,487,505,508,'#9cb5bd',2)
  # Engine manifolds and radial hazard marks, subtly integrated with plate faces.
  for j in range(3):
@@ -158,13 +161,28 @@ def build():
  line(1645,535,1645,560,'#76b5c7',1);text(1655,554,'KEPLER / SECTOR 09',11,'#89aebf')
  # Two translucent operational overlays; each is part of the navigation scene.
  rect(80,691,345,154,'url(#glass)',extra='rx="8" stroke="#507487" stroke-opacity=".55"');text(100,717,'NAVIGATION / VECTOR LOCK',12,'#bcd5df',extra='letter-spacing="1.3"')
+ add('<g transform="translate(150 775)"><g class="radar-sweep">')
+ path('M0 0L-30 -32A44 44 0 0 1 0 -44Z','#78dbe2',extra='opacity=".22"');line(0,0,0,-44,'#b5f2ef',1.8);add('</g></g>')
+ for i in range(24):
+  a=i*math.pi/12;line(150+46*math.cos(a),775+46*math.sin(a),150+49*math.cos(a),775+49*math.sin(a),'#7cabbc',.8)
+ for x,y in [(128,753),(172,791),(140,796)]:
+  circle(x,y,2.5,'#a5e2dd');circle(x,y,6,'none',extra='stroke="#8fe2d9" class="target-pulse"')
+ add('<g transform="translate(150 775)"><g class="target-orbit">');circle(32,0,3,'#ecc18c');add('</g></g>')
  for r in [24,44]:circle(150,775,r,'none',extra='stroke="#47758b" stroke-dasharray="3 5"')
- path('M120 803L155 755 174 771 199 736',stroke='#92d4dc',width=1.5);circle(199,736,3,'#e9b87d');line(105,775,195,775,'#47758b',.6);line(150,730,150,819,'#47758b',.6)
+ path('M120 803L155 755 174 771 199 736',stroke='#92d4dc',width=1.5);circle(199,736,3,'#e9b87d');path('M191 740v-12h12M207 732v12h-12',stroke='#e9b87d',width=1.2,extra='class="target-pulse"');line(105,775,195,775,'#47758b',.6);line(150,730,150,819,'#47758b',.6)
  text(222,755,'DEST  /  K–09',12,'#adcbd7');text(222,778,'VECTOR  032°',12,'#adcbd7');text(222,801,'LINK    STABLE',12,'#8ed3c9');text(100,835,'FICTIONAL NAVIGATION / NOT LIVE TELEMETRY',8,'#7397ac')
  rect(1536,682,478,163,'url(#glass)',extra='rx="8" stroke="#507487" stroke-opacity=".55"');text(1557,708,'JUMP DRIVE / CHARGE DISTRIBUTION',12,'#bcd5df',extra='letter-spacing="1.2"')
  for i,(label,value) in enumerate([('CORE',.82),('FIELD',.68),('SYNC',.94)]):
   y=736+i*29;text(1557,y,label,10,'#9bb7c7');rect(1608,y-8,105,4,'#1b3b4f');rect(1608,y-8,105*value,4,'#8bcacb' if i<2 else '#e8bd82');text(1726,y,str(round(value*100))+'%',10,'#c0d5da')
- pts=[(1800+i*3,777-22*math.sin(i/8)-8*math.sin(i/3)) for i in range(60)];wave='M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts);path(wave,stroke='#98d9df',width=1.4);path(wave,stroke='#e3f5f5',width=2,extra='class="signal-trace" stroke-dasharray="16 180"');line(1794,795,1988,795,'#426b80',.8);text(1800,821,'FIELD OSCILLATION / CONCEPT',9,'#789faf')
+  add(f'<clipPath id="charge-{i}"><rect x="1608" y="{y-8}" width="{105*value:.2f}" height="4"/></clipPath><g clip-path="url(#charge-{i})">')
+  line(1608,y-6,1713,y-6,'#eaf9f6',2,extra=f'class="charge-flow" stroke-dasharray="5 15" style="animation-delay:-{i*.4}s"');add('</g>')
+ # Segmented field ring and ticked waveform occupy separate areas of the drive panel.
+ circle(1786,749,17,'none',extra='stroke="#426b80" stroke-width="2"')
+ add('<g transform="translate(1786 749)"><g class="field-spin">');circle(0,0,17,'none',extra='stroke="#9de4e1" stroke-width="3" stroke-dasharray="18 9"');line(-9,0,9,0,'#b6ece7',1);line(0,-9,0,9,'#b6ece7',1);add('</g></g>')
+ for i in range(7):line(1820+i*26,734,1820+i*26,795,'#426b80',.6,extra='opacity=".4"')
+ for y in [745,765,785]:line(1820,y,1988,y,'#426b80',.6,extra='opacity=".4"')
+ circle(1786,790,3,'#8ed3c9',extra='class="target-pulse"')
+ pts=[(1820+i*2.7,777-22*math.sin(i/8)-8*math.sin(i/3)) for i in range(60)];wave='M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts);path(wave,stroke='#98d9df',width=1.4);path(wave,stroke='#e3f5f5',width=2,extra='class="signal-trace" stroke-dasharray="16 180"');line(1794,795,1988,795,'#426b80',.8);text(1800,821,'FIELD OSCILLATION / CONCEPT',9,'#789faf')
  # HUD center reticle remains small; no crosshair covers the narrative subjects.
  path('M1260 329v-12h17M1324 329v-12h-17M1260 371v12h17M1324 371v12h-17',stroke='#8bc9d8',width=1,extra='opacity=".45"');text(1234,299,'EXIT VECTOR',10,'#779fb4')
  # Typography sits in protected negative space, rather than a floating example card.
@@ -175,8 +193,8 @@ def build():
  add('</g>')
  style='''<style>
  @keyframes surface-spin{from{transform:translateX(0)}to{transform:translateX(-900px)}}
- .planet-spin{animation:surface-spin 120s linear infinite}
- .cloud-spin{animation:surface-spin 156s linear infinite}
+ .planet-spin{animation:surface-spin 60s linear infinite}
+ .cloud-spin{animation:surface-spin 78s linear infinite}
  @keyframes warp-travel{0%{transform:translate(0,0);opacity:.04}20%{opacity:.5}80%{opacity:.5}100%{transform:translate(var(--dx),var(--dy));opacity:.04}}
  .warp{animation:warp-travel 4s linear infinite}
  @keyframes engine-breathe{50%{opacity:.72}}
@@ -184,10 +202,18 @@ def build():
  @keyframes shuttle-transit{0%{transform:translate(0,0);opacity:.15}15%{opacity:1}85%{opacity:1}100%{transform:translate(var(--sx),var(--sy));opacity:.15}}
  .shuttle-flight{animation:shuttle-transit 24s linear infinite}
  @keyframes signal-flow{to{stroke-dashoffset:-196}}
- .signal-trace{animation:signal-flow 4s linear infinite}
- @media(prefers-reduced-motion:reduce){.planet-spin,.cloud-spin,.warp,.engine-breathe,.shuttle-flight,.signal-trace{animation:none}}
+ .signal-trace{animation:signal-flow 2s linear infinite}
+ @keyframes hud-rotate{to{transform:rotate(360deg)}}
+ .radar-sweep{animation:hud-rotate 4s linear infinite}
+ .target-orbit{animation:hud-rotate 12s linear infinite}
+ .field-spin{animation:hud-rotate 3s linear infinite}
+ @keyframes target-glow{50%{opacity:.35}}
+ .target-pulse{animation:target-glow 2s ease-in-out infinite}
+ @keyframes charge-stream{to{stroke-dashoffset:-20}}
+ .charge-flow{animation:charge-stream 1s linear infinite}
+ @media(prefers-reduced-motion:reduce){.planet-spin,.cloud-spin,.warp,.engine-breathe,.shuttle-flight,.signal-trace,.radar-sweep,.target-orbit,.field-spin,.target-pulse,.charge-flow{animation:none}}
  </style>'''
- svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" style="width:100%;height:auto;display:block" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表120秒自转模拟、云层156秒独立移动，星线径向向外运动，运输艇航行，引擎4.8秒波动。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
+ svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" style="width:100%;height:auto;display:block" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表60秒自转模拟、云层78秒独立移动，星线径向向外运动，运输艇航行，引擎4.8秒波动。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
  assets=ROOT/'assets';assets.mkdir(exist_ok=True);(assets/'hero.svg').write_text(svg)
  prompt='''# 跃迁前夜 / Before the Jump
 
@@ -198,14 +224,14 @@ def build():
 构图：左上保留标题与暗色留白，中下方巨大楔形探索舰指向右上；右上缓慢自转的星球，空间环、卫星、运输艇建立空间尺度。星线沿同一消失点向外拉长，暗蓝背景中穿插星点与稀薄星云。
 风格：深蓝黑、冷白、青色，少量琥珀色引擎与警示。复杂度来自可放大的装甲接缝、机库、窗口、能源走线和维护设备，不是把已有图表拼成九宫格。
 融合：导航航线/星图承接地图，能源读数与波形承接图表，舰体线路承接架构，导航投影承接界面，轨道与场线承接科学概念，舰名舷号承接排版，状态/舱段符号承接图标，舰与运输艇承接插画，阵列与几何装甲承接生成艺术，拉丝/玻璃/辉光承接材质。
-坐标：舰体顶面A(345,535)、B(610,773)、舰首C(1370,356)。装甲面片使用p(t,u)=(1-t)((1-u)A+uB)+tC，15×11共165面。侧面增厚并加入24窗口、4机库、3层抬高舰桥、吊机与天线；装甲有迎光斜边和背光接缝、整面低透明度拉丝噪声，舰桥投影偏移(24,32)并模糊5px形成接触与遮挡阴影，不依赖字体画舰体。
-星球：中心(1655,285)、半径224；地图宽900高440，在圆形裁切内放两个相隔900px的同图副本；地表120秒、云层156秒各自平移−900px，视觉模拟自转并非真实3D球面投影。地形用feTurbulence频率0.008/0.012、5层、seed11，阈值alpha映射后DiffuseLighting形成微地形；云层频率0.013/0.025、4层、seed23，alpha=4r−2.1，均stitchTiles。城市灯点用固定种子7301，之后覆盖静态球形明暗与大气层。
+坐标：舰体顶面A(345,535)、B(610,773)、舰首C(1370,356)。装甲面片使用p(t,u)=(1-t)((1-u)A+uB)+tC，15×11共165面。侧面增厚并加入24窗口、4机库、3层紧凑舰桥（层高0→16→30→43，嵌套轮廓沿甲板投影收缩）、吊机与天线；装甲有迎光斜边和背光接缝、整面低透明度拉丝噪声，舰桥投影偏移(18,20)并模糊5px形成接触与遮挡阴影，不依赖字体画舰体。
+星球：中心(1655,285)、半径224；地图宽900高440，在圆形裁切内放两个相隔900px的同图副本；地表60秒、云层78秒各自平移−900px，视觉模拟自转并非真实3D球面投影。地形用feTurbulence频率0.008/0.012、5层、seed11，阈值alpha映射后DiffuseLighting形成微地形；云层频率0.013/0.025、4层、seed23，alpha=4r−2.1，均stitchTiles。城市灯点用固定种子7301，之后覆盖静态球形明暗与大气层。
 轨道：rx350/ry119椭圆旋转−0.36弧度，72刻度；三台空间设备和5个不同尺度的运输艇，遮挡关系体现远近；5艘运输艇分别沿局部向量向右上航行，18+s×12秒周期，首尾淡入淡出，减少动效时停在完整基础位置。
 跃迁：星点与光线由seed7301确定，所有星线共用消失点(1300,340)，沿径向向外移动190px，周期1.8..3.8秒，起止透明度0.04、主体0.5，负延迟错开，移动区只在背景；静态星线也保持可见。
 引擎：3个喷口，径向辉光4.8秒opacity1→0.72→1，不闪烁、不遮挡舰体。
-投影：左下导航窗345×154，右下驱动状态窗478×163。CORE82%、FIELD68%、SYNC94%与条长对应；波形为双正弦示意。读数、星域名称、舰名均虚构，不是实时遥测或物理仿真。
+投影：左下导航窗345×154，右下驱动状态窗478×163。CORE82%、FIELD68%、SYNC94%与条长对应；波形为双正弦示意，2秒流光；左雷达4秒扫描、12秒目标环绕、2秒锁定呼吸；右场环3秒旋转，条内能量流1秒循环并裁切于真实百分比宽度。读数、星域名称、舰名均虚构，不是实时遥测或物理仿真。
 文字：SVG–PROMPT / THE VECTOR ATLAS、BEFORE THE JUMP、跃迁前夜、ONE SCENE. TEN VISUAL LANGUAGES.；舰身NOVA / ATLAS–07，远景KEPLER / SECTOR 09。
-兼容：仅内联矢量、渐变、滤镜、pattern与CSS，没有外部图片/字体/脚本；引用必须都在本文件defs内。prefers-reduced-motion禁用地表、云层、星线、运输艇、引擎和波形动画，保留同一完整静态场景；CSS失效也可完整查看。外部平台是否保留动效需实际页面验证。
+兼容：仅内联矢量、渐变、滤镜、pattern与CSS，没有外部图片/字体/脚本；引用必须都在本文件defs内。prefers-reduced-motion禁用地表、云层、星线、运输艇、引擎、波形和所有HUD动画，保留同一完整静态场景；CSS失效也可完整查看。外部平台是否保留动效需实际页面验证。
 ```
 
 完整构造可见 [生成脚本](../scripts/build-hero.py)，独立文件可见 [hero.svg](hero.svg)。

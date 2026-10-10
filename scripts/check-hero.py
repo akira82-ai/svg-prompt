@@ -37,8 +37,8 @@ assert len(svg.findall('.//s:g[@class="shuttle-flight"]',ns))==5
 assert svg.find('.//s:feDiffuseLighting',ns) is not None
 for noise in svg.findall('.//s:feTurbulence',ns):assert noise.get('seed') and noise.get('stitchTiles')=='stitch'
 for f in svg.findall('.//s:feColorMatrix',ns):assert len(f.get('values').split())==20
-assert '156s linear infinite' in raw
-assert 'translateX(-900px)' in raw and '120s linear infinite' in raw
+assert '78s linear infinite' in raw
+assert 'translateX(-900px)' in raw and '60s linear infinite' in raw
 assert 'prefers-reduced-motion:reduce' in raw and 'animation:none' in raw
 assert 'display:none' not in raw and 'opacity:0' not in raw
 # HUD bars and their displayed readings must match.
@@ -49,9 +49,18 @@ sp=importlib.util.spec_from_file_location('hero',ROOT/'scripts/build-hero.py');h
 for t in [0,.25,.5,.75,1]:
  for u in [0,.25,.5,.75,1]:
   x,y=h.pos(t,u);assert 345<=x<=1370 and 356<=y<=773
-prompt=(ROOT/'assets/hero-prompt.md').read_text();assert '2100×900' in prompt and '7301' in prompt and '120秒' in prompt
+prompt=(ROOT/'assets/hero-prompt.md').read_text();assert '2100×900' in prompt and '7301' in prompt and '60秒' in prompt
 readme=(ROOT/'README.md').read_text();assert readme.count('src="assets/hero.svg"')==1
 assert readme.index('assets/hero.svg')<readme.index('## 目录')
 assert 'width="1050"' in readme.split('assets/hero.svg')[1][:120]
 assert len(list((ROOT/'gallery').glob('*/*/meta.json')))==233
 print(f'PASS: 7:3 hero; 165 plates, 4 hangars, 24 windows, {len(lines)} radial warp streaks, periodic planet texture, HUD ratios and static-safe motion.')
+
+roofs=svg.findall('.//s:path[@data-role="bridge-roof"]',ns)
+assert [(int(e.get('data-bottom')),int(e.get('data-top'))) for e in roofs]==[(0,16),(16,30),(30,43)]
+for cls in ['radar-sweep','target-orbit','field-spin','target-pulse','charge-flow']:
+ assert svg.findall(f'.//*[@class="{cls}"]',ns)
+ assert '.'+cls in raw.split('@media(prefers-reduced-motion:reduce)')[1]
+for i,v in enumerate([.82,.68,.94]):
+ clip=svg.find(f'.//s:clipPath[@id="charge-{i}"]/s:rect',ns)
+ assert abs(float(clip.get('width'))-105*v)<.01
