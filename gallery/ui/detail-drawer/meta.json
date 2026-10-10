@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "detail-drawer",
+  "title": "详情抽屉",
+  "space": "2d",
+  "time": "static",
+  "order": 40,
+  "description": "详情抽屉保留列表上下文；同一Atlas项目负责人/状态/进度48%一致，关闭与完整页面入口明确。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

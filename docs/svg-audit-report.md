@@ -129,7 +129,7 @@ SVG历史一手核对：W3C [SVG 1.0推荐规范，2001-09-04](https://www.w3.or
 | [电商首页 · ecommerce-home](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/ecommerce-home/index.svg) | P2 | 首页布局完整；商品图是占位几何，应如实称界面原型，缩略图用更大的商品与价格焦点。 |
 | [卡片与阴影层级 · elevation](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/elevation/index.svg) | P2 | 四阴影递进合理；固定同一物体/背景及光源，阴影参数加入提示词，避免仅写小/中/大。 |
 | [健身数据 · fitness-dashboard](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/fitness-dashboard/index.svg) | P2 | 三环和本周柱图层级不错；补每环目标/实际数，今天柱与日期口径统一，图表缩略尺度偏小。 |
-| [渐变与玻璃质感 · glassmorphism](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/glassmorphism/index.svg) | P2 | 品牌感较强，可保留；玻璃卡是半透明叠加并非通用backdrop-filter，说明blur背景层的实现边界。 |
+| 渐变与玻璃质感 · glassmorphism（历史条目，2026-10-10 已移除） | P2 | 品牌感较强，可保留；玻璃卡是半透明叠加并非通用backdrop-filter，说明blur背景层的实现边界。 |
 | [不确定进度条 · indeterminate-progress](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/indeterminate-progress/index.svg) | P2 | 轨道内裁剪成立；光条与加载说明可放大，设置代表性首帧，停止动画时仍有可见状态。 |
 | [输入框状态 · input-states](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/input-states/index.svg) | P2 | 四状态基本完整；聚焦与错误提示层级可读，提示词补标签/帮助文案占位和长文本裁剪要求。 |
 | [音乐播放器 · music-player](/Users/agiray/Desktop/github/1-my-repo/svg-prompt/gallery/ui/music-player/index.svg) | P2 | 深浅双屏风格统一；第一首播放中却播放页主控为播放三角，统一播放/暂停语义；5首歌曲与底部迷你播放条拉开层级。 |

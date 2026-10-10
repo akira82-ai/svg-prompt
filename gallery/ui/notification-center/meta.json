@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "notification-center",
+  "title": "通知中心",
+  "space": "2d",
+  "time": "static",
+  "order": 20,
+  "description": "2条未读、1条已读；未读由点、分组计数与文字表达，通知包含来源、时间与行动上下文。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

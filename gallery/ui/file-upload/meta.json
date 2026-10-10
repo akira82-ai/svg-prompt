@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "file-upload",
+  "title": "文件上传过程",
+  "space": "2d",
+  "time": "smil",
+  "order": 11,
+  "description": "上传三阶段：等待/64%上传中/完成；4.0÷6.25=64%，进度与文本一致。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "SMIL"
+  ]
+}

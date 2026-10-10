@@ -1,15 +1,15 @@
 {
   "slug": "indeterminate-progress",
-  "title": "不确定进度条",
+  "title": "不确定进度",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "clipPath",
-    "linearGradient",
-    "animate"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "不知道还要多久——渐变光条在轨道内循环滑动",
+  "description": "未知时长使用循环光条，限定裁切范围，不显示伪百分比或预计完成时间。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 27
+  "order": 26
 }

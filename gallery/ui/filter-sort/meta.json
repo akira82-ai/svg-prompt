@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "filter-sort",
+  "title": "筛选与排序",
+  "space": "2d",
+  "time": "static",
+  "order": 19,
+  "description": "条件状态=进行中、负责人=林老师；三条示例结果按更新时间降序，条件可移除并提供清除入口。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

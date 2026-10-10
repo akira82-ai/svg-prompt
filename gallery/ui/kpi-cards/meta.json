@@ -3,13 +3,13 @@
   "title": "KPI 指标卡",
   "space": "2d",
   "time": "static",
-  "order": 20,
+  "order": 37,
   "tech": [
-    "text",
-    "polyline",
-    "箭头"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "四张卡：大数字 + 同比箭头 + sparkline 迷你趋势",
+  "description": "金额、订单和比率明确单位；累计序列最终值128450/840，比率序列最终值3.86/2.10；上一周期销售114279、订单800，比率4.26/2.50。转化率/退款率变化用百分点，下降是否有利由指标含义决定；迷你趋势各自独立尺度。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

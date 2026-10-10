@@ -1,15 +1,15 @@
 {
   "slug": "bi-dashboard",
-  "title": "浅色 BI 经营盘",
+  "title": "经营分析工作台",
   "space": "2d",
   "time": "static",
-  "order": 26,
+  "order": 53,
   "tech": [
-    "筛选栏",
-    "KPI 行",
-    "SaaS 风"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "SaaS 销售经营盘：筛选栏 + KPI 行 + 双图 + 排行表",
+  "description": "四KPI与图表共用显式示例数据；每日销售额[12100, 13500, 14200, 16600, 17750, 16900, 18300, 19100]，合计128450元；订单840，客单价128450/840≈152.92元；渠道40/30/20/10%合计100%。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

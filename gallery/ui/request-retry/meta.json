@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "request-retry",
+  "title": "请求状态与重试",
+  "space": "2d",
+  "time": "smil",
+  "order": 32,
+  "description": "请求超时/重试中/恢复三个状态；保留输入，避免重试导致重复提交。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "SMIL"
+  ]
+}

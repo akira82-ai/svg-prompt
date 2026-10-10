@@ -1,17 +1,15 @@
 {
   "slug": "dashboard",
-  "title": "数据可视化仪表盘",
+  "title": "经营分析 · 入场演示",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "linearGradient",
-    "stroke-dasharray",
-    "animate",
-    "rect",
-    "text"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "KPI 卡 + 面积折线图 + 环形进度 + 条形图，打开文件的一瞬间数据流入动画自动播放",
+  "description": "四KPI与图表共用显式示例数据；每日销售额[12100, 13500, 14200, 16600, 17750, 16900, 18300, 19100]，合计128450元；订单840，客单价128450/840≈152.92元；渠道40/30/20/10%合计100%。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 41
+  "order": 54
 }

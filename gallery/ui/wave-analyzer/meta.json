@@ -1,15 +1,15 @@
 {
   "slug": "wave-analyzer",
-  "title": "波形解析器",
+  "title": "波形解析工作台",
   "space": "2d",
   "time": "smil",
-  "order": 42,
+  "order": 60,
   "tech": [
-    "translate 循环",
-    "正弦叠加",
-    "频谱柱"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "三相位波形流动 + 频谱柱循环跳动",
+  "description": "128点信号sin(2π3n/128)+.5sin(2π8n/128)，DFT单边幅值2|Σsₙexp(−i2πkn/N)|/N，k0..16；峰值bin3=1、bin8=.5，其余数值近0。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

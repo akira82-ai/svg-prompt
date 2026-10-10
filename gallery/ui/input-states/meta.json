@@ -1,15 +1,15 @@
 {
   "slug": "input-states",
-  "title": "输入框状态",
+  "title": "输入与校验",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "text",
-    "表单设计"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "默认 / 聚焦 / 错误 / 禁用四态，标签与占位文字齐全",
+  "description": "标签不被占位符替代；错误说明如何修正；禁用提供组织策略原因。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 9
+  "order": 5
 }

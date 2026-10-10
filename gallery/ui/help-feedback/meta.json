@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "help-feedback",
+  "title": "帮助与反馈",
+  "space": "2d",
+  "time": "static",
+  "order": 22,
+  "description": "帮助检索与反馈表单并列；问题类型、描述与提交入口明确，并提示不要包含敏感凭证。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

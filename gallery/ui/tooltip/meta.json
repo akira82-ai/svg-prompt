@@ -1,15 +1,15 @@
 {
   "slug": "tooltip",
-  "title": "工具提示 Tooltip",
+  "title": "工具提示",
   "space": "2d",
   "time": "static",
   "tech": [
-    "path",
-    "rect",
-    "气泡"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "深浅两色气泡 + 指向箭头 + 触发按钮",
+  "description": "悬浮提示靠近触发按钮，含方向三角；重要操作与错误不只放在提示气泡中。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 12
+  "order": 15
 }

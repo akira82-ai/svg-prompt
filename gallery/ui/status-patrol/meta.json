@@ -1,15 +1,15 @@
 {
   "slug": "status-patrol",
-  "title": "状态灯巡检",
+  "title": "服务状态巡检",
   "space": "2d",
   "time": "smil",
-  "order": 37,
+  "order": 30,
   "tech": [
-    "animate",
-    "opacity",
-    "巡检扫描"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "服务状态灯依次呼吸 + 巡检光带自上而下循环",
+  "description": "四服务固定3正常/1降级；巡检框离散按行移动，不将扫描位置当作服务健康判定。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

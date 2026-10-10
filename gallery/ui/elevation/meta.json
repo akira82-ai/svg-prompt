@@ -1,14 +1,15 @@
 {
   "slug": "elevation",
-  "title": "卡片与阴影层级",
+  "title": "卡片与层级",
   "space": "2d",
   "time": "static",
   "tech": [
-    "feDropShadow",
-    "rect"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "海拔 0–3：从纯描边到大柔影的四档阴影",
+  "description": "四种产品层级用轻量偏移阴影与边界表达，不使用高斯模糊掩盖文本。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 17
+  "order": 9
 }

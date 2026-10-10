@@ -1,15 +1,15 @@
 {
   "slug": "progress-slider",
-  "title": "进度条与滑块",
+  "title": "进度与滑块",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "rx"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "三档进度条与带手柄的滑块轨道",
+  "description": "进度25/60/100%，滑块40%；圆点坐标与40%轨道比例一致，不把滑块当作进度反馈。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 14
+  "order": 36
 }

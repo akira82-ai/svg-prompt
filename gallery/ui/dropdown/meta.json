@@ -1,15 +1,15 @@
 {
   "slug": "dropdown",
-  "title": "下拉菜单",
+  "title": "下拉选择",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "path",
-    "投影"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "触发框 + 展开菜单：普通项、悬停高亮、选中打勾",
+  "description": "触发框与菜单对齐，当前进行中有勾选；普通项和选中项不混淆。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 19
+  "order": 6
 }

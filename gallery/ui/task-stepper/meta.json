@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "task-stepper",
+  "title": "多步骤任务进度",
+  "space": "2d",
+  "time": "smil",
+  "order": 31,
+  "description": "任务完成/当前/等待三个阶段；等待按钮禁用，不自动跳过当前任务。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "SMIL"
+  ]
+}

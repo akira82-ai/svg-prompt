@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "generation-compare",
+  "title": "生成结果对比",
+  "space": "2d",
+  "time": "static",
+  "order": 46,
+  "description": "同一请求的两段不同输出并排，版本B明确键盘/Tab/操作对象；支持独立采用，评价不伪装成客观分数。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

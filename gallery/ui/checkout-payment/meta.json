@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "checkout-payment",
+  "title": "结算与支付状态",
+  "space": "2d",
+  "time": "static",
+  "order": 52,
+  "description": "199×1+0=199元；当前待支付，明确确认后才提交；金额与按钮一致，不能用动画直接跳到支付成功。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

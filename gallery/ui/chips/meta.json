@@ -1,15 +1,15 @@
 {
   "slug": "chips",
-  "title": "标签 Chips",
+  "title": "标签与筛选项",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "rx",
-    "text"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "普通 / 选中 / 可删除 / 虚线添加四种标签形态",
+  "description": "普通、选中、可移除与添加四类；可移除标签含明确×，显示应用条件。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 5
+  "order": 7
 }

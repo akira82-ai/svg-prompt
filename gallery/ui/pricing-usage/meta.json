@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "pricing-usage",
+  "title": "套餐与用量",
+  "space": "2d",
+  "time": "static",
+  "order": 41,
+  "description": "三项用量800/1000次、6/10GB、4/5席位，进度80/60/80%；额度与套餐价格、周期和续费日期分开表达。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

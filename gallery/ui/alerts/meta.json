@@ -4,12 +4,12 @@
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "语义色"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "成功 / 错误 / 警告 / 信息四色横幅与图标",
+  "description": "成功/错误/警告/信息同时用符号、标题与说明区分；告警不得随强调消失，不快闪关键内容。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 13
+  "order": 23
 }

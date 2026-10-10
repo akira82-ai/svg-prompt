@@ -1,16 +1,15 @@
 {
   "slug": "music-player",
-  "title": "音乐播放器",
+  "title": "音乐播放工作台",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "linearGradient",
-    "circle",
-    "animate",
-    "深色主题"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "深色播放页与播放列表：唱片、进度条、控制键、律动均衡器",
+  "description": "正在播放Night Circuit，进度80/240秒与1:20/4:00一致；动画只强调播放控件，不让固定时间读数与滚动进度冲突。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 38
+  "order": 58
 }

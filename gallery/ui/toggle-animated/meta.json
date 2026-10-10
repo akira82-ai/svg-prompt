@@ -1,15 +1,15 @@
 {
   "slug": "toggle-animated",
-  "title": "开关拨动动画",
+  "title": "开关状态转换",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "animate",
-    "circle",
-    "rect"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "滑块位移与轨道变色同步补间——开与关自动循环",
+  "description": "开关绑定明确设置语义，开启、关闭与不可用状态同时展示；动画为自动演示。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 28
+  "order": 3
 }

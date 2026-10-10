@@ -1,15 +1,15 @@
 {
   "slug": "hud-interface",
-  "title": "HUD 瞄准界面",
+  "title": "HUD 导航概念",
   "space": "2d",
   "time": "smil",
-  "order": 39,
+  "order": 59,
   "tech": [
-    "animateTransform",
-    "双环反转",
-    "目标锁定"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "双层刻度环反向旋转 + 目标锁定框呼吸 + 数据读数",
+  "description": "航向以北为0顺时针，68°指向右上；指示线与读数一致，固定刻度不做装饰旋转；概念界面不用于实际导航。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

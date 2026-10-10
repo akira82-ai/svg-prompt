@@ -1,15 +1,15 @@
 {
   "slug": "dark-ops-dashboard",
-  "title": "深色监控大屏",
+  "title": "运维监控工作台",
   "space": "2d",
-  "time": "smil",
-  "order": 23,
+  "time": "static",
+  "order": 55,
   "tech": [
-    "深色主题",
-    "多面板",
-    "数据组合"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "NOC 运维风：深底霓虹一屏九区",
+  "description": "四KPI与图表共用显式示例数据；QPS末值46.2k，服务3正常/1降级，动画只强调降级项。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

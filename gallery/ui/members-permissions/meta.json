@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "members-permissions",
+  "title": "成员与权限",
+  "space": "2d",
+  "time": "static",
+  "order": 51,
+  "description": "所有者/管理员/编辑者/查看者四角色，权限范围明确；不能用角色标签暗示全部项目天然可见。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "model-parameters",
+  "title": "模型与参数选择",
+  "space": "2d",
+  "time": "static",
+  "order": 43,
+  "description": "三模型为虚构产品命名；单选Atlas Pro，温度.7与最大输出4096/8192示例；参数含义和模型能力边界明确。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

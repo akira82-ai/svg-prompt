@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "data-table",
+  "title": "专业数据表格",
+  "space": "2d",
+  "time": "static",
+  "order": 39,
+  "description": "5行项目表，前2行选中、批量导出2项；列包含选择/名称/负责人/状态/更新时间，降序日期10-10到10-06。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

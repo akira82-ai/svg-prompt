@@ -1,15 +1,15 @@
 {
   "slug": "pagination",
-  "title": "分页器",
+  "title": "分页与结果范围",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "text",
-    "path"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "页码 + 前后翻页 + 省略号的完整分页形态",
+  "description": "分页第4页，共95条，每页10条，范围31–40；列表仅预览其中4条；当前页、前后翻页与省略号明确。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 11
+  "order": 14
 }

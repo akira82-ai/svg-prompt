@@ -1,15 +1,15 @@
 {
   "slug": "spinners",
-  "title": "加载器三连",
+  "title": "加载状态",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "animateTransform",
-    "animate",
-    "circle"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "旋转圆弧、三点跳动、脉冲圆环三种经典加载动效",
+  "description": "圆弧旋转与点状等待均为不确定加载；文字固定可读，静态快照保持处理状态。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 21
+  "order": 25
 }

@@ -1,15 +1,15 @@
 {
   "slug": "alert-blink",
-  "title": "告警闪烁",
+  "title": "告警强调",
   "space": "2d",
   "time": "smil",
-  "order": 40,
+  "order": 24,
   "tech": [
-    "animate",
-    "opacity",
-    "声波扩散"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "警告横幅快闪两下常亮 + 声波弧持续扩散",
+  "description": "成功/错误/警告/信息同时用符号、标题与说明区分；告警不得随强调消失，不快闪关键内容。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

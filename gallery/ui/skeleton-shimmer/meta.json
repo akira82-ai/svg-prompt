@@ -1,15 +1,15 @@
 {
   "slug": "skeleton-shimmer",
-  "title": "骨架屏微光",
+  "title": "骨架屏加载",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "clipPath",
-    "linearGradient",
-    "animate"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "灰色占位块上一道高光循环扫过——内容加载中的体面等待",
+  "description": "三行列表骨架保留图标、标题、副文本与状态位置；微光在占位块内部裁切，不让加载文字闪烁。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 29
+  "order": 27
 }

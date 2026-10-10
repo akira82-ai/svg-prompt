@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "date-range",
+  "title": "日期范围选择",
+  "space": "2d",
+  "time": "static",
+  "order": 10,
+  "description": "2026-10-01为星期四；预选10月5日至11日，含首尾共7天；日期位置与真实日历匹配。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

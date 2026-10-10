@@ -1,14 +1,14 @@
 {
   "slug": "toggle",
-  "title": "开关 Toggle",
+  "title": "开关状态",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "rx"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "开与关两态的轨道滑块，大小两种规格",
+  "description": "开关绑定明确设置语义，开启、关闭与不可用状态同时展示；动画为自动演示。",
   "author": "airay1015",
   "date": "2026-10-08",
   "order": 2

@@ -1,15 +1,15 @@
 {
   "slug": "tabs",
-  "title": "标签页与分段控件",
+  "title": "标签页与分段导航",
   "space": "2d",
   "time": "static",
   "tech": [
-    "text",
-    "rect",
-    "指示条"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "下划线标签页与胶囊分段控件，激活态两种指示方式",
+  "description": "下划线标签页激活概览；分段控件激活月，导航与视图切换含义明确。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 10
+  "order": 13
 }

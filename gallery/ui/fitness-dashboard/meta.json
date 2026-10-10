@@ -1,16 +1,15 @@
 {
   "slug": "fitness-dashboard",
-  "title": "健身数据",
+  "title": "活动与训练",
   "space": "2d",
   "time": "static",
   "tech": [
-    "circle",
-    "stroke-dasharray",
-    "rect",
-    "数据可视化"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "活动三环、数据卡与周柱状图——健康仪表盘",
+  "description": "三环7200/10000步、28/40分钟、9/12小时；训练分钟15/30/0/45/20/35/25合计170，环弧与数字比例一致。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 33
+  "order": 57
 }

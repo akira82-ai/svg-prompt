@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "login-verification",
+  "title": "登录与验证",
+  "space": "2d",
+  "time": "static",
+  "order": 12,
+  "description": "并排展示登录与二次验证；邮箱脱敏，六位验证码未完整时继续按钮禁用；不展示真实凭证。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "ai-chat-workbench",
+  "title": "AI 对话工作台",
+  "space": "2d",
+  "time": "static",
+  "order": 42,
+  "description": "完整AI工作台：会话侧栏、附件、带[1]/[2]来源的回答、页码引用、复制/重新生成/反馈、模型选择与输入栏；这是已完成回答快照。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

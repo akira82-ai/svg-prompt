@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "agent-execution",
+  "title": "Agent 执行过程",
+  "space": "2d",
+  "time": "smil",
+  "order": 44,
+  "description": "四步骤完成/完成/进行中/未开始，工具只读已执行，写入未授权；确认不能被循环动画自动跳过。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "SMIL"
+  ]
+}

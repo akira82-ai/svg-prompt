@@ -4,12 +4,12 @@
   "space": "2d",
   "time": "static",
   "tech": [
-    "circle",
-    "clipPath",
-    "text"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "字母头像、图标头像、数字徽章与在线状态点",
+  "description": "字母头像三尺寸、成员头像堆叠、文字化在线与未读；数字徽章不是成员数量。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 7
+  "order": 8
 }

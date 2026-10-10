@@ -4,12 +4,12 @@
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "path"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "复选框三态与单选组：未选 / 选中 / 半选",
+  "description": "复选未选/选中/半选，单选组仅团队选中；半选不用于单选控件。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 3
+  "order": 4
 }

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "product-onboarding",
+  "title": "产品引导",
+  "space": "2d",
+  "time": "static",
+  "order": 35,
+  "description": "新手引导包含建立项目、邀请成员、添加资料三个步骤；当前第一步，允许稍后继续。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

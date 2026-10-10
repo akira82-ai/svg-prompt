@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "command-palette",
+  "title": "命令面板",
+  "space": "2d",
+  "time": "static",
+  "order": 18,
+  "description": "输入区域、分组结果、键盘选中态与键盘提示清楚；命令含动词和快捷键，不与全文搜索混淆。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

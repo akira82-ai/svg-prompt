@@ -32,6 +32,8 @@ const COLLECTIONS = [
   ['系统图解', ['diagrams/sequence-diagram', 'diagrams/rag-pipeline', 'diagrams/agent-loop']],
   ['空间分析', ['maps/origin-destination', 'maps/service-coverage', 'maps/campus-floorplan']],
   ['科学机制', ['science/fourier-build', 'science/catenary', 'science/koch-snowflake']],
+  ['AI 产品', ['ui/ai-chat-workbench', 'ui/agent-execution', 'ui/knowledge-citations']],
+  ['产品设计', ['ui/data-table', 'ui/pricing-usage', 'ui/kanban-board']],
   ['未来界面', ['ui/hud-interface', 'ui/dark-ops-dashboard', 'ui/wave-analyzer']],
   ['动效实验室', ['geometry/shape-morph', 'branding/letter-morph', 'backgrounds/rain-ripples']],
 ];

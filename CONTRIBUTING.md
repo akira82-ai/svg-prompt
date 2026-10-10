@@ -75,3 +75,7 @@ svg-prompt/
 ## 科学与原理维护
 
 修改 `scripts/build-science.py` 后运行 `python3 scripts/build-science.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-science.py`。核对实际 SVG 几何与公式、边界条件、相同尺度和动画共同参数；说明有限迭代、取样插值与理想模型的限制。浏览器验证正常动效与减少动效快照，不用装饰运动代替模型。
+
+## 界面与组件维护
+
+修改 `scripts/build-ui.py` 后运行 `python3 scripts/build-ui.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-ui.py`。组件状态与场景必须对应，错误、禁用、聚焦及操作上下文清楚；进度、日期、财务指标和波形数据需核对。浏览器检查全部文字布局、动画阶段与减少动效快照；原型不得宣称具有真实交互。生成脚本不会删除目录，移除条目应单独授权并清理引用。

@@ -1,16 +1,15 @@
 {
   "slug": "ecommerce-home",
-  "title": "电商首页",
+  "title": "电商商品目录",
   "space": "2d",
   "time": "static",
   "tech": [
-    "linearGradient",
-    "rect",
-    "text",
-    "网格布局"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "搜索栏、秒杀 Banner、分类入口、商品瀑布格与底部 Tab",
+  "description": "三商品199/299/99元，使用纯矢量产品示意；目录、搜索与购物车操作明确，无虚假折扣或倒计时。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 34
+  "order": 49
 }

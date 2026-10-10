@@ -1,15 +1,15 @@
 {
   "slug": "live-ops-dashboard",
-  "title": "动态大屏",
+  "title": "运维监控 · 巡检演示",
   "space": "2d",
   "time": "smil",
-  "order": 32,
+  "order": 56,
   "tech": [
-    "深色主题",
-    "滚动折线",
-    "组合动效"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "深色大屏组合动效：滚动折线+呼吸灯+扫描+数字滚动",
+  "description": "四KPI与图表共用显式示例数据；QPS末值46.2k，服务3正常/1降级，动画只强调降级项。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

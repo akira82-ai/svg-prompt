@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "settings-preferences",
+  "title": "设置与偏好",
+  "space": "2d",
+  "time": "static",
+  "order": 21,
+  "description": "设置区分产品偏好与系统权限；桌面通知说明权限未授予，减少动效为独立可读设置。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

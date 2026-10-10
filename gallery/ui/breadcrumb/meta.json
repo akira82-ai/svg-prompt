@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "breadcrumb",
+  "title": "面包屑导航",
+  "space": "2d",
+  "time": "static",
+  "order": 16,
+  "description": "四级面包屑首页/项目/设计系统/界面规范；当前项不是重复导航按钮。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

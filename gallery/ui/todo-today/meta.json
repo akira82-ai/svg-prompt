@@ -4,13 +4,12 @@
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "path",
-    "列表设计"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "周历条、任务分组勾选与悬浮新建按钮",
+  "description": "2026-10-10星期六；周历10月5日至11日，10日选中；3任务1完成，日期、状态和计数一致。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 31
+  "order": 47
 }

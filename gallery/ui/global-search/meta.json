@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "global-search",
+  "title": "全局搜索",
+  "space": "2d",
+  "time": "static",
+  "order": 17,
+  "description": "输入区域、分组结果、键盘选中态与键盘提示清楚；搜索按文档/项目分类，明确匹配关键词。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

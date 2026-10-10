@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "kanban-board",
+  "title": "看板任务",
+  "space": "2d",
+  "time": "static",
+  "order": 50,
+  "description": "三列待开始2/进行中2/已完成1，共5任务；每卡包含负责人和日期，拖动只是状态示意。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

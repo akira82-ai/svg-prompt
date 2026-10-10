@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "modal-confirm",
+  "title": "弹窗与确认",
+  "space": "2d",
+  "time": "static",
+  "order": 34,
+  "description": "确认框说明对象、权限影响和可恢复性，危险操作与取消分开；页面原型不执行真实移出。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

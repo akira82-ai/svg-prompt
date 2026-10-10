@@ -1,15 +1,15 @@
 {
   "slug": "typing-indicator",
-  "title": "打字指示器",
+  "title": "正在输入",
   "space": "2d",
   "time": "smil",
   "tech": [
-    "animate",
-    "circle",
-    "rect"
+    "SVG UI",
+    "state design",
+    "SMIL"
   ],
-  "description": "聊天气泡里三点依次亮起——\"对方正在输入\"",
+  "description": "三点依次强调，明确陈同学正在输入；不暗示消息已经发送或内容已经生成。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 22
+  "order": 28
 }

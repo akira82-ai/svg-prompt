@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "empty-error",
+  "title": "空状态与异常",
+  "space": "2d",
+  "time": "static",
+  "order": 33,
+  "description": "首次使用、搜索无结果、加载失败三个不同原因对应新建、清除条件、重试三种操作。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}

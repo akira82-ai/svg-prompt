@@ -1,16 +1,15 @@
 {
   "slug": "chat-messenger",
-  "title": "聊天 IM",
+  "title": "团队聊天",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "circle",
-    "path",
-    "消息流"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "会话列表与聊天窗口两屏：头像、气泡、未读徽章、输入栏",
+  "description": "会话列表保留2条未读提示；聊天有作者/时间/发送状态/附件与输入操作，不以气泡位置代替身份。",
   "author": "airay1015",
   "date": "2026-10-08",
-  "order": 36
+  "order": 48
 }

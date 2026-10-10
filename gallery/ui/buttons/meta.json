@@ -1,14 +1,14 @@
 {
   "slug": "buttons",
-  "title": "按钮四态",
+  "title": "按钮状态",
   "space": "2d",
   "time": "static",
   "tech": [
-    "rect",
-    "text",
-    "状态设计"
+    "SVG UI",
+    "state design",
+    "product layout"
   ],
-  "description": "主色与次色按钮的默认/悬停/按下/禁用四态对照",
+  "description": "主按钮与次按钮均显示默认、悬停、键盘聚焦、按下、禁用；禁用原因明确。",
   "author": "airay1015",
   "date": "2026-10-08",
   "order": 1

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "knowledge-citations",
+  "title": "知识库检索与引用",
+  "space": "2d",
+  "time": "static",
+  "order": 45,
+  "description": "检索问题与两条出处对应，包含文件名/页码或章节/更新时间；引用明确可追溯，不展示无依据的相关性百分比。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "product layout"
+  ]
+}
