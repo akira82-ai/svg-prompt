@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "gradient-descent",
+  "title": "梯度下降 · 步长与收敛",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "quadratic objective",
+    "explicit gradient",
+    "learning rate stability"
+  ],
+  "description": "沿负梯度更新，损失逐步下降；步长过大仍可能发散，不能只看箭头方向",
+  "order": 16
+}

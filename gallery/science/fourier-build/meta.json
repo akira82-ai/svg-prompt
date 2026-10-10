@@ -1,14 +1,16 @@
 {
   "slug": "fourier-build",
-  "title": "傅里叶构建动画",
+  "title": "傅里叶级数 · 谐波构建",
   "space": "2d",
   "time": "smil",
-  "order": 7,
+  "order": 8,
   "tech": [
-    "谐波逐入",
-    "循环"
+    "Fourier series",
+    "odd harmonics",
+    "Gibbs phenomenon",
+    "SMIL discrete stages"
   ],
-  "description": "谐波逐个加入，曲线逐渐逼近方波 — 逼近过程可见",
+  "description": "增加奇次谐波使过渡区变窄；跃点附近的吉布斯超调不会消失",
   "author": "airay1015",
   "date": "2026-10-09"
 }

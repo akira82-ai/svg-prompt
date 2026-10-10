@@ -1,11 +1,16 @@
 {
   "slug": "orbit-gravity",
-  "title": "引力轨道",
+  "title": "开普勒轨道 · 等时扫等面积",
   "space": "2d",
   "time": "smil",
-  "order": 9,
-  "tech": [],
-  "description": "恒星呼吸 + 行星公转",
+  "order": 12,
+  "tech": [
+    "Kepler equation",
+    "equal areas",
+    "eccentric anomaly",
+    "SMIL sampling"
+  ],
+  "description": "中心天体位于焦点；近心点更快，等时间间隔扫过相同面积",
   "author": "airay1015",
   "date": "2026-10-09"
 }

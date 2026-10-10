@@ -1,16 +1,15 @@
 {
   "slug": "three-d",
-  "title": "三维投影",
+  "title": "三维投影 · 同物体对照",
   "space": "3d",
-  "time": "smil",
+  "time": "static",
   "tech": [
-    "等距投影",
-    "旋转矩阵",
-    "SMIL 关键帧",
-    "脚本生成坐标"
+    "orthographic projection",
+    "perspective division",
+    "isometric basis"
   ],
-  "description": "等距插画、参数方程投影、关键帧插值——三种 3D 姿势",
+  "description": "三个面板使用同一组顶点和边；投影方式改变画面，不改变物体结构",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 11
+  "order": 14
 }

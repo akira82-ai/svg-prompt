@@ -1,15 +1,15 @@
 {
   "slug": "bezier-de-casteljau",
-  "title": "贝塞尔构造动画",
+  "title": "贝塞尔曲线 · 逐层构造",
   "space": "2d",
   "time": "smil",
-  "order": 8,
+  "order": 4,
   "tech": [
-    "animateMotion",
-    "贝塞尔曲线",
-    "控制点"
+    "De Casteljau",
+    "shared parameter",
+    "SMIL sampling"
   ],
-  "description": "共同参数t驱动Q/R/B逐层线性插值与构造辅助线",
+  "description": "每层使用同一个 t 做线性插值；最终点始终位于三次贝塞尔曲线上",
   "author": "airay1015",
   "date": "2026-10-09"
 }

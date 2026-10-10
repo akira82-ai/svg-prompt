@@ -1,16 +1,15 @@
 {
   "slug": "topology-deform",
-  "title": "拓扑形变",
+  "title": "莫比乌斯带 · 半扭转构造",
   "space": "3d",
-  "time": "smil",
+  "time": "static",
   "tech": [
-    "参数方程",
-    "拓扑形变",
-    "SMIL 关键帧",
-    "脚本生成坐标"
+    "Mobius parameterization",
+    "half twist",
+    "single boundary"
   ],
-  "description": "环面参数退化与自交、莫比乌斯带及三维参数线框",
+  "description": "绕行一圈，横向坐标反向；边界只有一条闭合曲线，不是环面形变",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 12
+  "order": 15
 }

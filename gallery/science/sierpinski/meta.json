@@ -3,12 +3,13 @@
   "title": "谢尔宾斯基三角形",
   "space": "2d",
   "time": "static",
-  "order": 4,
+  "order": 5,
   "tech": [
-    "递归",
-    "三分迭代"
+    "recursive subdivision",
+    "area scaling",
+    "self similarity"
   ],
-  "description": "六层递归 729 个三角形 — 分形的自相似",
+  "description": "每阶保留 3 倍小三角；边长减半，保留面积乘 3/4",
   "author": "airay1015",
   "date": "2026-10-09"
 }

@@ -1,15 +1,16 @@
 {
   "slug": "solar-system",
-  "title": "太阳系轨道",
+  "title": "太阳系 · 轨道周期对照",
   "space": "2d",
   "time": "smil",
-  "order": 10,
+  "order": 13,
   "tech": [
-    "animateMotion",
-    "椭圆轨道",
-    "多速公转"
+    "Kepler third law",
+    "period comparison",
+    "schematic radii",
+    "SMIL sampling"
   ],
-  "description": "五行星各自速度公转 + 彗星长周期掠过",
+  "description": "周期由半长轴决定；屏幕轨道半径为压缩示意，不能用于距离比较",
   "author": "airay1015",
   "date": "2026-10-09"
 }

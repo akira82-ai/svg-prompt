@@ -71,3 +71,7 @@ svg-prompt/
 ## 地图与空间维护
 
 修改 `scripts/build-maps.py` 后运行 `python3 scripts/build-maps.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-maps.py`。底图源文件 `assets/geography/western-europe.geojson` 保留来源与许可信息；真实经纬度使用共同投影，本地米制 X/Y 等比例。核对圆面积、色档、密度计算、覆盖并集和静态／动效快照，再逐张检查浏览器排版。
+
+## 科学与原理维护
+
+修改 `scripts/build-science.py` 后运行 `python3 scripts/build-science.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-science.py`。核对实际 SVG 几何与公式、边界条件、相同尺度和动画共同参数；说明有限迭代、取样插值与理想模型的限制。浏览器验证正常动效与减少动效快照，不用装饰运动代替模型。

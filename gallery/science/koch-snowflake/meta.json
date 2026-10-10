@@ -1,14 +1,15 @@
 {
   "slug": "koch-snowflake",
-  "title": "科赫雪花",
+  "title": "科赫雪花 · 边长与面积",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 6,
   "tech": [
-    "递归",
-    "边细分"
+    "Koch recursion",
+    "perimeter growth",
+    "finite area limit"
   ],
-  "description": "四层边细分迭代 — 周长无限面积有限的悖论",
+  "description": "每阶边数乘 4、边长除以 3；无限极限周长发散，面积趋于 8A₀/5",
   "author": "airay1015",
   "date": "2026-10-09"
 }

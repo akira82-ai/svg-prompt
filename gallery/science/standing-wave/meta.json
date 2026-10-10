@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "standing-wave",
+  "title": "驻波 · 节点与腹点",
+  "space": "2d",
+  "time": "smil",
+  "tech": [
+    "linear superposition",
+    "opposite traveling waves",
+    "standing nodes",
+    "SMIL sampling"
+  ],
+  "description": "等幅反向波叠加形成驻波：节点固定，腹点振幅为单列波的两倍",
+  "order": 10
+}

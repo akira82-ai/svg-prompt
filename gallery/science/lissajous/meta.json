@@ -1,14 +1,15 @@
 {
   "slug": "lissajous",
-  "title": "利萨茹曲线",
+  "title": "利萨茹曲线 · 频率与相位",
   "space": "2d",
   "time": "static",
   "order": 1,
   "tech": [
-    "参数方程",
-    "sin 叠加"
+    "parametric curves",
+    "frequency ratio",
+    "phase comparison"
   ],
-  "description": "x=sin(at+δ), y=sin(bt) — 三种频率比的示波器图形",
+  "description": "频率比改变闭合结构，相位差改变形状；各面板使用同一坐标尺度",
   "author": "airay1015",
   "date": "2026-10-09"
 }

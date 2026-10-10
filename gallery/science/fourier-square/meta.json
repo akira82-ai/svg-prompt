@@ -1,14 +1,15 @@
 {
   "slug": "fourier-square",
-  "title": "傅里叶逼近",
+  "title": "傅里叶级数 · 方波逼近",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 7,
   "tech": [
-    "傅里叶级数",
-    "谐波叠加"
+    "Fourier series",
+    "odd harmonics",
+    "Gibbs phenomenon"
   ],
-  "description": "方波 = 正弦奇次谐波之和 — 项数越多越方",
+  "description": "增加奇次谐波使过渡区变窄；跃点附近的吉布斯超调不会消失",
   "author": "airay1015",
   "date": "2026-10-09"
 }
