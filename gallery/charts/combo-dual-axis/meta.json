@@ -3,13 +3,12 @@
   "title": "双轴组合图",
   "space": "2d",
   "time": "static",
-  "order": 11,
+  "order": 21,
   "tech": [
-    "rect",
-    "path",
-    "双轴"
+    "dual axes",
+    "derived growth"
   ],
-  "description": "柱（销售额）+ 线（增长率%）左右双轴对照",
+  "description": "柱与线使用不同单位；高度相似不代表两个指标相关",
   "author": "airay1015",
   "date": "2026-10-08"
 }

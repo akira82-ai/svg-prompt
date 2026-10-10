@@ -1,15 +1,15 @@
 {
   "slug": "area-expand",
-  "title": "面积展开动画",
+  "title": "面积图 · 动态揭示",
   "space": "2d",
-  "time": "smil",
-  "order": 21,
+  "time": "css",
+  "order": 9,
   "tech": [
-    "clipPath",
-    "animate",
-    "面积图"
+    "path",
+    "累计边界",
+    "CSS clip-path"
   ],
-  "description": "展开铺满之后曲线持续微波起伏——7 秒一个循环",
+  "description": "六月总量 92；边缘端贡献 56，占总量 60.9%",
   "author": "airay1015",
   "date": "2026-10-08"
 }

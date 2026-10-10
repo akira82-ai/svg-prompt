@@ -1,15 +1,15 @@
 {
   "slug": "treemap",
-  "title": "树状图 Treemap",
+  "title": "矩形树图",
   "space": "2d",
   "time": "static",
-  "order": 8,
+  "order": 23,
   "tech": [
-    "rect",
-    "面积编码",
-    "层级"
+    "slice-and-dice",
+    "area encoding",
+    "hierarchy"
   ],
-  "description": "虚构市场份额父块与无重叠型号分区",
+  "description": "矩形面积对应预算份额；子项面积在各自父类内比较",
   "author": "airay1015",
   "date": "2026-10-08"
 }

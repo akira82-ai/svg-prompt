@@ -1,15 +1,15 @@
 {
   "slug": "line",
-  "title": "折线图",
+  "title": "趋势与预测区间",
   "space": "2d",
   "time": "static",
-  "order": 2,
+  "order": 6,
   "tech": [
     "path",
-    "circle",
-    "注释气泡"
+    "预测区间",
+    "stroke-dasharray"
   ],
-  "description": "三条序列的趋势对比与峰值注释",
+  "description": "实际请求持续增长；六月 92 落在演示预测区间 82–110 内",
   "author": "airay1015",
   "date": "2026-10-08"
 }

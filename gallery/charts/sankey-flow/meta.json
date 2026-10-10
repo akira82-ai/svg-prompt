@@ -1,15 +1,15 @@
 {
   "slug": "sankey-flow",
-  "title": "桑基流动",
+  "title": "桑基图 · 动态揭示",
   "space": "2d",
-  "time": "smil",
-  "order": 23,
+  "time": "css",
+  "order": 28,
   "tech": [
-    "path",
-    "stroke-dashoffset",
-    "animateMotion"
+    "closed ribbons",
+    "flow conservation",
+    "CSS clip-path"
   ],
-  "description": "桑基图上流带持续流动——能量从左向右奔涌",
+  "description": "总预算 100 = 三个来源之和 = 四个去向之和",
   "author": "airay1015",
   "date": "2026-10-08"
 }

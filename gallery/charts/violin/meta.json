@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "violin",
+  "title": "请求延迟小提琴图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "KDE",
+    "shared density scale",
+    "raw samples"
+  ],
+  "description": "服务 B 分布偏高且更分散；每组仅 12 个样本",
+  "order": 14
+}

@@ -28,6 +28,7 @@ const CATEGORIES = [
 // 专题只引用原作品，不复制条目或改变主分类。
 const COLLECTIONS = [
   ['精选作品', ['diagrams/system-architecture', 'science/bezier-de-casteljau', 'illustrations/cyber-city']],
+  ['数据分析', ['charts/sankey', 'charts/matrix-heatmap', 'charts/interval']],
   ['系统图解', ['diagrams/animated-architecture', 'diagrams/data-pipeline', 'diagrams/network-pulse']],
   ['科学机制', ['science/fourier-build', 'science/catenary', 'science/koch-snowflake']],
   ['未来界面', ['ui/hud-interface', 'ui/dark-ops-dashboard', 'ui/wave-analyzer']],
@@ -37,7 +38,7 @@ const COLLECTIONS = [
 // GitHub 锚点规则：小写；删去字母/数字/空格/连字符/下划线以外的字符；空格变 -
 const slug = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\-_ ]/gu, '').trim().replace(/ +/g, '-');
 
-// 分类内默认排序：order（复杂度递进，用户定稿）优先，未设 order 的按 静态 2D → 动态 2D → 静态 3D → 动态 3D
+// 分类内默认排序：order（策展顺序：分析任务或复杂度）优先，未设 order 的按 静态 2D → 动态 2D → 静态 3D → 动态 3D
 const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 const TIME_LABEL = { static: '静态', smil: 'SMIL 动效', css: 'CSS 动效', js: 'JS 动效' };

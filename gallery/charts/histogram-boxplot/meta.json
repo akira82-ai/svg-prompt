@@ -1,15 +1,15 @@
 {
   "slug": "histogram-boxplot",
-  "title": "直方图与箱线图",
+  "title": "延迟直方图",
   "space": "2d",
   "time": "static",
-  "order": 17,
+  "order": 12,
   "tech": [
+    "binning",
     "rect",
-    "四分位",
-    "分布"
+    "frequency"
   ],
-  "description": "分布的两副面孔：频数直方 + 箱线四分位",
+  "description": "多数请求落在 100–140 ms；右侧存在长尾",
   "author": "airay1015",
   "date": "2026-10-08"
 }

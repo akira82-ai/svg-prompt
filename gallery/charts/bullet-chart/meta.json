@@ -3,13 +3,13 @@
   "title": "子弹图",
   "space": "2d",
   "time": "static",
-  "order": 16,
+  "order": 4,
   "tech": [
     "rect",
-    "区间带",
-    "目标线"
+    "target marker",
+    "独立量纲"
   ],
-  "description": "实际 vs 目标 vs 区间：一横条说清 KPI 完成度",
+  "description": "吞吐量超过目标；成功率与延迟目标仍需改善",
   "author": "airay1015",
   "date": "2026-10-08"
 }

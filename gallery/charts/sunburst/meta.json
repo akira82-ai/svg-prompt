@@ -1,15 +1,14 @@
 {
   "slug": "sunburst",
-  "title": "旭日图",
+  "title": "层级旭日图",
   "space": "2d",
   "time": "static",
-  "order": 10,
+  "order": 24,
   "tech": [
-    "path",
-    "环形层级",
-    "圆弧"
+    "arc",
+    "hierarchical sums"
   ],
-  "description": "双层环：内环四大类，外环子类明细",
+  "description": "父类等于子类之和；角度编码份额，环面积不直接比较",
   "author": "airay1015",
   "date": "2026-10-08"
 }

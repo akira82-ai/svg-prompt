@@ -1,15 +1,15 @@
 {
   "slug": "scatter",
-  "title": "散点图",
+  "title": "散点与回归",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 16,
   "tech": [
+    "OLS",
     "circle",
-    "回归线",
-    "相关性"
+    "outlier"
   ],
-  "description": "投放与销量的正相关 + 回归线 + 异常点圈注",
+  "description": "全样本 OLS：销量 ≈ 15.83 + 0.61 × 投入；相关不代表因果",
   "author": "airay1015",
   "date": "2026-10-08"
 }

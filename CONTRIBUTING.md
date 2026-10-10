@@ -26,7 +26,7 @@ svg-prompt/
 | `index.svg` | 作品本体；浏览器直接打开即渲染；动效条目优先 SMIL / CSS 实现（零 JS） |
 | `prompt.md` | **详情页结构**：`# 中文标题` + `静态`/`动效`/`2D`/`3D` 标签 → 分类链接 `../_about.md` → `<img src="index.svg" width="720">` → 提示词代码块（不加"提示词"等小节标题）；保持这个结构 |
 | `prompt.md` 内的提示词 | **多行结构化书写**（不要挤成一行）：首行一句话意图，`-` 列表逐条列结构与风格要求，可替换部分用 `{花括号}` 标注 |
-| `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致；`order`（可选）控制分类内展示位置——在同一用途下按**复杂度递进**编号：单一组件 → 复杂组合 → 完整原型，未设时排在已编号条目之后 |
+| `meta.json` | 字段见 [schema/entry.schema.json](schema/entry.schema.json)；`slug` 必须与目录名一致；`order`（可选）控制分类内展示位置——在同一用途下编号；数据图表按**分析任务**排列、动画变体紧随静态图，其他分类通常按组件 → 组合 → 完整原型排列，未设时排在已编号条目之后 |
 
 ## 分类与时空标签
 
@@ -59,3 +59,7 @@ svg-prompt/
 2. 填好三件套
 3. `node scripts/build-readme.mjs`
 4. 提交 PR，一个 PR 一个条目
+
+## 数据图表维护
+
+数据图表使用显式模拟数据与标准库生成：先修改 `scripts/build-charts.py`，运行 `python3 scripts/build-charts.py`，再运行 `node scripts/build-readme.mjs` 和 `python3 scripts/check-charts.py`。图形、提示词和元数据必须一致；统计编码和动画终态都须核对。生成脚本仅维护数据图表，不覆盖其他分类。

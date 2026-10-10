@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "waterfall",
+  "title": "成本瀑布图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "rect",
+    "累计增减",
+    "waterfall"
+  ],
+  "description": "120 − 24 − 18 − 12 + 8 = 74；净成本下降 38.3%",
+  "order": 10
+}

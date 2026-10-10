@@ -1,15 +1,16 @@
 {
   "slug": "line-draw",
-  "title": "折线描线动画",
+  "title": "折线图 · 动态揭示",
   "space": "2d",
-  "time": "smil",
-  "order": 20,
+  "time": "css",
+  "order": 7,
   "tech": [
-    "stroke-dashoffset",
-    "pathLength",
-    "animate"
+    "path",
+    "预测区间",
+    "stroke-dasharray",
+    "CSS clip-path"
   ],
-  "description": "描线画完、数据点亮起、曲线持续微波——8 秒一个循环",
+  "description": "实际请求持续增长；六月 92 落在演示预测区间 82–110 内",
   "author": "airay1015",
   "date": "2026-10-08"
 }

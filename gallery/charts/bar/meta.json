@@ -1,15 +1,15 @@
 {
   "slug": "bar",
-  "title": "柱状图",
+  "title": "分组柱状图",
   "space": "2d",
   "time": "static",
   "order": 1,
   "tech": [
     "rect",
-    "网格线",
-    "分组/堆叠"
+    "分组比较",
+    "零基线"
   ],
-  "description": "分组与堆叠两种柱状：对比与构成一图看全",
+  "description": "六月请求量：本期 92，基期 72；同月增长 27.8%",
   "author": "airay1015",
   "date": "2026-10-08"
 }

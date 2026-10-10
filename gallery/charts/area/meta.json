@@ -1,15 +1,14 @@
 {
   "slug": "area",
-  "title": "面积图",
+  "title": "堆叠面积图",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 8,
   "tech": [
     "path",
-    "linearGradient",
-    "层叠"
+    "累计边界"
   ],
-  "description": "层叠双系列面积：构成随时间的流动",
+  "description": "六月总量 92；边缘端贡献 56，占总量 60.9%",
   "author": "airay1015",
   "date": "2026-10-08"
 }

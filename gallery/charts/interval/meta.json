@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "interval",
+  "title": "均值与置信区间",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "Student t",
+    "sample standard deviation",
+    "error bars"
+  ],
+  "description": "展示均值及 95% t 区间；区间重叠本身不等于显著性检验",
+  "order": 15
+}

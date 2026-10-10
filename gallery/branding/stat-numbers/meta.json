@@ -1,6 +1,6 @@
 {
   "slug": "stat-numbers",
-  "title": "数字统计图",
+  "title": "图鉴统计卡",
   "space": "2d",
   "time": "static",
   "order": 18,
@@ -9,7 +9,7 @@
     "大数字排版",
     "杂志式"
   ],
-  "description": "六组大数字：图鉴自己的年度统计",
+  "description": "截至2026-10-10的图鉴快照：176个作品、10类、68个动态与108个静态作品",
   "author": "airay1015",
   "date": "2026-10-08"
 }

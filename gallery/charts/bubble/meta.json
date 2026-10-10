@@ -1,14 +1,15 @@
 {
   "slug": "bubble",
-  "title": "气泡图",
+  "title": "三变量气泡图",
   "space": "2d",
   "time": "static",
-  "order": 9,
+  "order": 17,
   "tech": [
+    "area encoding",
     "circle",
-    "三維编码"
+    "size legend"
   ],
-  "description": "x 投入 / y 增长 / 气泡大小 = 市场规模",
+  "description": "位置编码两个比例；气泡面积编码模拟市场规模",
   "author": "airay1015",
   "date": "2026-10-08"
 }

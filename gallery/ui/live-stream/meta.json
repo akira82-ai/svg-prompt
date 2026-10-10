@@ -1,15 +1,15 @@
 {
   "slug": "live-stream",
-  "title": "实时数据流",
+  "title": "模拟监控数据流",
   "space": "2d",
   "time": "smil",
-  "order": 25,
+  "order": 43,
   "tech": [
     "clipPath",
     "animateTransform",
     "折线"
   ],
-  "description": "心电图式滚动折线——监控大屏的呼吸感",
+  "description": "循环模拟信号的监控界面动效，不连接实时数据源",
   "author": "airay1015",
   "date": "2026-10-08"
 }

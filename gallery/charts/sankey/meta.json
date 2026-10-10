@@ -1,15 +1,14 @@
 {
   "slug": "sankey",
-  "title": "桑基图",
+  "title": "预算流量桑基图",
   "space": "2d",
   "time": "static",
-  "order": 4,
+  "order": 27,
   "tech": [
-    "path",
-    "贝塞尔飘带",
-    "流量编码"
+    "closed ribbons",
+    "flow conservation"
   ],
-  "description": "收入如何分配：带宽即流量，三层节点看全链路",
+  "description": "总预算 100 = 三个来源之和 = 四个去向之和",
   "author": "airay1015",
   "date": "2026-10-08"
 }

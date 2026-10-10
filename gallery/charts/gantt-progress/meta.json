@@ -1,15 +1,16 @@
 {
   "slug": "gantt-progress",
-  "title": "甘特推进动画",
+  "title": "甘特图 · 动态揭示",
   "space": "2d",
-  "time": "smil",
-  "order": 24,
+  "time": "css",
+  "order": 31,
   "tech": [
-    "animate",
-    "rect",
-    "今日线"
+    "date intervals",
+    "dependencies",
+    "progress overlay",
+    "CSS clip-path"
   ],
-  "description": "任务条依次推进、今日线持续闪动——8 秒一个循环",
+  "description": "条长编码排期，深色段编码完成比例；依赖从上一任务结束后开始",
   "author": "airay1015",
   "date": "2026-10-08"
 }

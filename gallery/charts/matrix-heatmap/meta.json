@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "matrix-heatmap",
+  "title": "任务表现矩阵",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "matrix",
+    "sequential color scale",
+    "text labels"
+  ],
+  "description": "各模型有不同优势；不以单项最高分代替总体排名",
+  "order": 18
+}

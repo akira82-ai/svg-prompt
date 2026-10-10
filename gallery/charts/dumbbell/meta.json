@@ -1,0 +1,14 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "dumbbell",
+  "title": "哑铃图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "circle",
+    "paired comparison"
+  ],
+  "description": "四个阶段均缩短；生成阶段减少 78 ms，绝对改善最大",
+  "order": 5
+}

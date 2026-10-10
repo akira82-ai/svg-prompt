@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "ranking-lollipop",
+  "title": "排名棒棒糖图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "circle",
+    "排序",
+    "position"
+  ],
+  "description": "Vector-A 吞吐量最高；比 Vector-B 高 16.7%",
+  "order": 3
+}

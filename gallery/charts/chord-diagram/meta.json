@@ -1,15 +1,15 @@
 {
   "slug": "chord-diagram",
-  "title": "弦图",
+  "title": "跨区域流量弦图",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 29,
   "tech": [
-    "circle",
-    "path",
-    "环形关系"
+    "chord ribbons",
+    "matrix layout",
+    "angular encoding"
   ],
-  "description": "六城人口迁徒：弧带粗细即往来强度",
+  "description": "每条弦的两端占用真实子弧；外环角度对应区域总往来量",
   "author": "airay1015",
   "date": "2026-10-08"
 }

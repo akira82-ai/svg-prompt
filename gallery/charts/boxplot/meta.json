@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "boxplot",
+  "title": "延迟箱线图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "quantile",
+    "Tukey fences",
+    "outliers"
+  ],
+  "description": "中位数 123 ms；215 与 260 ms 被识别为离群值",
+  "order": 13
+}

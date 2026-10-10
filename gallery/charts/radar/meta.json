@@ -3,13 +3,13 @@
   "title": "雷达图",
   "space": "2d",
   "time": "static",
-  "order": 12,
+  "order": 20,
   "tech": [
-    "path",
-    "多边形",
-    "多维"
+    "polygon",
+    "shared scale",
+    "explicit values"
   ],
-  "description": "两支团队五维能力对比：设计/研发/运营/增长/协作",
+  "description": "方案 A 与 B 各有优势；多边形面积不代表综合评分",
   "author": "airay1015",
   "date": "2026-10-08"
 }

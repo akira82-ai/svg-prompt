@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "small-multiples",
+  "title": "小多图",
+  "space": "2d",
+  "time": "static",
+  "tech": [
+    "small multiples",
+    "共用尺度",
+    "path"
+  ],
+  "description": "南部节点增长最快：12 → 70；西部节点持续回落",
+  "order": 11
+}

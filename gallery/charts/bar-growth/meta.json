@@ -1,15 +1,16 @@
 {
   "slug": "bar-growth",
-  "title": "柱状生长动画",
+  "title": "柱状图 · 动态揭示",
   "space": "2d",
-  "time": "smil",
-  "order": 19,
+  "time": "css",
+  "order": 2,
   "tech": [
-    "animate",
     "rect",
-    "入场动效"
+    "分组比较",
+    "零基线",
+    "CSS clip-path"
   ],
-  "description": "柱子依次从零长到目标值——7 秒一个循环，随时点开都在生长",
+  "description": "六月请求量：本期 92，基期 72；同月增长 27.8%",
   "author": "airay1015",
   "date": "2026-10-08"
 }

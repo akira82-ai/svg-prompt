@@ -3,13 +3,12 @@
   "title": "饼图与环形图",
   "space": "2d",
   "time": "static",
-  "order": 3,
+  "order": 22,
   "tech": [
-    "path",
-    "stroke-dasharray",
-    "圆弧"
+    "arc",
+    "part-to-whole"
   ],
-  "description": "饼图、环形图与半圆仪表的三种占比表达",
+  "description": "计算与存储合计占 60%；两种图型使用同一组数据",
   "author": "airay1015",
   "date": "2026-10-08"
 }

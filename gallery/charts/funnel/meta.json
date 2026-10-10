@@ -1,15 +1,14 @@
 {
   "slug": "funnel",
-  "title": "漏斗图",
+  "title": "转化漏斗图",
   "space": "2d",
   "time": "static",
-  "order": 14,
+  "order": 25,
   "tech": [
-    "path",
-    "梯形",
-    "转化率"
+    "rect",
+    "conversion denominators"
   ],
-  "description": "五层转化漏斗：访问到复购的每一级流失",
+  "description": "累计复购率 4%；人数按等高矩形宽度编码",
   "author": "airay1015",
   "date": "2026-10-08"
 }

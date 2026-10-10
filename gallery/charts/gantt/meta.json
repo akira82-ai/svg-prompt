@@ -1,15 +1,15 @@
 {
   "slug": "gantt",
-  "title": "甘特图",
+  "title": "项目甘特图",
   "space": "2d",
   "time": "static",
-  "order": 15,
+  "order": 30,
   "tech": [
-    "rect",
-    "时间轴",
-    "今日线"
+    "date intervals",
+    "dependencies",
+    "progress overlay"
   ],
-  "description": "项目排期：6 个任务、3 位负责人、今日基准线",
+  "description": "条长编码排期，深色段编码完成比例；依赖从上一任务结束后开始",
   "author": "airay1015",
   "date": "2026-10-08"
 }
