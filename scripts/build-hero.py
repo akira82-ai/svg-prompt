@@ -29,7 +29,7 @@ def satellite(x,y,s=1,angle=0):
  for i in range(4):line(-50+i*9,-10,-50+i*9,10,'#7493a1',.7);line(20+i*9,-10,20+i*9,10,'#7493a1',.7)
  rect(-11,-18,22,36,'#a0b2b9',extra='rx="3"');line(0,-18,0,-38,'#adcbd3',2);circle(0,-39,3,'#e8b076');add('</g>')
 def shuttle(x,y,s=1,angle=-19):
- add(f'<g transform="translate({x} {y}) rotate({angle}) scale({s})">');poly([(-48,-9),(42,0),(-48,9),(-30,0)],'#83a5b4','#c0d0d4');rect(-21,-4,24,8,'#1b3748');ellipse(-50,0,12,4,'#87e5ed');line(-76,0,-56,0,'#79c5d8',2);add('</g>')
+ add(f'<g transform="translate({x} {y})"><g class="shuttle-flight" style="--sx:{120+s*70:.2f}px;--sy:{-35-s*25:.2f}px;animation-duration:{18+s*12:.2f}s;animation-delay:-{(x+y)%17:.2f}s"><g transform="rotate({angle}) scale({s})">');poly([(-48,-9),(42,0),(-48,9),(-30,0)],'#83a5b4','#c0d0d4');rect(-21,-4,24,8,'#1b3748');ellipse(-50,0,12,4,'#87e5ed');line(-76,0,-56,0,'#79c5d8',2);add('</g></g></g>')
 def build():
  PARTS.clear();TEXT.clear();RNG.seed(7301)
  add('''<defs>
@@ -38,37 +38,45 @@ def build():
  <radialGradient id="engine"><stop stop-color="#f0fbff"/><stop offset=".2" stop-color="#9be8f4" stop-opacity=".85"/><stop offset=".6" stop-color="#429dd0" stop-opacity=".2"/><stop offset="1" stop-color="#429dd0" stop-opacity="0"/></radialGradient>
  <linearGradient id="hull" x1="0" y1="1" x2=".9" y2="0"><stop stop-color="#345063"/><stop offset=".5" stop-color="#4d6878"/><stop offset="1" stop-color="#a9bdc4"/></linearGradient>
  <linearGradient id="side"><stop stop-color="#0b1c2a"/><stop offset=".55" stop-color="#254050"/><stop offset="1" stop-color="#172c3d"/></linearGradient>
- <radialGradient id="ocean" cx=".3" cy=".22" r=".95"><stop stop-color="#709fa9"/><stop offset=".5" stop-color="#315c71"/><stop offset="1" stop-color="#102337"/></radialGradient>
+ <radialGradient id="ocean" cx=".3" cy=".22" r=".95"><stop stop-color="#5c8d9c"/><stop offset=".5" stop-color="#1e485e"/><stop offset="1" stop-color="#102337"/></radialGradient>
  <radialGradient id="limb" cx=".27" cy=".26" r=".9"><stop stop-color="#06111b" stop-opacity="0"/><stop offset=".52" stop-color="#06111b" stop-opacity=".1"/><stop offset=".8" stop-color="#06111b" stop-opacity=".7"/><stop offset="1" stop-color="#030b16" stop-opacity=".99"/></radialGradient>
- <radialGradient id="atmosphere"><stop offset=".84" stop-color="#8bc0d2" stop-opacity="0"/><stop offset=".92" stop-color="#98cddd" stop-opacity=".18"/><stop offset=".96" stop-color="#85c6df" stop-opacity=".35"/><stop offset="1" stop-color="#85c6df" stop-opacity="0"/></radialGradient>
+ <radialGradient id="atmosphere"><stop offset=".89" stop-color="#8bc0d2" stop-opacity="0"/><stop offset=".92" stop-color="#98cddd" stop-opacity=".18"/><stop offset=".96" stop-color="#85c6df" stop-opacity=".22"/><stop offset="1" stop-color="#85c6df" stop-opacity="0"/></radialGradient>
  <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#234656" stop-opacity=".34"/><stop offset="1" stop-color="#122735" stop-opacity=".65"/></linearGradient>
  <linearGradient id="title-shade"><stop stop-color="#08111f" stop-opacity=".95"/><stop offset="1" stop-color="#08111f" stop-opacity="0"/></linearGradient>
  <clipPath id="planet-clip"><circle cx="1655" cy="285" r="224"/></clipPath>
  <clipPath id="hull-clip"><path d="M345 535L1370 356 610 773Z"/></clipPath>
  <clipPath id="frame"><rect width="2100" height="900"/></clipPath>
  <pattern id="hull-grain" width="12" height="8" patternUnits="userSpaceOnUse"><path d="M0 2H12M0 6H12" stroke="#c0d2d8" stroke-opacity=".06" stroke-width=".6"/></pattern>
+ <filter id="terrain" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="440" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency=".008 .012" numOctaves="5" seed="11" stitchTiles="stitch" result="noise"/>
+ <feColorMatrix in="noise" type="matrix" values="0 0 0 0 .4 0 0 0 0 .45 0 0 0 0 .34 1 0 0 0 0" result="land"/>
+ <feComponentTransfer in="land" result="mask"><feFuncA type="table" tableValues="0 0 0 0 .05 .7 1 1 1"/></feComponentTransfer>
+ <feDiffuseLighting in="noise" surfaceScale="4" diffuseConstant="1.1" lighting-color="#9ba48b" result="relief"><feDistantLight azimuth="225" elevation="55"/></feDiffuseLighting>
+ <feComposite in="relief" in2="mask" operator="in"/>
+ </filter>
+ <filter id="cloud-texture" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="440" color-interpolation-filters="sRGB">
+ <feTurbulence type="fractalNoise" baseFrequency=".013 .025" numOctaves="4" seed="23" stitchTiles="stitch" result="noise"/>
+ <feColorMatrix in="noise" type="matrix" values="0 0 0 0 .93 0 0 0 0 .98 0 0 0 0 1 4 0 0 0 -2.1"/><feGaussianBlur stdDeviation=".55"/>
+ </filter>
+ <filter id="bridge-shadow" x="-30%" y="-50%" width="170%" height="230%"><feGaussianBlur stdDeviation="5"/></filter>
+ <filter id="metal-grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".025 .38" numOctaves="2" seed="19" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 .72 0 0 0 0 .8 0 0 0 0 .84 .12 0 0 0 0"/></filter>
+ <linearGradient id="deck-light" x1="0" y1="1" x2=".7" y2="0"><stop stop-color="#071824" stop-opacity=".3"/><stop offset=".55" stop-color="#bbc5c9" stop-opacity=".06"/><stop offset="1" stop-color="#e9e5d8" stop-opacity=".25"/></linearGradient>
  <clipPath id="map-bounds"><rect width="900" height="440"/></clipPath><g id="map-tile" clip-path="url(#map-bounds)">''')
- # Surface geometry is a periodic 900px strip, duplicated to make the spin seamless.
- for j in range(16):
-  cx=RNG.uniform(0,900);cy=RNG.uniform(25,415);rx=RNG.uniform(30,100);ry=RNG.uniform(18,68);phase=RNG.uniform(0,6.28);points=[]
-  for i in range(43):
-   t=2*math.pi*i/43;rad=.9+.14*math.sin(3*t+phase)+.09*math.cos(5*t-phase)+RNG.uniform(-.025,.025);points.append((cx+rx*math.cos(t)*rad,cy+ry*math.sin(t)*rad))
-  for dx in [-900,0,900]:poly([(x+dx,y) for x,y in points],'#698b88',extra='opacity=".55"')
- for j in range(25):
-  x=RNG.uniform(0,900);y=RNG.uniform(12,425);w=RNG.uniform(55,220);weight=RNG.uniform(2,5)
-  for dx in [-900,0,900]:path(f'M{x+dx:.2f} {y:.2f}q{w*.4:.2f} -11 {w:.2f} 2',stroke='#d0e0dc',width=weight,extra='opacity=".16"')
- for j in range(130):
-  x=RNG.uniform(0,900);y=RNG.uniform(10,430);rx=RNG.uniform(2,8);ry=RNG.uniform(1,4)
-  for dx in [-900,0,900]:ellipse(x+dx,y,rx,ry,'#839992',extra='opacity=".3"')
- for j in range(90):circle(RNG.uniform(0,900),RNG.uniform(30,410),RNG.uniform(.5,1.5),'#e5c493',extra='opacity=".55"')
+ # Continuous procedural land relief replaces decorative continent blobs.
+ rect(0,0,900,440,'#677767',extra='filter="url(#terrain)"')
+ for j in range(120):
+  x=RNG.uniform(0,900);y=RNG.uniform(30,410)
+  circle(x,y,RNG.uniform(.4,1.1),'#e8c28c',extra='opacity=".5"')
+ add('</g><g id="cloud-tile" clip-path="url(#map-bounds)">')
+ rect(0,0,900,440,'#fff',extra='filter="url(#cloud-texture)" opacity=".72"')
  add('</g></defs><g clip-path="url(#frame)">');rect(0,0,W,H,'url(#space)');ellipse(1390,480,800,430,'url(#nebula)',extra='transform="rotate(-17 1390 480)"');ellipse(820,200,610,240,'url(#nebula)')
  # Sparse stars and outward streaks all use one vanishing point.
  for i in range(250):circle(RNG.uniform(15,2085),RNG.uniform(15,885),RNG.uniform(.4,1.3),'#b8d1e0',extra=f'opacity="{RNG.uniform(.13,.58):.2f}"')
- for i in range(125):
-  t=RNG.uniform(0,2*math.pi);r=RNG.uniform(185,1400);length=RNG.uniform(25,145)*(r/550);x=1300+r*math.cos(t);y=340+r*math.sin(t)
+ for i in range(240):
+  t=RNG.uniform(0,2*math.pi);r=RNG.uniform(170,1400);length=RNG.uniform(35,165)*(r/550);x=1300+r*math.cos(t);y=340+r*math.sin(t)
   if not (-120<x<2220 and -100<y<1000) or (x<850 and y<285):continue
-  xx=x+length*math.cos(t);yy=y+length*math.sin(t);dx=95*math.cos(t);dy=95*math.sin(t)
-  line(x,y,xx,yy,'#9cc5dd' if i%5 else '#d8e7eb',RNG.uniform(.55,1.45),extra=f'class="warp" data-vp="1300 340" style="--dx:{dx:.3f}px;--dy:{dy:.3f}px;animation-duration:{RNG.uniform(2.8,5.2):.2f}s;animation-delay:-{RNG.uniform(0,5):.2f}s" opacity=".35"')
+  xx=x+length*math.cos(t);yy=y+length*math.sin(t);dx=190*math.cos(t);dy=190*math.sin(t)
+  line(x,y,xx,yy,'#9cc5dd' if i%5 else '#d8e7eb',RNG.uniform(.55,1.45),extra=f'class="warp" data-vp="1300 340" style="--dx:{dx:.3f}px;--dy:{dy:.3f}px;animation-duration:{RNG.uniform(1.8,3.8):.2f}s;animation-delay:-{RNG.uniform(0,5):.2f}s" opacity=".5"')
  # Celestial navigation halo and orbital infrastructure, behind the planet.
  for r in [92,110,130]:ellipse(1290,350,r,r*.35,'none',extra='stroke="#6ca6b7" stroke-width="1" opacity=".22" transform="rotate(-20 1290 350)"')
  pts=[orbital(i*2*math.pi/240) for i in range(241)];path('M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts),stroke='#5c7e90',width=2,extra='opacity=".5"')
@@ -76,7 +84,7 @@ def build():
   x,y=orbital(i*2*math.pi/72);x2,y2=orbital(i*2*math.pi/72+.016);line(x,y,x2,y2,'#a4c5cb',2)
  satellite(1932,200,.55,20);satellite(1440,420,.45,-15)
  circle(1655,285,244,'url(#atmosphere)');circle(1655,285,224,'url(#ocean)')
- add('<g clip-path="url(#planet-clip)"><g transform="translate(1205 65)"><g class="planet-spin"><use href="#map-tile"/><use href="#map-tile" x="900"/></g></g></g>');circle(1655,285,224,'url(#limb)');circle(1655,285,225,'none',extra='stroke="#a2d3df" stroke-width="1.3" stroke-opacity=".38"')
+ add('<g clip-path="url(#planet-clip)"><g transform="translate(1205 65)"><g class="planet-spin"><use href="#map-tile"/><use href="#map-tile" x="900"/></g><g class="cloud-spin"><use href="#cloud-tile"/><use href="#cloud-tile" x="900"/></g></g></g>');circle(1655,285,224,'url(#limb)');circle(1655,285,225,'none',extra='stroke="#a2d3df" stroke-width="1.3" stroke-opacity=".38"');path('M1450 194A225 225 0 0 1 1697 64',stroke='#aedce7',width=2.7,extra='opacity=".45"')
  # A short near arc crosses the limb, with a visible docking hub.
  pts=[orbital(.18+i*.9/60) for i in range(61)];path('M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts),stroke='#acc5ce',width=3,extra='opacity=".6"');satellite(*orbital(.75),.8,-18)
  shuttle(1780,555,.42);shuttle(1818,573,.25);shuttle(1210,240,.33)
@@ -94,10 +102,10 @@ def build():
   t0=.025+row*.062;t1=t0+.052
   for col in range(11):
    u0=.02+col*.088;u1=u0+.074;corners=[pos(t0,u0),pos(t1,u0),pos(t1,u1),pos(t0,u1)]
-   fill=['#344f61','#415e70','#587484','#496575','#6b8490'][(row*3+col*7)%5];poly(corners,fill,'#213d50',.7,extra='data-role="armor-plate"')
+   fill=['#354b5b','#405666','#4e6573','#465e6c','#5b727f'][(row*3+col*7)%5];poly(corners,fill,'#213d50',.7,extra='data-role="armor-plate"');line(*corners[0],*corners[1],'#94acb7',.65,extra='opacity=".4"');line(*corners[2],*corners[3],'#142c3e',1.1)
    if (row+col)%9==0:
     a=pos((t0+t1)/2,u0+.01);b=pos((t0+t1)/2,u1-.01);line(*a,*b,'#94aebb',1,extra='opacity=".5"')
- poly([(345,535),(1370,356),(610,773)],'url(#hull-grain)')
+ poly([(345,535),(1370,356),(610,773)],'url(#hull-grain)');rect(345,356,1030,420,'#fff',extra='filter="url(#metal-grain)" opacity=".35"');poly([(345,535),(1370,356),(610,773)],'url(#deck-light)')
  # Two mirrored long hull conduits, a visual energy routing network.
  for u in [.23,.77]:
   points=[pos(t,u) for t in [.05,.19,.22,.45,.49,.72,.9]];path('M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in points),stroke='#142d40',width=7);path('M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in points),stroke='#75c5cd',width=1.3,extra='opacity=".7"')
@@ -114,6 +122,7 @@ def build():
   t=.12+i*.13;x,y=pos(t,1);poly([(x+5,y+4),(x+54*(1-t),y-25*(1-t)),(x+57*(1-t),y-8*(1-t)),(x+10,y+21*(1-t))],'#091927','#4e7a90',1.3,extra='data-role="hangar"');line(x+12,y+7,x+44*(1-t),y-11*(1-t),'#9ee0e6',2)
  # Multi-tier dorsal bridge, with raised side faces instead of flat stickers.
  decks=[([(455,556),(925,423),(762,591),(572,681)],28),([(540,548),(841,455),(727,574),(615,642)],38),([(589,538),(755,479),(704,560),(643,602)],38)]
+ for points,height in decks:poly([(x+24,y-height+32) for x,y in points],'#06121c',extra='filter="url(#bridge-shadow)" opacity=".65" clip-path="url(#hull-clip)"')
  for j,(points,height) in enumerate(decks):
   elevated=[(x,y-height) for x,y in points];poly([points[1],points[2],elevated[2],elevated[1]],'#193448','#557486');poly([points[2],points[3],elevated[3],elevated[2]],'#233e50','#557486');poly(elevated,['#78929e','#607e8e','#8fa7b1'][j],'#aec2c7',1.2)
   for k in range(8):
@@ -155,7 +164,7 @@ def build():
  rect(1536,682,478,163,'url(#glass)',extra='rx="8" stroke="#507487" stroke-opacity=".55"');text(1557,708,'JUMP DRIVE / CHARGE DISTRIBUTION',12,'#bcd5df',extra='letter-spacing="1.2"')
  for i,(label,value) in enumerate([('CORE',.82),('FIELD',.68),('SYNC',.94)]):
   y=736+i*29;text(1557,y,label,10,'#9bb7c7');rect(1608,y-8,105,4,'#1b3b4f');rect(1608,y-8,105*value,4,'#8bcacb' if i<2 else '#e8bd82');text(1726,y,str(round(value*100))+'%',10,'#c0d5da')
- pts=[(1800+i*3,777-22*math.sin(i/8)-8*math.sin(i/3)) for i in range(60)];path('M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts),stroke='#98d9df',width=1.4);line(1794,795,1988,795,'#426b80',.8);text(1800,821,'FIELD OSCILLATION / CONCEPT',9,'#789faf')
+ pts=[(1800+i*3,777-22*math.sin(i/8)-8*math.sin(i/3)) for i in range(60)];wave='M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in pts);path(wave,stroke='#98d9df',width=1.4);path(wave,stroke='#e3f5f5',width=2,extra='class="signal-trace" stroke-dasharray="16 180"');line(1794,795,1988,795,'#426b80',.8);text(1800,821,'FIELD OSCILLATION / CONCEPT',9,'#789faf')
  # HUD center reticle remains small; no crosshair covers the narrative subjects.
  path('M1260 329v-12h17M1324 329v-12h-17M1260 371v12h17M1324 371v12h-17',stroke='#8bc9d8',width=1,extra='opacity=".45"');text(1234,299,'EXIT VECTOR',10,'#779fb4')
  # Typography sits in protected negative space, rather than a floating example card.
@@ -166,14 +175,19 @@ def build():
  add('</g>')
  style='''<style>
  @keyframes surface-spin{from{transform:translateX(0)}to{transform:translateX(-900px)}}
- .planet-spin{animation:surface-spin 180s linear infinite}
- @keyframes warp-travel{0%{transform:translate(0,0);opacity:.04}20%{opacity:.35}80%{opacity:.35}100%{transform:translate(var(--dx),var(--dy));opacity:.04}}
+ .planet-spin{animation:surface-spin 120s linear infinite}
+ .cloud-spin{animation:surface-spin 156s linear infinite}
+ @keyframes warp-travel{0%{transform:translate(0,0);opacity:.04}20%{opacity:.5}80%{opacity:.5}100%{transform:translate(var(--dx),var(--dy));opacity:.04}}
  .warp{animation:warp-travel 4s linear infinite}
  @keyframes engine-breathe{50%{opacity:.72}}
- .engine-breathe{animation:engine-breathe 9s ease-in-out infinite}
- @media(prefers-reduced-motion:reduce){.planet-spin,.warp,.engine-breathe{animation:none}}
+ .engine-breathe{animation:engine-breathe 4.8s ease-in-out infinite}
+ @keyframes shuttle-transit{0%{transform:translate(0,0);opacity:.15}15%{opacity:1}85%{opacity:1}100%{transform:translate(var(--sx),var(--sy));opacity:.15}}
+ .shuttle-flight{animation:shuttle-transit 24s linear infinite}
+ @keyframes signal-flow{to{stroke-dashoffset:-196}}
+ .signal-trace{animation:signal-flow 4s linear infinite}
+ @media(prefers-reduced-motion:reduce){.planet-spin,.cloud-spin,.warp,.engine-breathe,.shuttle-flight,.signal-trace{animation:none}}
  </style>'''
- svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表180秒周期移动模拟自转，星线向共同消失点的外侧运动，9秒引擎光缓变。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
+ svg='<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="900" viewBox="0 0 2100 900" role="img" aria-labelledby="hero-title hero-desc" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif"><title id="hero-title">跃迁前夜 / Before the Jump</title><desc id="hero-desc">探索舰ATLAS–07抵达星球轨道，装甲、机库、运输艇、空间环和导航投影构成一个完整场景。星球地表120秒自转模拟、云层156秒独立移动，星线径向向外运动，运输艇航行，引擎4.8秒波动。所有读数为虚构示意；减少动效时显示完整静态封面。</desc>'+style+''.join(PARTS)+'</svg>\n'
  assets=ROOT/'assets';assets.mkdir(exist_ok=True);(assets/'hero.svg').write_text(svg)
  prompt='''# 跃迁前夜 / Before the Jump
 
@@ -184,14 +198,14 @@ def build():
 构图：左上保留标题与暗色留白，中下方巨大楔形探索舰指向右上；右上缓慢自转的星球，空间环、卫星、运输艇建立空间尺度。星线沿同一消失点向外拉长，暗蓝背景中穿插星点与稀薄星云。
 风格：深蓝黑、冷白、青色，少量琥珀色引擎与警示。复杂度来自可放大的装甲接缝、机库、窗口、能源走线和维护设备，不是把已有图表拼成九宫格。
 融合：导航航线/星图承接地图，能源读数与波形承接图表，舰体线路承接架构，导航投影承接界面，轨道与场线承接科学概念，舰名舷号承接排版，状态/舱段符号承接图标，舰与运输艇承接插画，阵列与几何装甲承接生成艺术，拉丝/玻璃/辉光承接材质。
-坐标：舰体顶面A(345,535)、B(610,773)、舰首C(1370,356)。装甲面片使用p(t,u)=(1-t)((1-u)A+uB)+tC，15×11共165面。侧面增厚并加入24窗口、4机库、3层抬高舰桥、吊机与天线，不依赖字体画舰体。
-星球：中心(1655,285)、半径224；地图宽900高440，在圆形裁切内放两个相隔900px的同图副本；纹理180秒平移−900px，视觉模拟自转并非真实3D球面投影。地表、云层、城市灯点使用固定随机种子7301，之后覆盖静态球形明暗与大气层。
-轨道：rx350/ry119椭圆旋转−0.36弧度，72刻度；三台空间设备和5个不同尺度的运输艇，遮挡关系体现远近。
-跃迁：星点与光线由seed7301确定，所有星线共用消失点(1300,340)，沿径向向外移动95px，周期2.8..5.2秒，起止透明度0.04、主体0.35，负延迟错开，移动区只在背景；静态星线也保持可见。
-引擎：3个喷口，径向辉光9秒opacity1→0.72→1，不闪烁、不遮挡舰体。
+坐标：舰体顶面A(345,535)、B(610,773)、舰首C(1370,356)。装甲面片使用p(t,u)=(1-t)((1-u)A+uB)+tC，15×11共165面。侧面增厚并加入24窗口、4机库、3层抬高舰桥、吊机与天线；装甲有迎光斜边和背光接缝、整面低透明度拉丝噪声，舰桥投影偏移(24,32)并模糊5px形成接触与遮挡阴影，不依赖字体画舰体。
+星球：中心(1655,285)、半径224；地图宽900高440，在圆形裁切内放两个相隔900px的同图副本；地表120秒、云层156秒各自平移−900px，视觉模拟自转并非真实3D球面投影。地形用feTurbulence频率0.008/0.012、5层、seed11，阈值alpha映射后DiffuseLighting形成微地形；云层频率0.013/0.025、4层、seed23，alpha=4r−2.1，均stitchTiles。城市灯点用固定种子7301，之后覆盖静态球形明暗与大气层。
+轨道：rx350/ry119椭圆旋转−0.36弧度，72刻度；三台空间设备和5个不同尺度的运输艇，遮挡关系体现远近；5艘运输艇分别沿局部向量向右上航行，18+s×12秒周期，首尾淡入淡出，减少动效时停在完整基础位置。
+跃迁：星点与光线由seed7301确定，所有星线共用消失点(1300,340)，沿径向向外移动190px，周期1.8..3.8秒，起止透明度0.04、主体0.5，负延迟错开，移动区只在背景；静态星线也保持可见。
+引擎：3个喷口，径向辉光4.8秒opacity1→0.72→1，不闪烁、不遮挡舰体。
 投影：左下导航窗345×154，右下驱动状态窗478×163。CORE82%、FIELD68%、SYNC94%与条长对应；波形为双正弦示意。读数、星域名称、舰名均虚构，不是实时遥测或物理仿真。
 文字：SVG–PROMPT / THE VECTOR ATLAS、BEFORE THE JUMP、跃迁前夜、ONE SCENE. TEN VISUAL LANGUAGES.；舰身NOVA / ATLAS–07，远景KEPLER / SECTOR 09。
-兼容：仅内联矢量、渐变、pattern与CSS，没有外部图片/字体/脚本；引用必须都在本文件defs内。prefers-reduced-motion禁用地表、星线、引擎动画，保留同一完整静态场景；CSS失效也可完整查看。外部平台是否保留动效需实际页面验证。
+兼容：仅内联矢量、渐变、滤镜、pattern与CSS，没有外部图片/字体/脚本；引用必须都在本文件defs内。prefers-reduced-motion禁用地表、云层、星线、运输艇、引擎和波形动画，保留同一完整静态场景；CSS失效也可完整查看。外部平台是否保留动效需实际页面验证。
 ```
 
 完整构造可见 [生成脚本](../scripts/build-hero.py)，独立文件可见 [hero.svg](hero.svg)。

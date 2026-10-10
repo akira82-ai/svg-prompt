@@ -25,13 +25,19 @@ for e in lines:
  cross=(x-1300)*(yy-y)-(y-340)*(xx-x)
  assert abs(cross)<20
  style=e.get('style');dx,dy=map(float,re.findall(r'--d[xy]:(-?[\d.]+)px',style))
- assert abs(math.hypot(dx,dy)-95)<.002
+ assert abs(math.hypot(dx,dy)-190)<.002
  assert (x-1300)*dx+(y-340)*dy>0
  assert re.search(r'animation-delay:-',style)
 spin=svg.find('.//s:g[@class="planet-spin"]',ns);assert len(spin)==2
 assert spin[0].get('href')==spin[1].get('href')=='#map-tile' and spin[1].get('x')=='900'
 assert svg.find('.//s:g[@id="map-tile"]',ns).get('clip-path')=='url(#map-bounds)'
-assert 'translateX(-900px)' in raw and '180s linear infinite' in raw
+cloud=svg.find('.//s:g[@class="cloud-spin"]',ns);assert len(cloud)==2 and cloud[1].get('x')=='900'
+assert len(svg.findall('.//s:g[@class="shuttle-flight"]',ns))==5
+assert svg.find('.//s:feDiffuseLighting',ns) is not None
+for noise in svg.findall('.//s:feTurbulence',ns):assert noise.get('seed') and noise.get('stitchTiles')=='stitch'
+for f in svg.findall('.//s:feColorMatrix',ns):assert len(f.get('values').split())==20
+assert '156s linear infinite' in raw
+assert 'translateX(-900px)' in raw and '120s linear infinite' in raw
 assert 'prefers-reduced-motion:reduce' in raw and 'animation:none' in raw
 assert 'display:none' not in raw and 'opacity:0' not in raw
 # HUD bars and their displayed readings must match.
@@ -42,7 +48,7 @@ sp=importlib.util.spec_from_file_location('hero',ROOT/'scripts/build-hero.py');h
 for t in [0,.25,.5,.75,1]:
  for u in [0,.25,.5,.75,1]:
   x,y=h.pos(t,u);assert 345<=x<=1370 and 356<=y<=773
-prompt=(ROOT/'assets/hero-prompt.md').read_text();assert '2100×900' in prompt and '7301' in prompt and '180秒' in prompt
+prompt=(ROOT/'assets/hero-prompt.md').read_text();assert '2100×900' in prompt and '7301' in prompt and '120秒' in prompt
 readme=(ROOT/'README.md').read_text();assert readme.count('src="assets/hero.svg"')==1
 assert readme.index('assets/hero.svg')<readme.index('## 目录')
 assert 'width="1050"' in readme.split('assets/hero.svg')[1][:120]
