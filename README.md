@@ -1,5 +1,7 @@
 # svg-prompt
 
+<a href="assets/hero-prompt.md"><img src="assets/hero.svg" width="1050" alt="跃迁前夜 / Before the Jump：探索舰、缓慢自转的星球与跃迁星线组成的科幻场景"></a>
+
 > **AI 生成 SVG 的图形图鉴** —— 每个作品都带可复制的提示词咒语。
 > GitHub 上"看得见作品、拿不到提示词"的 SVG 画廊千千万，把两者耦合在一起的图鉴，此前不存在。
 
