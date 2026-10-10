@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "deployment",
+  "title": "运行位置与部署边界",
+  "space": "2d",
+  "time": "static",
+  "description": "部署图解释运行位置、实例与网络边界，不替代逻辑架构图",
+  "tech": [
+    "deployment boundary",
+    "replica annotations",
+    "private endpoints"
+  ],
+  "order": 10
+}

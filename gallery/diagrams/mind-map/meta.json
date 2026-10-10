@@ -1,15 +1,14 @@
 {
   "slug": "mind-map",
-  "title": "思维导图",
+  "title": "SVG 知识层级图",
   "space": "2d",
   "time": "static",
-  "order": 3,
+  "order": 18,
   "tech": [
-    "path",
-    "贝塞尔曲线",
-    "发散结构"
+    "hierarchy",
+    "orthogonal mind map"
   ],
-  "description": "以 SVG 为中心的六分支知识图",
+  "description": "分支表示知识归类而非执行顺序；主干与叶子清晰分层",
   "author": "airay1015",
   "date": "2026-10-08"
 }

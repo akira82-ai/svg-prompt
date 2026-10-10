@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "swimlane",
+  "title": "跨角色泳道流程",
+  "space": "2d",
+  "time": "static",
+  "description": "泳道表达职责，箭头表达交接；审核失败必须返回修正",
+  "tech": [
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
+  ],
+  "order": 4
+}

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "service-dependencies",
+  "title": "有方向的服务依赖",
+  "space": "2d",
+  "time": "static",
+  "description": "检索和生成各有下游依赖；故障影响沿依赖关系反向分析",
+  "tech": [
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
+  ],
+  "order": 15
+}

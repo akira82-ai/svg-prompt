@@ -1,16 +1,17 @@
 {
   "slug": "animated-architecture",
-  "title": "动态架构图",
+  "title": "逻辑架构 · 请求路径",
   "space": "2d",
-  "time": "smil",
+  "time": "css",
   "tech": [
-    "animateMotion",
-    "animate",
-    "marker",
-    "path"
+    "orthogonal routing",
+    "ports",
+    "semantic edges",
+    "CSS semantic flow",
+    "reduced motion"
   ],
-  "description": "数据包沿真实布线流动、服务心跳灯、标题流光——与静态架构图同一张骨架叠上 SMIL 动画层",
+  "description": "节点表示逻辑职责；同步调用、异步事件和数据读写分别编码",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 2
+  "order": 9
 }

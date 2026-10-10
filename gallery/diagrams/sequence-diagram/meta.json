@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "sequence-diagram",
+  "title": "流式请求时序图",
+  "space": "2d",
+  "time": "static",
+  "description": "请求、返回与超时分支分别表示；关闭连接不等于取消后台计算",
+  "tech": [
+    "sequence messages",
+    "lifelines",
+    "alt branches"
+  ],
+  "order": 5
+}

@@ -1,15 +1,14 @@
 {
   "slug": "timeline-svg",
-  "title": "SVG 简史时间轴",
+  "title": "SVG 标准里程碑",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 20,
   "tech": [
-    "line",
-    "circle",
-    "交替排布"
+    "chronological events",
+    "W3C document status"
   ],
-  "description": "1996 → 2026：SVG 三十年大事件交替排布",
+  "description": "按事件顺序等距排列，不编码实际时间间隔；首帧信息完整",
   "author": "airay1015",
   "date": "2026-10-08"
 }

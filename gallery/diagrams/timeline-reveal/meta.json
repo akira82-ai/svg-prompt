@@ -1,15 +1,16 @@
 {
   "slug": "timeline-reveal",
-  "title": "时间轴点亮",
+  "title": "标准里程碑 · 动态强调",
   "space": "2d",
-  "time": "smil",
-  "order": 12,
+  "time": "css",
+  "order": 21,
   "tech": [
-    "animate",
-    "循环",
-    "时间轴"
+    "chronological events",
+    "W3C document status",
+    "CSS semantic flow",
+    "reduced motion"
   ],
-  "description": "事件沿时间线逐个点亮——6 秒一轮的时光放映",
+  "description": "按事件顺序等距排列，不编码实际时间间隔；首帧信息完整",
   "author": "airay1015",
   "date": "2026-10-08"
 }

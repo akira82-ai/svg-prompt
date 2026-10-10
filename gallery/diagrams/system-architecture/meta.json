@@ -1,17 +1,15 @@
 {
   "slug": "system-architecture",
-  "title": "复杂系统架构图",
+  "title": "应用逻辑架构",
   "space": "2d",
   "time": "static",
   "tech": [
-    "path",
-    "marker",
-    "rect",
-    "text",
-    "正交折线"
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
   ],
-  "description": "六分区 20 节点电商架构图，全部正交折线布线——模型盲算坐标必翻车的场景及解法",
+  "description": "节点表示逻辑职责；同步调用、异步事件和数据读写分别编码",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 1
+  "order": 8
 }

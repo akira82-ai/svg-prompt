@@ -1,15 +1,14 @@
 {
   "slug": "org-chart",
-  "title": "组织架构图",
+  "title": "组织与汇报层级",
   "space": "2d",
   "time": "static",
-  "order": 4,
+  "order": 17,
   "tech": [
-    "rect",
-    "正交连线",
-    "层级树"
+    "hierarchy",
+    "collaboration relation"
   ],
-  "description": "三层组织树：CEO → 四大部门 → 核心成员",
+  "description": "实线表示正式汇报层级；跨部门协作不应伪装成第二条汇报线",
   "author": "airay1015",
   "date": "2026-10-08"
 }

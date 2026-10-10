@@ -1,6 +1,6 @@
 # 对比信息图 `静态` `2D`
 
-分类：[流程与架构](../_about.md)
+分类：[品牌与排版](../_about.md)
 
 <img src="index.svg" width="720" alt="对比信息图">
 

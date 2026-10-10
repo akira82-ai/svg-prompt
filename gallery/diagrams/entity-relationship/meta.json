@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "entity-relationship",
+  "title": "会话数据实体关系",
+  "space": "2d",
+  "time": "static",
+  "description": "关系线表示数据关联而非调用；父对象可暂时没有子对象",
+  "tech": [
+    "PK/FK",
+    "cardinality",
+    "entity tables"
+  ],
+  "order": 14
+}

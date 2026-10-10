@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "rag-pipeline",
+  "title": "RAG：索引与查询两条路径",
+  "space": "2d",
+  "time": "static",
+  "description": "权限过滤先于重排；证据不足应拒答，引用需要可追溯",
+  "tech": [
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
+  ],
+  "order": 12
+}

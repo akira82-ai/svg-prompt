@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "agent-loop",
+  "title": "Agent 的受控执行闭环",
+  "space": "2d",
+  "time": "static",
+  "description": "工具调用前检查权限和预算；高风险操作先审批，失败有退出路径",
+  "tech": [
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
+  ],
+  "order": 13
+}

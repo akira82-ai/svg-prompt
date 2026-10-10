@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "state-machine",
+  "title": "异步任务状态机",
+  "space": "2d",
+  "time": "static",
+  "description": "成功、失败、取消都是终态；重试有明确预算与条件",
+  "tech": [
+    "state transitions",
+    "bounded retry",
+    "terminal states"
+  ],
+  "order": 6
+}

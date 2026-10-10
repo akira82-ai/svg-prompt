@@ -1,15 +1,17 @@
 {
   "slug": "network-pulse",
-  "title": "网络脉冲",
+  "title": "服务依赖 · 动态路径",
   "space": "2d",
-  "time": "smil",
-  "order": 11,
+  "time": "css",
+  "order": 16,
   "tech": [
-    "circle",
-    "animateMotion",
-    "呼吸"
+    "orthogonal routing",
+    "ports",
+    "semantic edges",
+    "CSS semantic flow",
+    "reduced motion"
   ],
-  "description": "力导向网络图：节点呼吸、连线上光点流动",
+  "description": "检索和生成各有下游依赖；故障影响沿依赖关系反向分析",
   "author": "airay1015",
   "date": "2026-10-08"
 }

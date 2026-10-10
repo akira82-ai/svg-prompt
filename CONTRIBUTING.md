@@ -63,3 +63,7 @@ svg-prompt/
 ## 数据图表维护
 
 数据图表使用显式模拟数据与标准库生成：先修改 `scripts/build-charts.py`，运行 `python3 scripts/build-charts.py`，再运行 `node scripts/build-readme.mjs` 和 `python3 scripts/check-charts.py`。图形、提示词和元数据必须一致；统计编码和动画终态都须核对。生成脚本仅维护数据图表，不覆盖其他分类。
+
+## 流程与架构维护
+
+修改 `scripts/build-diagrams.py` 中的节点、端口、关系与条件，再运行 `python3 scripts/build-diagrams.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-diagrams.py`。坐标与提示词必须同步，连线不穿无关节点，判断覆盖分支；静态骨架与对应动画版保持相同结构。动画只强调语义路径，不宣称真实运行状态。

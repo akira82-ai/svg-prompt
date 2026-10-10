@@ -1,15 +1,14 @@
 {
   "slug": "venn-diagram",
-  "title": "维恩图",
+  "title": "权限、相关性与安全的交集",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 19,
   "tech": [
-    "circle",
-    "fill-opacity",
-    "交集"
+    "set intersection",
+    "Boolean regions"
   ],
-  "description": "设计 × 研发 × 商业：三种能力的交集地图",
+  "description": "可交付候选 = 已授权 ∩ 相关 ∩ 满足安全条件",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "system-context",
+  "title": "系统上下文图",
+  "space": "2d",
+  "time": "static",
+  "description": "只解释谁使用系统、系统依赖谁；不混入内部部署细节",
+  "tech": [
+    "system boundary",
+    "C4 context",
+    "external systems"
+  ],
+  "order": 7
+}

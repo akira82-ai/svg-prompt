@@ -1,15 +1,17 @@
 {
   "slug": "process-walk",
-  "title": "流程行进",
+  "title": "交付流程 · 动态路径",
   "space": "2d",
-  "time": "smil",
-  "order": 13,
+  "time": "css",
+  "order": 2,
   "tech": [
-    "animateMotion",
-    "路径",
-    "流程图"
+    "orthogonal routing",
+    "ports",
+    "semantic edges",
+    "CSS semantic flow",
+    "reduced motion"
   ],
-  "description": "小圆点沿决策流程走完全程，路径渐次点亮",
+  "description": "每一步有明确输入与输出；验证不通过时返回生成",
   "author": "airay1015",
   "date": "2026-10-08"
 }

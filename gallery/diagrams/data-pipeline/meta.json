@@ -1,11 +1,17 @@
 {
   "slug": "data-pipeline",
-  "title": "数据流水线",
+  "title": "有校验与失败出口的数据管线",
   "space": "2d",
-  "time": "smil",
-  "order": 10,
-  "tech": [],
-  "description": "流动虚线 + 光点巡游",
+  "time": "css",
+  "order": 11,
+  "tech": [
+    "orthogonal routing",
+    "ports",
+    "semantic edges",
+    "CSS semantic flow",
+    "reduced motion"
+  ],
+  "description": "无效输入进入隔离区；消费失败有限重试，耗尽后进入死信队列",
   "author": "airay1015",
   "date": "2026-10-09"
 }

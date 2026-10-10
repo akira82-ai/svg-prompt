@@ -1,15 +1,15 @@
 {
   "slug": "decision-flowchart",
-  "title": "决策流程图",
+  "title": "质量决策与有限重试",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 3,
   "tech": [
-    "rect",
-    "菱形",
-    "分支"
+    "orthogonal routing",
+    "ports",
+    "semantic edges"
   ],
-  "description": "SVG 生成质量的判定流程：是/否分支走到底",
+  "description": "两次判断都有是／否分支；达到重试上限必须停止",
   "author": "airay1015",
   "date": "2026-10-08"
 }
