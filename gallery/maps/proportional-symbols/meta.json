@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "proportional-symbols",
+  "title": "城市比例符号地图",
+  "space": "2d",
+  "time": "static",
+  "description": "圆面积正比业务量；坐标真实、数值模拟",
+  "tech": [
+    "area encoding",
+    "longitude latitude",
+    "size legend"
+  ],
+  "order": 3
+}

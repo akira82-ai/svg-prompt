@@ -1,15 +1,16 @@
 {
   "slug": "map-ripple",
-  "title": "地图涟漪",
+  "title": "区域事件 · 动态强调",
   "space": "2d",
-  "time": "smil",
-  "order": 2,
+  "time": "css",
+  "order": 7,
   "tech": [
-    "circle",
-    "animate",
-    "涟漪"
+    "event snapshot",
+    "area encoding",
+    "CSS ripple",
+    "reduced motion"
   ],
-  "description": "区域版图上城市光点涟漪扩散，强度分档",
+  "description": "固定圆面积编码事件次数；涟漪仅吸引注意，不编码业务量",
   "author": "airay1015",
   "date": "2026-10-08"
 }

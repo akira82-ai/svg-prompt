@@ -67,3 +67,7 @@ svg-prompt/
 ## 流程与架构维护
 
 修改 `scripts/build-diagrams.py` 中的节点、端口、关系与条件，再运行 `python3 scripts/build-diagrams.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-diagrams.py`。坐标与提示词必须同步，连线不穿无关节点，判断覆盖分支；静态骨架与对应动画版保持相同结构。动画只强调语义路径，不宣称真实运行状态。
+
+## 地图与空间维护
+
+修改 `scripts/build-maps.py` 后运行 `python3 scripts/build-maps.py`、`node scripts/build-readme.mjs` 和 `python3 scripts/check-maps.py`。底图源文件 `assets/geography/western-europe.geojson` 保留来源与许可信息；真实经纬度使用共同投影，本地米制 X/Y 等比例。核对圆面积、色档、密度计算、覆盖并集和静态／动效快照，再逐张检查浏览器排版。

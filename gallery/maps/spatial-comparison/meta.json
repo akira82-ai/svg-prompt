@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "spatial-comparison",
+  "title": "多时刻空间对照",
+  "space": "2d",
+  "time": "static",
+  "description": "三时刻共用空间范围与 0–50 色域；不能各自自动归一化",
+  "tech": [
+    "small multiples",
+    "fixed spatial extent",
+    "shared color scale"
+  ],
+  "order": 12
+}

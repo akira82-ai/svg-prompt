@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "campus-floorplan",
+  "title": "楼层空间与设备分区",
+  "space": "2d",
+  "time": "static",
+  "description": "房间、走廊与设备使用同一米制坐标；标出入口与门洞",
+  "tech": [
+    "metric floorplan",
+    "room partitions",
+    "door openings"
+  ],
+  "order": 11
+}

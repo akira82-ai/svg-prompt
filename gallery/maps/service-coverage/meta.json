@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "service-coverage",
+  "title": "直线距离服务覆盖",
+  "space": "2d",
+  "time": "static",
+  "description": "6 个测试点中 3 个在覆盖内；不是通行时间、无线信号或容量预测",
+  "tech": [
+    "Euclidean distance",
+    "union coverage",
+    "metric circles"
+  ],
+  "order": 10
+}

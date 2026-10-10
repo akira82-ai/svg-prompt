@@ -11,7 +11,7 @@
 - **[精选与专题](#精选与专题)** <sub>跨分类策展入口</sub>
 - **[数据图表](#%E6%95%B0%E6%8D%AE%E5%9B%BE%E8%A1%A8)** <sub>charts · 31 条</sub>
 - **[流程与架构](#%E6%B5%81%E7%A8%8B%E4%B8%8E%E6%9E%B6%E6%9E%84)** <sub>diagrams · 21 条</sub>
-- **[地图与空间](#%E5%9C%B0%E5%9B%BE%E4%B8%8E%E7%A9%BA%E9%97%B4)** <sub>maps · 2 条</sub>
+- **[地图与空间](#%E5%9C%B0%E5%9B%BE%E4%B8%8E%E7%A9%BA%E9%97%B4)** <sub>maps · 12 条</sub>
 - **[科学与原理](#%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%8E%9F%E7%90%86)** <sub>science · 12 条</sub>
 - **[界面与组件](#%E7%95%8C%E9%9D%A2%E4%B8%8E%E7%BB%84%E4%BB%B6)** <sub>ui · 43 条</sub>
 - **[品牌与排版](#%E5%93%81%E7%89%8C%E4%B8%8E%E6%8E%92%E7%89%88)** <sub>branding · 19 条</sub>
@@ -40,6 +40,12 @@
 
 <table>
 <tr><td width="350" align="center" valign="top"><a href="gallery/diagrams/sequence-diagram/prompt.md"><img src="gallery/diagrams/sequence-diagram/index.svg" width="336" alt="流式请求时序图"></a><br><a href="gallery/diagrams/sequence-diagram/prompt.md"><strong>流式请求时序图</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/diagrams/rag-pipeline/prompt.md"><img src="gallery/diagrams/rag-pipeline/index.svg" width="336" alt="RAG：索引与查询两条路径"></a><br><a href="gallery/diagrams/rag-pipeline/prompt.md"><strong>RAG：索引与查询两条路径</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/diagrams/agent-loop/prompt.md"><img src="gallery/diagrams/agent-loop/index.svg" width="336" alt="Agent 的受控执行闭环"></a><br><a href="gallery/diagrams/agent-loop/prompt.md"><strong>Agent 的受控执行闭环</strong></a> <code>静态</code> <code>2D</code></td></tr>
+</table>
+
+### 空间分析
+
+<table>
+<tr><td width="350" align="center" valign="top"><a href="gallery/maps/origin-destination/prompt.md"><img src="gallery/maps/origin-destination/index.svg" width="336" alt="城市起终点流向图"></a><br><a href="gallery/maps/origin-destination/prompt.md"><strong>城市起终点流向图</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/service-coverage/prompt.md"><img src="gallery/maps/service-coverage/index.svg" width="336" alt="直线距离服务覆盖"></a><br><a href="gallery/maps/service-coverage/prompt.md"><strong>直线距离服务覆盖</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/campus-floorplan/prompt.md"><img src="gallery/maps/campus-floorplan/index.svg" width="336" alt="楼层空间与设备分区"></a><br><a href="gallery/maps/campus-floorplan/prompt.md"><strong>楼层空间与设备分区</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ### 科学机制
@@ -94,10 +100,13 @@
 
 ## 地图与空间
 
-表达位置、地理分布、路线和空间关系。
+表达位置、地理分布、流向、覆盖与空间关系，共 12 张，按区域概览 → 点位与密度 → 事件 → 流向与拓扑 → 距离覆盖与楼层 → 多时刻对照排序。
 
 <table>
-<tr><td width="350" align="center" valign="top"><a href="gallery/maps/china-grid-map/prompt.md"><img src="gallery/maps/china-grid-map/index.svg" width="336" alt="地理填色图"></a><br><a href="gallery/maps/china-grid-map/prompt.md"><strong>地理填色图</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/map-ripple/prompt.md"><img src="gallery/maps/map-ripple/index.svg" width="336" alt="地图涟漪"></a><br><a href="gallery/maps/map-ripple/prompt.md"><strong>地图涟漪</strong></a> <code>SMIL 动效</code> <code>2D</code></td></tr>
+<tr><td width="350" align="center" valign="top"><a href="gallery/maps/china-grid-map/prompt.md"><img src="gallery/maps/china-grid-map/index.svg" width="336" alt="区域格网图"></a><br><a href="gallery/maps/china-grid-map/prompt.md"><strong>区域格网图</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/choropleth/prompt.md"><img src="gallery/maps/choropleth/index.svg" width="336" alt="区域指标分级设色"></a><br><a href="gallery/maps/choropleth/prompt.md"><strong>区域指标分级设色</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/proportional-symbols/prompt.md"><img src="gallery/maps/proportional-symbols/index.svg" width="336" alt="城市比例符号地图"></a><br><a href="gallery/maps/proportional-symbols/prompt.md"><strong>城市比例符号地图</strong></a> <code>静态</code> <code>2D</code></td></tr>
+<tr><td width="350" align="center" valign="top"><a href="gallery/maps/point-distribution/prompt.md"><img src="gallery/maps/point-distribution/index.svg" width="336" alt="园区点位分布"></a><br><a href="gallery/maps/point-distribution/prompt.md"><strong>园区点位分布</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/spatial-density/prompt.md"><img src="gallery/maps/spatial-density/index.svg" width="336" alt="点位空间密度"></a><br><a href="gallery/maps/spatial-density/prompt.md"><strong>点位空间密度</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/regional-events/prompt.md"><img src="gallery/maps/regional-events/index.svg" width="336" alt="区域事件分布"></a><br><a href="gallery/maps/regional-events/prompt.md"><strong>区域事件分布</strong></a> <code>静态</code> <code>2D</code></td></tr>
+<tr><td width="350" align="center" valign="top"><a href="gallery/maps/map-ripple/prompt.md"><img src="gallery/maps/map-ripple/index.svg" width="336" alt="区域事件 · 动态强调"></a><br><a href="gallery/maps/map-ripple/prompt.md"><strong>区域事件 · 动态强调</strong></a> <code>CSS 动效</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/origin-destination/prompt.md"><img src="gallery/maps/origin-destination/index.svg" width="336" alt="城市起终点流向图"></a><br><a href="gallery/maps/origin-destination/prompt.md"><strong>城市起终点流向图</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/route-stations/prompt.md"><img src="gallery/maps/route-stations/index.svg" width="336" alt="路线与换乘拓扑图"></a><br><a href="gallery/maps/route-stations/prompt.md"><strong>路线与换乘拓扑图</strong></a> <code>静态</code> <code>2D</code></td></tr>
+<tr><td width="350" align="center" valign="top"><a href="gallery/maps/service-coverage/prompt.md"><img src="gallery/maps/service-coverage/index.svg" width="336" alt="直线距离服务覆盖"></a><br><a href="gallery/maps/service-coverage/prompt.md"><strong>直线距离服务覆盖</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/campus-floorplan/prompt.md"><img src="gallery/maps/campus-floorplan/index.svg" width="336" alt="楼层空间与设备分区"></a><br><a href="gallery/maps/campus-floorplan/prompt.md"><strong>楼层空间与设备分区</strong></a> <code>静态</code> <code>2D</code></td><td width="350" align="center" valign="top"><a href="gallery/maps/spatial-comparison/prompt.md"><img src="gallery/maps/spatial-comparison/index.svg" width="336" alt="多时刻空间对照"></a><br><a href="gallery/maps/spatial-comparison/prompt.md"><strong>多时刻空间对照</strong></a> <code>静态</code> <code>2D</code></td></tr>
 </table>
 
 ## 科学与原理

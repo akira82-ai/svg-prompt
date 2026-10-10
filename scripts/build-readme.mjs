@@ -30,6 +30,7 @@ const COLLECTIONS = [
   ['精选作品', ['diagrams/system-architecture', 'science/bezier-de-casteljau', 'illustrations/cyber-city']],
   ['数据分析', ['charts/sankey', 'charts/matrix-heatmap', 'charts/interval']],
   ['系统图解', ['diagrams/sequence-diagram', 'diagrams/rag-pipeline', 'diagrams/agent-loop']],
+  ['空间分析', ['maps/origin-destination', 'maps/service-coverage', 'maps/campus-floorplan']],
   ['科学机制', ['science/fourier-build', 'science/catenary', 'science/koch-snowflake']],
   ['未来界面', ['ui/hud-interface', 'ui/dark-ops-dashboard', 'ui/wave-analyzer']],
   ['动效实验室', ['geometry/shape-morph', 'branding/letter-morph', 'backgrounds/rain-ripples']],

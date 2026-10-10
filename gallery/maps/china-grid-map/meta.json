@@ -1,15 +1,15 @@
 {
   "slug": "china-grid-map",
-  "title": "地理填色图",
+  "title": "区域格网图",
   "space": "2d",
   "time": "static",
   "order": 1,
   "tech": [
-    "rect",
-    "分档填色",
-    "点阵地图"
+    "tile grid",
+    "shared data",
+    "discrete color scale"
   ],
-  "description": "部分省份抽象格图，虚构示例数值与统一色阶",
+  "description": "排行榜与格网使用同一组省份；抽象位置不等于真实行政区划",
   "author": "airay1015",
   "date": "2026-10-08"
 }

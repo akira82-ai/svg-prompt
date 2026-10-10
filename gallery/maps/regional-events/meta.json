@@ -1,0 +1,14 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "regional-events",
+  "title": "区域事件分布",
+  "space": "2d",
+  "time": "static",
+  "description": "固定圆面积编码事件次数；涟漪仅吸引注意，不编码业务量",
+  "tech": [
+    "event snapshot",
+    "area encoding"
+  ],
+  "order": 6
+}

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "choropleth",
+  "title": "区域指标分级设色",
+  "space": "2d",
+  "time": "static",
+  "description": "颜色表达比率而非业务总量；灰色区域表示无示例数据",
+  "tech": [
+    "equirectangular projection",
+    "choropleth",
+    "ratio bins"
+  ],
+  "order": 2
+}

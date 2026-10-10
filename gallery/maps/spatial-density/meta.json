@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "spatial-density",
+  "title": "点位空间密度",
+  "space": "2d",
+  "time": "static",
+  "description": "密度来自显式点位计算；颜色不是手绘光斑，也不是风险概率",
+  "tech": [
+    "Gaussian KDE",
+    "fixed bandwidth",
+    "shared color scale"
+  ],
+  "order": 5
+}

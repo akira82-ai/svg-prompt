@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "route-stations",
+  "title": "路线与换乘拓扑图",
+  "space": "2d",
+  "time": "static",
+  "description": "站间距为排版；交叉线路只有标记站点才表示换乘",
+  "tech": [
+    "network topology",
+    "station sequence",
+    "transfer node"
+  ],
+  "order": 9
+}

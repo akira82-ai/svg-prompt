@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "point-distribution",
+  "title": "园区点位分布",
+  "space": "2d",
+  "time": "static",
+  "description": "同尺寸标记只编码位置；颜色表示设备类型而非数量",
+  "tech": [
+    "Cartesian coordinates",
+    "point symbols",
+    "metric scale"
+  ],
+  "order": 4
+}

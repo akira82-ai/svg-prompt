@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "origin-destination",
+  "title": "城市起终点流向图",
+  "space": "2d",
+  "time": "static",
+  "description": "箭头编码方向，线宽编码流量；曲线不代表实际网络路由",
+  "tech": [
+    "directed flows",
+    "stroke width encoding",
+    "fixed arrowheads"
+  ],
+  "order": 8
+}
