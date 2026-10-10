@@ -2,14 +2,14 @@
   "slug": "rain-ripples",
   "title": "雨滴涟漪",
   "space": "2d",
-  "time": "smil",
+  "time": "css",
   "order": 21,
   "tech": [
-    "line",
-    "ellipse",
-    "animate"
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
   ],
-  "description": "雨滴下落触水成涟漪，多滴错位循环",
+  "description": "椭圆涟漪形成静谧雨面，保留完整且低干扰的背景。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

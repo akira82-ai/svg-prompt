@@ -1,14 +1,15 @@
 {
   "slug": "transparency-blend",
-  "title": "透明叠色",
+  "title": "透明色层",
   "space": "2d",
   "time": "static",
   "tech": [
-    "fill-opacity",
-    "半透明叠加"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "fill-opacity 让颜色互相穿透——三圆叠出七种色区",
+  "description": "透明色层在浅底叠出有顺序的混色，不把透明度当特殊混合模式。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 24
+  "order": 2
 }

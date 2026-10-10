@@ -1,14 +1,15 @@
 {
   "slug": "pattern-fill",
-  "title": "平铺图案",
+  "title": "几何平铺",
   "space": "2d",
   "time": "static",
-  "order": 5,
+  "order": 6,
   "tech": [
-    "pattern",
-    "patternUnits"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "一个单元三种比例——pattern 元素的无缝复制",
+  "description": "同一复古几何单元无缝重复，适合作包装与编辑底纹。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -1,16 +1,15 @@
 {
   "slug": "gradient-spheres",
-  "title": "渐变球体",
+  "title": "柔光球体背景",
   "space": "2d",
   "time": "static",
   "tech": [
-    "radialGradient",
-    "fx",
-    "fy",
-    "stop"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "radialGradient 把平涂圆变成发光球：高光靠焦点偏移",
+  "description": "偏移焦点与明暗层次构成柔光球体，留白可承接封面内容。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 23
+  "order": 3
 }

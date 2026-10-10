@@ -1,14 +1,15 @@
 {
   "slug": "pattern-tile",
-  "title": "图案平铺",
+  "title": "科技网格",
   "space": "2d",
   "time": "static",
-  "order": 6,
+  "order": 5,
   "tech": [
-    "pattern",
-    "rect"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "四方连续图案：一个单元铺满整个世界",
+  "description": "克制的坐标网格适合技术封面与页面底图。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

@@ -2,14 +2,14 @@
   "slug": "water-shimmer",
   "title": "水面波光",
   "space": "2d",
-  "time": "smil",
-  "order": 19,
+  "time": "css",
+  "order": 20,
   "tech": [
-    "animate",
-    "高光线",
-    "循环"
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
   ],
-  "description": "深海蓝纵向渐变（#0a2a4a → #061527）",
+  "description": "深色水面上的稀疏短线形成波光，变化只作用于高光。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

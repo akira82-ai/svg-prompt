@@ -1,15 +1,15 @@
 {
   "slug": "kraft-paper",
-  "title": "牛皮纸",
+  "title": "牛皮纸纤维",
   "space": "2d",
   "time": "static",
-  "order": 9,
+  "order": 16,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "毛边"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底色暖棕 #c9a875，叠两层噪声：高频纸纤维（opacity 0.12）+ 低频色斑（opacity 0.1）",
+  "description": "纸纤维与暖色斑点构成可用底纹，不附咖啡渍和道具。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

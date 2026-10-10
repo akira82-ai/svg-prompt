@@ -1,14 +1,15 @@
 {
   "slug": "fabric",
-  "title": "织物",
+  "title": "织物纹理",
   "space": "2d",
   "time": "static",
-  "order": 10,
+  "order": 7,
   "tech": [
-    "pattern",
-    "针织纹"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "针织区（上 60%）：米白底 #ece7dd，V 纹交错（pattern：两条 ±18° 斜线列交替，浅灰 #d8d2c4）",
+  "description": "平纹织物用经纬交错的明暗表达柔软纤维。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

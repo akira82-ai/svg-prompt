@@ -1,15 +1,15 @@
 {
   "slug": "concrete",
-  "title": "混凝土",
+  "title": "混凝土纹理",
   "space": "2d",
   "time": "static",
-  "order": 8,
+  "order": 15,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "气孔"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底色暖灰 #b6b6ae，叠两层 feTurbulence：高频细斑点（opacity 0.25）+ 低频云斑（opacity 0.15）",
+  "description": "混凝土由低频斑驳、细颗粒和小气孔构成，避免装饰裂纹喧宾夺主。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

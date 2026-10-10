@@ -1,15 +1,15 @@
 {
   "slug": "marble",
-  "title": "大理石",
+  "title": "大理石纹理",
   "space": "2d",
   "time": "static",
-  "order": 15,
+  "order": 14,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "静脉纹"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底色冷白渐变（#f4f4f0 → #dfe3e8）",
+  "description": "冷白石面与连续细脉纹形成大理石的风格化层理。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

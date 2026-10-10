@@ -1,14 +1,15 @@
 {
   "slug": "carbon-fiber",
-  "title": "碳纤维",
+  "title": "碳纤维编织",
   "space": "2d",
   "time": "static",
-  "order": 7,
+  "order": 8,
   "tech": [
-    "pattern",
-    "编织纹理"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "2×2 斜纹编织单元（24px）用 pattern 平铺满版：每单元四小块明暗交替（亮块 #2a2f3a / 暗块 #10131a），亮块内加一道细高光线",
+  "description": "深色编织纹通过交替方向与细线高光获得层次。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

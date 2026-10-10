@@ -1,15 +1,15 @@
 {
   "slug": "grainy-gradient",
-  "title": "噪点渐变",
+  "title": "颗粒渐变",
   "space": "2d",
   "time": "static",
-  "order": 3,
+  "order": 1,
   "tech": [
-    "linearGradient",
-    "feTurbulence",
-    "grainy"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "渐变叠一层半透明噪声——消除\"AI 味\"平涂的质感秘诀",
+  "description": "细颗粒为渐变增加层次，标题区独立保证可读性。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

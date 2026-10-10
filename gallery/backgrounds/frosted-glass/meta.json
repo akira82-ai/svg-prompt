@@ -3,13 +3,13 @@
   "title": "磨砂玻璃",
   "space": "2d",
   "time": "static",
-  "order": 14,
+  "order": 9,
   "tech": [
-    "feGaussianBlur",
-    "半透明叠加",
-    "噪点"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底层彩色几何内容（蓝紫橙圆与三角）经 feGaussianBlur(12) 全部虚化",
+  "description": "同一底图在玻璃外清晰、玻璃内模糊，边缘与白幕共同表达磨砂。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

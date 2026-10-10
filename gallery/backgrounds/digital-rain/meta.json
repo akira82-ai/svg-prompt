@@ -1,15 +1,15 @@
 {
   "slug": "digital-rain",
-  "title": "数据雨",
+  "title": "数据字符流",
   "space": "2d",
-  "time": "smil",
-  "order": 22,
+  "time": "css",
+  "order": 23,
   "tech": [
-    "translate 循环",
-    "字符列",
-    "头部亮点"
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
   ],
-  "description": "Matrix 字符雨：14 列字符流下落渐隐",
+  "description": "低对比字符流提供科技气氛，字符与速度不冒充实时数据。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

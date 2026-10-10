@@ -1,15 +1,15 @@
 {
   "slug": "wood-grain",
-  "title": "木纹",
+  "title": "木纹层理",
   "space": "2d",
   "time": "static",
-  "order": 4,
+  "order": 17,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "拉伸噪声"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "把噪声横向压扁拉出年轮——baseFrequency 的两个值就是秘诀",
+  "description": "连续纹线与板缝表达木材方向性，避免把噪声拉伸直接等同年轮。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

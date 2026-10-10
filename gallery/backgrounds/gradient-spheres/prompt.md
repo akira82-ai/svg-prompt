@@ -1,12 +1,16 @@
-# 渐变球体 `静态` `2D`
+# 柔光球体背景 / Soft Sphere Background
 
 分类：[背景与材质](../_about.md)
 
-<img src="index.svg" width="720" alt="渐变球体">
+<img src="index.svg" width="720" alt="柔光球体背景">
 
 ```
-用 SVG 画一张"渐变球体"教学图：
-- 左卡一个大球：radialGradient 圆心与焦点分离，高光偏左上（fx/fy），标注圆心、焦点位置与三段色标（#bfe0ff → #4f8ef7 → #1e4d8f）
-- 右卡三个不同颜色的高光小球（蓝、红、绿），说明"同一组参数换三组颜色，卡内配两行说明（立体感 = 焦点偏移 + 三段色标；球、气泡、按钮的光泽都是这个配方）"
-- 画布 1200×800，浅蓝灰背景 #f6f8fb，白色圆角卡片分格
+用SVG绘制“柔光球体背景 / Soft Sphere Background”。
+- 展示画幅1400×900，外框#111e2d，文字#e9f0fa/辅助#b5c7d9；中英文名称与页脚在纹理区外，样张x64..1336、y190..810。
+- 偏移焦点与明暗层次构成柔光球体，留白可承接封面内容。
+- 三球r190/125/100，径向渐变焦点(.28,.22)、中心(.35,.3)，每球有扁椭圆地面阴影；没有代码卡和焦点标注。
+- 材质为矢量视觉模拟，不宣称物理渲染、材料性能或真实测量。背景使用时提取样张组并同步保留其defs，移除外框标题；只有pattern作品可以按单元无缝平铺，其余为固定构图。
+- 动效只用于装饰，8–10秒缓变，无闪烁和主体遮挡；减少动效禁用CSS动画，静态基底完整；滤镜不支持时质感会简化。
+- 生成器scripts/build-backgrounds.py记录构造，完整SVG参考：
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">柔光球体背景 / Soft Sphere Background</title><desc id="desc">偏移焦点与明暗层次构成柔光球体，留白可承接封面内容。；三球r190/125/100，径向渐变焦点(.28,.22)、中心(.35,.3)，每球有扁椭圆地面阴影；没有代码卡和焦点标注。</desc><rect x="0" y="0" width="1400" height="900" fill="#111e2d" /><text x="64" y="64" font-size="14" fill="#b5c7d9" text-anchor="start">SURFACE STUDIES / 03</text><text x="64" y="116" font-size="34" fill="#e9f0fa" text-anchor="start">柔光球体背景</text><text x="1336" y="116" font-size="20" fill="#b5c7d9" text-anchor="end">Soft Sphere Background</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620" rx="18"/></clipPath></defs><g clip-path="url(#stage)"><rect x="64" y="190" width="1272" height="620" fill="#172b43" /><defs><radialGradient id="ball0" cx=".35" cy=".3" r=".75" fx=".28" fy=".22"><stop offset="0.0000" stop-color="#c1e6ed"/><stop offset="0.5000" stop-color="#5faac0"/><stop offset="1.0000" stop-color="#234764"/></radialGradient></defs><ellipse cx="390" cy="690" rx="161.5" ry="28.5" fill="#102039" /><circle cx="390.000" cy="480.000" r="190.000" fill="url(#ball0)" /><defs><radialGradient id="ball1" cx=".35" cy=".3" r=".75" fx=".28" fy=".22"><stop offset="0.0000" stop-color="#eadffc"/><stop offset="0.5000" stop-color="#899bea"/><stop offset="1.0000" stop-color="#37467c"/></radialGradient></defs><ellipse cx="850" cy="535" rx="106.25" ry="18.75" fill="#102039" /><circle cx="850.000" cy="390.000" r="125.000" fill="url(#ball1)" /><defs><radialGradient id="ball2" cx=".35" cy=".3" r=".75" fx=".28" fy=".22"><stop offset="0.0000" stop-color="#ffe9cb"/><stop offset="0.5000" stop-color="#dbab7b"/><stop offset="1.0000" stop-color="#775344"/></radialGradient></defs><ellipse cx="1030" cy="790" rx="85.0" ry="15.0" fill="#102039" /><circle cx="1030.000" cy="670.000" r="100.000" fill="url(#ball2)" /></g><text x="64" y="856" font-size="16" fill="#b5c7d9" text-anchor="start">偏移焦点与明暗层次构成柔光球体，留白可承接封面内容。</text><style>@keyframes drift{50%{transform:translate(0,12px)}}@keyframes shine{50%{opacity:.75}}.drift{animation:drift 10s ease-in-out infinite}.shine{animation:shine 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.drift,.shine{animation:none}}</style></svg>
 ```

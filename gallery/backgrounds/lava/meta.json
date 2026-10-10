@@ -1,15 +1,15 @@
 {
   "slug": "lava",
-  "title": "熔岩",
+  "title": "熔岩裂隙",
   "space": "2d",
-  "time": "smil",
-  "order": 17,
+  "time": "css",
+  "order": 22,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "seed 步进"
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
   ],
-  "description": "深色岩壳满版，裂缝网络透出橙红熔光（feTurbulence bf 0.025 octaves 3 + feColorMatrix 阈值映射橙红）",
+  "description": "固定岩壳与暖色裂隙构成熔岩纹理，亮度缓变避免纹理跳变。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

@@ -1,14 +1,16 @@
-# 水滴特写 `静态` `2D`
+# 叶面水滴 / Leaf Droplets
 
 分类：[背景与材质](../_about.md)
 
-<img src="index.svg" width="720" alt="水滴特写">
+<img src="index.svg" width="720" alt="叶面水滴">
 
 ```
-用 SVG 画"叶面水滴特写"：
-- 背景：绿渐变叶面（#3f7d44 → #2c5a31）+ 叶脉细线三根
-- 主水滴 r=95：径向渐变（中心几乎透明 → 边缘白 0.35），底部内折射亮斑（白椭圆 op 0.5），左上高光点（白 op 0.9），滴下深绿投影椭圆
-- 右上一颗小水滴（r=22，同样结构）
-- 右下参数卡：透明体 / 折射亮斑 / 高光 / 投影
-- 画布 1200×800
+用SVG绘制“叶面水滴 / Leaf Droplets”。
+- 展示画幅1400×900，外框#111e2d，文字#e9f0fa/辅助#b5c7d9；中英文名称与页脚在纹理区外，样张x64..1336、y190..810。
+- 叶脉、投影与局部高光表现水滴的透明体积。
+- 三滴r132/55/40，各有渐变边缘、下部亮斑、左上高光与偏移投影；视觉模拟，不是光线追踪折射。
+- 材质为矢量视觉模拟，不宣称物理渲染、材料性能或真实测量。背景使用时提取样张组并同步保留其defs，移除外框标题；只有pattern作品可以按单元无缝平铺，其余为固定构图。
+- 动效只用于装饰，8–10秒缓变，无闪烁和主体遮挡；减少动效禁用CSS动画，静态基底完整；滤镜不支持时质感会简化。
+- 生成器scripts/build-backgrounds.py记录构造，完整SVG参考：
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">叶面水滴 / Leaf Droplets</title><desc id="desc">叶脉、投影与局部高光表现水滴的透明体积。；三滴r132/55/40，各有渐变边缘、下部亮斑、左上高光与偏移投影；视觉模拟，不是光线追踪折射。</desc><rect x="0" y="0" width="1400" height="900" fill="#111e2d" /><text x="64" y="64" font-size="14" fill="#b5c7d9" text-anchor="start">SURFACE STUDIES / 18</text><text x="64" y="116" font-size="34" fill="#e9f0fa" text-anchor="start">叶面水滴</text><text x="1336" y="116" font-size="20" fill="#b5c7d9" text-anchor="end">Leaf Droplets</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620" rx="18"/></clipPath></defs><g clip-path="url(#stage)"><defs><linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0.0000" stop-color="#345f50"/><stop offset="0.5000" stop-color="#67916b"/><stop offset="1.0000" stop-color="#294e47"/></linearGradient></defs><rect x="64" y="190" width="1272" height="620" fill="url(#leaf)" /><path d="M110 800L1220 220" fill="none" stroke="#90af84" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><path d="M160 780l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M285 715l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M410 650l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M535 585l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M660 520l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M785 455l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M910 390l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M1035 325l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><path d="M1160 260l-120 -165" fill="none" stroke="#90af84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".25"/><defs><radialGradient id="drop"><stop offset="0" stop-color="#bce7d8" stop-opacity=".08"/><stop offset=".7" stop-color="#a3d4bc" stop-opacity=".12"/><stop offset="1" stop-color="#e3f5ef" stop-opacity=".5"/></radialGradient></defs><ellipse cx="575" cy="587.4" rx="132" ry="52.800000000000004" fill="#193f36" opacity=".35"/><circle cx="565.000" cy="495.000" r="132.000" fill="url(#drop)" stroke="#cee7dc" stroke-width="1"/><ellipse cx="565" cy="561.0" rx="66.0" ry="19.8" fill="#e3f5ef" opacity=".55"/><ellipse cx="525.4" cy="442.2" rx="26.400000000000002" ry="15.84" fill="#fff" opacity=".8"/><ellipse cx="925" cy="438.5" rx="55" ry="22.0" fill="#193f36" opacity=".35"/><circle cx="915.000" cy="400.000" r="55.000" fill="url(#drop)" stroke="#cee7dc" stroke-width="1"/><ellipse cx="915" cy="427.5" rx="27.5" ry="8.25" fill="#e3f5ef" opacity=".55"/><ellipse cx="898.5" cy="378.0" rx="11.0" ry="6.6" fill="#fff" opacity=".8"/><ellipse cx="1000" cy="688.0" rx="40" ry="16.0" fill="#193f36" opacity=".35"/><circle cx="990.000" cy="660.000" r="40.000" fill="url(#drop)" stroke="#cee7dc" stroke-width="1"/><ellipse cx="990" cy="680.0" rx="20.0" ry="6.0" fill="#e3f5ef" opacity=".55"/><ellipse cx="978.0" cy="644.0" rx="8.0" ry="4.8" fill="#fff" opacity=".8"/></g><text x="64" y="856" font-size="16" fill="#b5c7d9" text-anchor="start">叶脉、投影与局部高光表现水滴的透明体积。</text><style>@keyframes drift{50%{transform:translate(0,12px)}}@keyframes shine{50%{opacity:.75}}.drift{animation:drift 10s ease-in-out infinite}.shine{animation:shine 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.drift,.shine{animation:none}}</style></svg>
 ```

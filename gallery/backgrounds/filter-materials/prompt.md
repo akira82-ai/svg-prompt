@@ -1,14 +1,16 @@
-# 滤镜材质特效 `SMIL 动效` `2D`
+# 液态金属 / Liquid Metal
 
 分类：[背景与材质](../_about.md)
 
-<img src="index.svg" width="720" alt="滤镜材质特效">
+<img src="index.svg" width="720" alt="液态金属">
 
 ```
-用 SVG 展示四种滤镜材质特效：
-- 液态融合：三个彩圆相互吸附 + feGaussianBlur(stdDeviation 10) + feColorMatrix 把 alpha 通道对比度拉陡（阈值约 20/-9）→ metaball 效果
-- 金属打光：灰色凸起文字 + feSpecularLighting + fePointLight，光源 z 坐标加 <animate> 让高光游走
-- 水波扭曲：一行文字 + feTurbulence + feDisplacementMap，baseFrequency 加缓慢 <animate> 像在水中晃动
-  - 霓虹辉光：描边文字 + feGaussianBlur 双层叠加辉光，opacity 闪烁
-画布 1200×800 深色底，标题与副标题在左上，四块面板各配等宽字注释。
+用SVG绘制“液态金属 / Liquid Metal”。
+- 展示画幅1400×900，外框#111e2d，文字#e9f0fa/辅助#b5c7d9；中英文名称与页脚在纹理区外，样张x64..1336、y190..810。
+- 液态轮廓与交替亮暗反射带表达金属质感。
+- 单个闭合贝塞尔轮廓，多段线性渐变与两道高光，固定构图；不宣称metaball物理融合和真实光照。
+- 材质为矢量视觉模拟，不宣称物理渲染、材料性能或真实测量。背景使用时提取样张组并同步保留其defs，移除外框标题；只有pattern作品可以按单元无缝平铺，其余为固定构图。
+- 动效只用于装饰，8–10秒缓变，无闪烁和主体遮挡；减少动效禁用CSS动画，静态基底完整；滤镜不支持时质感会简化。
+- 生成器scripts/build-backgrounds.py记录构造，完整SVG参考：
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">液态金属 / Liquid Metal</title><desc id="desc">液态轮廓与交替亮暗反射带表达金属质感。；单个闭合贝塞尔轮廓，多段线性渐变与两道高光，固定构图；不宣称metaball物理融合和真实光照。</desc><rect x="0" y="0" width="1400" height="900" fill="#111e2d" /><text x="64" y="64" font-size="14" fill="#b5c7d9" text-anchor="start">SURFACE STUDIES / 10</text><text x="64" y="116" font-size="34" fill="#e9f0fa" text-anchor="start">液态金属</text><text x="1336" y="116" font-size="20" fill="#b5c7d9" text-anchor="end">Liquid Metal</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620" rx="18"/></clipPath></defs><g clip-path="url(#stage)"><rect x="64" y="190" width="1272" height="620" fill="#182536" /><defs><linearGradient id="chrome" x1="0" y1="0" x2=".8" y2="1"><stop offset="0.0000" stop-color="#20354b"/><stop offset="0.2500" stop-color="#c9dce5"/><stop offset="0.5000" stop-color="#4c6c86"/><stop offset="0.7500" stop-color="#edf5f7"/><stop offset="1.0000" stop-color="#28435a"/></linearGradient></defs><path d="M345 325C470 205 560 390 715 295C1005 135 1220 510 970 600C790 670 810 815 550 730C370 670 155 500 345 325Z" fill="url(#chrome)" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M390 330C525 280 530 445 735 330" fill="none" stroke="#edf5f7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/><path d="M900 600Q780 680 595 672" fill="none" stroke="#91acbe" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></g><text x="64" y="856" font-size="16" fill="#b5c7d9" text-anchor="start">液态轮廓与交替亮暗反射带表达金属质感。</text><style>@keyframes drift{50%{transform:translate(0,12px)}}@keyframes shine{50%{opacity:.75}}.drift{animation:drift 10s ease-in-out infinite}.shine{animation:shine 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.drift,.shine{animation:none}}</style></svg>
 ```

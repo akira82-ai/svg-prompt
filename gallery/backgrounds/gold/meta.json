@@ -1,14 +1,15 @@
 {
   "slug": "gold",
-  "title": "黄金质感",
+  "title": "金色镜面",
   "space": "2d",
   "time": "static",
-  "order": 13,
+  "order": 12,
   "tech": [
-    "linearGradient",
-    "镜面渐变"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底色深暖棕 #14100a 衬托",
+  "description": "多段金色渐变形成镜面反射带，保留干净可用的材质面。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

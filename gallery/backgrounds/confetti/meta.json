@@ -1,15 +1,15 @@
 {
   "slug": "confetti",
-  "title": "粒子礼花",
+  "title": "庆祝粒子背景",
   "space": "2d",
-  "time": "smil",
-  "order": 20,
+  "time": "css",
+  "order": 24,
   "tech": [
-    "animate",
-    "粒子系统",
-    "放射"
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
   ],
-  "description": "粒子从中心爆发四散、坠落实散——循环绽放",
+  "description": "疏朗的彩色粒子可作庆祝背景，中央留白不被爆炸效果占据。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

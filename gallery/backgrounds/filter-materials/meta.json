@@ -1,18 +1,15 @@
 {
   "slug": "filter-materials",
-  "title": "滤镜材质特效",
+  "title": "液态金属",
   "space": "2d",
-  "time": "smil",
+  "time": "static",
   "tech": [
-    "feGaussianBlur",
-    "feColorMatrix",
-    "feSpecularLighting",
-    "fePointLight",
-    "feTurbulence",
-    "feDisplacementMap"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "液态融合、金属打光、水波扭曲——20 个滤镜原语串联出的矢量版 Photoshop",
+  "description": "液态轮廓与交替亮暗反射带表达金属质感。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 1
+  "order": 10
 }

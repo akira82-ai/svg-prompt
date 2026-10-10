@@ -1,11 +1,15 @@
 {
   "slug": "spotlight-scan",
-  "title": "聚光灯",
+  "title": "环境聚光",
   "space": "2d",
-  "time": "smil",
-  "order": 18,
-  "tech": [],
-  "description": "光斑巡游 · 暗区显隐",
+  "time": "css",
+  "order": 4,
+  "tech": [
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion"
+  ],
+  "description": "大面积环境光为深色背景提供柔和的视觉中心。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

@@ -1,15 +1,15 @@
 {
   "slug": "rusted-iron",
-  "title": "铁锈",
+  "title": "锈蚀金属",
   "space": "2d",
   "time": "static",
-  "order": 12,
+  "order": 13,
   "tech": [
-    "feTurbulence",
-    "feColorMatrix",
-    "分层噪声"
+    "surface composition",
+    "SVG gradient",
+    "standalone texture"
   ],
-  "description": "底色深铁灰 #4a4240，叠三层：铁底渐变（暗→深）、橙棕锈斑（feTurbulence bf 0.06 octaves 5 映射橙棕 opacity 0.75）、暗斑驳（bf 0.15 opacity 0.3）",
+  "description": "铁灰基底与暖色斑驳表达风化，而非整面橙色噪声。",
   "author": "airay1015",
   "date": "2026-10-09"
 }
