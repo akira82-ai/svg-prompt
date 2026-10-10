@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "spiral-composition",
+  "title": "螺旋构成",
+  "order": 8,
+  "space": "2d",
+  "time": "static",
+  "description": "七条阿基米德螺旋围绕共同中心展开，疏密变化成为构图。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "slug": "shape-morph",
-  "title": "形状变换",
+  "title": "几何形变",
   "space": "2d",
   "time": "smil",
-  "order": 4,
+  "order": 17,
   "tech": [
-    "animate",
-    "d 路径 morph",
-    "贝塞尔骨架"
+    "parametric geometry",
+    "deterministic generation",
+    "SMIL morph"
   ],
-  "description": "正方形⇄圆⇄菱形与圆→星→心的路径插值",
+  "description": "共同顶点骨架保持形变连续；减少动效显示完整的第一状态。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

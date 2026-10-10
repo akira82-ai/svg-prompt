@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "geometric-composition",
+  "title": "基础几何构成",
+  "order": 1,
+  "space": "2d",
+  "time": "static",
+  "description": "基础元素合成一个完整构图，以遮挡、对比和留白组织视觉。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "moire-patterns",
+  "title": "干涉纹构成",
+  "order": 14,
+  "space": "2d",
+  "time": "static",
+  "description": "两组错位同心线叠加产生干涉纹，疏密来自真实线条交叠。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

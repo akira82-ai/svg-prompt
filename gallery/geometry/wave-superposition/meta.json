@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "wave-superposition",
+  "title": "波形叠构",
+  "order": 9,
+  "space": "2d",
+  "time": "static",
+  "description": "两种频率叠加的平行曲线，以相位差形成层叠波纹。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "slug": "rotational-patterns",
-  "title": "旋转复制组合",
+  "title": "放射与旋转",
   "space": "2d",
   "time": "static",
   "tech": [
-    "transform-rotate",
-    "defs",
-    "use"
+    "parametric geometry",
+    "deterministic generation",
+    "path"
   ],
-  "description": "一个单元绕圆心复制 N 次——齿轮、花瓣、太阳的共同祖先",
+  "description": "同一径向单元复制出三种密度，轮廓由旋转规则形成。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 18
+  "order": 5
 }

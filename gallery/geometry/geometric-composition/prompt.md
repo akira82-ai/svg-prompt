@@ -1,0 +1,15 @@
+# 基础几何构成 / Geometric Composition
+
+分类：[几何与生成艺术](../_about.md)
+
+<img src="index.svg" width="720" alt="基础几何构成">
+
+```
+用 SVG 制作“基础几何构成 / Geometric Composition”。
+- 1400×900画布，深色#101d2d，文字#e7effa、辅助#aabfd5，几何色板#75ddcf/#e7b875/#819af8/#d18eba/#4e8195；标题中英文，主体区域x64..1336、y190..810。
+- 基础元素合成一个完整构图，以遮挡、对比和留白组织视觉。
+- 圆(510,480,r225)、矩形(510,310,420,330)、大三角、右侧圆形负空间与水平线；元素共享画面，不再拆为7张属性教程。
+- 公式与构造细节只写在提示词，不把主画面做成代码教学卡。仅为几何艺术，不是测量数据或物理仿真。
+- 生成器 scripts/build-geometry.py 包含完整坐标构造；下列SVG是可复现的几何、色彩和参数参考。
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">基础几何构成 / Geometric Composition</title><desc id="desc">基础元素合成一个完整构图，以遮挡、对比和留白组织视觉。；圆(510,480,r225)、矩形(510,310,420,330)、大三角、右侧圆形负空间与水平线；元素共享画面，不再拆为7张属性教程。</desc><rect x="0" y="0" width="1400" height="900" fill="#101d2d" /><text x="64" y="64" font-size="14" fill="#aabfd5" text-anchor="start">GENERATIVE STUDIES / 01</text><text x="64" y="116" font-size="34" fill="#e7effa" text-anchor="start">基础几何构成</text><text x="1336" y="116" font-size="20" fill="#aabfd5" text-anchor="end">Geometric Composition</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620"/></clipPath><linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#75ddcf"/><stop offset="1" stop-color="#819af8"/></linearGradient></defs><g clip-path="url(#stage)"><circle cx="510.000" cy="480.000" r="225.000" fill="#75ddcf" stroke="none" stroke-width="2" /><rect x="510" y="310" width="420" height="330" fill="#819af8" /><path d="M335 705L700 220 1050 705Z" fill="none" stroke="#e7b875" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" /><circle cx="850.000" cy="545.000" r="170.000" fill="#101d2d" stroke="none" stroke-width="2" /><circle cx="850.000" cy="545.000" r="170.000" fill="none" stroke="#d18eba" stroke-width="3" /><path d="M250 740H1150" fill="none" stroke="#4e8195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><rect x="340" y="267" width="120" height="25" fill="#e7b875" /></g><text x="64" y="856" font-size="16" fill="#aabfd5" text-anchor="start">基础元素合成一个完整构图，以遮挡、对比和留白组织视觉。</text><style>.snapshot{display:none}@media(prefers-reduced-motion:reduce){.motion{display:none}.snapshot{display:inline}.grow{animation:none;stroke-dashoffset:0}}@keyframes grow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}</style></svg>
+```

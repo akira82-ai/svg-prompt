@@ -1,11 +1,15 @@
 {
   "slug": "blob-morph",
-  "title": "液态形变",
+  "title": "有机形变",
   "space": "2d",
   "time": "smil",
-  "order": 5,
-  "tech": [],
-  "description": "d 路径循环 + 巡游点",
+  "order": 18,
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "SMIL morph"
+  ],
+  "description": "共同顶点骨架保持形变连续；减少动效显示完整的第一状态。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

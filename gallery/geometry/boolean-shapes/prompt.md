@@ -1,14 +1,15 @@
-# 相减与挖洞 `静态` `2D`
+# 布尔几何构成 / Boolean Geometry
 
 分类：[几何与生成艺术](../_about.md)
 
-<img src="index.svg" width="720" alt="相减与挖洞">
+<img src="index.svg" width="720" alt="布尔几何构成">
 
 ```
-用 SVG 画一张"形状布尔运算"教学图，三张卡片各演示一种关系：
-- 圆环·挖洞：大圆套小圆，fill-rule="evenodd" 挖出中孔，孔心标"挖洞"
-- 月牙·相减：用白底黑色偏移圆mask从大圆透明挖出弯月，叠放的偏移圆用虚线画出
-- 透镜·相交：两圆交集的双尖叶形，两个虚线参考圆画出参与运算的圆
-- 每张卡片标注所用方法，下方宽卡片三行说明三种实现的适用场景
-- 画布 1200×800，浅蓝灰背景 #f6f8fb，白色圆角卡片分格，主题色青 #38b8c9
+用 SVG 制作“布尔几何构成 / Boolean Geometry”。
+- 1400×900画布，深色#101d2d，文字#e7effa、辅助#aabfd5，几何色板#75ddcf/#e7b875/#819af8/#d18eba/#4e8195；标题中英文，主体区域x64..1336、y190..810。
+- 圆环、月牙与交集由真实负空间和边界构成。
+- 圆环evenodd挖孔半径150/70；月牙从(700,490,r150)减去(765,455,r150)；交集是(1005,490,r150)与(1105,490,r150)共同区域，透明负空间不靠底色覆盖。
+- 公式与构造细节只写在提示词，不把主画面做成代码教学卡。仅为几何艺术，不是测量数据或物理仿真。
+- 生成器 scripts/build-geometry.py 包含完整坐标构造；下列SVG是可复现的几何、色彩和参数参考。
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">布尔几何构成 / Boolean Geometry</title><desc id="desc">圆环、月牙与交集由真实负空间和边界构成。；圆环evenodd挖孔半径150/70；月牙从(700,490,r150)减去(765,455,r150)；交集是(1005,490,r150)与(1105,490,r150)共同区域，透明负空间不靠底色覆盖。</desc><rect x="0" y="0" width="1400" height="900" fill="#101d2d" /><text x="64" y="64" font-size="14" fill="#aabfd5" text-anchor="start">GENERATIVE STUDIES / 04</text><text x="64" y="116" font-size="34" fill="#e7effa" text-anchor="start">布尔几何构成</text><text x="1336" y="116" font-size="20" fill="#aabfd5" text-anchor="end">Boolean Geometry</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620"/></clipPath><linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#75ddcf"/><stop offset="1" stop-color="#819af8"/></linearGradient></defs><g clip-path="url(#stage)"><defs><mask id="subtract" maskUnits="userSpaceOnUse" x="540" y="300" width="320" height="380"><rect x="540" y="300" width="320" height="380" fill="white"/><circle cx="765" cy="455" r="150" fill="black"/></mask><clipPath id="intersection"><circle cx="1105" cy="490" r="150"/></clipPath></defs><path d="M470 490a150 150 0 1 0-300 0a150 150 0 1 0 300 0 M390 490a70 70 0 1 0-140 0a70 70 0 1 0 140 0" fill="#75ddcf" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd"/><circle cx="700.000" cy="490.000" r="150.000" fill="#e7b875" stroke="none" stroke-width="2" mask="url(#subtract)"/><circle cx="1005.000" cy="490.000" r="150.000" fill="#819af8" stroke="none" stroke-width="2" clip-path="url(#intersection)"/><text x="320" y="730" font-size="14" fill="#aabfd5" text-anchor="middle">DIFFERENCE / RING</text><text x="700" y="730" font-size="14" fill="#aabfd5" text-anchor="middle">DIFFERENCE / CRESCENT</text><text x="1055" y="730" font-size="14" fill="#aabfd5" text-anchor="middle">INTERSECTION</text></g><text x="64" y="856" font-size="16" fill="#aabfd5" text-anchor="start">圆环、月牙与交集由真实负空间和边界构成。</text><style>.snapshot{display:none}@media(prefers-reduced-motion:reduce){.motion{display:none}.snapshot{display:inline}.grow{animation:none;stroke-dashoffset:0}}@keyframes grow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}</style></svg>
 ```

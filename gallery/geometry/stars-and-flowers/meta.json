@@ -4,12 +4,12 @@
   "space": "2d",
   "time": "static",
   "tech": [
-    "polygon",
-    "path",
-    "内外半径交替"
+    "parametric geometry",
+    "deterministic generation",
+    "path"
   ],
-  "description": "外半径与内半径交替生成星形；内点改用二次曲线，星就开花",
+  "description": "相同瓣数的锐角星与圆润花形上下呼应。",
   "author": "airay1015",
   "date": "2026-10-07",
-  "order": 20
+  "order": 3
 }

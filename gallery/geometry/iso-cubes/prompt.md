@@ -1,12 +1,15 @@
-# 等距立方 `SMIL 动效` `2D`
+# 等距体块构成 / Isometric Blocks
 
 分类：[几何与生成艺术](../_about.md)
 
-<img src="index.svg" width="720" alt="等距立方">
+<img src="index.svg" width="720" alt="等距体块构成">
 
 ```
-用 SVG 画"等距立方体"三个：
-- 蓝/紫/橙三色立方体悬浮排列，每个立方体顶/左/右三面三种明度
-- 立方体轻微上下悬浮呼吸，地面投影虚椭圆
-- 画布 1200×800 深底 #0a0f1a
+用 SVG 制作“等距体块构成 / Isometric Blocks”。
+- 1400×900画布，深色#101d2d，文字#e7effa、辅助#aabfd5，几何色板#75ddcf/#e7b875/#819af8/#d18eba/#4e8195；标题中英文，主体区域x64..1336、y190..810。
+- 三种尺度的等距体块，以面明度和错落位置建立空间节奏。
+- 三轴投影使用水平±30°与垂直轴，三个面共用顶点；尺寸110/170/85，真正等距立方体，SVG表现仍归2D。
+- 公式与构造细节只写在提示词，不把主画面做成代码教学卡。仅为几何艺术，不是测量数据或物理仿真。
+- 生成器 scripts/build-geometry.py 包含完整坐标构造；下列SVG是可复现的几何、色彩和参数参考。
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">等距体块构成 / Isometric Blocks</title><desc id="desc">三种尺度的等距体块，以面明度和错落位置建立空间节奏。；三轴投影使用水平±30°与垂直轴，三个面共用顶点；尺寸110/170/85，真正等距立方体，SVG表现仍归2D。</desc><rect x="0" y="0" width="1400" height="900" fill="#101d2d" /><text x="64" y="64" font-size="14" fill="#aabfd5" text-anchor="start">GENERATIVE STUDIES / 16</text><text x="64" y="116" font-size="34" fill="#e7effa" text-anchor="start">等距体块构成</text><text x="1336" y="116" font-size="20" fill="#aabfd5" text-anchor="end">Isometric Blocks</text><defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620"/></clipPath><linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#75ddcf"/><stop offset="1" stop-color="#819af8"/></linearGradient></defs><g clip-path="url(#stage)"><path d="M250 445l95.26279441628824 55.0 95.26279441628824 -55.0 -95.26279441628824 -55.0Z" fill="#75ddcf" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M250 445v110l95.26279441628824 55.0v-110Z" fill="#4e8195" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M345.2627944162882 500.0v110l95.26279441628824 -55.0v-110Z" fill="#2e546f" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M620 350l147.22431864335456 85.0 147.22431864335456 -85.0 -147.22431864335456 -85.0Z" fill="#e7b875" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M620 350v170l147.22431864335456 85.0v-170Z" fill="#4e8195" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M767.2243186433545 435.0v170l147.22431864335456 -85.0v-170Z" fill="#2e546f" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M1030 505l73.61215932167728 42.5 73.61215932167728 -42.5 -73.61215932167728 -42.5Z" fill="#819af8" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M1030 505v85l73.61215932167728 42.5v-85Z" fill="#4e8195" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M1103.6121593216774 547.5v85l73.61215932167728 -42.5v-85Z" fill="#2e546f" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></g><text x="64" y="856" font-size="16" fill="#aabfd5" text-anchor="start">三种尺度的等距体块，以面明度和错落位置建立空间节奏。</text><style>.snapshot{display:none}@media(prefers-reduced-motion:reduce){.motion{display:none}.snapshot{display:inline}.grow{animation:none;stroke-dashoffset:0}}@keyframes grow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}</style></svg>
 ```

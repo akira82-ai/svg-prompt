@@ -1,14 +1,15 @@
 {
   "slug": "polar-rose",
-  "title": "极坐标玫瑰",
+  "title": "极坐标花园",
   "space": "2d",
   "time": "static",
-  "order": 1,
+  "order": 6,
   "tech": [
-    "极坐标",
-    "cos(kθ)"
+    "parametric geometry",
+    "deterministic generation",
+    "path"
   ],
-  "description": "r = cos(kθ) — 花瓣数由 k 决定",
+  "description": "三、五、七瓣玫瑰曲线以共享尺度形成极坐标花园。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

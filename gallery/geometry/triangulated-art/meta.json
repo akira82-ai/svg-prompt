@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "triangulated-art",
+  "title": "三角网格艺术",
+  "order": 13,
+  "space": "2d",
+  "time": "static",
+  "description": "低多边形色面组成完整网格，点位与对角线均可复现。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

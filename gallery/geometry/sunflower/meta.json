@@ -1,14 +1,15 @@
 {
   "slug": "sunflower",
-  "title": "向日葵种子图",
+  "title": "黄金角排列",
   "space": "2d",
   "time": "static",
-  "order": 3,
+  "order": 7,
   "tech": [
-    "黄金角",
-    "极坐标散点"
+    "parametric geometry",
+    "deterministic generation",
+    "path"
   ],
-  "description": "800 粒种子按 137.5° 黄金角发散 — 自然界的斐波那契",
+  "description": "800 个点以黄金角与平方根半径排列，形成均匀而有节奏的盘面。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

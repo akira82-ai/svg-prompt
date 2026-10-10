@@ -1,11 +1,15 @@
 {
   "slug": "iso-cubes",
-  "title": "等距立方",
+  "title": "等距体块构成",
   "space": "2d",
-  "time": "smil",
-  "order": 8,
-  "tech": [],
-  "description": "三面明度 + 悬浮呼吸",
+  "time": "static",
+  "order": 16,
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ],
+  "description": "三种尺度的等距体块，以面明度和错落位置建立空间节奏。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

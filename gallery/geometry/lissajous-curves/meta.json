@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "lissajous-curves",
+  "title": "利萨如曲线",
+  "order": 10,
+  "space": "2d",
+  "time": "static",
+  "description": "整数频率比让两轴振荡闭合成不同的曲线轮廓。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

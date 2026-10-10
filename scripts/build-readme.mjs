@@ -47,6 +47,25 @@ const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 // Slugs supply conventional English names; overrides clarify scene-specific titles.
 const ENGLISH_NAMES = {
+  'geometry/geometric-composition': 'Geometric Composition',
+  'geometry/regular-polygons': 'Polygon Composition',
+  'geometry/stars-and-flowers': 'Stars and Petals',
+  'geometry/boolean-shapes': 'Boolean Geometry',
+  'geometry/rotational-patterns': 'Radial Symmetry',
+  'geometry/polar-rose': 'Polar Garden',
+  'geometry/sunflower': 'Golden-angle Phyllotaxis',
+  'geometry/spiral-composition': 'Spiral Composition',
+  'geometry/wave-superposition': 'Wave Superposition',
+  'geometry/lissajous-curves': 'Lissajous Curves',
+  'geometry/flow-field': 'Flow Field',
+  'geometry/voronoi-tessellation': 'Voronoi Tessellation',
+  'geometry/triangulated-art': 'Triangulated Art',
+  'geometry/moire-patterns': 'Moiré Patterns',
+  'geometry/fractal-tree': 'Recursive Fractal Tree',
+  'geometry/iso-cubes': 'Isometric Blocks',
+  'geometry/shape-morph': 'Geometric Morphing',
+  'geometry/blob-morph': 'Organic Morphing',
+
   'illustrations/human-ai': 'Human–AI Collaboration',
   'illustrations/knowledge-discovery': 'Knowledge Discovery',
   'illustrations/cloud-computing': 'Cloud Computing',
@@ -185,8 +204,8 @@ const ENGLISH_NAMES = {
   'ui/live-ops-dashboard': 'Operations Inspection Animation',
   'ui/fitness-dashboard': 'Activity and Training', 'ui/music-player': 'Music Workspace',
   'ui/hud-interface': 'HUD Navigation Concept', 'ui/wave-analyzer': 'Waveform Analyzer',
-  'geometry/iso-cubes': 'Isometric Cubes', 'geometry/path': 'SVG Paths',
-  'geometry/polyline': 'Polylines', 'geometry/fractal-tree-grow': 'Fractal Tree Growth',
+
+
 };
 const ENGLISH_WORDS = { ai: 'AI', bi: 'BI', kpi: 'KPI', hud: 'HUD', rag: 'RAG', svg: 'SVG', vs: 'vs.' };
 function englishName(e) {

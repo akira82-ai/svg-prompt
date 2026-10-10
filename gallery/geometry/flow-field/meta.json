@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "flow-field",
+  "title": "流场线迹",
+  "order": 11,
+  "space": "2d",
+  "time": "static",
+  "description": "确定性的流场线迹，连续方向变化组织画面中的流动感。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}

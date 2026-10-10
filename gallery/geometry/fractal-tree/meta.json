@@ -1,14 +1,15 @@
 {
   "slug": "fractal-tree",
-  "title": "分形树",
+  "title": "递归分形树",
   "space": "2d",
-  "time": "static",
-  "order": 6,
+  "time": "css",
+  "order": 15,
   "tech": [
-    "递归",
-    "二叉"
+    "parametric geometry",
+    "deterministic generation",
+    "CSS growth"
   ],
-  "description": "九层二叉递归 511 段枝干 — 线宽渐细叶端渐绿",
+  "description": "递归分形树将静态轮廓与一次生长呈现合为一个作品。",
   "author": "airay1015",
   "date": "2026-10-09"
 }

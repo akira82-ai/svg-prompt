@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-10-10",
+  "slug": "voronoi-tessellation",
+  "title": "沃罗诺伊分区",
+  "order": 12,
+  "space": "2d",
+  "time": "static",
+  "description": "每块区域归属于最近的种子点，边界由距离关系决定。",
+  "tech": [
+    "parametric geometry",
+    "deterministic generation",
+    "path"
+  ]
+}
