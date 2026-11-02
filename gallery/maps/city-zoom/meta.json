@@ -1,0 +1,18 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "city-zoom",
+  "title": "城市地图 · 三级放大镜",
+  "space": "2d",
+  "time": "static",
+  "description": "建筑随倍率放大；路网描边在三个窗口内始终为 3px",
+  "tech": [
+    "vector-effect",
+    "non-scaling-stroke",
+    "use",
+    "clipPath",
+    "shared geometry",
+    "metric scale"
+  ],
+  "order": 13
+}

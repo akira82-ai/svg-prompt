@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate sixty distinct UI specimens with shared visual tokens and explicit states."""
+"""Generate distinct UI specimens with shared visual tokens and explicit states."""
 from pathlib import Path
 from html import escape
 import json,math
@@ -13,12 +13,13 @@ GROUPS=[
 ('AI 产品界面',[('ai-chat-workbench','AI 对话工作台'),('model-parameters','模型与参数选择'),('agent-execution','Agent 执行过程'),('knowledge-citations','知识库检索与引用'),('generation-compare','生成结果对比')]),
 ('协作与业务操作',[('todo-today','待办清单'),('chat-messenger','团队聊天'),('ecommerce-home','电商商品目录'),('kanban-board','看板任务'),('members-permissions','成员与权限'),('checkout-payment','结算与支付状态')]),
 ('完整工作台与特色场景',[('bi-dashboard','经营分析工作台'),('dashboard','经营分析 · 入场演示'),('dark-ops-dashboard','运维监控工作台'),('live-ops-dashboard','运维监控 · 巡检演示'),('fitness-dashboard','活动与训练'),('music-player','音乐播放工作台'),('hud-interface','HUD 导航概念'),('wave-analyzer','波形解析工作台')])]
-ANIMATED={'toggle-animated','file-upload','alert-blink','spinners','indeterminate-progress','skeleton-shimmer','typing-indicator','audio-wave','status-patrol','task-stepper','request-retry','number-roll','agent-execution','dashboard','live-ops-dashboard','music-player','hud-interface','wave-analyzer'}
+GROUPS.append(('SVG 2 几何属性',[('geometry-properties','几何属性 · 同一组件多状态')]))
+ANIMATED={'geometry-properties','toggle-animated','file-upload','alert-blink','spinners','indeterminate-progress','skeleton-shimmer','typing-indicator','audio-wave','status-patrol','task-stepper','request-retry','number-roll','agent-execution','dashboard','live-ops-dashboard','music-player','hud-interface','wave-analyzer'}
 DARK={'command-palette','ai-chat-workbench','agent-execution','dark-ops-dashboard','live-ops-dashboard','music-player','hud-interface','wave-analyzer'}
 REMOVED=['clock','coffee-loader','battery-charger','radar-sweep','donut-sweep','ecg-pulse','gauge-swing','live-stream','glassmorphism']
 class UI:
     def __init__(self,slug,title,group):
-        self.slug,self.title,self.group=slug,title,group;self.dark=slug in DARK;self.animated=slug in ANIMATED;self.parts=[];self.notes=[];self.labels=[]
+        self.slug,self.title,self.group=slug,title,group;self.dark=slug in DARK;self.animated=slug in ANIMATED;self.parts=[];self.notes=[];self.labels=[];self.animation_type='smil';self.tech=[]
         self.bg='#0c1422' if self.dark else '#eef2f7';self.paper='#131f31' if self.dark else '#ffffff';self.ink='#eef4fc' if self.dark else '#1d2e46';self.muted='#acbdd3' if self.dark else '#596b82';self.linecolor='#314159' if self.dark else '#dce4ee';self.tint='#1c3050' if self.dark else '#eaf1fd';self.blue='#79b5ff' if self.dark else BLUE;self.green='#67d7b6' if self.dark else GREEN;self.red='#ff9ca6' if self.dark else RED;self.orange='#ffc16c' if self.dark else ORANGE
         self.rect(0,0,1400,900,self.bg,0);self.text(72,54,'SVG / PRODUCT INTERFACES',14,self.muted,weight=600);self.text(1328,54,'DEMO · 状态示意',14,self.muted,anchor='end');self.line(72,74,1328,74)
         self.text(72,122,title,34,weight=700);self.text(72,160,group+' / '+('过程动画与静态快照' if self.animated else '产品场景与状态设计'),18,self.muted)
@@ -89,10 +90,11 @@ class UI:
         svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="title desc"><title id="title">{escape(self.title)}</title><desc id="desc">{escape(finding)}</desc>'+''.join(self.parts)+'</svg>\n'
         p=OUT/self.slug;p.mkdir(exist_ok=True);(p/'index.svg').write_text(svg)
         m=json.loads((p/'meta.json').read_text()) if (p/'meta.json').exists() else {'author':'airay1015','date':'2026-10-10'}
-        m.update(slug=self.slug,title=self.title,space='2d',time='smil' if self.animated else 'static',order=len(BUILT)+1,description=finding,tech=['SVG UI','state design','SMIL' if self.animated else 'product layout']);(p/'meta.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+        m.update(slug=self.slug,title=self.title,space='2d',time=self.animation_type if self.animated else 'static',order=len(BUILT)+1,description=finding,tech=['SVG UI','state design',('CSS geometry' if self.animation_type=='css' else 'SMIL') if self.animated else 'product layout']+self.tech);(p/'meta.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
         labels=list(dict.fromkeys(self.labels));lines=[f'用 SVG 制作“{self.title}”，用于{self.group}。',f'- 画布1400×900；{"深色专业工作台" if self.dark else "浅色产品界面"}，背景{self.bg}、卡片{self.paper}、正文{self.ink}、辅助文字{self.muted}、主色{self.blue}；34px标题、15–19px正文、圆角8–12px、8px间距基准。','- 顶部作品标题与分组说明，内容位于x80..1320、y210..820；底部标注界面原型、模拟内容和非真实交互。']+['- '+s for s in self.notes]+['- 文字与示例值包含：'+json.dumps(labels,ensure_ascii=False)+'。','- 控件由SVG图形展示状态，不添加真实网络、登录、支付或权限操作；模拟场景不能宣称实时服务。']
-        if self.animated:lines+=['- SMIL过程演示；状态、关键读数与操作从首帧可读，入场可按说明呈现图表，强调不得隐藏关键告警；减少动效时隐藏motion、显示fallback明确静态快照。确定进度/数字必须同步，不确定进度不显示伪百分比；重复演示不代表实际操作。']
-        (p/'prompt.md').write_text(f'# {self.title} `{"SMIL 动效" if self.animated else "静态"}` `2D`\n\n分类：[界面与组件](../_about.md)\n\n<img src="index.svg" width="720" alt="{self.title}">\n\n```\n'+'\n'.join(lines)+'\n```\n');BUILT.append(self.slug)
+        if self.animated and self.animation_type=='css':lines+=['- CSS几何属性过程演示，不使用SMIL或路径形变；减少动效关闭动画、隐藏motion并显示胶囊形fallback，下方三种静态快照始终可见。']
+        if self.animated and self.animation_type=='smil':lines+=['- SMIL过程演示；状态、关键读数与操作从首帧可读，入场可按说明呈现图表，强调不得隐藏关键告警；减少动效时隐藏motion、显示fallback明确静态快照。确定进度/数字必须同步，不确定进度不显示伪百分比；重复演示不代表实际操作。']
+        (p/'prompt.md').write_text(f'# {self.title} `{("CSS 动效" if self.animation_type=="css" else "SMIL 动效") if self.animated else "静态"}` `2D`\n\n分类：[界面与组件](../_about.md)\n\n<img src="index.svg" width="720" alt="{self.title}">\n\n```\n'+'\n'.join(lines)+'\n```\n');BUILT.append(self.slug)
 
 def board(f,cols=3,rows=2):
     boxes=[];gap=24;w=(1240-gap*(cols-1))/cols;h=(570-gap*(rows-1))/rows
@@ -472,13 +474,43 @@ def full_views(f):
     else:return False
     return True
 
+def geometry_properties(f):
+    if f.slug!='geometry-properties':return False
+    f.animation_type='css';f.tech=['geometry properties','x','width','rx','ry','reduced motion']
+    f.panel(80,210,1240,300,'同一个 rect / CSS 几何属性自动演示')
+    f.text(1290,246,'10s 循环',15,f.muted,anchor='end')
+    f.line(220,383,1180,383,f.linecolor,1,attrs='stroke-dasharray="5 6"')
+    f.add('<style>.geometry-motion{x:652px;y:335px;width:96px;height:96px;rx:48px;ry:48px;animation:geometry-states 10s ease-in-out infinite}@keyframes geometry-states{0%,15%,90%,100%{x:652px;width:96px;rx:48px;ry:48px}30%,45%{x:532px;width:336px;rx:48px;ry:48px}60%,75%{x:532px;width:336px;rx:16px;ry:16px}}@media(prefers-reduced-motion:reduce){.geometry-motion{animation:none}}</style>')
+    f.rect(652,335,96,96,f.blue,48,attrs='id="geometry-component" class="motion geometry-motion"')
+    f.rect(532,335,336,96,f.blue,48,attrs='class="fallback" data-geometry-fallback="capsule"')
+    f.path([(688,383),(712,383)],'#fff',3);f.path([(700,371),(700,395)],'#fff',3)
+    f.text(700,478,'圆形 → 胶囊形 → 圆角矩形 → 圆形',19,f.muted,anchor='middle')
+    states=[('circle','01 / 圆形',96,48),('capsule','02 / 胶囊形',336,48),('rounded','03 / 圆角矩形',336,16)]
+    for i,(name,title,width,radius) in enumerate(states):
+        x=80+i*422;cx=x+198
+        f.panel(x,550,396,250,title)
+        f.rect(cx-width/2,625,width,96,f.blue,radius,attrs=f'data-geometry-state="{name}"')
+        f.path([(cx-12,673),(cx+12,673)],'#fff',3);f.path([(cx,661),(cx,685)],'#fff',3)
+        f.text(cx,760,f'w {width} / h 96 / rx = ry {radius}',16,f.muted,anchor='middle')
+    f.req('同一个rect以CSS的x/width/rx/ry属性从圆形扩展为胶囊形，再变为圆角矩形；不靠scale拉伸、不改写path，也不是可点击按钮。')
+    f.req('主组件中心始终(700,383)、高度96；圆形x652/w96/rx=ry48，胶囊形x532/w336/rx=ry48，圆角矩形x532/w336/rx=ry16；CSS长度显式使用px。')
+    f.req('10秒循环，ease-in-out：0–15%圆形停留，15–30%扩展，30–45%胶囊停留，45–60%圆角变小，60–75%圆角矩形停留，75–90%回圆形，90–100%停留；起止几何一致，不跳变。')
+    f.req('所有阶段x+width/2=700，高度与加号不缩放；主组件仅一个带animation的rect，加号是固定的两条白线；虚线标出固定中心轴。')
+    f.req('下方三张396×250卡片左上角(80,550)/(502,550)/(924,550)，分别显示三种状态的完整静态快照；图形尺寸与主组件一致，参数文字始终对应各自静态快照，不冒充动画实时读数。')
+    f.req('减少动态效果模式隐藏主动画rect并禁用动画，显示同位置的胶囊形fallback；下方三种状态及全部文字保留。不支持CSS几何属性时，主组件保留SVG属性定义的初始圆形。')
+    f.req('不添加SMIL、脚本、外部资源或点击交互；使用系统字体。标准依据：https://www.w3.org/TR/SVG2/geometry.html；这是SVG 2几何属性能力示范，不声称该能力是2026年新增。')
+    return True
+
+
 def build():
     BUILT.clear()
     for group,entries in GROUPS:
         for slug,title in entries:
             f=UI(slug,title,group)
-            if not any(fn(f) for fn in [primitives,navigation,feedback,data_views,ai_views,business_views,full_views]):raise ValueError('Missing renderer: '+slug)
+            if not any(fn(f) for fn in [primitives,navigation,feedback,data_views,ai_views,business_views,full_views,geometry_properties]):raise ValueError('Missing renderer: '+slug)
             f.finish()
-    assert len(BUILT)==60
-    print('Built 60 UI specimens.')
+            if slug=='geometry-properties':
+                p=OUT/slug/'meta.json';m=json.loads(p.read_text());m['date']='2026-11-02';p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+    assert len(BUILT)==61
+    print(f'Built {len(BUILT)} UI specimens.')
 if __name__=='__main__':build()

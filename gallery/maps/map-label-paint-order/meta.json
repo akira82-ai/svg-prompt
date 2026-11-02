@@ -1,0 +1,18 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "map-label-paint-order",
+  "title": "地图标注 · 描边不吃字",
+  "space": "2d",
+  "time": "static",
+  "description": "先描边、后填字：白色光晕隔开底图，同时保留完整字形",
+  "tech": [
+    "paint-order",
+    "text",
+    "stroke",
+    "use",
+    "clipPath",
+    "map labels"
+  ],
+  "order": 14
+}

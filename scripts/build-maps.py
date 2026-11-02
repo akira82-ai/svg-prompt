@@ -255,8 +255,88 @@ def time_comparison():
     m.finish(['三个时刻4列×3行矩阵：'+json.dumps(TIME_DATA)+'；所有格子对应同一空间分区ID，行从北到南、列从西到东。','三图共用0–50模拟任务数色域与同样格子面积；色值blend(v/50)，不得分别按各面板最大值缩放。','这是同一空间分区的快照，不是连续时间轨迹；不以插值动画暗示未观测的数据。'],['small multiples','fixed spatial extent','shared color scale'])
 
 
+def zoom_streets():
+    m=Map('city-zoom','城市地图 · 三级放大镜','同一虚构街区 / 1×、2×、4× / 固定窗口对照','建筑随倍率放大；路网描边在三个窗口内始终为 3px',footer='虚构街区 · 米制示意 · 固定视口对照，非交互地图或实际测绘')
+    # One shared meter-based scene; only the camera transform changes per panel.
+    m.add('<defs><g id="street-scene">')
+    for x in range(30,330,60):
+        for y in range(30,330,60):
+            park=(x,y)==(150,150)
+            m.rect(x,y,40,40,'#b7d8c5' if park else '#d4dfe9',rx=3,attrs=f'data-building="{x},{y}"')
+    roads=[[(20,y),(340,y)] for y in range(20,341,60)]+[[(x,20),(x,340)] for x in range(20,341,60)]
+    for i,pts in enumerate(roads):
+        m.path(linepath(pts),stroke=BLUE,width=3,attrs=f'vector-effect="non-scaling-stroke" data-road="{i}" stroke-linecap="round"')
+    m.add('</g></defs>')
+    for i,zoom in enumerate((1,2,4)):
+        x=72+i*428;y=330;cx=x+200;cy=y+180
+        m.text(x,285,f'0{i+1} / {zoom}×',24,weight=700)
+        m.text(x+400,285,f'视野 {400//zoom} × {360//zoom} m',16,m.muted,anchor='end')
+        m.rect(x,y,400,360,'#ffffff',rx=8)
+        m.add(f'<defs><clipPath id="zoom-window-{zoom}"><rect x="{x}" y="{y}" width="400" height="360" rx="8"/></clipPath></defs><g clip-path="url(#zoom-window-{zoom})">')
+        m.add(f'<g transform="translate({cx} {cy}) scale({zoom}) translate(-180 -180)" data-zoom="{zoom}"><use href="#street-scene"/></g>')
+        # Show exactly the region used by the next camera, not an arbitrary highlight.
+        if zoom<4:
+            w,h=200,180
+            m.rect(cx-w/2,cy-h/2,w,h,'none',attrs=f'stroke="{ORANGE}" stroke-width="2" stroke-dasharray="6 5" data-next-zoom="{zoom*2}"')
+        m.add('</g>')
+        m.rect(x,y,400,360,'none',rx=8,attrs=f'stroke="{m.grid}"')
+        m.line(cx-8,cy,cx+8,cy,m.ink);m.line(cx,cy-8,cx,cy+8,m.ink)
+        meters=100/zoom
+        m.line(x+20,728,x+120,728,m.ink,3,attrs=f'data-scale-m="{meters:g}" data-zoom-scale="{zoom}"')
+        m.line(x+20,722,x+20,734,m.ink,2);m.line(x+120,722,x+120,734,m.ink,2)
+        m.text(x+70,758,f'{meters:g} m',16,m.muted,anchor='middle')
+        m.text(x+400,750,'路网描边 3px',17,BLUE,anchor='end')
+    m.text(72,809,'橙色虚线：下一幅的取景范围；十字：共同中心。3px 指 1400×900 原始显示尺寸。',17,m.muted)
+    m.finish([
+        '三窗口左上角(72,330)/(500,330)/(928,330)，尺寸400×360px；中心相同为街区(180,180)m，倍率1/2/4，视野400×360、200×180、100×90m。',
+        '只定义一份street-scene，用use href复用三次；建筑x/y取30..270步长60，40×40m，(150,150)一块为绿地，其余灰蓝。道路横纵坐标20..320步长60，端点范围20..340，共12条。',
+        '每条道路自身设置stroke-width=3和vector-effect=non-scaling-stroke；建筑填充随组变换放大，道路描边不随地图内部倍率变粗。不能只把属性写在父g或use上，因为vector-effect不继承。',
+        '各相机变换translate(窗口中心) scale(倍率) translate(-180,-180)，在变换外裁切；1×与2×面板中央橙框200×180px，恰好对应下一幅视野。十字在地图变换外绘制。',
+        '三个比例尺绘制长度均100px，对应100/50/25m，不能固定距离标签；3px为原画布显示尺寸，整图作为img缩小时描边也随整张图片缩小。',
+        '不添加JS、外部字体或外部地图资源，三幅同时可读；标准依据：https://www.w3.org/TR/SVG2/coords.html#VectorEffects。'
+    ],['vector-effect','non-scaling-stroke','use','clipPath','shared geometry','metric scale'])
+    p=OUT/m.slug/'meta.json';meta=json.loads(p.read_text());meta['date']='2026-11-02';p.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+
+def label_paint_order():
+    m=Map('map-label-paint-order','地图标注 · 描边不吃字','同一虚构地形 / 同一组地名 / 只改变填充与描边顺序','先描边、后填字：白色光晕隔开底图，同时保留完整字形',footer='虚构地形与地名 · 曲线仅作底图纹理，不代表测绘等高线或真实高程')
+    m.add('<defs><g id="label-terrain">')
+    m.rect(0,0,600,350,'#eef0e5')
+    # Deterministic contour-like linework, deliberately not a terrain elevation model.
+    for i in range(18):
+        pts=[(x, -80+i*30+32*math.sin(x/90+i*.15)+15*math.cos(x/45)) for x in range(-20,621,5)]
+        m.path(linepath(pts),stroke='#aab99c',width=1.5,attrs=f'data-contour="{i}"')
+    m.path('M -20 290 C 120 230 170 365 300 245 S 440 135 620 180',stroke='#a4cedb',width=24)
+    m.path('M -20 290 C 120 230 170 365 300 245 S 440 135 620 180',stroke='#d0e5ea',width=13)
+    m.path('M 30 370 C 180 160 370 290 570 -20',stroke='#9b8d72',width=2,attrs='stroke-dasharray="7 5"')
+    m.add('</g></defs>')
+    labels=[('青岚岭',170,100),('北麓站',420,180),('松溪谷',220,290)]
+    for i,order in enumerate(('normal','stroke fill')):
+        x=72+i*656
+        m.text(x,282,'01 / 默认顺序' if i==0 else '02 / 保留字形',24,weight=700)
+        m.text(x,315,'paint-order: '+order,18,m.muted)
+        m.add(f'<defs><clipPath id="label-window-{i}"><rect x="0" y="0" width="600" height="350" rx="8"/></clipPath></defs>')
+        m.add(f'<g transform="translate({x} 340)" data-label-panel="{order}"><g clip-path="url(#label-window-{i})"><use href="#label-terrain"/>')
+        for j,(name,lx,ly) in enumerate(labels):
+            m.add(f'<text x="{lx}" y="{ly}" text-anchor="middle" font-size="38" font-weight="600" fill="{m.ink}" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="{order}" data-map-label="{j}">{escape(name)}</text>')
+        m.add('</g></g>')
+        m.rect(x,340,600,350,'none',rx=8,attrs=f'stroke="{m.grid}"')
+        m.text(x,727,'填充 → 描边：白边覆盖笔画内侧' if i==0 else '描边 → 填充：深色笔画重新覆盖内侧',18,m.muted)
+    m.rect(72,762,1256,56,'#e6edf3',rx=5)
+    m.text(92,797,'对照条件相同：38px / 字重 600 / 白色描边 5px / 同一底图与标签位置',18)
+    m.finish([
+        '左右地图窗口分别位于(72,340)与(728,340)，均600×350px；地形只在defs中定义一次label-terrain，由两个use href实例复用。',
+        '底色#eef0e5；18条类等高线由x=-20..620、步长5生成，y=-80+30i+32sin(x/90+0.15i)+15cos(x/45)，i=0..17；绿色线宽1.5。曲线是装饰地形纹理，没有真实高程含义。',
+        '河道路径M-20 290 C120 230 170 365 300 245 S440 135 620 180，外宽24、内宽13；小径M30 370 C180 160 370 290 570 -20，线宽2、虚线7/5；都在地图窗口内裁切。',
+        '相同地名与局部坐标：'+json.dumps(labels,ensure_ascii=False)+'；文字38px、字重600、居中、深色#172a3a填充、白色5px描边、round连接；字体使用画布默认系统字体栈。',
+        '唯一实验变量为文字元素的paint-order：左normal默认先填充再描边，白边压住笔画内侧；右stroke fill先描边再填充，完整深色字形覆盖描边内侧。不能用复制两层文字、改变字重或描边宽度替代此属性。',
+        '保留左右说明与相同参数条；不添加脚本、交互、外部底图或外部字体。字体差异会改变字形，比较时两侧必须在同一环境渲染。标准依据：https://www.w3.org/TR/SVG2/painting.html#PaintOrder。'
+    ],['paint-order','text','stroke','use','clipPath','map labels'])
+    p=OUT/m.slug/'meta.json';meta=json.loads(p.read_text());meta['date']='2026-11-02';p.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+
 def build():
-    BUILT.clear();grid();choropleth();symbols();dots();density();events();events(True);flow();transit();coverage();floorplan();time_comparison()
+    BUILT.clear();grid();choropleth();symbols();dots();density();events();events(True);flow();transit();coverage();floorplan();time_comparison();zoom_streets();label_paint_order()
     for i,slug in enumerate(BUILT,1):
         p=OUT/slug/'meta.json';m=json.loads(p.read_text());m['order']=i;p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Built {len(BUILT)} maps and spatial examples.')

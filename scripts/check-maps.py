@@ -14,8 +14,8 @@ def svg(slug):return ET.parse(BASE/slug/'index.svg').getroot()
 def nodes(slug,attribute):return [n for n in svg(slug).iter() if attribute in n.attrib]
 def near(a,b):assert math.isclose(float(a),b,abs_tol=.001), (a,b)
 entries=sorted(BASE.glob('*/meta.json'),key=lambda p:json.loads(p.read_text())['order'])
-assert len(entries)==12
-assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,13))
+assert len(entries)==14
+assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,15))
 for p in entries:
     for f in ['index.svg','prompt.md']:assert (p.parent/f).is_file()
 assert DATA['GEO']['features']
@@ -64,4 +64,27 @@ for n in comparison:
     v=DATA['TIME_DATA'][int(n.get('data-time'))][int(n.get('data-zone'))]
     assert int(n.get('data-value'))==v and n.get('fill')==DATA['blend'](v/50)
     near(n.get('width'),90);near(n.get('height'),90)
-print('OK: 12 maps; projections, area, bins, 600 KDE cells, snapshot parity, flows, coverage and shared scales verified.')
+zoom=svg('city-zoom')
+scene=zoom.find(".//s:g[@id='street-scene']",NS)
+assert len(scene.findall('s:rect',NS))==25
+roads=scene.findall('s:path',NS);assert len(roads)==12
+assert all(r.get('vector-effect')=='non-scaling-stroke' and r.get('stroke-width')=='3' for r in roads)
+assert len(zoom.findall('.//s:use[@href="#street-scene"]',NS))==3
+for i,n in enumerate(nodes('city-zoom','data-zoom')):
+    z=2**i;assert int(n.get('data-zoom'))==z
+    assert n.get('transform')==f'translate({272+i*428} 510) scale({z}) translate(-180 -180)'
+for n in nodes('city-zoom','data-scale-m'):
+    near(float(n.get('x2'))-float(n.get('x1')),float(n.get('data-scale-m'))*float(n.get('data-zoom-scale')))
+assert not zoom.findall('.//s:script',NS)
+labels=svg('map-label-paint-order')
+panels=nodes('map-label-paint-order','data-label-panel');assert len(panels)==2
+assert len(labels.findall('.//s:use[@href="#label-terrain"]',NS))==2
+left,right=[p.findall('.//s:text',NS) for p in panels]
+assert len(left)==len(right)==3
+for a,b in zip(left,right):
+    assert a.text==b.text
+    assert a.get('paint-order')=='normal' and b.get('paint-order')=='stroke fill'
+    assert {k:v for k,v in a.attrib.items() if k!='paint-order'}=={k:v for k,v in b.attrib.items() if k!='paint-order'}
+    near(a.get('font-size'),38);near(a.get('stroke-width'),5)
+assert not labels.findall('.//s:script',NS)
+print('OK: 14 maps; spatial encodings, zoom cameras and map-label parity with paint-order as the sole variable verified.')

@@ -79,12 +79,12 @@ class Diagram:
             text+=''.join(self.text(x+w/2,baseline+27+i*24,line,15 if w<180 else 16,self.muted,'middle') for i,line in enumerate(n['sub']))
         return f'<g {outer}>{shape}{text}</g>'
 
-    def finish(self,requirements,tech=('orthogonal routing','ports','semantic edges')):
+    def finish(self,requirements,tech=('orthogonal routing','ports','semantic edges'),marker_defs=None,marker_id=None):
         edge_svg=[];edge_labels=[]
         for e in self.edges:
             color=COLOR[e['kind']];points=' '.join(f'{x:g},{y:g}' for x,y in e['points'])
             values={'id':e['id'],'data-edge':e['id'],'data-source':e['source'],'data-target':e['target'],'data-source-port':e['sp'],'data-target-port':e['tp'],'data-guard':e['guard'],'data-route':'custom' if e['custom'] else 'ports','points':points,'fill':'none','stroke':color,'stroke-width':2,'stroke-linejoin':'round'}
-            if e['arrow']:values['marker-end']='url(#arrow-'+e['kind']+')'
+            if e['arrow']:values['marker-end']='url(#'+(marker_id or 'arrow-'+e['kind'])+')'
             if e['kind'] in ('event','control','neutral'):values['stroke-dasharray']='6 5'
             edge_svg.append('<polyline '+attrs(values)+'/>')
             if self.animated and e['animate']:
@@ -93,6 +93,7 @@ class Diagram:
                 x,y=e['at'] if e['at'] else ((e['points'][0][0]+e['points'][-1][0])/2,(e['points'][0][1]+e['points'][-1][1])/2-12)
                 edge_labels.append(self.text(x,y,e['label'],15,color,'middle'))
         markers=''.join(f'<marker id="arrow-{name}" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="{color}"/></marker>' for name,color in COLOR.items())
+        if marker_defs is not None:markers=marker_defs
         style='<style>.flow{stroke-dasharray:7 17;animation:flow 2.8s linear infinite}@keyframes flow{to{stroke-dashoffset:-48}}.event-focus{animation:focus 6s infinite}@keyframes focus{0%,100%{stroke-width:2}35%,55%{stroke-width:7}}@media(prefers-reduced-motion:reduce){.flow{animation:none;display:none}.event-focus{animation:none;stroke-width:2}}</style>' if self.animated else ''
         header=f'<rect width="1400" height="900" fill="{self.bg}"/>'+self.text(72,55,'SVG / SYSTEM ATLAS',14,self.muted)+f'<line x1="72" y1="73" x2="1328" y2="73" stroke="{self.grid}"/>'+self.text(72,122,self.title,34,weight=700)+self.text(72,160,self.subtitle,18,self.muted)+f'<rect x="72" y="183" width="1256" height="51" rx="5" fill="{"#172c40" if self.dark else "#e6edf3"}"/>'+self.text(92,215,self.takeaway,18,weight=600)
         footer=f'<line x1="72" y1="845" x2="1328" y2="845" stroke="{self.grid}"/>'+self.text(72,877,self.footer,15,self.muted)+self.text(1328,877,'SVG-PROMPT',14,self.muted,'end')
@@ -376,9 +377,78 @@ def timeline(animated=False):
     d.finish(['六事件以对应W3C版本文档为来源：']+[when+' '+title+'；'+url for when,title,status,url in EVENTS]+['只展示2001–2018的选定里程碑，不能写成1996–2026完整历史；Candidate Recommendation不等于Recommendation。','节点顺序等距排版；首帧所有日期和事件可见，动态版仅逐个强调外圈。'],['chronological events','W3C document status'])
 
 
+def engineering_dimensions():
+    d=Diagram('engineering-dimensions','工程尺寸 · 自动朝向箭头','水平 / 竖直 / 斜向尺寸线；同一箭头定义复用到两端','auto-start-reverse 自动反转起点箭头；终点箭头沿路径方向',footer='虚构零件 · 单位 mm · 演示尺寸关系与 SVG 箭头方向，非制造图纸')
+    vertices=[(0,0),(120,0),(120,40),(90,80),(0,80)]
+    project=lambda p:(270+4*p[0],390+4*p[1])
+    outline=[project(p) for p in vertices]
+    d.layers.append(f'<path d="{path(outline)} Z" fill="{d.box}" stroke="{d.ink}" stroke-width="3" data-part-mm="{escape(json.dumps(vertices),quote=True)}" data-px-per-mm="4"/>')
+    d.note(480,515,'120 × 80 mm',28,anchor='middle');d.note(480,552,'同尺度零件轮廓 / 4px = 1mm',16,d.muted,'middle')
+    dims=[('horizontal',(270,320),(750,320),(0,0),(120,0),(510,302)),('vertical',(180,390),(180,710),(0,0),(0,80),(122,558)),('diagonal',(686,752),(806,592),(90,80),(120,40),(850,682))]
+    for name,a,b,source,target,label in dims:
+        value=math.dist(source,target)
+        for origin,end in [(project(source),a),(project(target),b)]:
+            dx,dy=end[0]-origin[0],end[1]-origin[1];length=math.hypot(dx,dy)
+            start=(origin[0]+dx/length*8,origin[1]+dy/length*8)
+            beyond=(end[0]+dx/length*12,end[1]+dy/length*12)
+            d.layers.append(f'<path d="{path([start,beyond])}" fill="none" stroke="{d.muted}" stroke-width="1"/>')
+        values={'x1':a[0],'y1':a[1],'x2':b[0],'y2':b[1],'stroke':COLOR['call'],'stroke-width':2,'marker-start':'url(#dimension-arrow)','marker-end':'url(#dimension-arrow)','data-dimension':name,'data-value-mm':f'{value:g}','data-source-mm':','.join(map(str,source)),'data-target-mm':','.join(map(str,target))}
+        d.layers.append('<line '+attrs(values)+'/>')
+        d.note(*label,f'{value:g} mm',22,COLOR['call'],'middle')
+    d.layers.append(f'<path d="{path([(750,550),(750,710),(630,710)])}" fill="none" stroke="{COLOR["event"]}" stroke-width="1.5" stroke-dasharray="5 5"/>')
+    d.note(718,641,'40',15,COLOR['event']);d.note(691,697,'30',15,COLOR['event'],'middle')
+    d.layers.append(f'<line x1="930" y1="280" x2="930" y2="797" stroke="{d.grid}"/>')
+    for x,y,text,size,color in [
+        (980,320,'一个 marker，三种方向',23,d.ink),
+        (980,372,'水平尺寸 / 120 mm',18,d.muted),
+        (980,416,'竖直尺寸 / 80 mm',18,d.muted),
+        (980,460,'斜边尺寸 / 50 mm',18,d.muted),
+        (980,524,'30² + 40² = 50²',22,d.ink),
+        (980,584,'两端共用 dimension-arrow',17,d.muted),
+        (980,628,'起点：沿路径反向',18,COLOR['call']),
+        (980,672,'终点：沿路径正向',18,COLOR['call'])]:d.note(x,y,text,size,color)
+    d.note(72,815,'蓝色为尺寸线，灰色为尺寸界线；箭头指向测量端点，不表示运动或服务调用。',17,d.muted)
+    marker=f'<marker id="dimension-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="{COLOR["call"]}"/></marker>'
+    d.finish([
+        '零件顶点毫米坐标'+json.dumps(vertices)+'；屏幕投影x=270+4u、y=390+4v，单位方向向右/向下。轮廓宽120、高80；右下斜边的水平差30、竖直差40，长度sqrt(30²+40²)=50mm。',
+        '只定义一个dimension-arrow：viewBox=0 0 10 10、三角形M0 0 L10 5 L0 10 Z、refX=10/refY=5、markerWidth=markerHeight=12、markerUnits=userSpaceOnUse、orient=auto-start-reverse。所有尺寸线的marker-start与marker-end都引用它，不手动旋转箭头。',
+        '尺寸线按起点/终点绘制：水平(270,320)→(750,320)，竖直(180,390)→(180,710)，斜向(686,752)→(806,592)；对应尺寸120/80/50mm，屏幕长度均等于毫米数×4。',
+        '尺寸界线从零件对应顶点向尺寸线延伸，距轮廓留8px，超出尺寸线12px；斜向尺寸线为斜边的平行偏移，不用水平投影长度当斜边长度。',
+        '尺寸文字位置(510,302)/(122,558)/(850,682)，均水平排字以便阅读，不压尺寸线；斜边旁用橙色虚线标出水平30、竖直40的计算辅助线。',
+        '本图蓝色专用于尺寸线，不沿用其他系统图的调用语义；箭头从跨度中间指向两端测量点，起点反向、终点正向。无脚本与交互。标准依据：https://www.w3.org/TR/SVG2/painting.html#OrientAttribute。'
+    ],['marker','auto-start-reverse','dimension lines','metric geometry'],marker_defs=marker)
+    p=OUT/d.slug/'meta.json';meta=json.loads(p.read_text());meta['date']='2026-11-02';p.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+
+def context_stroke_arrows():
+    d=Diagram('context-stroke-arrows','服务依赖 · 连线与箭头同色','请求 / 响应 / 异步事件；三种连线共用一个 marker','箭头填充使用 context-stroke，自动采用引用连线的描边颜色',dark=True,footer='虚构消息关系 · 响应不表示反向依赖 · 非实时运行或完整生产架构')
+    d.node('client',100,360,220,180,'客户端',['发起业务请求','接收响应'],start=True)
+    d.node('service',580,360,240,180,'任务服务',['处理请求并返回结果','发布业务事件'])
+    d.node('subscriber',1080,360,220,180,'审计订阅方',['异步接收事件','不参与同步响应'],color='event')
+    d.edge('client','service',points=[(320,410),(580,410)],label='请求 →',at=(450,390),kind='call')
+    d.edge('service','client','l','r',points=[(580,480),(320,480)],label='← 响应',at=(450,514),kind='data')
+    d.edge('service','subscriber','b','b',via=[(700,680),(1190,680)],label='异步事件 →',at=(945,660),kind='event')
+    d.note(100,305,'01 / 发起方',18,d.muted);d.note(580,305,'02 / 处理方',18,d.muted);d.note(1080,305,'03 / 订阅方',18,d.muted)
+    d.layers.append(f'<rect x="100" y="740" width="1200" height="70" rx="8" fill="{d.box}"/>')
+    d.note(125,771,'一个定义',18);d.note(125,796,'shared-arrow',15,d.muted)
+    d.note(370,783,'fill="context-stroke"',22,COLOR['call'])
+    d.note(780,771,'颜色来自引用它的连线，而非父组的 color',18)
+    d.note(780,796,'线宽一致；事件另用虚线区分，颜色不编码流量。',15,d.muted)
+    marker='<marker id="shared-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="context-stroke"/></marker>'
+    d.finish([
+        '三条消息关系：客户端→任务服务为蓝色请求#3686d9；任务服务→客户端为绿色响应#00a887；任务服务→审计订阅方为橙色异步事件#d99431。响应只表示返回消息，不是任务服务对客户端的服务依赖。',
+        '所有连线等宽2px；请求与响应实线，事件虚线6/5。三条marker-end均引用唯一shared-arrow；该marker内三角形fill=context-stroke，不写死颜色、不用currentColor、不复制三个彩色marker。',
+        'shared-arrow参数：viewBox=0 0 10 10、路径M0 0 L10 5 L0 10 Z、refX=10、refY=5、markerWidth=markerHeight=14、markerUnits=userSpaceOnUse、orient=auto；箭头随路径终段朝向旋转，大小不随线宽编码数值。',
+        '客户端与任务服务分别用y410的右向请求、y480的左向响应，端点在各矩形相对侧边界上；事件从任务服务底边经y680到订阅方底边，箭头朝上。连线不穿过其他节点，标题和标签不压线。',
+        '这是消息关系示意，不是纯服务依赖DAG，不以线长表达延迟、粗细表达流量或颜色表达实时健康；事件链路省略传输设施，不声称完整生产部署。',
+        '不引入JS、外部资源或交互。context-stroke的实际渲染需按展示浏览器验证，不能仅靠SVG解析成功判定；标准依据：https://www.w3.org/TR/SVG2/painting.html#context-paint。'
+    ],['marker','context-stroke','shared marker','request-response','semantic edges'],marker_defs=marker,marker_id='shared-arrow')
+    p=OUT/d.slug/'meta.json';meta=json.loads(p.read_text());meta['date']='2026-11-02';p.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+
 def build():
     BUILT.clear()
-    process();process(True);decision();swimlane();sequence();state_machine();context();architecture();architecture(True);deployment();pipeline();rag();agent();er();dependency();dependency(True);org();mindmap();venn();timeline();timeline(True)
+    process();process(True);decision();swimlane();sequence();state_machine();context();architecture();architecture(True);deployment();pipeline();rag();agent();er();dependency();dependency(True);org();mindmap();venn();timeline();timeline(True);engineering_dimensions();context_stroke_arrows()
     for index,slug in enumerate(BUILT,1):
         p=OUT/slug/'meta.json';m=json.loads(p.read_text());m['order']=index;p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'Built {len(BUILT)} diagrams with explicit relationship semantics.')

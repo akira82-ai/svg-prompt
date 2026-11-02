@@ -50,6 +50,7 @@ const ENGLISH_NAMES = {
   'backgrounds/grainy-gradient': 'Grainy Gradient',
   'backgrounds/transparency-blend': 'Translucent Layers',
   'backgrounds/gradient-spheres': 'Soft Sphere Background',
+  'backgrounds/focal-circle-gradient': 'Focal Circle Gradients',
   'backgrounds/spotlight-scan': 'Ambient Spotlight',
   'backgrounds/pattern-tile': 'Technical Grid',
   'backgrounds/pattern-fill': 'Geometric Pattern',
@@ -166,6 +167,8 @@ const ENGLISH_NAMES = {
   'diagrams/network-pulse': 'Network Flow Animation',
   'diagrams/process-steps': 'Process Flow', 'diagrams/deployment': 'Deployment Diagram',
   'diagrams/entity-relationship': 'Entity Relationship Diagram',
+  'diagrams/engineering-dimensions': 'Engineering Dimensions',
+  'diagrams/context-stroke-arrows': 'Context-Colored Message Arrows',
   'maps/china-grid-map': 'Regional Tile Grid',
   'maps/choropleth': 'Choropleth Map',
   'maps/proportional-symbols': 'Proportional Symbol Map',
@@ -178,6 +181,8 @@ const ENGLISH_NAMES = {
   'maps/service-coverage': 'Distance-Based Service Coverage',
   'maps/campus-floorplan': 'Floor Plan and Devices',
   'maps/spatial-comparison': 'Spatial Snapshots',
+  'maps/city-zoom': 'City Map at Three Zoom Levels',
+  'maps/map-label-paint-order': 'Map Label Paint Order',
   'science/lissajous': 'Lissajous Curves',
   'science/golden-spiral': 'Fibonacci Spiral Approximation',
   'science/catenary': 'Catenary vs. Parabola',
@@ -229,6 +234,7 @@ const ENGLISH_NAMES = {
   'ui/live-ops-dashboard': 'Operations Inspection Animation',
   'ui/fitness-dashboard': 'Activity and Training', 'ui/music-player': 'Music Workspace',
   'ui/hud-interface': 'HUD Navigation Concept', 'ui/wave-analyzer': 'Waveform Analyzer',
+  'ui/geometry-properties': 'CSS Geometry States',
 
 
 };

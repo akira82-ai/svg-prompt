@@ -1,0 +1,21 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "geometry-properties",
+  "title": "几何属性 · 同一组件多状态",
+  "space": "2d",
+  "time": "css",
+  "order": 61,
+  "description": "同一个rect以CSS的x/width/rx/ry属性从圆形扩展为胶囊形，再变为圆角矩形；不靠scale拉伸、不改写path，也不是可点击按钮。",
+  "tech": [
+    "SVG UI",
+    "state design",
+    "CSS geometry",
+    "geometry properties",
+    "x",
+    "width",
+    "rx",
+    "ry",
+    "reduced motion"
+  ]
+}

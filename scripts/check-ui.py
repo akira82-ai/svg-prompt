@@ -13,8 +13,8 @@ def points(d):
     nums=list(map(float,re.findall(r'-?\d+(?:\.\d+)?(?:e[+-]?\d+)?',d)));return list(zip(nums[::2],nums[1::2]))
 entries=sorted(BASE.glob('*/meta.json'),key=lambda p:json.loads(p.read_text())['order'])
 expected=[slug for group,items in SOURCE['GROUPS'] for slug,title in items]
-assert [p.parent.name for p in entries]==expected and len(entries)==60
-assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,61))
+assert [p.parent.name for p in entries]==expected and len(entries)==61
+assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,62))
 for slug in SOURCE['REMOVED']:assert not (BASE/slug).exists()
 for p in entries:
     slug=p.parent.name;m=json.loads(p.read_text());root=svg(slug)
@@ -113,4 +113,19 @@ for e in nodes('wave-analyzer','data-bin'):
 # Deleted works must not survive in generated navigation or live prompts.
 for p in [ROOT/'README.md',ROOT/'scripts/build-readme.mjs']+list((ROOT/'gallery').glob('*/*/prompt.md')):
     for slug in SOURCE['REMOVED']:assert 'ui/'+slug+'/' not in p.read_text(),p
-print('PASS: 60 UI specimens; states, dates, selection counts, progress ratios, finance, dashboard parity, agent confirmation, HUD bearing and signal spectrum.')
+geometry=svg('geometry-properties');meta=json.loads((BASE/'geometry-properties/meta.json').read_text())
+assert meta['time']=='css' and 'geometry properties' in meta['tech']
+assert not geometry.findall('.//s:animate',NS) and not geometry.findall('.//s:animateTransform',NS)
+animated=geometry.find('.//s:rect[@id="geometry-component"]',NS)
+assert animated is not None and animated.get('class')=='motion geometry-motion'
+states=nodes('geometry-properties','data-geometry-state');assert len(states)==3
+for e,(width,radius) in zip(states,[(96,48),(336,48),(336,16)]):
+    near(e.get('width'),width);near(e.get('height'),96);near(e.get('rx'),radius)
+fallback=nodes('geometry-properties','data-geometry-fallback');assert len(fallback)==1
+assert fallback[0].get('class')=='fallback'
+for key in ['width','height','rx']:near(fallback[0].get(key),float(states[1].get(key)))
+near(float(fallback[0].get('x'))+float(fallback[0].get('width'))/2,700)
+style=''.join(e.text or '' for e in geometry.findall('.//s:style',NS))
+assert '@keyframes geometry-states' in style and 'prefers-reduced-motion:reduce' in style
+assert 'transform:' not in style and 'animation:none' in style
+print('PASS: 61 UI specimens; product semantics, data encodings and CSS geometry states with static reduced-motion snapshot.')

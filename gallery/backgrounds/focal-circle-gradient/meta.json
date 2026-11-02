@@ -1,0 +1,20 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "title": "焦点圆渐变 · 光环与透镜",
+  "slug": "focal-circle-gradient",
+  "order": 25,
+  "space": "2d",
+  "time": "static",
+  "description": "同一组色标，从点焦点到圆形焦点再到偏心焦点；纯渐变光环，不模拟真实折射。",
+  "tech": [
+    "surface composition",
+    "SVG gradient",
+    "standalone texture",
+    "radialGradient",
+    "fr",
+    "fx",
+    "fy",
+    "gradient template"
+  ]
+}

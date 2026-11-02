@@ -1,0 +1,16 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "engineering-dimensions",
+  "title": "工程尺寸 · 自动朝向箭头",
+  "space": "2d",
+  "time": "static",
+  "description": "auto-start-reverse 自动反转起点箭头；终点箭头沿路径方向",
+  "tech": [
+    "marker",
+    "auto-start-reverse",
+    "dimension lines",
+    "metric geometry"
+  ],
+  "order": 22
+}

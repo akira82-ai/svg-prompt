@@ -5,10 +5,11 @@ from html import escape
 import math,json,random
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'gallery/backgrounds'
 ENTRIES=[('grainy-gradient','颗粒渐变','Grainy Gradient'),('transparency-blend','透明色层','Translucent Layers'),('gradient-spheres','柔光球体背景','Soft Sphere Background'),('spotlight-scan','环境聚光','Ambient Spotlight'),('pattern-tile','科技网格','Technical Grid'),('pattern-fill','几何平铺','Geometric Pattern'),('fabric','织物纹理','Woven Fabric'),('carbon-fiber','碳纤维编织','Carbon Fiber Weave'),('frosted-glass','磨砂玻璃','Frosted Glass'),('filter-materials','液态金属','Liquid Metal'),('brushed-metal','拉丝金属','Brushed Metal'),('gold','金色镜面','Gold Reflection'),('rusted-iron','锈蚀金属','Weathered Metal'),('marble','大理石纹理','Marble Veins'),('concrete','混凝土纹理','Concrete Texture'),('kraft-paper','牛皮纸纤维','Kraft Paper'),('wood-grain','木纹层理','Wood Grain'),('water-drop','叶面水滴','Leaf Droplets'),('starry-sky','程序化星空','Procedural Starfield'),('water-shimmer','水面波光','Water Shimmer'),('rain-ripples','雨滴涟漪','Rain Ripples'),('lava','熔岩裂隙','Lava Fissures'),('digital-rain','数据字符流','Digital Streams'),('confetti','庆祝粒子背景','Celebration Confetti')]
+ENTRIES.append(('focal-circle-gradient','焦点圆渐变 · 光环与透镜','Focal Circle Gradients'))
 PALETTE=['#6ed4ca','#869cee','#d995b8','#e9b57e']
 class Sample:
  def __init__(self,slug,title,en,order):
-  self.slug,self.title,self.en,self.order=slug,title,en,order;self.a=[];self.notes=[];self.animated=False;self.rng=random.Random(29)
+  self.slug,self.title,self.en,self.order=slug,title,en,order;self.a=[];self.notes=[];self.tech=[];self.animated=False;self.rng=random.Random(29)
   self.rect(0,0,1400,900,'#111e2d');self.text(64,64,'SURFACE STUDIES / '+f'{order:02}',14,'#b5c7d9');self.text(64,116,title,34);self.text(1336,116,en,20,'#b5c7d9','end');self.add('<defs><clipPath id="stage"><rect x="64" y="190" width="1272" height="620" rx="18"/></clipPath></defs><g clip-path="url(#stage)">')
  def add(self,s):self.a.append(s)
  def rect(self,x,y,w,h,c,extra=''):self.add(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{c}" {extra}/>')
@@ -26,7 +27,7 @@ class Sample:
  def finish(self):
   self.add('</g>');self.text(64,856,self.notes[0],16,'#b5c7d9');self.add('<style>@keyframes drift{50%{transform:translate(0,12px)}}@keyframes shine{50%{opacity:.75}}.drift{animation:drift 10s ease-in-out infinite}.shine{animation:shine 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.drift,.shine{animation:none}}</style>')
   svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">{self.title} / {self.en}</title><desc id="desc">{escape("；".join(self.notes))}</desc>'+''.join(self.a)+'</svg>\n'
-  d=OUT/self.slug;d.mkdir(exist_ok=True);old=json.loads((d/'meta.json').read_text());old.update(title=self.title,slug=self.slug,order=self.order,space='2d',time='css' if self.animated else 'static',description=self.notes[0],tech=['surface composition','SVG gradient','CSS ambient motion' if self.animated else 'standalone texture']);(d/'meta.json').write_text(json.dumps(old,ensure_ascii=False,indent=2)+'\n');(d/'index.svg').write_text(svg)
+  d=OUT/self.slug;d.mkdir(exist_ok=True);old=json.loads((d/'meta.json').read_text()) if (d/'meta.json').exists() else {'author':'airay1015','date':'2026-11-02'};old.update(title=self.title,slug=self.slug,order=self.order,space='2d',time='css' if self.animated else 'static',description=self.notes[0],tech=['surface composition','SVG gradient','CSS ambient motion' if self.animated else 'standalone texture']+self.tech);(d/'meta.json').write_text(json.dumps(old,ensure_ascii=False,indent=2)+'\n');(d/'index.svg').write_text(svg)
   (d/'prompt.md').write_text(f'# {self.title} / {self.en}\n\n分类：[背景与材质](../_about.md)\n\n<img src="index.svg" width="720" alt="{self.title}">\n\n```\n用SVG绘制“{self.title} / {self.en}”。\n- 展示画幅1400×900，外框#111e2d，文字#e9f0fa/辅助#b5c7d9；中英文名称与页脚在纹理区外，样张x64..1336、y190..810。\n'+''.join('- '+n+'\n' for n in self.notes)+'- 材质为矢量视觉模拟，不宣称物理渲染、材料性能或真实测量。背景使用时提取样张组并同步保留其defs，移除外框标题；只有pattern作品可以按单元无缝平铺，其余为固定构图。\n- 动效只用于装饰，8–10秒缓变，无闪烁和主体遮挡；减少动效禁用CSS动画，静态基底完整；滤镜不支持时质感会简化。\n- 生成器scripts/build-backgrounds.py记录构造，完整SVG参考：\n'+svg+'```\n')
 def render(p):
  s=p.slug
@@ -41,6 +42,27 @@ def render(p):
   for j,(x,y,r,cols) in enumerate([(390,480,190,['#c1e6ed','#5faac0','#234764']),(850,390,125,['#eadffc','#899bea','#37467c']),(1030,670,100,['#ffe9cb','#dbab7b','#775344'])]):
    p.gradient('ball'+str(j),cols,True);p.ellipse(x,y+r+20,r*.85,r*.15,'#102039');p.circle(x,y,r,'url(#ball'+str(j)+')')
   p.notes=['偏移焦点与明暗层次构成柔光球体，留白可承接封面内容。','三球r190/125/100，径向渐变焦点(.28,.22)、中心(.35,.3)，每球有扁椭圆地面阴影；没有代码卡和焦点标注。']
+ elif s=='focal-circle-gradient':
+  cases=[('point',302,0,.5,.5,'01 / 点焦点 · fr = 0'),('circle',700,.2,.5,.5,'02 / 圆形焦点 · fr = 0.20'),('offset',1098,.2,.38,.42,'03 / 偏心焦点 · fx / fy 偏移')]
+  # Keep comparison captions outside the clipped material stage.
+  p.add('</g>')
+  for name,x,fr,fx,fy,label in cases:p.text(x,166,label,17,'#b5c7d9','middle')
+  p.add('<g clip-path="url(#stage)">')
+  p.base('#0b1628')
+  p.add('<defs><radialGradient id="lens-colors" color-interpolation="sRGB"><stop offset="0" stop-color="#0b1628"/><stop offset=".36" stop-color="#183c5a"/><stop offset=".64" stop-color="#4da3b5"/><stop offset=".77" stop-color="#e6f5e8"/><stop offset=".84" stop-color="#e6b895"/><stop offset="1" stop-color="#0b1628"/></radialGradient></defs>')
+  for name,x,fr,fx,fy,label in cases:
+   p.add(f'<defs><radialGradient id="lens-{name}" href="#lens-colors" gradientUnits="objectBoundingBox" cx=".5" cy=".5" r=".5" fx="{fx}" fy="{fy}" fr="{fr}"/></defs>')
+   p.circle(x,500,188,f'url(#lens-{name})',extra=f'data-lens="{name}"')
+  p.notes=[
+   '同一组色标，从点焦点到圆形焦点再到偏心焦点；纯渐变光环，不模拟真实折射。',
+   '画面以#0b1628为底，三枚半径188的圆心为(302,500)/(700,500)/(1098,500)；样张区只呈现光环构图，三组参数标题位于y166、样张上方。',
+   '三组radialGradient统一gradientUnits=objectBoundingBox，终圆cx=cy=r=0.5；点焦点fr=0、fx=fy=0.5；圆形焦点fr=0.2、fx=fy=0.5；偏心焦点fr=0.2、fx=0.38、fy=0.42。fr=0.2相当于圆直径的20%、终圆半径的40%，不能写成终圆半径的20%。',
+   '仅定义一份lens-colors色标，三个渐变通过href复用；offset/color依次为0/#0b1628、0.36/#183c5a、0.64/#4da3b5、0.77/#e6f5e8、0.84/#e6b895、1/#0b1628，明确color-interpolation=sRGB。',
+   'fr定义渐变起始圆的半径；起始圆以内用第一个色标，向终圆过渡。亮环来自共用色标的明暗分布，不是fr自带光晕；不额外叠加遮挡圆或模糊滤镜来伪造焦点圆。',
+   '三枚渐变自身都是完整圆形，偏心组只是渐变焦点偏移，不变换圆轮廓；所有焦点圆均在终圆内。不加动画、脚本、外部字体和图像，保持img模式下可展示。',
+   '标准依据：https://www.w3.org/TR/SVG2/pservers.html#RadialGradientElementFRAttribute；透镜仅指视觉风格，不代表物理光学或光线追踪。'
+  ]
+  p.tech=['radialGradient','fr','fx','fy','gradient template']
  elif s=='spotlight-scan':
   p.gradient('spot',['#5c8194','#213c55','#122238'],True);p.base('#122238');p.rect(64,190,1272,620,'url(#spot)',extra='class="drift"');p.motion();p.notes=['大面积环境光为深色背景提供柔和的视觉中心。','偏移径向渐变以10秒上下12px缓移；没有隐藏内容和扫描交互，不声称聚光灯揭示文字。']
  elif s=='pattern-tile':
@@ -137,5 +159,5 @@ def render(p):
 def build():
  for i,(slug,title,en) in enumerate(ENTRIES,1):
   p=Sample(slug,title,en,i);render(p);p.finish()
- print('Built 24 background and material studies.')
+ print(f'Built {len(ENTRIES)} background and material studies.')
 if __name__=='__main__':build()

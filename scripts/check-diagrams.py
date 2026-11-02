@@ -36,8 +36,8 @@ def edge_conditions(slug,source):
 
 
 entries=sorted((ROOT/'gallery/diagrams').glob('*/meta.json'),key=lambda p:json.loads(p.read_text())['order'])
-assert len(entries)==21
-assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,22))
+assert len(entries)==23
+assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,24))
 order=[p.parent.name for p in entries]
 for a,b in [('process-steps','process-walk'),('system-architecture','animated-architecture'),('service-dependencies','network-pulse'),('timeline-svg','timeline-reveal')]:
     assert order.index(b)==order.index(a)+1
@@ -129,4 +129,32 @@ assert [event[0] for event in events]==sorted(event[0] for event in events)
 for slug in ['timeline-svg','timeline-reveal']:
     prompt=(ROOT/'gallery/diagrams'/slug/'prompt.md').read_text()
     for when,title,status,url in events:assert when in prompt and url in prompt
-print('PASS: 21 diagrams; order/variant parity; ports; orthogonal routes; node clearance; animation routes; finite exits; decision coverage; dependency DAG; set regions; timeline sources')
+engineering,_,_=load('engineering-dimensions')
+markers=engineering.findall('.//s:marker',NS);assert len(markers)==1
+marker=markers[0];assert marker.get('orient')=='auto-start-reverse'
+assert marker.get('markerUnits')=='userSpaceOnUse' and marker.get('refX')=='10'
+part=engineering.find('.//s:path[@data-part-mm]',NS)
+vertices=json.loads(part.get('data-part-mm'));assert vertices==[[0,0],[120,0],[120,40],[90,80],[0,80]]
+assert part.get('d')=='M 270 390 L 750 390 L 750 550 L 630 710 L 270 710 Z'
+dimensions=engineering.findall('.//s:line[@data-dimension]',NS);assert len(dimensions)==3
+for line in dimensions:
+    a=tuple(map(float,line.get('data-source-mm').split(',')));b=tuple(map(float,line.get('data-target-mm').split(',')))
+    value=math.dist(a,b);assert math.isclose(float(line.get('data-value-mm')),value)
+    start=(float(line.get('x1')),float(line.get('y1')));end=(float(line.get('x2')),float(line.get('y2')))
+    assert math.isclose(math.dist(start,end),value*4)
+    assert math.isclose((end[0]-start[0])*(b[1]-a[1])-(end[1]-start[1])*(b[0]-a[0]),0,abs_tol=1e-8)
+    assert line.get('marker-start')==line.get('marker-end')=='url(#dimension-arrow)'
+assert not engineering.findall('.//s:script',NS)
+context_tree,context_nodes,context_edges=load('context-stroke-arrows')
+markers=context_tree.findall('.//s:marker',NS);assert len(markers)==1
+marker=markers[0];assert marker.get('id')=='shared-arrow' and marker.get('orient')=='auto'
+assert marker.find('s:path',NS).get('fill')=='context-stroke'
+assert len(context_nodes)==3 and len(context_edges)==3
+assert {(e.get('data-source'),e.get('data-target'),e.get('stroke')) for e in context_edges}=={('client','service','#3686d9'),('service','client','#00a887'),('service','subscriber','#d99431')}
+for e in context_edges:
+    assert e.get('marker-end')=='url(#shared-arrow)' and e.get('stroke-width')=='2'
+    for endpoint,identity in [(points(e)[0],e.get('data-source')),(points(e)[-1],e.get('data-target'))]:
+        x,y,w,h=bounds(context_nodes[identity]);px,py=endpoint
+        assert (px in (x,x+w) and y<=py<=y+h) or (py in (y,y+h) and x<=px<=x+w)
+assert context_edges[2].get('stroke-dasharray')=='6 5'
+print('PASS: 23 diagrams; routing, semantics, metric dimensions and shared context-stroke message arrows.')

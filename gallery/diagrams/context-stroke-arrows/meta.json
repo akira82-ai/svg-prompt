@@ -1,0 +1,17 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "context-stroke-arrows",
+  "title": "服务依赖 · 连线与箭头同色",
+  "space": "2d",
+  "time": "static",
+  "description": "箭头填充使用 context-stroke，自动采用引用连线的描边颜色",
+  "tech": [
+    "marker",
+    "context-stroke",
+    "shared marker",
+    "request-response",
+    "semantic edges"
+  ],
+  "order": 23
+}
