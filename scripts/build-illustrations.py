@@ -5,6 +5,7 @@ from html import escape
 import json, math
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'gallery/illustrations'
 ENTRIES=[('human-ai','人机协作','Human–AI Collaboration'),('knowledge-discovery','知识探索','Knowledge Discovery'),('cloud-computing','云端计算','Cloud Computing'),('data-security','数据安全','Data Security'),('creative-workspace','创意工作室','Creative Workspace'),('robot-assistant','机器人助手','Robot Assistant'),('line-drawing','航天探索','Space Exploration'),('hologram','全息投影','Holographic Projection'),('energy-core','未来能源装置','Future Energy Device'),('cyber-city','未来城市','Future City'),('tech-campus','等距科技园区','Isometric Tech Campus'),('sunrise-scene','山间日出','Mountain Sunrise'),('snow-globe','冬日雪景球','Winter Snow Globe'),('campfire','林间篝火','Forest Campfire'),('sticker-pack','科技主题贴纸','Technology Stickers')]
+ENTRIES += [('specimen-journal','口袋标本 · 拼贴式自然笔记','Pocket Specimen Journal'),('desktop-garden','桌面花园 · 从窗口长出植物','Desktop Window Garden')]
 DARK={'line-drawing','hologram','energy-core','cyber-city','campfire'}
 class Scene:
  def __init__(self,slug,title,en,order):
@@ -37,7 +38,7 @@ class Scene:
  def finish(self):
   self.add('</g>');self.text(64,857,self.notes[0],16,c='#b3c5da' if self.dark else '#526778');self.add('<style>@keyframes breathe{50%{opacity:.6}}.pulse{animation:breathe 6s ease-in-out infinite}@keyframes drift{50%{transform:translateY(6px)}}.drift{animation:drift 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}</style>')
   svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc" font-family="PingFang SC, Microsoft YaHei, sans-serif"><title id="title">{self.title} / {self.en}</title><desc id="desc">{escape("；".join(self.notes))}</desc>'+''.join(self.a)+'</svg>\n'
-  d=OUT/self.slug;d.mkdir(exist_ok=True);old=json.loads((d/'meta.json').read_text()) if (d/'meta.json').exists() else {'author':'airay1015','date':'2026-10-10'}
+  d=OUT/self.slug;d.mkdir(exist_ok=True);old=json.loads((d/'meta.json').read_text()) if (d/'meta.json').exists() else {'author':'airay1015','date':'2026-11-02'}
   old.update(slug=self.slug,title=self.title,order=self.order,space='2d',time='css' if self.anim else 'static',tech=['path','clipPath','CSS ambient motion' if self.anim else 'vector illustration'],description=self.notes[0]);(d/'meta.json').write_text(json.dumps(old,ensure_ascii=False,indent=2)+'\n');(d/'index.svg').write_text(svg)
   # Include the actual scene geometry so the prompt remains reproducible rather than generic.
   (d/'prompt.md').write_text(f'# {self.title} / {self.en}\n\n分类：[插画与场景](../_about.md)\n\n<img src="index.svg" width="720" alt="{self.title}">\n\n```\n用SVG绘制“{self.title} / {self.en}”。\n- 1400×900画布，背景{self.bg}，正文{self.ink}，强调色{self.accent}；中英文标题，主体裁切在x64..1336、y190..810圆角区域。\n'+''.join('- '+n+'\n' for n in self.notes)+'- 本作品为概念插画，不是科学仿真、地图或可操作界面。\n- 动效只改变装饰层，不隐藏主体；CSS失效时静态画面完整；prefers-reduced-motion禁用动画。\n- 以下为可复现的完整SVG几何与色彩参考，可直接保存查看，也可据此改写构图：\n'+svg+'```\n')
@@ -115,9 +116,37 @@ def render(s):
    else:s.path(f'M{x+120} {y+46}l20 8v15q0 17-20 27-20-10-20-27V{y+54}Z',stroke='#fff',sw=4)
    s.text(x+120,y+161,name,22,'middle','#fff');s.add('</g>')
   s.notes=['六枚科技主题贴纸组成可复用的小插画，不再重复品牌Logo套件。','统一白色贴纸边缘、偏移底影、轻微旋转；创造/探索/构建/连接/学习/保护六主题为概念符号，非印刷刀模。']
+ elif k=='specimen-journal':
+  s.rect(64,190,1272,620,'#ded9c9');s.add('<defs><filter id="paper-shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="2" dy="6" stdDeviation="5" flood-color="#514f3d" flood-opacity=".18"/></filter><symbol id="journal-leaf" viewBox="0 0 120 200"><path d="M60 195C-20 145-8 42 67 6C132 64 131 151 60 195Z" fill="#76825a"/><path d="M60 190Q65 100 67 14M63 148L26 101M64 121L101 70M65 90L39 56" fill="none" stroke="#d3d5af" stroke-width="2"/></symbol><clipPath id="journal-photo"><path d="M915 278L1206 286 1212 600 1192 612 911 603Z"/></clipPath></defs>')
+  s.add('<g transform="rotate(-3 510 505)">');s.rect(165,239,690,534,'#f7f1df',8,extra='filter="url(#paper-shadow)"')
+  for y in range(318,740,31):s.line(198,y,815,y,'#d9ddc7',1)
+  s.line(244,260,244,748,'#d7b7a4',1);s.text(275,295,'FIELD JOURNAL',19,c='#4c5942');s.text(770,295,'NO. 014',14,'end','#75755e')
+  s.add('<g transform="rotate(-21 420 499)"><use href="#journal-leaf" x="325" y="330" width="180" height="300"/></g><g transform="rotate(25 601 518)"><use href="#journal-leaf" x="560" y="410" width="112" height="187"/></g>')
+  s.rect(356,350,130,31,'#d9c7a1',extra='opacity=".75" transform="rotate(-12 421 365)"');s.rect(555,561,105,28,'#c5c9ac',extra='opacity=".8" transform="rotate(13 607 575)"')
+  s.text(275,680,'雨后，沿着小路收集颜色。',24,c='#4c5942');s.text(275,722,'2026.11.02  /  CONCEPT FIELD NOTES',14,c='#75755e')
+  s.path('M494 410Q550 360 628 357M661 506Q713 475 770 488',stroke='#9a6653',sw=2,extra='pathLength="1" class="journal-annotation"');s.text(636,363,'叶缘 / EDGE',15,c='#8b6451');s.text(698,524,'叶脉',17,c='#8b6451');s.add('</g>')
+  s.add('<g transform="rotate(5 1060 460)" filter="url(#paper-shadow)">');s.rect(885,257,356,422,'#faf6eb');s.add('<g clip-path="url(#journal-photo)">');s.rect(905,275,310,340,'#b4c2af');s.circle(1135,344,44,'#e6d5aa');s.path('M905 491L1002 351 1102 484 1174 392 1230 481V620H905Z','#6f8972');s.path('M905 550Q1040 460 1220 537V620H905Z','#405e4b');s.add('</g>');s.text(1063,647,'A WALK, NOT A DESTINATION.',14,'middle','#59614e');s.add('</g>')
+  s.path('M899 715Q1000 677 1190 732',stroke='#9a6653',sw=2,extra='pathLength="1" class="journal-annotation"');s.text(1055,771,'KEEP LOOKING.',28,'middle','#4c5942')
+  s.add('<style>@keyframes journal-ink{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}.journal-annotation{stroke-dasharray:1;stroke-dashoffset:0;animation:journal-ink 2.6s ease-out 1}@media(prefers-reduced-motion:reduce){.journal-annotation{animation:none}}</style>');s.anim=True
+  s.notes=['叶片、纸胶带、线描注记与矢量风景卡，组成一页虚构的自然采集手账。','同一journal-leaf symbol以两种尺寸和角度复用，底纸有31px行距；右侧不是嵌入照片，而是通过不规则clipPath裁切的矢量风景。','仅三条装饰注记pathLength=1、dashoffset1→0一次2.6秒描画；叶片、文字、风景首帧完整，减少动效直接显示全部注记。叶形为艺术概括，不标植物学物种。']
+ elif k=='desktop-garden':
+  s.rect(64,190,1272,620,'#e7e0cc');s.add('<defs><pattern id="desktop-grid" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#b3b9a2"/></pattern><clipPath id="window-inside"><rect x="290" y="360" width="820" height="330"/></clipPath><clipPath id="plant-front"><rect x="565" y="195" width="485" height="465"/></clipPath><symbol id="garden-leaf" viewBox="0 0 110 55"><path d="M4 28Q45-22 106 24Q60 80 4 28Z" fill="#789958"/><path d="M6 28Q55 27 99 25" fill="none" stroke="#d1d7a6" stroke-width="2"/></symbol></defs>');s.rect(64,190,1272,620,'url(#desktop-grid)')
+  s.rect(265,321,870,410,'#a4aa92',12);s.rect(252,309,870,410,'#f7f3df',12,extra='stroke="#3b5344" stroke-width="3"');s.rect(252,309,870,51,'#3b5344',10);s.rect(252,340,870,20,'#3b5344');s.text(277,342,'GARDEN.EXE  /  A LITTLE ROOM TO GROW',17,c='#f7f3df')
+  for x,c in [(1034,'#d4bb78'),(1065,'#c38a73'),(1096,'#b4c796')]:s.circle(x,334,7,c)
+  s.add('<g clip-path="url(#window-inside)">');s.circle(1000,449,170,'#e5e8ce');s.path('M290 654Q520 530 735 628T1110 610V690H290Z','#d2d9b7');s.text(320,416,'GROW AT YOUR OWN PACE.',17,c='#627052');s.text(320,462,'No rush.',38,c='#3b5344');s.text(320,498,'Just a little light.',24,c='#627052');s.add('</g>')
+  # The plant crosses the title bar; the pot covers its lower stem.
+  s.add('<defs><g id="garden-plant"><path d="M770 614Q741 496 818 384Q851 338 839 257" fill="none" stroke="#456b43" stroke-width="10" stroke-linecap="round"/><path d="M790 461Q720 406 704 421M812 401Q860 403 868 372M777 531Q829 522 839 472" fill="none" stroke="#456b43" stroke-width="6" stroke-linecap="round"/>')
+  for x,y,angle,scale in [(704,421,200,1.1),(868,372,-32,1.15),(839,472,-32,1),(800,430,205,.8),(839,294,-55,.9),(777,488,195,.8)]:
+   s.add(f'<g transform="translate({x} {y}) rotate({angle}) scale({scale})"><use href="#garden-leaf" x="-4" y="-28" width="110" height="55"/></g>')
+  s.add('</g></defs><g clip-path="url(#plant-front)"><g class="garden-grow" data-plant="front"><use href="#garden-plant"/></g></g>')
+  s.rect(621,592,330,64,'#b66f50',12);s.rect(634,602,304,44,'#d9a078',7)
+  for i in range(9):s.rect(643+i*32,610,25,28,'#754b3d' if i<6 else '#e8bc93',3)
+  s.text(700,690,'PROGRESS IS A PLACE TO PLANT.',16,'middle','#627052');s.text(290,771,'STATUS: GROWING SLOWLY',16,c='#627052');s.text(1110,771,'OFFLINE / CONCEPT',15,'end','#627052')
+  s.add('<style>@keyframes garden-open{from{transform:scaleY(.86)}to{transform:scaleY(1)}}.garden-grow{transform-box:view-box;transform-origin:770px 614px;animation:garden-open 3.2s cubic-bezier(.2,.6,.3,1) 1}@media(prefers-reduced-motion:reduce){.garden-grow{animation:none}}</style>');s.anim=True
+  s.notes=['植物越过复古软件窗口标题栏，进度条成为花盆；超现实桌面花园是概念插画，不是可操作软件。','窗口内景clipPath限制山丘；植物前景在(565,195,485,465)裁切，覆盖标题栏但不遮挡左侧窗口标题，底部由进度条花盆压住；六片叶复用同一symbol。','植物从完整高度86%到100%在3.2秒内一次展开后停住，transform-origin=(770,614)固定根部；基础几何是终帧，减少动效/CSS失效主体完整；进度条6/9格仅为花盆纹样，不称真实任务进度。']
  else:raise ValueError(k)
 def build():
  for i,(slug,title,en) in enumerate(ENTRIES,1):
   s=Scene(slug,title,en,i);render(s);s.finish()
- print('Built 15 illustration scenes.')
+ print(f'Built {len(ENTRIES)} illustration scenes.')
 if __name__=='__main__':build()

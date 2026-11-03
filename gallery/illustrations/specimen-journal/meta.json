@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "specimen-journal",
+  "title": "口袋标本 · 拼贴式自然笔记",
+  "order": 16,
+  "space": "2d",
+  "time": "css",
+  "tech": [
+    "path",
+    "clipPath",
+    "CSS ambient motion"
+  ],
+  "description": "叶片、纸胶带、线描注记与矢量风景卡，组成一页虚构的自然采集手账。"
+}

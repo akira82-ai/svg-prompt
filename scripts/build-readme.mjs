@@ -47,6 +47,12 @@ const TIME_RANK = { static: 0, smil: 1, css: 2, js: 3 };
 const SPACE_RANK = { '2d': 0, '3d': 1 };
 // Slugs supply conventional English names; overrides clarify scene-specific titles.
 const ENGLISH_NAMES = {
+  'branding/risograph-poster': 'Risograph Zine Poster',
+  'branding/gummy-wordmark': 'Gummy Vector Wordmark',
+  'branding/quiet-reading': 'Quiet Editorial Chapter',
+  'backgrounds/glass-lens': 'Glass Lens over Stripes',
+  'illustrations/specimen-journal': 'Pocket Specimen Journal',
+  'illustrations/desktop-garden': 'Desktop Window Garden',
   'backgrounds/grainy-gradient': 'Grainy Gradient',
   'backgrounds/transparency-blend': 'Translucent Layers',
   'backgrounds/gradient-spheres': 'Soft Sphere Background',

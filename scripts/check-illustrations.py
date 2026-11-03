@@ -4,9 +4,9 @@ from pathlib import Path
 import importlib.util,json,xml.etree.ElementTree as ET
 spec=importlib.util.spec_from_file_location('build',Path(__file__).with_name('build-illustrations.py'));b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
 ns={'s':'http://www.w3.org/2000/svg'}
-animated={'hologram','energy-core','sunrise-scene','snow-globe','campfire'}
+animated={'hologram','energy-core','sunrise-scene','snow-globe','campfire','specimen-journal','desktop-garden'}
 assert not (b.OUT/'particle-collider').exists()
-assert len(list(b.OUT.glob('*/meta.json')))==15
+assert len(list(b.OUT.glob('*/meta.json')))==17
 for i,(slug,title,en) in enumerate(b.ENTRIES,1):
  d=b.OUT/slug;raw=(d/'index.svg').read_text();svg=ET.fromstring(raw);meta=json.loads((d/'meta.json').read_text());prompt=(d/'prompt.md').read_text()
  assert meta['order']==i and meta['title']==title and meta['slug']==slug
@@ -25,4 +25,11 @@ for i,(slug,title,en) in enumerate(b.ENTRIES,1):
  assert 'clip-path="url(#stage)"' in raw
  if slug=='snow-globe':assert 'clip-path="url(#globe)"' in raw
  if slug=='tech-campus':assert meta['space']=='2d' and '.866' not in raw
-print('PASS: 15 standalone scenes; bilingual titles, order, prompt parity, local references, clipping and visible reduced-motion states.')
+
+journal=ET.parse(b.OUT/'specimen-journal/index.svg').getroot()
+assert len(journal.findall('.//s:use[@href="#journal-leaf"]',ns))==2
+assert len(journal.findall('.//s:path[@class="journal-annotation"]',ns))==2
+garden=ET.parse(b.OUT/'desktop-garden/index.svg').getroot()
+assert len(garden.findall('.//s:use[@href="#garden-leaf"]',ns))==6
+assert garden.find('.//s:g[@data-plant="front"]',ns) is not None
+print('PASS: 17 standalone scenes; bilingual titles, order, prompt parity, local references, clipping and visible reduced-motion states.')

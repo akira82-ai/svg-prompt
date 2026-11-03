@@ -1,0 +1,20 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "risograph-poster",
+  "title": "独立刊物 · 错版印刷海报",
+  "space": "2d",
+  "time": "css",
+  "order": 25,
+  "description": "FIELD虚构独立刊物印刷展海报；暖纸、深青与朱红套印、撕纸边缘及大标题构成完整活动版式，非真实活动公告。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "CSS decorative motion",
+    "feTurbulence",
+    "feDisplacementMap",
+    "mix-blend-mode:multiply",
+    "mask",
+    "pattern"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "quiet-reading",
+  "title": "安静阅读 · 编辑式章节页",
+  "space": "2d",
+  "time": "css",
+  "order": 27,
+  "description": "FIELD虚构长文第三章阅读扉页；米白留白、Georgia衬线标题、中文导语、右侧线描风景形成主次，阅读时长约6分钟为虚构示例。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "CSS decorative motion",
+    "mask",
+    "CSS geometry reveal",
+    "one-shot motion"
+  ]
+}

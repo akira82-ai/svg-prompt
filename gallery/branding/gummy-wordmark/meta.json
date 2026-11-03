@@ -1,0 +1,19 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "gummy-wordmark",
+  "title": "软糖字标 · 柔软而有体积",
+  "space": "2d",
+  "time": "css",
+  "order": 26,
+  "description": "LOAM概念系列的SOFT软糖字标；四个字母均为自绘闭合矢量路径，暖粉到莓红渐变、接触阴影与表面高光建立柔软体积，不依赖字体生成字标。",
+  "tech": [
+    "brand system",
+    "SVG typography",
+    "CSS decorative motion",
+    "shared vector glyphs",
+    "feSpecularLighting",
+    "feComposite",
+    "feGaussianBlur"
+  ]
+}

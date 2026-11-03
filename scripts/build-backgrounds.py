@@ -6,6 +6,7 @@ import math,json,random
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'gallery/backgrounds'
 ENTRIES=[('grainy-gradient','颗粒渐变','Grainy Gradient'),('transparency-blend','透明色层','Translucent Layers'),('gradient-spheres','柔光球体背景','Soft Sphere Background'),('spotlight-scan','环境聚光','Ambient Spotlight'),('pattern-tile','科技网格','Technical Grid'),('pattern-fill','几何平铺','Geometric Pattern'),('fabric','织物纹理','Woven Fabric'),('carbon-fiber','碳纤维编织','Carbon Fiber Weave'),('frosted-glass','磨砂玻璃','Frosted Glass'),('filter-materials','液态金属','Liquid Metal'),('brushed-metal','拉丝金属','Brushed Metal'),('gold','金色镜面','Gold Reflection'),('rusted-iron','锈蚀金属','Weathered Metal'),('marble','大理石纹理','Marble Veins'),('concrete','混凝土纹理','Concrete Texture'),('kraft-paper','牛皮纸纤维','Kraft Paper'),('wood-grain','木纹层理','Wood Grain'),('water-drop','叶面水滴','Leaf Droplets'),('starry-sky','程序化星空','Procedural Starfield'),('water-shimmer','水面波光','Water Shimmer'),('rain-ripples','雨滴涟漪','Rain Ripples'),('lava','熔岩裂隙','Lava Fissures'),('digital-rain','数据字符流','Digital Streams'),('confetti','庆祝粒子背景','Celebration Confetti')]
 ENTRIES.append(('focal-circle-gradient','焦点圆渐变 · 光环与透镜','Focal Circle Gradients'))
+ENTRIES.append(('glass-lens','玻璃透镜 · 穿过彩色条纹','Glass Lens over Stripes'))
 PALETTE=['#6ed4ca','#869cee','#d995b8','#e9b57e']
 class Sample:
  def __init__(self,slug,title,en,order):
@@ -63,6 +64,18 @@ def render(p):
    '标准依据：https://www.w3.org/TR/SVG2/pservers.html#RadialGradientElementFRAttribute；透镜仅指视觉风格，不代表物理光学或光线追踪。'
   ]
   p.tech=['radialGradient','fr','fx','fy','gradient template']
+ elif s=='glass-lens':
+  p.base('#ece8df')
+  p.add('<defs><g id="stripe-scene"><rect x="64" y="190" width="1272" height="620" fill="#ece8df"/>')
+  for i in range(18):
+   x=70+i*76;p.path(f'M{x} 165Q{x+115} 390 {x+25} 545T{x+100} 845',stroke=['#f07b59','#385f66','#b7c3a7','#e8c678','#7d8dbe','#d7b3b0'][i%6],sw=38)
+  p.add('</g><clipPath id="lens-clip"><circle cx="700" cy="500" r="231"/></clipPath><filter id="lens-warp" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".006 .012" numOctaves="1" seed="29" result="ripple"/><feDisplacementMap in="SourceGraphic" in2="ripple" scale="32" xChannelSelector="R" yChannelSelector="G"/></filter><filter id="lens-shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="15"/></filter><linearGradient id="lens-tint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".36"/><stop offset=".42" stop-color="#fff" stop-opacity=".02"/><stop offset="1" stop-color="#4f6064" stop-opacity=".18"/></linearGradient><linearGradient id="lens-rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".42" stop-color="#fff" stop-opacity=".18"/><stop offset=".72" stop-color="#405963" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity=".85"/></linearGradient></defs>')
+  p.add('<use href="#stripe-scene"/>');p.ellipse(710,730,208,30,'#44535c',extra='opacity=".24" filter="url(#lens-shadow)"')
+  p.add('<g clip-path="url(#lens-clip)" data-lens-interior="true"><rect x="460" y="260" width="480" height="480" fill="#ece8df"/><use href="#stripe-scene" transform="translate(-126 -90) scale(1.18)" filter="url(#lens-warp)"/><circle cx="700" cy="500" r="231" fill="url(#lens-tint)"/></g>')
+  p.circle(700,500,234,'none',extra='stroke="url(#lens-rim)" stroke-width="9"');p.circle(700,500,224,'none',extra='stroke="white" stroke-opacity=".3" stroke-width="1.5"')
+  p.path('M512 416A208 208 0 0 1 696 292',stroke='#fff',sw=9,extra='opacity=".78" class="lens-glint"');p.path('M834 678A208 208 0 0 0 901 546',stroke='#fff',sw=4,extra='opacity=".55"')
+  p.add('<style>@keyframes lens-light{50%{transform:translate(5px,7px);opacity:.48}}.lens-glint{animation:lens-light 10s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.lens-glint{animation:none}}</style>')
+  p.motion();p.tech=['feDisplacementMap','shared backdrop','local magnification','clipPath'];p.notes=['同一组彩色条纹穿过透明透镜，局部放大与固定低频位移产生弯曲，高光缓慢移动。','stripe-scene两次use；透镜内部先铺不透明底遮住清晰原图，再以中心(700,500)的1.18倍变换复用底图；translate(-126,-90)使中心固定，镜内裁切半径231。','固定seed29、frequency(.006,.012)、单层噪声仅作32px位移；不是物理光线追踪或浏览器backdrop-filter，无法折射外部网页。圆形边缘、阴影与渐变高光支持静态画面，只有上缘高光10秒轻移(5,7)和透明度缓变；滤镜失效时仍有局部放大。']
  elif s=='spotlight-scan':
   p.gradient('spot',['#5c8194','#213c55','#122238'],True);p.base('#122238');p.rect(64,190,1272,620,'url(#spot)',extra='class="drift"');p.motion();p.notes=['大面积环境光为深色背景提供柔和的视觉中心。','偏移径向渐变以10秒上下12px缓移；没有隐藏内容和扫描交互，不声称聚光灯揭示文字。']
  elif s=='pattern-tile':

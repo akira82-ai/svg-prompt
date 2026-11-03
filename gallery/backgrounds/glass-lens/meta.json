@@ -1,0 +1,19 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "title": "玻璃透镜 · 穿过彩色条纹",
+  "slug": "glass-lens",
+  "order": 26,
+  "space": "2d",
+  "time": "css",
+  "description": "同一组彩色条纹穿过透明透镜，局部放大与固定低频位移产生弯曲，高光缓慢移动。",
+  "tech": [
+    "surface composition",
+    "SVG gradient",
+    "CSS ambient motion",
+    "feDisplacementMap",
+    "shared backdrop",
+    "local magnification",
+    "clipPath"
+  ]
+}

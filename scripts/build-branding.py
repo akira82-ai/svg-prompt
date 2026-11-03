@@ -13,6 +13,8 @@ ENTRIES=[
 ('magazine-cover','杂志式封面','Magazine Cover','edit'),('report-cover','技术报告封面','Technical Report Cover','tech'),('product-launch','产品发布海报','Product Launch Poster','tech'),('article-header','文章头图与裁切','Article Header and Cropping','edit'),('presentation-title','演讲标题页','Presentation Title Slide','tech'),('poster','编辑式品牌海报','Editorial Brand Poster','edit'),('comparison-vs','对比信息版式','Comparison Layout','edit'),('stat-numbers','图鉴统计卡','Gallery Statistics','tech'),
 ('business-card','名片正反面','Business Card Front and Back','tech'),('social-kit','社媒品牌套件','Social Brand Kit','tech'),('packaging-dieline','包装结构与品牌应用','Packaging Structure and Branding','life'),('circular-badge','品牌圆形徽章','Circular Brand Badge','life'),
 ('typewriter','品牌文案揭示','Brand Copy Reveal','tech'),('brand-intro','品牌动效片头','Brand Intro Animation','tech')]
+ENTRIES += [('risograph-poster','独立刊物 · 错版印刷海报','Risograph Zine Poster','edit'),('gummy-wordmark','软糖字标 · 柔软而有体积','Gummy Vector Wordmark','life'),('quiet-reading','安静阅读 · 编辑式章节页','Quiet Editorial Chapter','edit')]
+CSS_ANIMATED={'risograph-poster','gummy-wordmark','quiet-reading'}
 REMOVED=['letter-morph','word-morph','neon-sign','glitch-text'];ANIMATED={'typewriter','brand-intro'}
 MARK='M0 0 L2 0 L6 4 L6 6 L4 6 L0 2 Z M4 0 L6 0 L6 2 Z M0 4 L0 6 L2 6 Z'
 GLYPHS={
@@ -22,7 +24,7 @@ GLYPHS={
 'A':'M0 60 L22 0 H38 L60 60 H45 L40 45 H20 L15 60 Z M26 30 H34 L30 17 Z'}
 class Brand:
     def __init__(self,slug,title,en,theme):
-        self.slug,self.title,self.en=slug,title,en;self.theme=theme;self.t={'tech':TECH,'edit':EDIT,'life':LIFE}[theme];self.parts=[];self.labels=[];self.notes=[];self.animated=slug in ANIMATED
+        self.slug,self.title,self.en=slug,title,en;self.theme=theme;self.t={'tech':TECH,'edit':EDIT,'life':LIFE}[theme];self.parts=[];self.labels=[];self.notes=[];self.animated=slug in ANIMATED;self.css_animated=slug in CSS_ANIMATED;self.tech=[]
         self.rect(0,0,1400,900,self.t['bg']);self.text(64,48,'SVG / BRAND & TYPE',14,self.t['muted']);self.text(1336,48,self.t['name']+' / CONCEPT BRAND',14,self.t['muted'],anchor='end');self.line(64, 70,1336,70)
         self.text(64,118,title,32,weight=700);self.text(64,153,en,18,self.t['muted']);self.line(64,846,1336,846);self.text(64,878,'示例品牌与版式 · 字体依赖系统环境 · 印刷图仅为示意',14,self.t['muted']);self.text(1336,878,'SVG-PROMPT',14,self.t['muted'],anchor='end')
         glyphs='';offset=0
@@ -45,10 +47,11 @@ class Brand:
     def finish(self):
         if self.animated:self.add('<style>.fallback{display:none}@media(prefers-reduced-motion:reduce){.motion{display:none}.fallback{display:inline}}</style>')
         finding=self.notes[0];svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="title desc"><title id="title">{escape(self.title)}</title><desc id="desc">{escape(finding)}</desc>'+''.join(self.parts)+'</svg>\n'
-        p=OUT/self.slug;p.mkdir(exist_ok=True);(p/'index.svg').write_text(svg);m=json.loads((p/'meta.json').read_text()) if (p/'meta.json').exists() else {'author':'airay1015','date':'2026-10-10'}
-        m.update(slug=self.slug,title=self.title,space='2d',time='smil' if self.animated else 'static',order=len(BUILT)+1,description=finding,tech=['brand system','SVG typography','SMIL reveal' if self.animated else 'editorial layout']);(p/'meta.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+        p=OUT/self.slug;p.mkdir(exist_ok=True);(p/'index.svg').write_text(svg);m=json.loads((p/'meta.json').read_text()) if (p/'meta.json').exists() else {'author':'airay1015','date':'2026-11-02'}
+        m.update(slug=self.slug,title=self.title,space='2d',time='css' if self.css_animated else 'smil' if self.animated else 'static',order=len(BUILT)+1,description=finding,tech=['brand system','SVG typography','CSS decorative motion' if self.css_animated else 'SMIL reveal' if self.animated else 'editorial layout']+self.tech);(p/'meta.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
         lines=[f'用 SVG 制作“{self.title} / {self.en}”，采用{self.t["name"]}示例品牌。',f'- 画布1400×900；背景{self.t["bg"]}、纸面{self.t["paper"]}、正文{self.t["ink"]}、辅助文字{self.t["muted"]}、强调色{self.t["accent"]}；顶部中英文标题，作品区域x64..1336、y200..820，页脚说明示例与印刷边界。']+['- '+s for s in self.notes]+['- NOVA共用标准矢量标识：6×6单位视图，路径 '+MARK+'；字标N/O/V/A共用固定矢量轮廓，宽高266:60；不依赖字体重建字标。','- 其他标题采用系统无衬线或Georgia衬线回退；中英文字体由环境决定，不声称嵌入商业字体。','- 文字和样例值：'+json.dumps(list(dict.fromkeys(self.labels)),ensure_ascii=False)+'。']
         if self.animated:lines+=['- SMIL只播放一次，终帧稳定；减少动效隐藏motion并显示完整fallback，不能让品牌名或完整文案永久缺失。']
+        if self.css_animated:lines+=['- CSS仅点缀装饰层，基础SVG属性就是完整静态构图；减少动效禁用动画，正文与品牌名始终可见；不依赖脚本或外部字体与图片。','- 完整SVG几何、颜色和动效参考：',svg]
         (p/'prompt.md').write_text(f'# {self.title} / {self.en}\n\n分类：[品牌与排版](../_about.md)\n\n<img src="index.svg" width="720" alt="{self.title}">\n\n```\n'+'\n'.join(lines)+'\n```\n');BUILT.append(self.slug)
 
 def identity(f):
@@ -145,7 +148,7 @@ def editorial(f):
     elif s=='stat-numbers':
         records={str(p.parent.relative_to(ROOT/'gallery')):json.loads(p.read_text()) for p in (ROOT/'gallery').glob('*/*/meta.json')}
         for slug in REMOVED:records.pop('branding/'+slug,None)
-        for slug,_,_,_ in ENTRIES:records['branding/'+slug]={'time':'smil' if slug in ANIMATED else 'static'}
+        for slug,_,_,_ in ENTRIES:records['branding/'+slug]={'time':'css' if slug in CSS_ANIMATED else 'smil' if slug in ANIMATED else 'static'}
         count=len(records);static=sum(m['time']=='static' for m in records.values());values=[('WORKS',count,'个作品'),('CATEGORIES',10,'个分类'),('STATIC',static,'个静态作品'),('ANIMATED',count-static,'个动效作品')]
         for i,(label,value,unit) in enumerate(values):
             x=90+(i%2)*640;y=235+(i//2)*285;f.rect(x,y,580,250);f.text(x+28,y+45,label,14,f.t['muted']);f.text(x+28,y+150,value,70,f.t['accent'],weight=700,attrs=f'data-stat="{label.lower()}"');f.text(x+265,y+150,unit,21);f.text(x+28,y+212,'图鉴快照 / 2026-10-10',14,f.t['muted'])
@@ -198,12 +201,58 @@ def motion(f):
     else:return False
     return True
 
+def trends(f):
+    if f.slug=='risograph-poster':
+        f.tech=['feTurbulence','feDisplacementMap','mix-blend-mode:multiply','mask','pattern']
+        f.rect(80,200,1240,620,'#eee6d3')
+        f.add('<defs><filter id="ink-edge" x="-3%" y="-3%" width="106%" height="106%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="29" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter><pattern id="paper-grain" width="13" height="17" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".7" fill="#786b50" opacity=".18"/><circle cx="10" cy="13" r=".5" fill="#786b50" opacity=".16"/></pattern><mask id="torn-paper" maskUnits="userSpaceOnUse" x="80" y="200" width="1240" height="620"><path d="M115 226L320 221 345 228 580 221 604 229 880 222 901 228 1284 222V785L1085 793 1060 785 785 792 760 784 455 793 433 786 115 794Z" fill="white"/></mask></defs>')
+        f.add('<g mask="url(#torn-paper)" style="isolation:isolate">');f.rect(105,215,1190,585,'#f8f0d9');f.rect(105,215,1190,585,'url(#paper-grain)')
+        f.text(145,273,'FIELD NOTES     /     INDEPENDENT PRINT FAIR',17,'#243e42',attrs='letter-spacing="2"');f.line(145,298,1250,298,'#243e42',2)
+        f.add('<g filter="url(#ink-edge)">');f.text(137,453,'OFF',174,'#244c50',weight=900,font='Georgia, serif');f.text(137,618,'REGISTER',124,'#244c50',weight=900,font='Georgia, serif',attrs='letter-spacing="-5"')
+        f.add('<g class="register-ink" style="mix-blend-mode:multiply" transform="translate(5 -3)" data-print-layer="red">');f.text(137,453,'OFF',174,'#dd543f',weight=900,font='Georgia, serif');f.text(137,618,'REGISTER',124,'#dd543f',weight=900,font='Georgia, serif',attrs='letter-spacing="-5"');f.add('</g></g>')
+        f.circle(1110,411,92,'#e96447',attrs='style="mix-blend-mode:multiply"');f.circle(1075,442,92,'#2d7775',attrs='style="mix-blend-mode:multiply"');f.text(1090,420,'02',74,'#f8f0d9',anchor='middle',font='Georgia, serif')
+        f.text(147,695,'把错位，印成自己的节奏。',28,'#243e42',weight=700);f.text(147,751,'CONCEPT EDITION  /  2026.11  /  NO. 02',15,'#243e42');f.text(1245,751,'INK · PAPER · PEOPLE',15,'#243e42',anchor='end');f.add('</g>')
+        for x in [93,1307]:
+            f.line(x-7,208,x+7,208,'#dd543f');f.line(x,201,x,215,'#dd543f');f.line(x-7,808,x+7,808,'#244c50');f.line(x,801,x,815,'#244c50')
+        f.add('<style>@keyframes register-settle{from{transform:translate(9px,-5px)}to{transform:translate(5px,-3px)}}.register-ink{animation:register-settle 2.4s cubic-bezier(.2,.7,.3,1) 1}@media(prefers-reduced-motion:reduce){.register-ink{animation:none}}</style>')
+        f.req('FIELD虚构独立刊物印刷展海报；暖纸、深青与朱红套印、撕纸边缘及大标题构成完整活动版式，非真实活动公告。')
+        f.req('OFF / REGISTER两层文字几何相同；朱红层以multiply混色，2.4秒从(9,-5)收敛到(5,-3)后停住，保留有意错版；低幅feDisplacementMap scale2.2只作用于印墨边缘，固定seed29，不动画噪声。')
+        f.req('torn-paper为白色路径alpha遮罩；细颗粒用13×17矢量pattern，不用嵌入位图；标题与活动说明保持可读，套印仅为屏幕模拟，不等于印刷分色文件。')
+    elif f.slug=='gummy-wordmark':
+        f.tech=['shared vector glyphs','feSpecularLighting','feComposite','feGaussianBlur']
+        f.rect(80,200,1240,620,'#efe5dc')
+        f.add('<defs><linearGradient id="gummy-color" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#ffb8a2"/><stop offset=".34" stop-color="#f17f79"/><stop offset=".72" stop-color="#dc586d"/><stop offset="1" stop-color="#a63858"/></linearGradient><filter id="gummy-shadow" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur stdDeviation="14"/></filter><filter id="gummy-light" x="-12%" y="-25%" width="124%" height="150%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="bump"/><feSpecularLighting in="bump" surfaceScale="12" specularConstant=".8" specularExponent="22" lighting-color="#fff4da" result="spec"><fePointLight x="390" y="250" z="220"/></feSpecularLighting><feComposite in="spec" in2="SourceAlpha" operator="in"/></filter><g id="soft-glyphs" fill-rule="evenodd"><path d="M335 365Q245 310 198 373Q150 452 275 491Q330 512 297 540Q269 562 205 529L183 588Q300 642 360 567Q415 479 292 440Q234 422 261 397Q284 380 321 401Z"/><path d="M510 347C370 347 370 614 510 614C650 614 650 347 510 347Z M510 415C557 415 557 546 510 546C463 546 463 415 510 415Z"/><path d="M696 355Q675 355 675 380V585Q675 611 711 611Q747 611 747 585V517H815Q844 517 844 483Q844 452 815 452H747V423H841Q869 423 869 388Q869 355 841 355Z"/><path d="M917 355Q888 355 888 389Q888 423 917 423H964V582Q964 614 1000 614Q1036 614 1036 582V423H1083Q1112 423 1112 389Q1112 355 1083 355Z"/></g></defs>')
+        f.text(700,268,'LOAM / SMALL PLEASURES',17,'#794b4c',anchor='middle',attrs='letter-spacing="4"')
+        f.add('<use href="#soft-glyphs" fill="#833e51" opacity=".23" transform="translate(0 24)" filter="url(#gummy-shadow)"/><use href="#soft-glyphs" fill="url(#gummy-color)"/><use href="#soft-glyphs" fill="#fff" filter="url(#gummy-light)" opacity=".6" class="gummy-glint"/>')
+        f.path('M219 389Q245 359 295 378M466 390Q495 373 520 384M702 387H821M934 386H1066',stroke='#ffe3cb',width=6,attrs='opacity=".65" stroke-linecap="round"')
+        f.text(700,700,'A LITTLE SOFTER.',30,'#70454d',anchor='middle',font='Georgia, serif');f.text(700,752,'柔软的轮廓，也可以有清楚的个性。',18,'#794b4c',anchor='middle')
+        f.add('<style>@keyframes gummy-shine{50%{opacity:.38}}.gummy-glint{animation:gummy-shine 8s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.gummy-glint{animation:none}}</style>')
+        f.req('LOAM概念系列的SOFT软糖字标；四个字母均为自绘闭合矢量路径，暖粉到莓红渐变、接触阴影与表面高光建立柔软体积，不依赖字体生成字标。')
+        f.req('共享soft-glyphs三次use：偏移24px模糊阴影、清晰渐变主体、SourceAlpha模糊生成bump的feSpecularLighting；feComposite将高光裁回字形，不让高光替代可读主体。')
+        f.req('高光透明度在基础0.6与0.38间8秒缓变，字形和位置不动；无真实材料折射、物理光照与可食用产品宣称。')
+    elif f.slug=='quiet-reading':
+        f.tech=['mask','CSS geometry reveal','one-shot motion']
+        f.rect(80,200,1240,620,'#f8f5ec');f.line(145,272,1255,272,'#b7b3a6');f.text(145,250,'FIELD / LONG READ',15,'#696b5d',attrs='letter-spacing="3"');f.text(1255,250,'CHAPTER 03',15,'#696b5d',anchor='end')
+        f.text(145,385,'The art of',69,'#303d34',font='Georgia, serif');f.text(145,463,'paying attention.',69,'#303d34',font='Georgia, serif');f.text(148,524,'把目光，留给眼前。',26,'#48584b')
+        f.lines(148,610,['沿着一条小路走，不急着抵达。','树影、风声与远山，都值得停一下。'],20,'#656c60',step=38);f.text(148,750,'03 — LANDSCAPE / 约 6 分钟阅读',14,'#696b5d')
+        f.add('<defs><mask id="landscape-reveal" maskUnits="userSpaceOnUse" x="785" y="310" width="440" height="355"><rect x="785" y="310" width="440" height="355" fill="white" class="chapter-mask"/></mask></defs><g mask="url(#landscape-reveal)">')
+        f.circle(1110,375,38,'#e4d4ab');f.path('M790 489Q860 465 908 395Q941 454 981 474Q1032 447 1061 414Q1140 485 1220 467',stroke='#7c8b76',width=2);f.path('M791 528Q877 497 941 513T1220 520',stroke='#a3ab96',width=2);f.path('M790 604Q885 542 971 569T1220 578',stroke='#465d49',width=2);f.path('M1000 642Q943 601 1030 567Q1087 544 1060 521',stroke='#8a8f76',width=2)
+        for x,y,h in [(822,561,62),(1180,558,80),(1150,560,48)]:
+            f.path(f'M{x} {y}v{-h}m-14 28 14-18 15 15m-29 19 14-18 16 16',stroke='#465d49',width=2)
+        f.add('</g>');f.line(790,688,1220,688,'#b7b3a6');f.text(790,722,'OBSERVATION  /  03',14,'#696b5d');f.text(790,756,'远山不催促，阅读也不必。',18,'#656c60')
+        f.add('<style>@keyframes chapter-open{from{width:110px}to{width:440px}}.chapter-mask{animation:chapter-open 2.8s cubic-bezier(.2,.6,.3,1) 1}@media(prefers-reduced-motion:reduce){.chapter-mask{animation:none}}</style>')
+        f.req('FIELD虚构长文第三章阅读扉页；米白留白、Georgia衬线标题、中文导语、右侧线描风景形成主次，阅读时长约6分钟为虚构示例。')
+        f.req('所有正文首帧完整；仅风景mask内白色矩形宽度从110px扩至440px，2.8秒一次揭示后停住；基础width440，CSS失效与减少动效均显示完整风景。')
+    else:return False
+    return True
+
+
 def build():
     BUILT.clear()
     for slug,title,en,theme in ENTRIES:
         f=Brand(slug,title,en,theme)
-        if not any(fn(f) for fn in [identity,typography,editorial,applications,motion]):raise ValueError('Missing renderer: '+slug)
+        if not any(fn(f) for fn in [identity,typography,editorial,applications,motion,trends]):raise ValueError('Missing renderer: '+slug)
         f.finish()
-    assert len(BUILT)==24
-    print('Built 24 brand and typography specimens.')
+    assert len(BUILT)==27
+    print(f'Built {len(BUILT)} brand and typography specimens.')
 if __name__=='__main__':build()

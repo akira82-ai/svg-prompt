@@ -4,8 +4,8 @@ from pathlib import Path
 import importlib.util,json,math,re,xml.etree.ElementTree as ET
 sp=importlib.util.spec_from_file_location('build',Path(__file__).with_name('build-backgrounds.py'));b=importlib.util.module_from_spec(sp);sp.loader.exec_module(b)
 ns={'s':'http://www.w3.org/2000/svg'}
-animated={'spotlight-scan','water-shimmer','rain-ripples','lava','digital-rain','confetti'}
-assert len(list(b.OUT.glob('*/meta.json')))==25
+animated={'spotlight-scan','water-shimmer','rain-ripples','lava','digital-rain','confetti','glass-lens'}
+assert len(list(b.OUT.glob('*/meta.json')))==26
 for i,(slug,title,en) in enumerate(b.ENTRIES,1):
  d=b.OUT/slug;raw=(d/'index.svg').read_text();svg=ET.fromstring(raw);m=json.loads((d/'meta.json').read_text())
  assert m['order']==i and m['title']==title and m['slug']==slug
@@ -51,4 +51,11 @@ for i,(slug,title,en) in enumerate(b.ENTRIES,1):
   group=svg.find('.//s:g[@class="drift"]',ns);assert len(group)==65
   for e in group:
    x=float(e.get('x',e.get('cx')));y=float(e.get('y',e.get('cy')));assert not (510<x<890 and 340<y<650)
-print('PASS: 25 materials; prompt/reference integrity, patterns, glass, noise, ambient motion and shared-stop focal-circle gradients.')
+
+lens=ET.parse(b.OUT/'glass-lens/index.svg').getroot()
+assert len(lens.findall('.//s:use[@href="#stripe-scene"]',ns))==2
+interior=lens.find('.//s:g[@data-lens-interior]',ns)
+assert interior[0].tag.endswith('rect') and interior[0].get('fill')=='#ece8df'
+assert interior[1].get('transform')=='translate(-126 -90) scale(1.18)'
+assert lens.find('.//s:feDisplacementMap',ns).get('scale')=='32'
+print('PASS: 26 materials; prompt/reference integrity, patterns, glass, noise, ambient motion and shared-stop focal-circle gradients.')

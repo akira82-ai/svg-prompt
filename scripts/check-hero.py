@@ -53,7 +53,7 @@ prompt=(ROOT/'assets/hero-prompt.md').read_text();assert '2100×900' in prompt a
 readme=(ROOT/'README.md').read_text();assert readme.count('src="assets/hero.svg"')==1
 assert readme.index('assets/hero.svg')<readme.index('## 目录')
 assert 'width="1050"' in readme.split('assets/hero.svg')[1][:120]
-assert len(list((ROOT/'gallery').glob('*/*/meta.json')))==233
+# Gallery totals are validated against generated statistics by check-branding.py.
 print(f'PASS: 7:3 hero; 165 plates, 4 hangars, 24 windows, {len(lines)} radial warp streaks, periodic planet texture, HUD ratios and static-safe motion.')
 
 roofs=svg.findall('.//s:path[@data-role="bridge-roof"]',ns)

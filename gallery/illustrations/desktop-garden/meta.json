@@ -1,0 +1,15 @@
+{
+  "author": "airay1015",
+  "date": "2026-11-02",
+  "slug": "desktop-garden",
+  "title": "桌面花园 · 从窗口长出植物",
+  "order": 17,
+  "space": "2d",
+  "time": "css",
+  "tech": [
+    "path",
+    "clipPath",
+    "CSS ambient motion"
+  ],
+  "description": "植物越过复古软件窗口标题栏，进度条成为花盆；超现实桌面花园是概念插画，不是可操作软件。"
+}
