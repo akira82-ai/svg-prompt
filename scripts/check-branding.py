@@ -8,9 +8,9 @@ def svg(slug):return E.parse(BASE/slug/'index.svg').getroot()
 def nodes(slug,attr):return [e for e in svg(slug).iter() if attr in e.attrib]
 def near(a,b,tol=.001):assert math.isclose(float(a),b,abs_tol=tol),(a,b)
 def texts(slug):return [e.text or '' for e in svg(slug).findall('.//s:text',NS)]
-entries=sorted(BASE.glob('*/meta.json'),key=lambda p:json.loads(p.read_text())['order']);assert len(entries)==27
+entries=sorted(BASE.glob('*/meta.json'),key=lambda p:json.loads(p.read_text())['order']);assert len(entries)==26
 assert [p.parent.name for p in entries]==[e[0] for e in SOURCE['ENTRIES']]
-assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,28))
+assert [json.loads(p.read_text())['order'] for p in entries]==list(range(1,27))
 for removed in SOURCE['REMOVED']:assert not (BASE/removed).exists()
 canonical_mark=None;canonical_word=None
 for p in entries:
@@ -83,4 +83,4 @@ assert svg('gummy-wordmark').find('.//s:feComposite',NS).get('operator')=='in'
 assert svg('risograph-poster').find('.//s:feDisplacementMap',NS).get('scale')=='2.2'
 assert svg('risograph-poster').find('.//s:feTurbulence',NS).get('seed')=='29'
 assert svg('quiet-reading').find('.//s:mask/s:rect',NS).get('width')=='440'
-print('PASS: 27 branding specimens; shared vector assets, clear space, lockup ratios, typography, media proportions, packaging roles, one-shot animations and library statistics.')
+print('PASS: 26 branding specimens; shared vector assets, clear space, lockup ratios, typography, media proportions, packaging roles, one-shot animations and library statistics.')

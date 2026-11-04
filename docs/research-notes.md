@@ -8,7 +8,7 @@
 1. **文本即图像**：SVG 是 XML 文本，LLM 原生按 token 输出，不需要像素级渲染引擎。
 2. **分辨率无关**：无限缩放不失真，一张图适配所有屏幕和打印。
 3. **元素级可编辑**：每个形状/文字都是带 id 的节点，Agent 或人可以精确改局部。
-4. **轻量 + 通用**：可内嵌到网页、Markdown 预览、文档，也可转 PDF/PNG/PPTX。
+4. **轻量 + 通用**：可内嵌到网页、Markdown 预览、文档，也可转 PDF/PNG。
 5. **渲染确定性**：同一份 SVG 在任何浏览器渲染结果一致，便于 Agent 自检与迭代。
 
 参考：dev.to《Why AI agents can't draw SVG》指出 LLM 直接手写 SVG 的两大死穴——
@@ -98,12 +98,11 @@
 | 直接手写 | 小图标/单概念图，模型直接输出 SVG | 多数 Agent 默认 |
 | DSL 中转 | Mermaid 等语法→引擎渲染；语法脆弱易解析崩溃 | Pretty-Mermaid Skill（15 主题，SVG/ASCII 双输出） |
 | 语义 JSON→布局引擎 | 模型出节点/边，ELK/d3 布局，resvg 渲染 | dev.to 文章方案 |
-| Skill 化流水线 | 把设计流程写进 SKILL.md，SVG 只是输出格式 | logo-design-skill（★1.8k+，1400 参考库，16px 单色审计，8-12 概念稿）；FigGenie（论文级架构图 SVG→PDF/PNG/PPTX）；svg-diagram（linted house style） |
+| Skill 化流水线 | 把设计流程写进 SKILL.md，SVG 只是输出格式 | logo-design-skill（★1.8k+，1400 参考库，16px 单色审计，8-12 概念稿）；FigGenie（论文级架构图 SVG→PDF/PNG）；svg-diagram（linted house style） |
 | 学术增强 | 语义 token 训练让 LLM 理解渲染顺序/遮挡 | LLM4SVG (arXiv 2412.11102) |
 
 关键洞见（dev.to）：LLM 擅长**描述图是什么**，不擅长**决定东西在哪**。
-把空间计算交给确定性引擎，把语义交给模型——这正是 ppt-master 类技能画 SVG 而非
-"画图"的原因：SVG 既是渲染目标也是可编辑交付物，还能无损转 PPTX/PDF/PNG。
+把空间计算交给确定性引擎，把语义交给模型。SVG 既是渲染目标，也是可编辑的交付物，可按目标环境导出 PDF 或 PNG。
 
 ## 五、资料存档（raw/ 全文）
 

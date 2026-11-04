@@ -10,7 +10,7 @@ LIFE={'name':'LOAM','bg':'#ebe5da','paper':'#faf5e9','ink':'#343b2d','muted':'#6
 ENTRIES=[
 ('logo-grid','Logo 构形与网格','Logo Construction Grid','tech'),('wordmark','几何字标','Geometric Wordmark','tech'),('brand-lockup','品牌组合标识','Brand Lockups','tech'),('brand-palette','品牌色彩系统','Brand Color System','tech'),('brand-guidelines','品牌使用规范','Brand Guidelines','tech'),
 ('type-scale','字阶与阅读层级','Type Scale and Hierarchy','edit'),('bilingual-type','中英文字体搭配','Bilingual Typography','edit'),('editorial-grid','编辑网格与版式','Editorial Grid Systems','edit'),('type-effects','品牌文字表达','Expressive Typography','tech'),('text-on-path','文字沿路径排布','Type on a Path','life'),
-('magazine-cover','杂志式封面','Magazine Cover','edit'),('report-cover','技术报告封面','Technical Report Cover','tech'),('product-launch','产品发布海报','Product Launch Poster','tech'),('article-header','文章头图与裁切','Article Header and Cropping','edit'),('presentation-title','演讲标题页','Presentation Title Slide','tech'),('poster','编辑式品牌海报','Editorial Brand Poster','edit'),('comparison-vs','对比信息版式','Comparison Layout','edit'),('stat-numbers','图鉴统计卡','Gallery Statistics','tech'),
+('magazine-cover','杂志式封面','Magazine Cover','edit'),('report-cover','技术报告封面','Technical Report Cover','tech'),('product-launch','产品发布海报','Product Launch Poster','tech'),('article-header','文章头图与裁切','Article Header and Cropping','edit'),('poster','编辑式品牌海报','Editorial Brand Poster','edit'),('comparison-vs','对比信息版式','Comparison Layout','edit'),('stat-numbers','图鉴统计卡','Gallery Statistics','tech'),
 ('business-card','名片正反面','Business Card Front and Back','tech'),('social-kit','社媒品牌套件','Social Brand Kit','tech'),('packaging-dieline','包装结构与品牌应用','Packaging Structure and Branding','life'),('circular-badge','品牌圆形徽章','Circular Brand Badge','life'),
 ('typewriter','品牌文案揭示','Brand Copy Reveal','tech'),('brand-intro','品牌动效片头','Brand Intro Animation','tech')]
 ENTRIES += [('risograph-poster','独立刊物 · 错版印刷海报','Risograph Zine Poster','edit'),('gummy-wordmark','软糖字标 · 柔软而有体积','Gummy Vector Wordmark','life'),('quiet-reading','安静阅读 · 编辑式章节页','Quiet Editorial Chapter','edit')]
@@ -133,10 +133,6 @@ def editorial(f):
     elif s=='article-header':
         f.text(90,225,'16:9 / 原始横向画面',16,f.t['muted']);f.rect(90,250,780,438.75);f.text(125,305,'FIELD / 见地',18,weight=700);f.lines(125,425,['让信息，','有自己的顺序。'],48,weight=700,step=74);f.text(125,640,'编辑设计 / 2026 年 10 月',16,f.t['muted']);f.circle(740,440,105,f.t['soft']);f.rect(640,420,90,160,f.t['accent']);f.rect(120,330,500,280,'none',attrs=f'stroke="{f.t["accent"]}" stroke-dasharray="5 5"')
         f.text(950,280,'裁切安全区',24,weight=600);f.lines(950,355,['文字放在稳定区域。','右侧图形允许裁切。','缩略图重新检查字重。'],20,f.t['muted'],step=50);f.rect(940,570,330,186);f.text(960,625,'让信息，',32,weight=700);f.text(960,675,'有自己的顺序。',27,weight=700);f.text(940,796,'缩略图重排示意 / 不声称自动裁切',14,f.t['muted']);f.req('原画780×438.75为16:9；标题安全区x120..620/y330..610，副图在右可裁切；右下为缩略重排而非同画面自动裁切。')
-    elif s=='presentation-title':
-        f.rect(90,235,1220,548,f.t['ink']);f.mark(140,285,50,'#fff');f.text(215,317,'NOVA / DESIGN SESSION',17,'#d5dfed');f.lines(140,455,['让复杂系统','被清楚理解'],64,'#fff',weight=700,step=90);f.line(140,625,600,625,'#718aa8');f.text(140,690,'林老师 / 示例讲者',22,'#fff');f.text(140,737,'设计方法分享 · 2026-10-10',17,'#d5dfed')
-        for i in range(8):f.line(1000+i*26,380,810+i*26,660,'#638ed6',2)
-        f.req('演讲标题页采用横向屏幕布局，主题、讲者、活动日期三个层级；右侧线性图形不干扰标题，不冒充真实活动。')
     elif s=='poster':
         f.rect(130,220,400,566);f.text(160,273,'FIELD / 08',15,f.t['accent']);f.lines(160,395,['看见','秩序'],90,weight=700,step=130);f.line(160,585,500,585,f.t['accent'],5);f.text(160,655,'ORDER / IN VIEW',20,font='Georgia, serif');f.lines(160,714,['字体、留白与阅读路径','编辑设计系列 / 示例海报'],15,step=30)
         f.lines(710,320,['EDITORIAL POSTER','主标题支配画面','说明退居第二层','信息锚点稳定'],26,step=70);f.lines(710,650,['400×566 近似 A 系列比例。','大字、细线、小字形成节奏。','不用装饰图形填满所有空白。'],19,f.t['muted'],step=44);f.req('竖版400×566近似A3比例，主标题看见秩序、英文副标题ORDER IN VIEW、编辑设计系列说明；排版用留白与字重建立层级。')
@@ -253,6 +249,6 @@ def build():
         f=Brand(slug,title,en,theme)
         if not any(fn(f) for fn in [identity,typography,editorial,applications,motion,trends]):raise ValueError('Missing renderer: '+slug)
         f.finish()
-    assert len(BUILT)==27
+    assert len(BUILT)==26
     print(f'Built {len(BUILT)} brand and typography specimens.')
 if __name__=='__main__':build()

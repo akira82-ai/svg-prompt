@@ -3,7 +3,7 @@
   "title": "品牌圆形徽章",
   "space": "2d",
   "time": "static",
-  "order": 22,
+  "order": 21,
   "tech": [
     "brand system",
     "SVG typography",

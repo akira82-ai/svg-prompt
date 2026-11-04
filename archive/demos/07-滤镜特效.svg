@@ -87,5 +87,5 @@
   </g>
 
   <text x="60" y="756" font-size="14" fill="#c6d2e4">滤镜是 SVG "高级感"的分水岭 —— 它让纯几何图形拥有了材质与物理感。</text>
-  <text x="60" y="778" font-size="14" fill="#c6d2e4">同样的技术套在架构图 / PPT 页面上，就是"科技感大屏"和"发布会 keynote"的质感来源。</text>
+  <text x="60" y="778" font-size="14" fill="#c6d2e4">同样的技术可用于架构图与网页大屏；具体滤镜效果取决于渲染环境。</text>
 </svg>

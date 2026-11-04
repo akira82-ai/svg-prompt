@@ -136,7 +136,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" v
     <rect x="60" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>
     <text x="84" y="146" font-size="18" font-weight="700" fill="#e8eef7">等距插画：数据中心（插画级伪 3D）</text>
     ${p1}${leds}
-    <text x="84" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">30° 等距轴：顶/左/右三面 × 明度 + LED 心跳 — Keynote 插画就这么画</text>
+    <text x="84" y="366" font-size="11.5" fill="#6f84a8" font-family="SFMono-Regular, Menlo, monospace">30° 等距轴：顶/左/右三面 × 明度 + LED 心跳 — 等距插画的基础构形</text>
   </g>
   <g>
     <rect x="620" y="110" width="540" height="280" rx="14" fill="#0e1524" stroke="#22304d"/>

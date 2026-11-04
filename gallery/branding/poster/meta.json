@@ -3,7 +3,7 @@
   "title": "编辑式品牌海报",
   "space": "2d",
   "time": "static",
-  "order": 16,
+  "order": 15,
   "tech": [
     "brand system",
     "SVG typography",

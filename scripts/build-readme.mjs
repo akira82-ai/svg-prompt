@@ -136,7 +136,6 @@ const ENGLISH_NAMES = {
   'branding/stat-numbers': 'Gallery Statistics',
   'branding/comparison-vs': 'Comparison Layout',
   'branding/poster': 'Editorial Brand Poster',
-  'branding/presentation-title': 'Presentation Title Slide',
   'branding/article-header': 'Article Header and Cropping',
   'branding/product-launch': 'Product Launch Poster',
   'branding/report-cover': 'Technical Report Cover',

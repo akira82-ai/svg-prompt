@@ -3,13 +3,13 @@
   "title": "图鉴统计卡",
   "space": "2d",
   "time": "static",
-  "order": 18,
+  "order": 17,
   "tech": [
     "brand system",
     "SVG typography",
     "editorial layout"
   ],
-  "description": "截至2026-10-10的全库快照：245个作品、10类、185个静态和60个动效；由条目元数据计算，统计布局随数值更新。",
+  "description": "截至2026-10-10的全库快照：244个作品、10类、184个静态和60个动效；由条目元数据计算，统计布局随数值更新。",
   "author": "airay1015",
   "date": "2026-10-08"
 }

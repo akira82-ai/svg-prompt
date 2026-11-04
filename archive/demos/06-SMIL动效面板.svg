@@ -150,5 +150,5 @@
   </g>
 
   <text x="60" y="756" font-size="14" fill="#c6d2e4">这就是 SVG 动画的"中间层"：比 CSS 多了路径运动（animateMotion）、形状变形（&lt;animate&gt; 属性插值），</text>
-  <text x="60" y="778" font-size="14" fill="#c6d2e4">比 JS 少了依赖 —— 一个 .svg 文件扔进聊天窗口、放进 PPT、挂到网页，动画都活着。</text>
+  <text x="60" y="778" font-size="14" fill="#c6d2e4">比 JS 少了依赖 —— 一个 .svg 文件可在支持 SMIL 的浏览器中直接播放动画。</text>
 </svg>
